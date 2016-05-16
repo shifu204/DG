@@ -25,10 +25,14 @@ function CIDB()
 {
     $params = array(
     'dbdriver' => 'mysql',
-    'hostname' => 'localhost',
-    'username' => 'root',
-    'password' => '',
-    'database' => 'debei_test',
+    //'hostname' => 'localhost',
+    // 'username' => 'root',
+    // 'password' => '',
+    // 'database' => 'debei_test',
+    'hostname' => 'qdm234013142.my3w.com',
+    'username' => 'qdm234013142',
+    'password' => 'yangjianwei',
+    'database' => 'qdm234013142_db',
     //'char_set' => 'utf-8',
     'dbcollat' => 'utf8_general_ci',
     'pconnect' => TRUE,

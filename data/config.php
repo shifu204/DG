@@ -1,16 +1,20 @@
 <?php
 // 注意文件路径
 // database host
-$db_host   = "localhost:3306";
+//$db_host   = "localhost:3306";
+$db_host   = "qdm234013142.my3w.com";
 
 // database name
-$db_name   = "debei_test";
+//$db_name   = "debei_test";
+$db_name   = "qdm234013142_db";
 
 // database username
-$db_user   = "root";
+//$db_user   = "root";
+$db_user   = "qdm234013142";
 
 // database password
-$db_pass   = "";
+//$db_pass   = "";
+$db_pass   = "yangjianwei";
 
 // table prefix
 $prefix    = "ecs_";
