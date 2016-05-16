@@ -1,0 +1,124 @@
+/*icons*/
+.icons {
+    display:inline-block;
+    background: url(images1/icons.png) no-repeat;
+    vertical-align: middle;
+}
+.icons {
+    *display: inline;
+}
+.icons-login {
+    background-position: -505px 0;
+    width: 32px;
+    height: 15px;
+}
+.icons-login-hover {
+    background-position: -465px 0;
+    width: 32px;
+    height: 15px;
+}
+.icons-register {
+    background-position: -575px 0;
+    width: 20px;
+    height: 23px;
+}
+.icons-register-hover {
+    background-position: -545px 0;
+    width: 20px;
+    height: 23px;
+}
+.icons-login-weibo {
+    background-position: -680px 0;
+    width: 24px;
+    height: 24px;
+}
+.icons-login-zhifubao {
+    background-position: -710px 0;
+    width: 24px;
+    height: 24px;
+}
+.icons-login-qq {
+    background-position: -740px 0;
+    width: 24px;
+    height: 24px;
+}
+.icons-cross {
+    background-position: -775px 0;
+    width: 48px;
+    height: 48px;
+}
+.icons-close {
+    background-position: -840px 0;
+    width: 22px;
+    height: 22px;
+}
+.icons-login-wx {
+    background-position:0 -100px;
+    width: 24px;
+    height: 24px;
+}
+
+.category-icons {
+    background: url(images1/category_icons.png) no-repeat;
+    display: inline-block;
+    height: 31px;
+    width: 42px;
+    vertical-align: bottom;
+}
+.powder-discount-suit{
+    background-position: 0 0;
+}
+.powder-class{
+    background-position: -120px 0;
+}
+.powder-ico-brand{
+    background-position: -60px 0;
+}
+.powder-level{
+    background-position: -180px 0;
+}
+.powder-country{
+    background-position: -240px 0;
+}
+.fushi-ico-brand{
+    background-position: 0px -31px;
+}
+.fushi-class{
+    background-position: -300px 0;
+}
+.fushi-country{
+    background-position: -60px -31px;
+}
+.fushi-age{
+    background-position: -120px -31px;
+}
+.yingyang-ico-brand {
+    background-position: -240px -31px;
+}
+.yingyang-class{
+    background-position: -180px -31px;
+}
+.yingyang-country{
+    background-position: -300px -31px;
+}
+.yingyang-age {
+    background-position: 0 -62px;
+}
+.daily-ico-brand{
+    background-position: -120px -62px;
+}
+.daily-class{
+    background-position: -60px -62px;
+}
+.daily-country{
+    background-position: -180px -62px;
+}
+.weiyang-ico-brand{
+    background-position: -300px -62px;
+}
+.weiyang-class{
+    background-position: -240px -62px;
+}
+.weiyang-country{
+    background-position: 0 -93px;
+}

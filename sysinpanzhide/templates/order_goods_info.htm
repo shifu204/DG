@@ -1,0 +1,32 @@
+<table class="re-normal-table">
+  <tr>
+    <th class="dis-goodsname" scope="col"><strong>商品名称</strong></td>
+    <th scope="col"><strong>品牌</strong></td>
+    <th scope="col"><strong>{$lang.goods_sn}</strong></td>
+    <th scope="col"><strong>{$lang.goods_price}</strong></td>
+    <th scope="col"><strong>{$lang.goods_number}</strong></td>
+    <th scope="col"><strong>{$lang.goods_attr}</strong></td>
+    <th scope="col"><strong>{$lang.storage}</strong></td>
+    <th scope="col"><strong>{$lang.subtotal}</strong></td>
+  </tr>
+  {foreach from=$goods_list item=goods}
+  <tr>
+    {if $goods.goods_id gt 0 && $goods.extension_code neq 'package_buy'}
+    <td class="dis-goodsname">
+        <img src="{$goods.goods_thumb}" />
+        <a href="../goods.php?id={$goods.goods_id}" target="_blank">{$goods.goods_name} 
+    {if $goods.is_gift}{if $goods.goods_price > 0}{$lang.remark_favourable}{else}{$lang.remark_gift}{/if}{/if}
+    {if $goods.parent_id > 0}{$lang.remark_fittings}{/if}</a></td>
+    {else}
+    <td>{$goods.goods_name}{$lang.remark_package}</td>
+    {/if}
+    <td>{$goods.brand_name}</td>
+    <td>{$goods.goods_sn}</td>
+    <td>{$goods.formated_goods_price}</td>
+    <td>{$goods.goods_number}</td>
+    <td>{$goods.goods_attr|nl2br}</td>
+    <td>{$goods.storage}</td>
+    <td>{$goods.formated_subtotal}</td>
+  </tr>
+  {/foreach}
+</table>

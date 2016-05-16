@@ -1,0 +1,19 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="order font_gray bg_border padding65">
+<a href="category.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=<!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"><img src="images/goods_id_<!-- {if $pager.sort == 'goods_id'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.goods_id}"></a>
+  <a href="category.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->#goods_list"><img src="images/shop_price_<!-- {if $pager.sort == 'shop_price'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.shop_price}"></a>
+  <a href="category.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=last_update&order=<!-- {if $pager.sort == 'last_update' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"><img src="images/last_update_<!-- {if $pager.sort == 'last_update'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.last_update}"></a>
+
+</div>
+  <div class="goods_list">
+    <!--{foreach name=goods_list from=$goods_list item=goods}-->
+    <div class="goods b_bottom">
+    	<p class="goods_name"><a href="{$goods.url}">{$goods.goods_name}</a></p>
+        <span class="goods_pic"><a href="{$goods.url}"><img src="{$goods.goods_thumb}" height="60px" width="60px"></a></span>
+        <div class="goods_info">
+        	<p class="now_price font_red"><span class="now_price red">{$goods.shop_price}</span><span class="old_price"></span></p>
+            <span class="storge_status"></span>
+            <a href="javascript:addToCart({$goods.goods_id})" class="goods_buy">[购买]</a></div>
+    </div>
+    <!-- {/foreach} -->
+</div>

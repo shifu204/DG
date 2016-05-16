@@ -1,0 +1,28 @@
+.flex-control-nav {
+    bottom: 10px;
+    z-index: 100;
+}
+
+.flexslider .slides img {
+    margin:0 auto;
+}
+
+.flexslider .slides .ad_div_img {
+    height: 478px;
+}
+
+.floorad1 .ad_div_img {
+    width:450px;
+    height: 277px;
+}
+.floorad1 .flex-control-nav  {
+    right:50px;
+
+}
+.f2flexslider .flex-control-nav,.f4flexslider .flex-control-nav {
+    right: 0;
+}
+/*商品详细页*/
+.textInfo ul strong {
+    font-size: 13px;
+}

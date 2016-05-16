@@ -1,0 +1,49 @@
+<!-- $Id: user_situation.htm 16752 2013-08-28  zbl $ -->
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<form method="post" action="" name="listForm" onsubmit="return confirmSubmit(this)">
+<div class="list-div" id="listDiv">
+{/if}
+	<table cellpadding="3" cellspacing="1">
+      <tr>
+        <th><a href="javascript:listTable.sort('week_time'); ">{$lang.week_time}</a></th>
+        <th><a href="javascript:listTable.sort('week_count'); ">{$lang.week_count}</a></th>
+        <th><a href="javascript:listTable.sort('user_count'); ">{$lang.user_count}</a></th>
+        <th><a href="javascript:listTable.sort('over_count'); ">{$lang.over_count}</a></th>
+        <th><a href="javascript:listTable.sort('month_count'); ">{$lang.month_count}</a></th>
+      <tr>
+      {foreach from=$user_situation_list item=user_situation}
+          <tr>
+            <td align="center">{$user_situation.week_time}</td>
+            <td align="center">{$user_situation.week_count}</td>
+            <td align="center">{$user_situation.user_count}</td>
+            <td align="center">{$user_situation.over_count}</td>
+            <td align="center">{$user_situation.month_count}</td>
+          </tr>
+      {foreachelse}
+          <tr><td class="no-records" colspan="10">{$lang.no_records}</td></tr>
+      {/foreach}
+    </table>
+    
+    <!-- 分页 -->
+    <table id="page-table" cellspacing="0">
+      <tr>
+        <td align="right" nowrap="true">
+        {include file="page.htm"}
+        </td>
+      </tr>
+	</table>
+{if $full_page}
+</div>
+</form>
+<script type="text/javascript">
+  listTable.recordCount = {$record_count};
+  listTable.pageCount = {$page_count};
+  {foreach from=$filter item=item key=key}
+  listTable.filter.{$key} = '{$item}';
+  {/foreach}
+</script>
+{include file="pagefooter.htm"}
+{/if}

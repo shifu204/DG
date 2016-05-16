@@ -1,0 +1,96 @@
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link rel="stylesheet" type="text/css" href="{$theme_path}zt/user_level/user_level.css" />
+<div class="user_level">
+	<div class="main">
+    	<div class="title" style="background:#f8e5e9;">
+        	<b><span style="font-size:30px; color:#c91623; height:60px; line-height:60px;">积分等级折扣</span></b>
+        </div>
+        <div class="content">
+        	<div class="effect">
+            	<div class="effect_title">
+                	<img src="{$theme_path}zt/user_level/images/jfzy.png" class="jfzy">
+                	
+                </div>
+                <div class="effect_content">
+                	<div style="float:left; padding-left:220px; padding-top:55px;">
+               		<b><span style=" font-size:26px;  letter-spacing:-2px; color:#000; ">获得消费积分的会员可以通过购买商品时，</span>
+      				<span style=" font-size:26px; letter-spacing:-2px; color:#df1322; ">使用积分来抵消消费的金额，</span><br/>
+					<span style=" font-size:26px; letter-spacing:-2px; color:#000; ">每件商品都有有</span>
+                    <span style=" font-size:26px; letter-spacing:-2px; color:#df1322;">限定</span>
+       			 	<span style=" font-size:26px; letter-spacing:-2px; color:#000; ">的消费积分抵消。</span></b>
+                    </div>
+                </div>
+            </div>
+            <div class="level">
+            	<div class="level_title">
+                	<img src="{$theme_path}zt/user_level/images/hydj.png" class="hydj">
+                </div>
+                <div class="level_content">
+                	<div style=" padding-left:145px; padding-top:40px;">
+                          <b><span style="font-size:20px; float:left; text-align:left; letter-spacing:-1px; line-height:30px; color:#000;">德贝的顾客将依据购买商品或参加活动累计的积分，分为四种不同的会员级别：<br>普通会员（V1会员）、黄金会员（V2会员）、白金会员（V3会员）和至尊会员（V4会员）</span></b>
+					</div>
+                    <div style="padding-left:145px; padding-top:95px;">
+                        <table class="tab" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="td2">
+                                    <span style="color:#ffffff; text-align:center; font-size:22px; width:294px; float:left;">级别</span>
+                                </td>
+                                <td class="td2"><span style="color:#ffffff; text-align:center; font-size:22px; width:240px; float:left; ">折扣</span></td>
+                                <td class="td2"><span style="color:#ffffff; text-align:center; font-size:22px; width:360px; float:left;">积分</span></td>
+                            </tr>
+                            <tr>
+                                <td class="td1" width="294px"><img src="{$theme_path}zt/user_level/images/lv1.png" style="padding-top:10px; padding-left:53px; float:left;">
+                                    <span style="float:left; padding-left:12px; padding-top:18px; font-size:23px; letter-spacing:-2px;">普通会员</span></td>
+                                <td class="td1" width="240px" >
+                                    <span class="zk">无折扣</span></td> 
+                                <td class="td1" width="360px">
+                                    <span class="jf">2000积分以下</span></td>
+                            </tr>
+                            <tr>
+                                <td class="td1"><img src="{$theme_path}zt/user_level/images/lv2.png" style="padding-top:5px; padding-left:53px; float:left; ">
+                                    <span style="float:left; padding-left:15px; padding-top:14px; font-size:21px; letter-spacing:-1px;">黄金会员</span>
+                                </td>
+                                <td class="td1">
+                                    <span class="zk">9.8折</span></td>
+                                <td class="td1">
+                                    <span class="jf">2000-5999积分</span></td>
+                            </tr>
+                            <tr>
+                                <td class="td1"><img src="{$theme_path}zt/user_level/images/lv3.png" style="padding-top:5px; padding-left:53px; float:left; ">
+                                    <span style="float:left; padding-left:12px; padding-top:14px; font-size:23px; letter-spacing:-2px;">白金会员</span>
+                                </td>
+                                <td class="td1"td>
+                                    <span class="zk">9.5折</span></td>
+                                <td class="td1">
+                                    <span class="jf">6000-7999积分</span></td>
+                            </tr>
+                            <tr>
+                                <td class="td1"><img src="{$theme_path}zt/user_level/images/lv4.png" style="padding-top:0px; padding-left:53px; float:left; ">
+                                    <span style="float:left; padding-left:12px; padding-top:4px; font-size:23px; letter-spacing:-2px;">至尊会员</span></td>
+                                <td class="td1">
+                                    <span class="zk">9.0折</span></td>
+                                <td class="td1">
+                                    <span class="jf">8000以上</span></td>
+                            </tr>
+                        </table>
+        			</div>
+                </div>
+            </div>
+            <div class="score">
+            	<div class="score_title">
+                	<img src="{$theme_path}zt/user_level/images/xfjf.png" class="xfjf">
+                </div>
+                <div class="score_content">
+                	<div style="padding-left:150px; padding-top:10px;">
+                    	<span class="score_span" style="padding-top:25px;">1.消费积分不限制会员等级使用，消费积分可在购买商品时使用。<br/>2.会员积分是通过购物时获得，从而升级会员等级来享受优惠折扣。<br/><br>例如：您的会员等级是至尊钻石会员，在您购买商品得到优惠折扣<br/>的同时，你也可以消费积分抵消一定的金额，这样就可以做到双重<br/>的优惠.</span>
+                	</div>
+    			</div>
+            </div>
+        </div>
+    </div>
+    <div class="floorBlank"></div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+   </body>
+</html>

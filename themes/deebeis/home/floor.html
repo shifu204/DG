@@ -1,0 +1,47 @@
+<div class="go_floor">
+    <div class="daogounav">
+        <div class="daogounav_top"></div>
+        <div class="center_content">
+            <ul class="floor_nav">
+                <!--{foreach from=$floors item=floor}-->
+                <li id="floor_{$floor.i}_nav" name="floors_nav" ><a data="floor_{$floor.i}">F{$floor.i} {$floor.name}</a></li>
+                <!--{/foreach}-->
+            </ul>
+        </div>
+        <div class="daogounav_bottom"></div>
+    </div>
+</div>
+<script language="javascript" src="themes/deebeis/js/jquery.stickem.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".stickem-content").stickem({
+        item:".go_floor",
+        container:".daogou-container",
+        stickClass:"go_floor_start",
+        endStickClass:"go_floor_end"
+    });
+    //点击左侧楼层
+    $(".go_floor ul li a").click(function(){
+        var floor_id = $(this).attr("data");
+        var pos = $("#"+floor_id).offset().top - 20;
+        $("html,body").animate({scrollTop: pos}, 1000);
+    });
+    //当窗口滚动的时候
+    $(window).scroll(function() { 
+        var nowscroll = $(document).scrollTop();
+        var floors = $("div[name='floors']");
+        var selected = false;
+        $.each(floors,function(index,value){          
+            var elescroll = $(this).offset().top;
+            var elsheight = $(this).height();
+            if(nowscroll < elescroll + elsheight - 200) {
+                selected = $(this).attr("id");
+                return false;
+            }
+        });
+        $("li[name='floors_nav']").removeClass("selected_floor");
+        $("#"+selected+"_nav").addClass("selected_floor");
+    });
+    
+});
+</script>

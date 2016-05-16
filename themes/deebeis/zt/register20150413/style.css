@@ -1,0 +1,11 @@
+.wrapper{margin: 0 auto; padding: 0; text-align: center; min-width: 1190px; background: url(images/bg.jpg); padding-bottom: 260px; margin-bottom: -260px;}
+.poster{background: url(images/poster.jpg) center no-repeat; height: 443px;}
+.container_coupon{background: url(images/coupon_bg.jpg) center no-repeat; height: 323px;}
+.container_coupon .coupon{width: 724px;}
+.container_coupon .coupon ul li{float: left; width: 332px; height: 133px; padding: 0 15px 20px 15px; }
+.container_rule{background: url(images/rule_bg.jpg) center no-repeat; height: 549px; text-align: center; overflow: hidden;}
+.container_rule .rule{background: url(images/rule.jpg) center no-repeat; height: 331px; width: 891px; overflow: hidden;}
+.container_rule .rule_span{ color:#000; font-size: 18px; line-height: 38px; text-align: left; padding: 65px 0px 0px 28px;}
+.container_rule a{width: 350px; height: 149px; margin-top: 25px;display:inline-block;}
+.container_rule .span_red{color:#e40001;}
+

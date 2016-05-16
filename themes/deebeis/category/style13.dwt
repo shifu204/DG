@@ -1,0 +1,29 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}category/common.css" rel="stylesheet" type="text/css">
+<link href="{$theme_path}category/{$category_style}/{$category_style}.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{$theme_path}js/category.js"></script>
+<input type="hidden" id="category" value="{$category}" name="category" />
+<div class="feed_utensil">
+    <div class="poster"></div>
+    <div class="fu1">
+        <div class="wm01190">
+            <div class="category_nav">
+                <div id="filter_area">
+                    <!-- #BeginLibraryItem "/library/goods/category_goods_filter.lbi" --><!-- #EndLibraryItem -->
+                </div>
+                <div class="nav_more">更多品牌</div>
+            </div>
+        </div>
+    </div>
+    <div class="fu2">
+        <!-- #BeginLibraryItem "/library/goods/category_goods_list.lbi" --><!-- #EndLibraryItem -->
+    </div>
+{if $left_filter}
+    <!-- #BeginLibraryItem "/category/library/left_nav.lbi" --><!-- #EndLibraryItem -->
+{/if}
+</div>
+<script type="text/javascript">
+    $.categoryNav("cate_nav_item");
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --></body>
+</html>

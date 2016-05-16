@@ -1,0 +1,48 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}category/common.css" rel="stylesheet" type="text/css">
+<link href="{$theme_path}category/{$category_style}/{$category_style}.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{$theme_path}js/category.js"></script>
+<input type="hidden" id="category" value="{$category}" name="category" />
+<div class="commodity">
+    <div class="poster"></div>
+    <div class="commodity_c wm01190">
+        <div class="commodity1">
+            <div class="c1_top">
+                冬天气候干冷刺激，宝宝稚嫩的皮肤在冬天总是经不起这样的折腾，一系列的问题接踵而来；
+                <span class="span_r">皮肤干裂、冻疮、脸蛋通红粗糙</span>
+                。许多粑粑麻麻是既心疼又着急。
+            </div>
+            <div class="c1_c">
+                <div class="category_nav">
+                    <div id="filter_area">
+                    <!-- #BeginLibraryItem "/library/goods/category_goods_filter.lbi" --><!-- #EndLibraryItem -->
+                    </div>
+                    <div class="nav_more">更多品牌</div>
+                </div>
+            </div>
+            <div class="c1_img"></div>
+        </div>
+        <div class="commodity2">
+            <div class="c2_font">
+                <div class="c2_t">
+                    全球最TOP精品
+                </div>
+                <div class="c2_c">
+                    德贝最注重的是宝宝的安全与感受，在售商品均经过国际严格质量检测，以确保每一款都是海外精品中的精品，带给宝宝极致的呵护！
+                </div>
+                <div class="c2_img"></div>
+            </div>
+        </div>
+        <div class="commodity3">
+            <!-- #BeginLibraryItem "/library/goods/category_goods_list.lbi" --><!-- #EndLibraryItem -->
+        </div>
+    </div>
+{if $left_filter}
+    <!-- #BeginLibraryItem "/category/library/left_nav.lbi" --><!-- #EndLibraryItem -->
+{/if}
+</div>
+<script type="text/javascript">
+    $.categoryNav("cate_nav_item");
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --></body>
+</html>

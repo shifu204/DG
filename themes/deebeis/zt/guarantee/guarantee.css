@@ -1,0 +1,290 @@
+.dunpai1 { 
+    height: 220px;
+    background: url(dunpai1.jpg) no-repeat center top;
+}
+
+.dunpai2 { 
+    height: 220px;
+    background: url(dunpai2.jpg) no-repeat center top;
+}
+
+.dunpai3 { 
+    height: 179px;
+    background: url(dunpai3.jpg) no-repeat center top;
+    border-bottom: 2px solid #D7D7D7;
+}
+
+.dunpai {
+    height: 463px;
+    background: url(dunpai.jpg) no-repeat center top;
+    border-bottom: 2px solid #D7D7D7;
+}
+
+.navIcons {
+    height: 147px;
+}
+.navIcons li {
+    float:left;
+    padding:12px 38px 0;
+}
+
+.navIcons li a{
+    display: block;
+    width:92px;
+    height: 114px;    
+}
+
+.navIcons li a.icon1 {
+    background: url(icon-gray-1.png) no-repeat;
+}
+.navIcons li a.icon2 {
+    background: url(icon-gray-2.png) no-repeat;
+}
+.navIcons li a.icon3 {
+    background: url(icon-gray-3.png) no-repeat;
+}
+.navIcons li a.icon4 {
+    background: url(icon-gray-4.png) no-repeat;
+}
+.navIcons li a.icon5 {
+    background: url(icon-gray-5.png) no-repeat;
+}
+.navIcons li a.icon6 {
+    background: url(icon-gray-6.png) no-repeat;
+}
+.navIcons li a.icon7 {
+    background: url(icon-gray-7.png) no-repeat;
+}
+
+.navIcons li a.icon1:hover {
+    background: url(icon-red-1.png) no-repeat;
+}
+.navIcons li a.icon2:hover {
+    background: url(icon-red-2.png) no-repeat;
+}
+.navIcons li a.icon3:hover {
+    background: url(icon-red-3.png) no-repeat;
+}
+.navIcons li a.icon4:hover {
+    background: url(icon-red-4.png) no-repeat;
+}
+.navIcons li a.icon5:hover {
+    background: url(icon-red-5.png) no-repeat;
+}
+.navIcons li a.icon6:hover {
+    background: url(icon-red-6.png) no-repeat;
+}
+.navIcons li a.icon7:hover {
+    background: url(icon-red-7.png) no-repeat;
+}
+
+.floor .floorwrap {
+    height:125px;
+}
+
+.floor .floorwrap {
+    width:1190px;
+}
+
+.floor1 {
+    background: url(title1-bg.jpg) repeat-x;
+}
+
+.floor .floorwrap1 {
+    background: url(title1.jpg) no-repeat;
+}
+
+.floor1 .content1 {
+    height: 390px;
+    background: url(floor1-1.jpg) no-repeat center;
+}
+
+.floor1 .content2 {
+    height: 258px;
+    background: url(floor1-2.jpg) no-repeat center;
+}
+.floor2 {
+    background: url(title2-bg.jpg) repeat-x;
+}
+
+.floor .floorwrap2 {
+    background: url(title2.jpg) no-repeat;
+}
+
+.floor2 .content1 {
+    height: 346px;
+    background: url(floor2-1.jpg) no-repeat center;
+}
+
+.floor2 .content2 {
+    height: 722px;
+    background: url(floor2-2.jpg) no-repeat center;
+}
+
+.floor3 {
+    background: url(title3-bg.jpg) repeat-x;
+}
+
+.floor .floorwrap3 {
+    background: url(title3.jpg) no-repeat;
+}
+
+.floor3 .content1 {
+    height: 379px;
+    background: url(floor3-1.jpg) no-repeat center;
+}
+
+.floor3 .content2 {
+    height: 497px;
+    background: url(floor3-2.jpg) no-repeat center;
+}
+
+.floor3 .content3 {
+    height:447px;
+    background: url(floor3-3.jpg) no-repeat center;
+}
+
+.floor3 .content4 {
+    height: 637px;
+    background: url(floor3-4.jpg) no-repeat center;
+}
+
+.floor4 {
+    background: url(title4-bg.jpg) repeat-x;
+}
+
+.floor .floorwrap4 {
+    background: url(title4.jpg) no-repeat;
+}
+
+.floor4 .content1 {
+    height: 469px;
+    background: url(floor4-1.jpg) no-repeat center;
+}
+
+.floor4 .content2 {
+    height: 348px;
+    background: url(floor4-2.jpg) no-repeat center;
+}
+
+.floor4 .content3 {
+    height:556px;
+    background: url(floor4-3.jpg) no-repeat center;
+}
+
+.floor5 {
+    background: url(title5-bg.jpg) repeat-x;
+}
+
+.floor .floorwrap5 {
+    background: url(title5.jpg) no-repeat;
+}
+
+.floor5 .content1 {
+    height: 486px;
+    background: url(floor5-1.jpg) no-repeat center;
+}
+
+.floor5 .content2 {
+    height: 271px;
+    background: url(floor5-2.jpg) no-repeat center;
+}
+
+.floor6 {
+    background: url(title6-bg.jpg) repeat-x;
+}
+
+.floor .floorwrap6 {
+    background: url(title6.jpg) no-repeat;
+}
+
+.floor6 .content1 {
+    height: 446px;
+    background: url(floor6-1.jpg) no-repeat center;
+}
+
+.floor6 .content2 {
+    height: 192px;
+    background: url(floor6-2.jpg) no-repeat center;
+}
+
+.floor7 {
+    background: url(title7-bg.jpg) repeat-x;
+}
+
+.floor .floorwrap7 {
+    background: url(title7.jpg) no-repeat;
+}
+
+.floor7 .content1 {
+    height: 427px;
+    background: url(floor7-1.jpg) no-repeat center;
+}
+
+.floor7 .content2 {
+    height: 438px;
+    background: url(floor7-2.jpg) no-repeat center;
+}
+
+.floor8 {
+    background: url(title8-bg.jpg) repeat-x;
+}
+
+.floor .floorwrap8 {
+    background: url(title8.jpg) no-repeat;
+}
+
+.floor8 .content1 {
+    height: 281px;
+    background: url(floor8-1.jpg) no-repeat center;
+}
+
+.floor8 .content2 {
+    padding:0 220px;
+    width: 750px;
+    background: #FFFFFF;
+}
+.floor8 .content2 .goods_item {
+    float:left;
+    width:138px;
+    height: 138px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.floor8 .content2 .goods_item img {
+    width: 138px;
+    height: 138px;
+}
+
+.floor8 .content3 {
+    height: 195px;
+    width: 1190px;
+    background: url(floor8-3.jpg) no-repeat center;
+}
+
+.navIcons1 {
+    height: 147px;
+	position:absolute;
+	top:50px;
+	display:none;
+}
+.navIcons1 li {
+    padding:12px 0 0;
+}
+
+.navIcons1 li a{
+    display: block;
+    width:65px;
+    height: 80px;  
+}
+
+.imgicon{
+	width:65px;
+	height:80px;
+	padding-bottom:12px;
+}
+
+.f_no{ float:none;}
+.position{ position:fixed; z-index:999999; top:120px; left:100px;} 
+* html .position{ position:absolute; _top:expression(documentElement.scrollTop-0);} 

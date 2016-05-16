@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+<link rel="apple-touch-icon-precomposed" href="/icon_desktop.png">
+<link href="{$template_dir}/style_m/mobile.css" type="text/css" rel="stylesheet">
+<link href="{$template_dir}/style_m/mine_main.css" rel="stylesheet" type="text/css">
+<script>var _hmt = _hmt || [];_hmt.push(['_setCustomVar', 5,  'visitor', 'visitor', 1]);</script>
+{insert_scripts files='common.js,compare.js'}
+{insert_scripts files='jquery.min.js,jquery.json.min.js'}
+{insert_scripts files='transport_z.js,utils.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header_m.lbi" --><!-- #EndLibraryItem -->
+
+<!-- {if $action eq 'default'} -->
+<div class="subHeader"><a href="/" class="goback">返回</a>用户中心</div>
+<div class="mine_main_content">
+    <div class="desc">
+        <!--<div id="avatar" class="img" style="background-image:url({$template_dir}/images/m/mDefaultAvatar.png)"></div>-->
+        <div class="user_info">
+            <span>用户昵称：</span>
+            <span>{$info.nickname}</span>
+            <ul>
+                <li><em>积分</em><i>{$info.integral}</i></li>
+                <li><em>账户余额</em><i>{$info.surplus}</i></li>
+            </ul>
+        </div>
+    </div>
+
+    <ul>
+        <li><a id="myorder" href="user.php?act=order_list">我的订单<i>0</i></a></li>
+        <!--<li><a id="mycou" href="user.php?act=bonus">我的红包<i>0</i></a></li>-->
+        <li><a id="myfav" href="user.php?act=collection_list">我的收藏<i>0</i></a></li>
+        <li><a id="myaddress" href="user.php?act=address_list">地址管理</a></li>
+    </ul>
+
+    <ul>
+        <!--<li><a href="#">手机绑定
+            <em>已绑定</em>
+        </a></li>-->
+        <li><a href="user.php?act=profile">修改密码
+            <!--<em>已绑定</em>-->
+        </a></li>
+    </ul>
+    <a href="user.php?act=logout" class="logout">退出当前账户</a>
+</div>
+
+<!--{elseif $action eq 'collection_list'} -->
+<div class="wrap proList goodsList">
+    <!--{foreach name=goods_list from=$goods_list item=goods}-->
+    <!-- {if $goods.goods_id} -->
+   	<dl>
+        <dt>
+	        <a href="{$goods.url}"><img class="lazy" src="{$goods.goods_thumb}" alt=""></a>
+        </dt>
+       	<dd>
+	        <a href="{$goods.url}">
+                <h4>{$goods.goods_name}</h4>
+                <p class="promTags">
+                    {if $goods.is_buy_five && $goods.is_preferential_five}<span class="gift icon_buy_five">买五 送一</span>
+                    {elseif $goods.is_buy_seven && $goods.is_preferential_seven}<span class="decre icon_buy_seven">买七送一</span>{/if}
+                </p>
+                <p class="price">
+                    <strong>{$goods.shop_price}</strong>
+                    <del>{$goods.market_price}</del>
+                </p>
+            </a>
+        	<a class="cartBtn" href="javascript:addToCart({$goods.goods_id})">+</a>
+            <a href="javascript:if (confirm('{$lang.remove_collection_confirm}')) location.href='user.php?act=delete_collection&collection_id={$goods.rec_id}'" class="f6" style="bottom: 12px; position: absolute; right: 50px;">{$lang.drop}</a>
+        </dd>
+    
+    </dl>
+    <!--{/if}-->
+    <!-- {/foreach} -->
+    <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+</div>
+
+<!--{/if}-->
+
+<!-- #BeginLibraryItem "/library/page_footer_m.lbi" --><!-- #EndLibraryItem -->
+</body></html>

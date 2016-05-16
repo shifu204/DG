@@ -1,0 +1,51 @@
+.commodity{margin: 0; padding: 0; text-align: center; background: #efffff;}
+.poster{background: url(images/poster.jpg) center no-repeat; height:528px; min-width: 1190px;}
+.commodity_c{}
+
+/* commodity1 */
+.commodity1{background: url(images/commodity1.jpg) center no-repeat; height:580px; position: relative;}
+.c1_top{color: #4f4238; text-align: left; font-size: 19px; line-height: 22px; letter-spacing: -2px; padding-top: 35px; padding-left: 95px; padding-right: 90px;}
+.span_r{color: #f13774;}
+.c1_c{}
+.c1_c1{}
+.c1_img{background: url(images/pig.png) center no-repeat; width: 143px; height: 195px; position: absolute; top: 161px; left: -40px;}
+
+/* nav */
+.category_nav{margin-top: 120px; margin-left: 80px; margin-right: 90px;}
+.cate_nav_item{border-top: solid 2px #644d36;  padding-left: 30px; padding-right: 40px;}
+.frist_item{border-top: solid 2px #fffcf5;}
+.nav_left{font-size: 21px; font-weight: bold; width: 20px; float: left; color: #4f351c; line-height: 25px; padding-top: 15px;}
+.cate_nav_item ul{padding-bottom: 10px; padding-top: 10px; *overflow:hidden}
+.item_li{float: left; width: 120px; height: 28px; line-height: 28px; color: #765c40; }
+.frist_li{width: 80px;}
+.nav_onclick{background: #4f351c; color: #ffffff; font-weight: bold; padding:0px 5px 3px 5px;}
+.nav_more{cursor: pointer; color: #765c40; width: 100px;}
+.item_li label{cursor: pointer;}
+
+
+
+/* commodity2 */
+.commodity2{background: url(images/commodity2.jpg) center no-repeat; height:165px; text-align: left; padding-top: 110px; position: relative;}
+.c2_font{margin-left: 40px; width: 800px;}
+.c2_t{font-size: 24px; font-weight: bold; height: 45px; line-height: 40px; color: #0578c8;}
+.c2_c{font-size: 20px; line-height: 32px; color: #636262;}
+.c2_img{background: url(images/commodity2_img.png) center no-repeat; height: 273px; width: 323px; position: absolute; top:3px; right: -25px;}
+
+/* commodity3 */
+.commodity3{background: #fefefe; }
+
+
+/* goodbox */
+.frame{background: url(images/commodity3.jpg) no-repeat bottom; padding: 25px 0px 80px 19px; height: 1848px;}
+.goodbox{border: solid 1px #e6e7e7; width: 275px; height: 350px; float: left; margin-right: 15px; margin-bottom: 20px;}
+.goodsTop{height: 300px;}
+.goodsPrice{padding-top: 5px;}
+
+
+/* 姘旂悆瀵艰埅 */
+.nav_no{background:url(images/nav.png) center no-repeat; width:253px; height:625px; position:absolute; right:100px; bottom:-750px; z-index:999999;}
+.nav_pf{ position:fixed; z-index:999999; bottom:-150px; right:100px;} 
+* html .nav_pf{ position:absolute; _top: expression(documentElement.scrollTop-0);} 
+.classify_nav{margin: 225px 80px 0px 65px;}
+.classify_1{height: 35px; line-height: 30px; margin-bottom: 6px; border-radius: 25px; cursor: pointer;}
+

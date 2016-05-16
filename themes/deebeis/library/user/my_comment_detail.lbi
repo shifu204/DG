@@ -1,0 +1,61 @@
+{if $is_reply}
+<div class="my-coment-table" id="comment_table_{$comment.comment_id}">
+    <div class="my-discuss">
+        <div class="discuss-wrapper">
+{/if}
+            <div class="shaidan_form" id="comment_form">
+                <div class="clearfix"><span class="shaidan-close">收起</span></div>
+                <div class="goods_rank" style="width: 180px;">
+                    <div class="fl name-field">评分：</div>
+                    <div class="fl rank_star rank_star{$comment.comment_rank}"></div>  
+                </div>
+                {if $comment.title}
+                <div class="comment-title clearfix">
+                    <div class="fl name-field">标题：</div>
+                    <div class="fl">{$comment.title}</div>
+                </div>
+                {/if}
+                <div class="xinde clearfix">
+                    <span class="fl name-field">心得：</span> 
+                    <div class="fl">
+                        <span>{$comment.content}</span>
+                    </div>
+                </div>
+                {if $comment.imgs}
+                <div class="shaidan-1 clearfix">          
+                    <span class="fl name-field">晒单图片：</span>             
+                        {foreach from=$comment.imgs item=image}
+                        <div class="fl relative shaidan_img_div" data-id="{$image.img_id}">
+                            <img src="{$image.shaidan_img}" width="80" height="80"/>
+                        </div>
+                        {/foreach}         
+                </div>
+                {/if}
+                {if $comment.replys}
+                <div class="shaidan_row clearfix">
+                    <div class="fl name-field">&nbsp;</div> 
+                    <div class="fl clearfix">
+                        {foreach from=$comment.replys item=reply}
+                        <div class="clearfix user-replys">
+                            <div><span class="comment-detail-users">{$reply.user_name}</span>：<span style="padding-left: 8px;">{$reply.content}</span><span style="padding-left: 25px;">{$reply.formated_add_time}</span></div>
+                        </div>
+                        {/foreach}
+                    </div>
+                </div>
+                {/if}
+                {if $is_reply} 
+                <div class="shaidan_row clearfix">
+                    <div class="fl name-field">您的评论：</div>
+                    <textarea id="reply_comment_{$comment.comment_id}"></textarea>
+                </div>
+                <div class="shaidan_row">
+                    <div class="fl name-field">&nbsp;</div>
+                    <input class="green_but" type="button" value="评论" onclick="submit_reply('{$comment.comment_id}');"/>
+                </div>
+                {/if}
+            </div>
+{if $is_reply}           
+        </div>
+    </div>
+</div>
+{/if}

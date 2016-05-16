@@ -1,0 +1,1 @@
+{"dbname":"webscantest","dbuser":"root","dbhost":"127.0.0.1","dbpass":"123123","data":"true","uname":"admin","password":"root","storageType":"file","host":"localhost","user":"root","database":"test","scope":null,"errorReport":false}

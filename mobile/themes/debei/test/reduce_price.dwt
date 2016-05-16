@@ -1,0 +1,789 @@
+﻿<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="themes/debei/test/reduce_price/reduce_price.css" rel="stylesheet" type="text/css" >
+<div class="con"> 
+    <header class="ect-header ect-margin-tb ect-margin-lr header-logo">
+        {if $user_name}
+        <div class="ect-header-username f_r">
+            欢迎您，{$user_name}
+        </div>
+        {/if}
+    </header>
+    <div class="poster">
+        <img src="themes/debei/test/reduce_price/images/poster.jpg" style="width: 100%;" />
+    </div>
+    <div class="rp1">
+        <img src="themes/debei/test/reduce_price/images/rp1.jpg" style="width: 100%;" />
+    </div>
+    <div class="rp2">
+        <div class="rp2_1">
+            <img src="themes/debei/test/reduce_price/images/rp2_1.jpg" style="width: 100%;" />
+        </div>
+        <div class="rp2_2">
+            <div class="rp2_21">
+                <img class="coupon" id="cl" src="themes/debei/test/reduce_price/images/c10.png"/>
+                <img class="coupon" id="cr" src="themes/debei/test/reduce_price/images/c30.png"/>
+            </div>
+            <div class="rp2_22">
+                <img class="coupon" id="cl" src="themes/debei/test/reduce_price/images/c50.png" />
+                <img class="coupon" id="cr" src="themes/debei/test/reduce_price/images/c70.png" />
+            </div>
+        </div>
+        <div class="rp2_3">
+            <img src="themes/debei/test/reduce_price/images/rp2_3.jpg" style="width: 100%;" />
+        </div>
+        
+    </div>
+    <div class="rp3">
+        <div class="rp3_1">
+            <img src="themes/debei/test/reduce_price/images/rp3_1.png" style="width: 100%;" />
+            <div class="rp3_r">
+                <img src="themes/debei/test/reduce_price/images/rp3_b.png" style="width: 90%; cursor: pointer;" />
+            </div>
+        </div>
+        <div class="rp3_1">
+            <img src="themes/debei/test/reduce_price/images/rp3_2.png" style="width: 100%;" />
+            <div class="rp3_r">
+                <img src="themes/debei/test/reduce_price/images/rp3_b.png" style="width: 90%; cursor: pointer;" />
+            </div>
+        </div>
+        <div class="rp3_1">
+            <img src="themes/debei/test/reduce_price/images/rp3_3.png" style="width: 100%;" />
+            <div class="rp3_r">
+                <img src="themes/debei/test/reduce_price/images/rp3_b.png" style="width: 90%; cursor: pointer;" />
+            </div>
+        </div>
+        <div class="rp3_1">
+            <img src="themes/debei/test/reduce_price/images/rp3_4.png" style="width: 100%;" />
+            <div class="rp3_r">
+                <img src="themes/debei/test/reduce_price/images/rp3_b.png" style="width: 90%; cursor: pointer;" />
+            </div>
+        </div>
+        <div class="rp3_1">
+            <img src="themes/debei/test/reduce_price/images/rp3_5.png" style="width: 100%;" />
+            <div class="rp3_r">
+                <img src="themes/debei/test/reduce_price/images/rp3_b.png" style="width: 90%; cursor: pointer;" />
+            </div>
+        </div>
+    </div>
+    <div class="rp4">
+        <div class="rp4_hl">
+            <div class="rp4_hlt">
+                <img class="" src="themes/debei/test/reduce_price/images/rp4_hlt.jpg" style="width: 100%;" />
+            </div>
+            <div class="rp4_bg_b">
+                <div class="goodbox_warp clearfix" style="">
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_hl1.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_hl2.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_hl3.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_hl4.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_hl5.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_4.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_hl6.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_hl7.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_hl8.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rp4_xxl">
+            <div class="rp_xxlt">
+                <img class="" src="themes/debei/test/reduce_price/images/rp4_xxlt.jpg" style="width: 100%;" />
+            </div>
+            <div class="rp4_bg_r">
+                <div class="goodbox_warp clearfix" style="">
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_r rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_xxl1.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_r rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_xxl2.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_r rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_xxl3.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_r rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_xxl4.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_r rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_xxl5.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_4.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_r rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_xxl6.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_r rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_xxl7.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_r rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_xxl8.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rp4_yg">
+            <div class="rp_ygt">
+                <img class="" src="themes/debei/test/reduce_price/images/rp4_ygt.jpg" style="width: 100%;" />
+            </div>
+            <div class="rp4_bg_y">
+                <div class="goodbox_warp clearfix" style="">
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_y rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_yg1.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_y rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_yg2.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_y rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_yg3.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_y rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_yg4.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_y rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_yg5.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_4.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_y rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_yg6.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_y rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_yg7.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_y rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_yg8.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rp4_dg">
+            <div class="rp_dgt">
+                <img class="" src="themes/debei/test/reduce_price/images/rp4_dgt.jpg" style="width: 100%;" />
+            </div>
+            <div class="rp4_bg_b">
+                <div class="goodbox_warp clearfix" style="">
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_dg1.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_dg2.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_dg3.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_dg4.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_dg5.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_4.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_dg6.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_dg7.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_dg8.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_dg9.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div>
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_dg10.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_dg11.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rp4_xg">
+            <div class="rp_xgt">
+                <img class="" src="themes/debei/test/reduce_price/images/rp4_xgt.jpg" style="width: 100%;" />
+            </div>
+            <div class="rp4_bg_r">
+                <div class="goodbox_warp clearfix" style="">
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_r rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_xg1.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_r rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_xg2.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_r rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_xg3.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_r rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_xg4.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_4.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_r rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_xg5.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rp4_mg">
+            <div class="rp_mgt">
+                <img class="" src="themes/debei/test/reduce_price/images/rp4_mgt.jpg" style="width: 100%;" />
+            </div>
+            <div class="rp4_bg_y">
+                <div class="goodbox_warp clearfix" style="">
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_y rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_mg1.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_y rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_mg2.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_y rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_mg3.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_y rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_mg4.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_y rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_mg5.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_4.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rp4_az">
+            <div class="rp_azt">
+                <img class="" src="themes/debei/test/reduce_price/images/rp4_azt.jpg" style="width: 100%;" />
+            </div>
+            <div class="rp4_bg_b">
+                <div class="goodbox_warp clearfix" style="">
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_az1.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_b rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_az2.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rp4_rd">
+            <div class="rp_rdt">
+                <img class="" src="themes/debei/test/reduce_price/images/rp4_rdt.jpg" style="width: 100%;" />
+            </div>
+            <div class="rp4_bg_r">
+                <div class="goodbox_warp clearfix" style="">
+                    <div class="gd_frame clearfix">
+                        <div class="goodbox gb_bg_r rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_rd1.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_92.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                        <div class="goodbox gb_bg_r rounded">
+                            <div class="rp4_img">
+                                <img src="themes/debei/test/reduce_price/images/rp4/rp4_rd2.png" style="width: 100%;" />
+                                <div class="rp4_ico">
+                                    <img src="themes/debei/test/reduce_price/images/rp4_61.png" style="width: 100%;">
+                                </div> 
+                            </div> 
+                            <div class="rp4_but">
+                                <img src="themes/debei/test/reduce_price/images/rp4_b.png" style="width: 92%; cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rp5">
+            <div class="rp5_t">
+                <img src="themes/debei/test/reduce_price/images/rp5_t.jpg" style="width: 100%;" />
+            </div>
+            <div class="rp5_c">
+                <div class="rp5_1">
+                    <div class="rp5_t1">
+                        <img src="themes/debei/test/reduce_price/images/rp5_t1.jpg" style="width: 98%;" />
+                    </div>
+                    <div class="rp5_c1">
+                        <img src="themes/debei/test/reduce_price/images/rp5_c1.jpg" style="width: 98%;" />
+                    </div>
+                </div>
+                <div class="rp5_2">
+                    <div class="rp5_t2">
+                        <img src="themes/debei/test/reduce_price/images/rp5_t2.jpg" style="width: 98%;" />
+                    </div>
+                    <div class="rp5_c2">
+                        <img src="themes/debei/test/reduce_price/images/rp5_c2.jpg" style="width: 98%;" />
+                    </div>
+                </div>
+                <div class="rp5_3">
+                    <div class="rp5_t3">
+                        <img src="themes/debei/test/reduce_price/images/rp5_t3.jpg" style="width: 98%;" />
+                    </div>
+                    <div class="rp5_c3">
+                        <img src="themes/debei/test/reduce_price/images/rp5_c3.jpg" style="width: 98%;" />
+                    </div>
+                </div>
+                <div class="rp5_4">
+                    <div class="rp5_t4">
+                        <img src="themes/debei/test/reduce_price/images/rp5_t4.jpg" style="width: 98%;" />
+                    </div>
+                    <div class="rp5_c4">
+                        <img src="themes/debei/test/reduce_price/images/rp5_c4.jpg" style="width: 98%;" />
+                    </div>
+                </div>
+            </div>
+            <div class="rp5_b">
+                <img src="themes/debei/test/reduce_price/images/rp5_b.jpg" style="width: 100%;" />
+            </div>
+        </div>
+    </div>
+    
+
+ 
+
+
+  <footer>
+    <nav class="ect-nav"><!-- #BeginLibraryItem "/library/page_menu.lbi" --><!-- #EndLibraryItem --></nav>
+  </footer>
+</div>
+<!-- #BeginLibraryItem "/library/search.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/js_files.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript">
+get_asynclist("{:url('index/ajax_goods', array('type'=>'best'))}" , '__TPL__/images/loader.gif');
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --></body></html>

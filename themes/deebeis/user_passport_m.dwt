@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+<link rel="apple-touch-icon-precomposed" href="/icon_desktop.png">
+<link href="{$template_dir}/style_m/mobile.css" type="text/css" rel="stylesheet">
+{insert_scripts files='jquery.min.js,jquery.json.min.js'}
+{insert_scripts files='common.js,transport_z.js,utils.js'}
+</head>
+<body>
+<link href="{$template_dir}/style_m/base.css" type="text/css" rel="stylesheet">
+<link href="{$template_dir}/style_m/signInsignOut.css" type="text/css" rel="stylesheet">
+<!-- {if $action eq 'login'} --> 
+<!-- #BeginLibraryItem "/library/page_header_m.lbi" --><!-- #EndLibraryItem -->
+<div class="signIn">
+    <!-- s 专有头部 --> 
+    <!--<header>
+        <button onclick="javascript:window.location = '/">
+            <div class="icon_close"></div>
+        </button>
+        登录
+    </header>--> 
+    <!-- e 专有头部 --> 
+
+    <!-- s 登录主体 -->
+    <section class="signIn_main signIn_bg">
+        <form name="formLogin" id="formLogins" action="user.php" method="post">
+            <label class="cssBorder-box">
+                帐号：<input id="usrname" name="username" placeholder="用户名" type="text">
+            </label>
+            <label class="cssBorder-box"> 密码：
+                <input name="password" type="password">
+            </label>
+            <p class="cssBox signIn_btn">
+                <input class="icon_checked" type="checkbox" value="1" name="remember" id="remember" checked="checked" />
+                <span>{$lang.remember}</span>
+                <button type="submit" name="login">登录</button>
+            </p>
+            <p class="cssBox signIn_more">
+                <a class="box_flex_0" href="user.php?act=register">免费注册&gt;&gt;</a> 
+                <!--<a href="user.php?act=get_password">忘记密码？</a>-->
+            </p>
+            <input type="hidden" name="act" value="act_login" />
+            <input type="hidden" name="back_act" value="{$back_act}" />
+        </form>
+    </section>
+    <!-- e 登录主体 --> 
+    <!-- s 合作帐号登录 -->
+    <section class="signIn_coo">
+    <header>合作账号登录</header>
+    <ul class="coo_panel cssBox">
+        <li class="box_flex_1">
+        <a class="btn_qq" href="api/qq_m/deebei/oauth/"></a>
+        </li>
+        <li class="box_flex_1" style="display:none;">
+        <div class="btn_alipay" onclick="javascript:zfb();"></div>
+        </li>
+    </ul>
+    </section>
+    <!-- e 合作帐号登录 --> 
+</div>
+
+<!--{else}-->
+<div class="signUp">
+    <!-- s 头部 只有一个返回按钮 -->
+    <header class="header_withBackBtn">
+        <button onclick="javascript:window.location='/';">取消</button>注册
+    </header>
+    <!-- e 头部 只有一个返回按钮 -->
+    <!-- s 主体 邮箱注册（可被切换隐藏，默认为隐藏） -->
+    <section style="display: block;" class="byMail_main none">
+        <form id="loginForm_id" action="user.php" method="post" name="formUser">
+            <div class="step_1">
+                <label class="cssBox">
+                    <div class="box_flex_0">账号：</div>
+                    <div class="box_flex_1">
+                        <input id="registerUserId" name="username" class="cssBorder-box" placeholder="请输入用户名" type="text">
+                    </div>
+                </label>
+                <label class="cssBox">
+                    <div class="box_flex_0">邮箱：</div>
+                    <div class="box_flex_1">
+                        <input id="registerMallId" name="email" class="cssBorder-box" placeholder="请输入常用的邮箱地址" type="email">
+                    </div>
+                </label>
+                <label class="cssBox">
+                    <div class="box_flex_0">密码：</div>
+                    <div class="box_flex_1">
+                        <input pattern="[^\u4e00-\u9fa5]{6,20}" name="password" id="password_id" class="cssBorder-box" placeholder="6-20位字母、数字或符号组合" type="text">
+                    </div>
+                </label>
+                <!-- 判断是否启用验证码{if $enabled_captcha} -->
+                <div class="verification_code cssBox">
+                    <label class="cssBorder-box box_flex_0">
+                        <input name="captcha" placeholder="请输入验证码" pattern="[0-9A-z]*" autocapitalize="off" type="text">
+                    </label>
+                    <img src="captcha.php?{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?'+Math.random()" />
+                </div>
+                <!--{/if}-->
+                <p class="agreement cssBox" style="display:none;">
+                    <input name="agreement" type="checkbox" value="1" checked="checked" />
+                    <span>{$lang.agreement} </span>
+                </p>
+                <aside class="big_btn">
+                <!-- 下面的按钮通过去掉“disable”改变状态 -->
+                <button type="submit" id="btn_emailreg">注册</button>
+                </aside>
+            </div>
+            <input name="act" type="hidden" value="act_register" >
+            <input type="hidden" name="back_act" value="{$back_act}" />
+        </form>
+    <input id="emailRegister" value="" type="hidden">
+    </section>
+    <!-- e 主体 邮箱注册（可被切换隐藏，默认为隐藏） -->
+</div>
+<!--{/if}-->
+</body>
+</html>

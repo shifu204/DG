@@ -1,0 +1,3 @@
+<?php if(empty($this->_var['user_info']['username'])):?>
+<!--<a href="http://www.deebei.net/topic.php?topic_id=20" target="_blank"><div class="" style="float: left; padding: 5px;"><img src="themes/deebeis/images1/welcome.png"  style="vertical-align:middle"></div><span>所售商品均有平安保险承保</span></a>-->
+<?php endif;?>

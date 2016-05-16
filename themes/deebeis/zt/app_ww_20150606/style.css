@@ -1,0 +1,54 @@
+.wrapper{margin: 0; padding: 0; min-width: 1190px;}
+.header{height: 88px; width: 1000px;}
+.header .logo{height: 88px; float: left;}
+.header .nav{float: right;}
+.header .nav ul{margin-top: 30px;}
+.header .nav ul li{float: left; font-size: 20px; font-family: "微软雅黑"; color: #7b7b7b; height: 26px; line-height: 26px; border-right: 1px solid #7b7b7b; padding: 0 28px; cursor: pointer;}
+.header .nav ul li.nav-last{border-right: none; padding-right: 0px;}
+.header .nav ul li a{color: #7b7b7b;}
+.header .nav ul li.nav-red a{color: #fe5454;}
+.header .nav ul li.WeChat{position: relative;}
+.header .nav ul li img{position: absolute; top: 44px; left: -31px; display: none;}
+
+.download{background: url(images/download-bg.jpg)  repeat-x; height: 670px;}
+.download .rounded {-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; position:relative; behavior:url(/themes/deebeis/style/PIE.htc);}
+.download .btn{width: 168px; float: left;}
+.download .btn .down-btn{background: url(images/down-btn.png) no-repeat; width: 168px; height: 59px;}
+.download .btn .down-btn.Android{background-position: -30px -80px; margin-bottom: 40px;}
+.download .btn .down-btn.Android:hover{background-position: -233px -80px;}
+.download .btn .down-btn.iphone{background-position: -30px -179px;}
+.download .btn .down-btn.iphone:hover{background-position: -233px -179px;}
+/*.download .btn .down-btn{color: #ff8643; background: #fff; width: 168px; margin-bottom: 40px; text-align: center; cursor: pointer; height: 59px;}
+.download .btn .down-btn:hover{background: #ff6749; color: #fff;}
+.download .btn .system{font-size: 26px;  height: 59px; line-height: 59px; display: inline-block;}
+.download .btn .down-span{font-size: 18px; display: inline-block;}
+.download .btn .system{font-size: 26px;  height: 59px; line-height: 55px; position: relative; margin-right: 40px;}
+.download .btn .down-span{font-size: 18px; position: absolute; top: 0px; width: 36px; right: -32px; line-height: 37px;}*/
+.download .QR-Code{position: relative; width: 158px; height: 158px; background: #fff; margin-right: 92px; float: right;}
+.download .photograph-me{position: absolute; right: -44px; top: 0px; display: none;}
+
+.activity-list{padding-bottom: 75px;}
+.activity-list.w846{width: 846px;}
+/*.activity-list .list{background: url(images/activity-list-bg.jpg) no-repeat; height: 300px; padding: 40px 0px;}
+.activity-list .frist-list{background: #fff;}
+.activity-list .list .img{width: 300px; height: 300px; float: left; margin-left: 150px;}
+.activity-list .list .explain{ color: #474747; width: 590px; height: 220px; float: left; text-align: center; margin-right: 150px; margin-top: 10px;}
+.activity-list .list .explain .title{font-size: 50px;}
+.activity-list .list .explain .container{font-size: 32px;}*/
+
+
+.footer{margin: 0px; background: #e5e5e5; color: #9d9da6; text-align: center; overflow: hidden; padding-bottom: 58px; font-size: 14px;}
+.footer .footer-nav{width: 320px; margin-top: 65px;}
+.footer .footer-nav ul{}
+.footer .footer-nav ul li{float: left; padding:0px 29px; border-left: solid 1px #9d9da6; height: 14px; line-height: 14px; cursor: pointer;} 
+.footer .footer-nav ul .frist-list{border:none;}
+.footer .company{height: 14px; line-height: 14px; margin-top: 29px;}
+.footer .filing-number{margin-top: 20px;}
+.footer img{vertical-align: middle;}
+
+
+.advertisement-bg{filter:alpha(opacity:75); opacity:0.75; position: absolute; background: #000; z-index: 1;}
+.advertisement{position: absolute; text-align: center; margin: 0 auto; padding: 0px; z-index: 2}
+.advertisement-img{width: 700px; height: 600px; position: relative; top: 200px;}
+.advertisement-img .close{position: absolute; top: 22px; right: 141px; cursor:pointer; width: 29px; height: 29px;}
+.advertisement-img .btn{position: absolute; top: 462px; left: 182px; height: 52px; cursor: pointer;}

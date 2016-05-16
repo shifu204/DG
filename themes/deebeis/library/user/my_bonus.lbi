@@ -1,0 +1,82 @@
+<div class="bonus_box">
+    <h2 class="my_bonus">
+        <span>我的优惠劵</span>
+    </h2>
+    <div class="order-tag">
+        <ul class="clearfix">
+            <li class="{if $bonus_status eq 0}on{/if}" data-value="0"><span>未使用({$bonus_effective})</span></li>
+            <li class="{if $bonus_status eq 1}on{/if}" data-value="1"><span>已使用({$bonus_used})</span></li>
+            <li class="{if $bonus_status eq 2}on{/if}" data-value="2"><span>已过期({$bonus_overtime})</span></li>
+        </ul>
+    </div>
+    <div class="order-list">       
+        <table>           
+                <tr class="tr-title">
+                    <td width="11%">面值</td>
+                    <td width="17%">所需消费金额</td>
+                    <td width="17%">红包类型</td>
+                    <td width="21%">使用限制</td>
+                    <td width="25%">有效期</td>
+                    <td width="9%"></td>
+                </tr>
+            {if $bonus}
+                {foreach from=$bonus item=bonu}
+                <tr class="tr-bonus">
+                    <td class="tc td1">{$bonu.type_money}</td>
+                    <td class="tc">{$bonu.min_goods_amount}</td>
+                    <td class="tc td3"><span>{$bonu.type_name}</span></td>
+                    <td class="tc td4">最小订单金额：{$bonu.min_goods_amount}</td>
+                    <td class="tc td5">{$bonu.use_enddate}</td>
+                    <td class="tc td6"><a href="/" target="_blank">去购物></a></td>
+                </tr>
+                {/foreach}
+            {else}
+            <tr>
+                <td class="tc" colspan="5" style="height: 50px;">没有相关数据</td>
+            </tr>
+            {/if}
+        </table>      
+        <input type="hidden" value="{$page}" id="bonus_page" />
+    </div>
+    <div class="clearfix" style="height: 10px;"></div>
+    <!-- paging -->
+    {include file="library/ajax_pages.lbi" }
+    <!-- paging end -->
+    <div class="coupon-info" style="display: none;">
+        <h3>优惠券规则:</h3>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    {if $default_page == 'my_bonus'}
+        get_bonus_data();
+    {/if}
+    var order_tags = $(".order-tag").find("li");
+    $(order_tags).click(function(){
+        if($(this).hasClass("on")){
+            return;
+        }
+        $(order_tags).removeClass("on");
+        $(this).addClass("on");
+        get_bonus_data();
+    });
+});
+
+function get_bonus_data(page){
+    if(typeof(page) == 'undefined'){
+        page = 1;
+    }
+    var bonus_status = $(".order-tag").find("li[class='on']").attr("data-value");
+    $.ajax({
+        type:'get',
+        dataType:'json',
+        url:'user.php?act=ajax_get_bonus&bonus_status='+bonus_status+"&page="+page,
+        success:function(data){
+            $("#user_right_content").empty();
+            $("#user_right_content").append(data.content);
+        }
+    });
+}
+</script>

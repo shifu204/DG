@@ -1,0 +1,16 @@
+.state-wrapper{padding:21px 10px 40px 11px;}
+.state-wrapper .arrow{position: absolute; top: -10px; right: 50px;}
+.product_details{text-align: left; margin:0 auto;background: #FFF;}
+.state{background:#fffceb; margin-bottom:39px; border: solid 1px #eed97c; width:730px; }
+.state .state_title{height: 36px; line-height: 36px;}
+.state .state_title .information{float: left; width: 95px; height: 34px; background: #fff; color: #000; font-size: 16px; text-align: center;}
+.state .state_title .order_sn{float: left; width: 623px; height: 34px;  color: #7f7f7f; border-left: solid 1px #eed97c; border-bottom: solid 1px #eed97c; padding-left: 11px;}
+.state .state_title .order_sn span{color: #005ea7;}
+.state .state_title .order_sn .order-close{text-decoration:underline ; float: right; color: #005ea7; margin-right: 25px; cursor: pointer;}
+.state .logistics-wrapper{background: #fff;}
+.logistics-wrapper .logistics{padding: 5px 10px 20px 10px ;}
+.logistics-wrapper .logistics .logistics-title{border-bottom: solid 1px #dadada; height: 30px; line-height: 30px; padding-left: 6px;}
+.logistics-wrapper .logistics{}
+.logistics-wrapper .logistics .logistics-price{ border-top: solid 1px #dadada; padding-left: 6px;}
+.logistics-wrapper .logistics .logistics-price table{width:300px; text-align: left; margin-top: 15px;}
+.logistics-wrapper .logistics .logistics-price table tr{height: 25px; line-height: 25px;}

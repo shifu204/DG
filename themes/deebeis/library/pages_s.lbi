@@ -1,0 +1,12 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--翻页 start-->
+<form name="selectPageForm" action="{$smarty.server.PHP_SELF}" method="get">
+    <div class="page">
+        <p class="s_mar">
+            <!-- {if $pager.page_prev} --><a class="prev" href="{$pager.page_prev}">{$lang.page_prev}</a>{else}<span class="prev"><b></b>{$lang.page_prev}</span><!-- {/if} -->
+            <!-- {if $pager.page_next} --><a href="{$pager.page_next}" title="{$lang.page_next}" class="next"><b></b>{$lang.page_next}</a>{else}<span class="next"><b></b>{$lang.page_next}</span><!-- {/if} -->
+            <span class="num"><em class="pre_num red">{$pager.page}</em>/{$pager.record_count}</span>
+        </p>
+    </div>
+</form>
+<!--翻页 END-->

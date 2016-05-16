@@ -1,0 +1,35 @@
+<!--支付完成页面-->
+<?php if($this->_var['order']):?>
+<div class="order_list">  
+    <div class="done_order">
+        <div class="done_order_title">
+            <span class="green_hook"></span>
+            恭喜！您的订单已完成支付，我们立刻为您安排发货。
+        </div>
+        <div class="done_order_content">
+            <table style="font-size: 14px;">
+                <thead>
+                    <tr>
+                        <th>订单号码</th>
+                        <th>配送方式</th>
+                        <th>支付方式</th>
+                        <th>支付金额</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><?php echo $this->_var['order']['order_sn'];?></td>
+                        <td><?php echo $this->_var['order']['shipping_name'];?></td>
+                        <td><?php echo $this->_var['order']['pay_name'];?></td>
+                        <td><?php echo $this->_var['order']['formated_total_fee'];?></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<?php endif;?>
+<script type="text/javascript">
+
+</script>
+

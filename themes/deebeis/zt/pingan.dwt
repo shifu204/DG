@@ -1,0 +1,99 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/new_style.css" rel="stylesheet" type="text/css">
+<link href="{$theme_path}zt/pingan/pingan.css" rel="stylesheet" type="text/css">
+<div class="pingan">
+    <div class="poster"></div>
+    <div class="pingan_1">
+        <div class="pingan_1_t">
+            <img src="{$theme_path}zt/pingan/images/pingan_1_t.jpg"/>
+        </div>
+        <div class="pingan_1_c wm01190">
+            <img src="{$theme_path}zt/pingan/images/pingan_1_c.jpg"/>
+        </div>
+    </div>
+    <div class="pingan_2">
+        <div class="pingan_2_t">
+            <img src="{$theme_path}zt/pingan/images/pingan_2_t.jpg"/>
+        </div>
+        <div class="pingan_2_c wm01190">
+            <img src="{$theme_path}zt/pingan/images/pingan_2_c1.jpg"/>
+            <img src="{$theme_path}zt/pingan/images/pingan_2_c2.jpg"/>
+            <img src="{$theme_path}zt/pingan/images/pingan_2_c3.jpg"/>
+        </div>
+    </div>
+    <div class="pingan_3">
+        <div class="pingan_3_t">
+            <img src="{$theme_path}zt/pingan/images/pingan_3_t.jpg"/>
+        </div>
+        <div class="pingan_3_c wm01190">
+            <img src="{$theme_path}zt/pingan/images/pingan_3_c.jpg"/>
+        </div>
+    </div>
+    <div class="pingan_4">
+        <div class="pingan_4_t">
+            <img src="{$theme_path}zt/pingan/images/pingan_4_t.jpg"/>
+        </div>
+        <div class="contact wm01190">
+            <div class="contact_ul">
+                <ul class="clearfix">
+                    <li>
+                        <div>
+                            <img src="{$theme_path}zt/images/contact/tel.jpg"/>
+                            <img src="{$theme_path}zt/images/contact/tel_1.jpg"/>
+                            <img src="{$theme_path}zt/images/contact/tel_qq_2.jpg"/>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="{$theme_path}zt/images/contact/qq.jpg"/>
+                            <img src="{$theme_path}zt/images/contact/qq_1.jpg"/>
+                            <img src="{$theme_path}zt/images/contact/tel_qq_2.jpg"/>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="{$theme_path}zt/images/contact/wechat.jpg"/>
+                            <img src="{$theme_path}zt/images/contact/wechat_1.jpg"/>
+                            <img src="{$theme_path}zt/images/contact/wechat_2.jpg"/>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="{$theme_path}zt/images/contact/mobile.jpg"/>
+                            <img src="{$theme_path}zt/images/contact/mobile_1.jpg"/>
+                            <img src="{$theme_path}zt/images/contact/mobile_2.jpg"/>
+                        </div>
+                    </li>
+
+                </ul>
+                <img src="{$theme_path}zt/images/contact/bottom.jpg"/>
+
+            </div>
+        </div>
+    </div>
+    <div class="pingan_5">
+        <div class="pingan_5_t">
+            <img src="{$theme_path}zt/pingan/images/pingan_5_t.jpg"/>
+        </div>
+        <div class="characteristic wm01190">
+            <div class="characteristic_ul">
+                <ul class="clearfix">
+                    <li><a href="http://www.deebei.net/topic.php?topic_id=18"><img src="{$theme_path}zt/pingan/images/characteristic_ul_1.jpg" /></a></li>
+                    <li><a href="http://www.deebei.net/topic.php?topic_id=16"><img src="{$theme_path}zt/pingan/images/characteristic_ul_2.jpg" /></a></li>
+                    <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="{$theme_path}zt/pingan/images/characteristic_ul_3.jpg" /></a></li>
+                    <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="{$theme_path}zt/pingan/images/characteristic_ul_4.jpg" /></a></li>
+                    <li><a href="http://m.deebei.net/"><img src="{$theme_path}zt/pingan/images/characteristic_ul_5.jpg" /></a></li>
+                </ul>
+                <div class="characteristic_index">
+                    <a href="/">
+                        <img src="{$theme_path}zt/pingan/images/characteristic_index.png" />
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

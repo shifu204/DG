@@ -1,0 +1,38 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/new_style.css" rel="stylesheet" type="text/css">
+<link href="{$theme_path}zt/register20150413/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{$theme_path}js/category.js"></script>
+<div class="wrapper">
+    <div class="poster"></div>
+    <div class="container_coupon">
+        <div class="wm01190">
+            <div class="coupon">
+                <ul>
+                    <li><img src="{$theme_path}zt/register20150413/images/coupon_10.jpg"/></li>
+                    <li><img src="{$theme_path}zt/register20150413/images/coupon_30.jpg"/></li>
+                    <li><img src="{$theme_path}zt/register20150413/images/coupon_50.jpg"/></li>
+                    <li><img src="{$theme_path}zt/register20150413/images/coupon_70.jpg"/></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container_rule">
+        <div class="wm01190">
+            <div class="rule">
+                <div class="rule_span">
+                    1、无历史订单记录的新会员，注册即送160元红包，登陆我的德贝在&nbsp;“<span class="span_red">我的红包</span>”&nbsp;中查看；<br/>
+                    2、使用红包：在结算页面，点击选择相应的红包即可抵扣现金；<br/>
+                    3、一张订单<span class="span_red">只能使用一张</span>红包；<br/>
+                    4、使用红包的订单如发生取消、拒收或退货，红包自动反还到账号上。<br/>
+                    5、红包不能折现、不退换，过期作废，敬请谅解，活动最终解释权归德贝商城所有。<br/>
+                </div>
+                
+            </div>
+            <a href="javascript:user_login_dialog('register');"></a>
+        </div>
+    </div>
+    
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>﻿

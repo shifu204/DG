@@ -1,0 +1,83 @@
+<table>
+    <thead>
+        <tr>
+            <th>评论内容/晒单标题</th>
+            <th>回复/人气</th>
+            <th>奖励积分</th>
+            <th>返现金额</th>
+            <th>类型</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    {if $comments}
+    <tbody>
+        {foreach from=$comments item=item}
+            {if $item.msg_id}
+            <!-- 晒单 -->
+            <tr>
+                <td width="35%">{$item.shaidan.msg_title}</td>
+                <td>{$item.shaidan.replys_num}</td>
+                <td>{$item.shaidan.return_integral}</td>
+                <td>{$item.shaidan.return_amount}</td>
+                <td>{$item.type}</td>
+                <td>{$item.shaidan.status}</td>
+                <td class="table_operate">{if !$item.shaidan.msg_status}<a href="javascript:edit_comment({$item.comment_id},2);">修改</a>{/if}</td>
+            </tr>
+            <!-- 普通回复 -->
+            {else}
+            <tr width="40%">
+                <td>{$item.content}</td>
+                <td>{$item.replys_num}</td>
+                <td>0</td>
+                <td>0</td>
+                <td>{$item.type}</td>
+                <td>{$item.comment_status}</td>
+                <td class="table_operate">{if !$item.status}<a href="javascript:edit_comment({$item.comment_id},1);">修改</a>{/if}</td>
+            </tr>
+            {/if}
+        {/foreach}
+    </tbody>
+    {/if}
+</table>
+<input id="comment_page" type="hidden" value="{$page}" />
+{include file="library/ajax_pages.lbi"}
+<script type="text/javascript"> 
+function get_comment_data(page){
+    if(typeof(page) == 'undefined'){
+        page = 1;
+    }
+    var comment_keyword = $("#comment_keyword").val();
+    var comment_type = $("#comment_type").val();
+    var comment_status = $("#comment_status").val();
+    $.ajax({
+        type:'get',
+        dataType:'json',
+        url:'user.php?act=ajax_get_comment&comment_keyword='+comment_keyword+"&comment_type="+comment_type+"&comment_status="+comment_status+"&page="+page,
+        success:function(data){
+            $("#comment_list").empty();
+            $("#comment_list").append(data.content);
+        }
+    });
+}
+
+function edit_comment(comment_id,type){
+    $.ajax({
+        url:'user.php?act=ajax_edit_comment&comment_id='+comment_id,
+        dataType:'json',
+        type:'get',
+        success:function(data){
+            if(type == 2){
+                $("#edit_shaidan").remove();
+                $("body").append(data);
+                open_dialog("edit_shaidan");
+            } else if(type == 1) {
+                $("#edit_comment").remove();
+                $("body").append(data);
+                open_dialog("edit_comment");
+            }
+            
+        }
+    });
+}
+</script>

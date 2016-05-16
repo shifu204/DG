@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>购物车</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon-precomposed" href="http://image.yihaodianimg.com/mobile-website/images/website/screenLogo.png">
+<link href="{$template_dir}/style_m/mobile.css" type="text/css" rel="stylesheet">
+<link href="{$template_dir}/style_m/cart.css" type="text/css" rel="stylesheet">
+<script>var _hmt = _hmt || [];_hmt.push(['_setCustomVar', 5,  'visitor', 'visitor', 1]);</script>
+<style type="text/css">
+.deepRed {
+	color:#ff3c3c;
+}
+.promoprice {
+	position:absolute;
+	top:35%;
+	right:76px;
+	color:#ff3c3c;
+}
+</style>
+{insert_scripts files='common.js,shopping_flow.js'}
+{insert_scripts files='jquery.min.js,jquery.json.min.js'}
+{insert_scripts files='transport_z.js,utils.js'}
+</head>
+<body class="relative">
+<!-- ^^^ HEAD ^^^ -->
+    <header class="titleHead clearfix">
+        <div class="leftBtns">
+            <!--{if $step eq 'consignee' || $step eq 'checkout'}-->
+            <a class="goback" href="flow.php"></a>
+            <!--{elseif $step eq 'done'}-->
+            <a class="goback" href="/"></a>
+            <!--{else}-->
+            <a class="goback" href="javascript:void(0);" onclick="returnPrevPage('{$return_url}'); return false;"></a></div>
+            <!--{/if}-->
+        </div>
+        <h2>
+            <!--{if $step eq "consignee"}-->新增收货地址
+            <!--{elseif $step eq 'checkout'}-->确认订单
+            <button class="rightBtn cur submit_order" onclick="submitOrder()">提交订单</button>
+            <!--{elseif $step eq 'login'}-->登录 / 注册新用户
+            <!--{elseif $step eq 'done'}-->订单完成
+            <!--{else}-->购物车
+            <!--{/if}-->
+        </h2>
+    </header>
+<script type="text/javascript">
+function returnPrevPage(return_url){
+    if (return_url != 'null' && return_url != '') {
+        window.history.back(-1);
+    } else {
+        document.location = 'http://' + window.location.host;
+    }
+}
+function submitOrder() {
+    theForm.submit();
+}
+</script>
+<!-- vvv HEAD vvv -->
+
+<!-- ^^^ MAIN ^^^ -->
+    <!--{if $step eq 'cart'}-->
+    <!-- #BeginLibraryItem "/library/cart_list.lbi" --><!-- #EndLibraryItem -->
+    <!-- {/if} --> 
+
+    <!--{if $step eq "consignee"} --> 
+    <!-- 开始收货人信息填写界面 -->
+    {insert_scripts files='region.js,utils.js'} 
+    <!-- #BeginLibraryItem "/Library/consignee.lbi" --><!-- #EndLibraryItem -->
+    <!-- {/if} --> 
+
+    <!--{if $step eq 'select_gift'}-->
+
+    <div class="wrap proList goodsList">
+        <!--{foreach name=gift_list from=$gift_list item=goods}-->
+        <!-- {if $goods.goods_id} -->
+        <dl>
+            <dt>
+                <a href="{$goods.url}"><img class="lazy" src="{$goods.goods_thumb}" alt=""></a>
+            </dt>
+            <dd>
+                <a href="{$goods.url}">
+                    <h4>{$goods.goods_name}</h4>
+                    <p class="promTags">
+                        {if $goods.is_buy_five && $goods.is_preferential_five}<span class="gift icon_buy_five">买五 送一</span>
+                        {elseif $goods.is_buy_seven && $goods.is_preferential_seven}<span class="decre icon_buy_seven">买七送一</span>{/if}
+                    </p>
+                    <p class="price">
+                        <strong>免费</strong>
+                        <del>{$goods.market_price}</del>
+                    </p>
+                </a>
+                <a class="cartBtn" href="javascript:addToCart('{$goods.goods_id}', '', 1);">+</a>
+                <div class="ins">
+                    <p></p>
+                    <a href="javascript:commonStatistics('','buttonPosition','goshopping','');" class="goBuy">继续购物</a>
+                    <a href="javascript:commonStatistics('','buttonPosition','gotocart','/mw/cart');">去购物车结算</a>
+                </div>
+            </dd>
+        </dl>
+        <!--{/if}-->
+        <!-- {/foreach} -->
+    </div>
+    <!-- {/if} --> 
+
+    <!--{if $step eq "checkout"}-->
+    <!-- #BeginLibraryItem "/library/cart_checkout.lbi" --><!-- #EndLibraryItem -->
+    <!--{/if}--> 
+
+    <!-- {if $step eq "done"} --> 
+    <!-- #BeginLibraryItem "/library/cart_done.lbi" --><!-- #EndLibraryItem -->
+    <!-- {/if} --> 
+
+    <!-- {if $step eq "login"} --> 
+    <!-- #BeginLibraryItem "/library/cart_login.lbi" --><!-- #EndLibraryItem -->
+    <!-- {/if} --> 
+
+<!-- vvv HEAD vvv -->
+
+<!-- #BeginLibraryItem "/library/page_footer_m.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

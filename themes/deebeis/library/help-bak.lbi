@@ -1,0 +1,51 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <div class="Server">
+        <!--{if $helps}-->
+        <div class="block">
+        <div class="helpTitBg  clearfix">
+        <!-- {foreach from=$helps item=help_cat name=no} -->
+        <dl class="dl" <!--{if $smarty.foreach.no.index mod 7 eq 0}-->  style='border-left:0;'<!-- {/if} -->>
+        <dt><s><img src="../images/h{$smarty.foreach.no.iteration}.gif" /></s> <a href='{$help_cat.cat_id}' title="{$help_cat.cat_name}">{$help_cat.cat_name}</a></dt>
+        <dd> <!-- {foreach from=$help_cat.article item=item} -->
+        <a href="{$item.url}" title="{$item.title|escape:html}">{$item.short_title}</a>
+        <!-- {/foreach} --></dd>
+        </dl>
+        <!-- {/foreach} -->
+        </div>
+        </div>
+        <div class="blank"></div>
+        <!--{/if}-->
+        </div>
+ 
+        <div class="snHotGoods"><div class="footerHook"></div><div class="fWrap"><div class="goodImgs">
+        <a><img width="240" height="112" src="../images/b1.jpg"></a>
+        <a><img width="240" height="112" src="../images/b2.jpg"></a>
+        <a><img width="240" height="112" src="../images/b3.jpg"></a>
+        <a><img width="240" height="112" src="../images/b4.jpg"></a>
+        </div></div></div>
+
+        <div class="snSpecial"><div class="fWrap"><ul>
+        <li class="blink1"><a>&nbsp;</a></li>
+        <li class="blink2"><a>&nbsp;</a></li>
+        <li class="blink3"><a>&nbsp;</a></li>
+        </ul></div></div>
+
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div  id="bottomNav" class="block  box">
+ <div class="box_1">
+     <div class="links clearfix">
+    <strong>友情链接：</strong>
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<div class="blank"></div>
+<!--{/if}-->

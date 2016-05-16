@@ -1,0 +1,61 @@
+<div class="tryonebuy_goods">
+    <div class="goods_title">
+        您要试购的奶粉
+    </div>
+    <div class="goods_content clearfix">
+        <a href="goods.php?id={$goods.goods_id}" target="_blank">
+            <img class="f_l" src="{$goods.goods_thumb}" height="90" />
+            <div class="f_l" style="padding-left: 8px;">
+                <p style="font-size: 14px;font-weight: bold; overflow: hidden; height: 40px;">{$goods.goods_name}</p>
+                <p>德贝价：<font class="color8">{$goods.shop_price}</font></p>
+                <p>数量：1</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<table class="goodsadd" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><strong>收货人名：</strong>
+              <input name="consignee" type="text" style="width:120px;" value="" /> {$lang.require_field}</td>
+            <td><strong>联系电话：</strong><input name="tel" type="text" style="width:120px;" value="" /> {$lang.require_field}</td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>收货地址：</strong>
+            <select name="country" id="selCountries_{$sn}" onchange="region.changed(this, 1, 'selProvinces_{$sn}')">
+                      <option value="0">{$lang.please_select}{$name_of_region[0]}</option>
+                      {foreach from=$country_list item=country}
+                      <option value="{$country.region_id}" {if $consignee.country eq $country.region_id}selected{/if}>{$country.region_name}</option>
+                      {/foreach}
+                    </select>
+                    <select name="province" id="selProvinces_{$sn}" onchange="region.changed(this, 2, 'selCities_{$sn}')">
+                      <option value="0">{$lang.please_select}{$name_of_region[1]}</option>
+                      {foreach from=$province_list.$sn item=province}
+                      <option value="{$province.region_id}" {if $consignee.province eq $province.region_id}selected{/if}>{$province.region_name}</option>
+                      {/foreach}
+                    </select>
+                    <select name="city" id="selCities_{$sn}" onchange="region.changed(this, 3, 'selDistricts_{$sn}')">
+                      <option value="0">{$lang.please_select}{$name_of_region[2]}</option>
+                      {foreach from=$city_list.$sn item=city}
+                      <option value="{$city.region_id}" {if $consignee.city eq $city.region_id}selected{/if}>{$city.region_name}</option>
+                      {/foreach}
+                    </select>
+                    <select name="district" id="selDistricts_{$sn}" {if !$district_list.$sn}style="display:none"{/if}>
+                      <option value="0">{$lang.please_select}{$name_of_region[3]}</option>
+                      {foreach from=$district_list.$sn item=district}
+                      <option value="{$district.region_id}" {if $consignee.district eq $district.region_id}selected{/if}>{$district.region_name}</option>
+                      {/foreach}
+                    </select> {$lang.require_field}
+            </td>
+            </tr>
+          <tr>
+            <td colspan="2"><strong>街道地址：</strong>
+              <input name="address" type="text" style="width:390px;" value=""  /> {$lang.require_field}</td>
+            </tr>
+          <tr>
+            <td colspan="2"><strong>邮政编码：</strong>
+              <input name="zipcode" type="text" style="width:170px;" value="" /> 
+              请正确填写收货地址信息以确保您能收到货物
+              </td>
+            </tr>
+        </table>

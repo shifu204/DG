@@ -1,0 +1,19 @@
+<!--成功加入购物车 -->
+<div id="addToCart_success">
+    <div class="addToCart-wrap">
+        <a class="addToCart_close_cross" href="javascript:close_addToCart_success()"></a>
+        <div class="content clearfix">
+            <div class="clearfix">              
+                <span class="cart_green_hook "></span>
+                <span id="addToCart_content">
+                    购物车共&nbsp;<font id="cart_goods_num" class="color4">6</font>&nbsp;件商品&nbsp;&nbsp;&nbsp;&nbsp;合计：<font class="color4" id="cart_goods_amount"></font>
+                </span>
+            </div>
+            <div class="buttons clearfix">
+                <a class="go_to_pay_btn" href="flow.php?act=cart"></a>
+                <a class="go_on_buy_btn" href="javascript:close_addToCart_success()"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--成功加入购物车end -->

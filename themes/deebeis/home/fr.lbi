@@ -1,0 +1,29 @@
+<div class="snBrand">
+<h2>旗舰品牌 <a target="_blank" href="brand.php">更多品牌 &gt;</a></h2>
+<ol>
+<?php $this->_var['brand_list_this'] = kl3w_get_brands($this->_var['floor']['catid']);?>
+<!-- {if $brand_list_this} -->
+  <!-- {foreach from=$brand_list_this item=home_brand name="brand_foreach_a"} -->
+    {if $smarty.foreach.brand_foreach_a.index <= 6 && $home_brand.brand_logo}
+        <li{if $smarty.foreach.brand_foreach_a.index==0} class="on"{/if}><a target="_blank" href="{$home_brand.url}" title="{$home_brand.brand_name}"><img width="90" height="30" src="data/brandlogo/{$home_brand.brand_logo}" class="err-product"></a></li>
+    {/if}
+  <!-- {/foreach} -->
+<!-- {/if} -->                      
+</ol>
+<ul>
+<!-- {if $brand_list_this} -->
+<!-- {foreach from=$brand_list_this key=brand_id_for_goods item=home_brand_goods name="brand_foreach_b"} -->
+{if $smarty.foreach.brand_foreach_b.index <= 6 && $home_brand_goods.brand_logo}
+<?php $this->_var['brand_goods_this'] = array();$this->_var['brand_goods_this'] = kl3w_get_brands_goods($this->_var['home_brand_goods']['brand_id'],$this->_var['floor']['catid'],1);//?>
+<li>
+    <!-- {foreach from=$brand_goods_this item=goods} -->
+<a target="_blank" href="{$goods.url}"><img width="145" height="145" src="{$goods.goods_thumb}" class="err-product"></a>
+<p><a target="_blank" href="{$goods.url}" title="">{$goods.name}</a></p>
+<em class="snPrice">{if $goods.promote_price}<del style="color:#ccc">{$goods.shop_price}</del> {$goods.promote_price}{else}{$goods.shop_price}{/if}</em> 
+	<!-- {/foreach} -->
+</li>
+{/if}
+<!-- {/foreach} -->
+<!-- {/if} -->                      
+</ul>
+</div>

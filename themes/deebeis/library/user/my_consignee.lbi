@@ -1,0 +1,251 @@
+<h2 class="my-title">
+    <span>配送地址</span>
+</h2>
+<div class="m-right-box">
+    
+    <div class="address-list">
+        <div class="clearfix">
+            <span class="address-table"><a href="javascript:add_address();" class="right_content-rounded">新增收货地址</a></span>
+            <div class="address-tip">您已创建<span>{$add_num}</span>个收货地址，最多可创建<span>20</span>个</div>
+        </div>
+        <div class="address-table">
+            {foreach from=$addresses item=address}
+            <div id="address_{$address.address_id}">
+                <div class='address-details clearfix {if $user_info.address_id eq $address.address_id}red-border{/if}'>
+                    <div class="title">{$address.consignee}<span {if $user_info.address_id eq $address.address_id}style="display:inline-block;"{/if}>默认地址</span>
+                        <div class="address-close">
+                            <a href="javascript:del_address({$address.address_id});" class="addr_del" ><img src="{$theme_path}images1/user_clips_20150420/address-close.png"/></a>&nbsp;
+                        </div>
+                    </div>
+                    <div class="left">收货人：</div><div class="right"><span data-name="consignee">{$address.consignee}</span></div>
+                    <input id="address_province_{$address.address_id}" type="hidden" value="{$address.province}" />
+                    <input id="address_city_{$address.address_id}" type="hidden" value="{$address.city}" />
+                    <input id="address_district_{$address.address_id}" type="hidden" value="{$address.district}" />
+                    <div class="left">所在地区：</div><div class="right"><span data-name="consignee_info">{$address.consignee_info}</span></div>
+                    <div class="left">地址：</div><div class="right"><span data-name="address">{$address.address}</span></div>
+                    <div class="left">手机：</div><div class="right"><span data-name="mobile">{$address.mobile}</span></div>
+                    <div class="left">固定电话：</div><div class="right"><span data-name="tel">{$address.tel}</span></div>
+                    <div class="left">电子邮箱：</div><div class="right"></div>
+
+                    <div class="bottom">
+                        <a href="javascript:set_default({$address.address_id});" class='addr_default' {if $user_info.address_id eq $address.address_id}style="display:none;"{/if}>设为默认</a>
+                        <a href="javascript:edit_address({$address.address_id});" class="addr_edit">编辑</a>&nbsp;
+                    </div>
+                </div>
+            </div>
+            {/foreach}
+        </div>
+        
+        <!--浮动窗口-->
+        <div id="fullbg"></div>
+        <div id="my-profile-border" class="my-profile-opacity"> </div>
+        <div class="my-profile-bg">
+            <div class="top clearfix">
+                <div class="left">新收货地址</div>
+                <div class="right"><a href="javascript:closeBg();"><img src="{$theme_path}images1/user_clips_20150420/my-profile-close.jpg"/></a></div>
+            </div>
+            <div class="my-profile-frame">
+                <form id="my_profile_form">
+                    <div class="user-address">
+                        <div class="user-1">
+                            <font>*</font>收货人：&nbsp;<span class="err" id="errName"></span>
+                        </div>
+                        <div class="">
+                            <input id="my_profile_consignee" name="consignee" value="" type="text">
+                        </div>
+                        <div class="user-1"><font>*</font>所在地区：&nbsp;<span class="err"></span></div>
+                        <div id="my_profile_region">{include file="library/region.lbi"}</div>
+                        <div class="user-1">
+                            <font>*</font>地址：&nbsp;<span class="err" id="errAddress"></span><span class="err"></span>
+                        </div>
+                        <div class="">
+                            <input class="x-long" id="my_profile_address" name="address" value="" type="text">
+                        </div>
+                        <div class="user-1">
+                            <font>*</font>手机：&nbsp;<span class="err" id="errMobile"></span>固定电话：&nbsp;<span class="err"></span>
+                        </div>
+                        <div class="">
+                            <input value="" maxlength="11" name="mobile" id="my_profile_mobile" class="small" type="text"><span class="user-1">或</span><input id="my_profile_tel" class="small" name="tel" type="text">
+                        </div>
+                        <div class="user-1">
+                            <font></font>电子邮箱：&nbsp;<span class="err" id="errMail"></span><span class="err"></span>
+                        </div>
+                        <div class="">
+                            <input class="x-long" type="text">
+                        </div>
+                        <div class="" >
+                            <button id="addAddress" class="btn right_content-rounded" style="margin-right: 20px; " onclick="save_address();return false;">保存收货地址</button>
+                            <button id="editAddress" style="" class="btn" onclick="save_address();return false;">修改收货地址</button>
+                            <input name="address_id" id="address_id" value="" type="hidden">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+<script type="text/javascript">
+    function del_address(address_id){
+        var parent = $("#address_"+address_id);
+        $.getJSON("flow.php?act=delete_address&address_id="+address_id,function(data){
+                if(data == 1){
+                    $(parent).remove();
+                }else {
+                    return ;
+                }
+        });
+    }
+    
+    function edit_address(address_id){
+        var form = $("#my_profile_form");
+        var address = $("#address_"+address_id);
+        $(form).find("#my_profile_consignee").val($(address).find("span[data-name='consignee']").html());
+        $(form).find("#my_profile_address").val($(address).find("span[data-name='address']").html());
+        $(form).find("#my_profile_mobile").val($(address).find("span[data-name='mobile']").html());
+        $(form).find("#my_profile_tel").val($(address).find("span[data-name='tel']").html());
+        $(form).find("#address_id").val(address_id);
+        //获取区域信息
+        var province =$("#address_province_"+address_id).val();
+        var city = $("#address_city_"+address_id).val();
+        var district = $("#address_district_"+address_id).val();
+        $.ajax({
+            url:"region.php?act=get_region&id_pre=my_profile",
+            type:"post",
+            dataType:'json',
+            data:{province:province,city:city,district:district},
+            success:function(data){
+                $(form).find("#my_profile_region").html(data);
+            }
+        });
+        var bh = $("body").height();
+        var bw = $("body").width(); 
+        $("#fullbg").css({
+            height:bh,
+            width:bw, 
+            display:"block"
+        });
+        $("#my-profile-border,.my-profile-bg").show();
+        $(form).find("#editAddress").show();
+        $(form).find("#addAddress").hide();
+        $(form).show();     
+    }
+    
+    function save_address(){
+        var inputs = $("#my_profile_form input");
+        var selects = $("#my_profile_form select");
+        var eles = $.merge(inputs,selects);
+        var send = {};
+        var val = {};
+        var contact_method = 0;
+        var province = 0;
+        var city = 0;
+        var district = 0;
+        var submit = true;
+        $.each(eles,function(i,j){
+            var name = $(j).attr("name");          
+            val[name] = $(j).val(); 
+            if(name == 'consignee'){
+                var consignee = val[name];
+                var reg = /[\u4E00-\u9FA5\uF900-\uFA2D]/;
+                if(!reg.test(consignee)){
+                    $("#errName").html("收货人格式不正确");
+                    submit = false;
+                }else if(consignee.length < 2){
+                    $("#errName").html("收货人名称最少为2位");
+                    submit = false;
+                }             
+            }
+            if(name == 'address'){
+                var address = val[name];
+                if(address == ''){
+                    $("#errAddress").html("请填写收货人的详细地址");
+                    submit = false;
+                }
+            }
+            if(name == 'mobile'){
+                var mobile = val[name];
+                if(mobile == ''){                  
+                    contact_method = contact_method +1;
+                } else {
+                    var patrn = /^(13[0-9]|15[0-9]|18[0-9]|147|17[0-9])\d{8}$/;
+                    if (!patrn.exec(mobile)) {
+                        $("#errMobile").html("手机号码格式不正确");
+                        submit = false;
+                    }
+                }
+            }
+            if(name == 'tel'){
+                var tel = val[name];
+                if(tel == ''){
+                    contact_method = contact_method +1;
+                }
+            }           
+            if(name = 'province'){
+                province = val[name];
+            }
+            if(name = 'city'){
+                city = val[name];
+            }
+            if(name = 'district'){
+                district = val[name];
+            }
+        });
+        send[0] = val;
+        if(province == 0 || city == 0 || city == null ){
+            $("#errAddress").html("请选择收货人所在区域");
+            submit = false;
+        }
+        if(contact_method == 2){
+            $("#errMobile").html("请留下手机号码或者固话以方便联系");
+            submit = false;
+        }
+        if(submit){
+            $.ajax({
+                type:"post",
+                url:"flow.php?step=save_consignee&from=my_consignee",
+                dataType:'json',
+                data:{consignee_data:send},
+                success:function(data){
+                    if(data.error == 0){
+                        $("#user_right_content").empty();
+                        $("#user_right_content").append(data.addresses);
+                    }
+                }
+            });
+        }
+    }
+    
+    
+    function add_address(){      
+        var bh = $("body").height();
+        var bw = $("body").width(); 
+        $("#fullbg").css({
+            height:bh,
+            width:bw, 
+            display:"block"
+        });
+        $("#editAddress").hide();
+        $("#addAddress").show();
+        $("#my-profile-border,.my-profile-bg").show();
+    }
+    function closeBg(){
+        $("#fullbg,#my-profile-border,.my-profile-bg").hide();
+    }
+    
+    function set_default(address_id){
+        $.getJSON("flow.php?act=set_default_address&address_id="+address_id,function(data){
+           if(data == 1){
+               $("a[class='addr_default']").show();
+               $("#address_"+address_id).find("a[class='addr_default']").hide();
+               $(".address-details").removeClass("red-border");
+               $("#address_"+address_id).find(".address-details").addClass("red-border");
+               $(".address-details > .title").find("span").css("display","none");
+               $("#address_"+address_id).find(".address-details > .title").find("span").css("display","inline-block");
+           }else {
+               return ;
+           }
+       });
+    }
+</script>

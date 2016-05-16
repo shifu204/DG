@@ -1,0 +1,16 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="nav"><a href="/">首页</a><!--|<a href="/sort">分类</a>|<a href="/more" class="n_more">更多</a>--></div>
+<div class="version_select">
+	<span style="color:black">手机版</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="http://www.yihaodian.com/?from=wap">电脑版</a>
+</div>
+<div class="download_login">
+	<p class="login">
+        <a href="#top">回顶部</a>
+   	</p>
+</div>
+<div class="foot">
+	<p class="copyright">{$icp_number}</p>
+    <p class="copyright">Copyright © 佛山市德贝海外母婴商城</p>
+    <p class="copyright">All Rights Reserved</p>
+</div>

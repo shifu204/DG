@@ -1,0 +1,57 @@
+.filter-wrap {border-top: 1px solid  #E0E0E0;} 
+.filter-wrap .cate_nav_item {border-bottom:1px solid #E0E0E0; color: #444;}
+.filter-wrap .cate_nav_item .filter-table {width: 100%; height: 100%; border: none;}
+.filter-wrap .cate_nav_item .item-left  { width: 133px; background: #F8F8F8; text-align: center;}
+.filter-wrap .cate_nav_item .item-right { padding:4px 0;}
+.filter-wrap .cate_nav_item .nav_all {cursor: pointer;}
+.filter-wrap .cate_nav_item .item-right ul {position: relative; float: left; width: 965px;}
+.filter-wrap .cate_nav_item .item-right ul li {float:left; width: 14.2%; height: 25px; line-height: 25px; overflow: hidden;}
+.filter-wrap .cate_nav_item .item-right .brand-list li { height: 50px; cursor: pointer; text-align: center; line-height: inherit;}
+.filter-wrap .cate_nav_item .item-right .brand-list li .brand-logo img{ width: 68px; height: 30px;}
+.filter-wrap .cate_nav_item .item-right ul li a, .filter-wrap .cate_nav_item .nav_all a { padding:1px 5px; cursor: pointer;}
+
+.filter-wrap .cate_nav_item .item-right ul .selected a,
+.filter-wrap .cate_nav_item .item-right ul li a:hover,
+.filter-wrap .cate_nav_item .nav_all a:hover , 
+.filter-wrap .cate_nav_item .nav_all_selected a { background:#DF1322; color:#FFF;}
+
+.filter-wrap .cate_nav_item .nav_all { float: left; width: 90px; text-align: center; padding-top: 4px;}
+.filter-wrap .cate_nav_item .item-right ul li.disabled a { color:#E0E0E0;}
+.filter-wrap .cate_nav_item .item-right ul li.disabled a:hover{color:#E0E0E0;background:#FFF; }
+.filter-wrap .cate_nav_item .item-right .more { width: 100px; margin-left: 412px; cursor: pointer; text-indent: 20px; z-index: -1;}
+.filter-wrap .cate_nav_item .item-right .more .icon-arrow {display: inline-block; width: 9px; height: 5px; background: url(/themes/deebeis/images1/category_bg_icons.png) no-repeat; margin-left: 8px; vertical-align: middle;}
+.filter-wrap .cate_nav_item .item-right .more .icon-arrow-up {background-position: -20px -20px;}
+.filter-wrap .cate_nav_item .item-right .more .icon-arrow-down {background-position: 0 -20px;}
+.filter-bar { width: 1188px; border:1px solid #E0E0E0; height: 36px; background: #F8F8F8; margin-top: 20px;}
+.filter-bar a {cursor: pointer;display: block; height: 36px; line-height: 36px;  float: left; }
+.filter-bar .sure-btn {border: 1px solid #E0E0E0; background: #FFF; padding:0px 5px; cursor: pointer; margin-left: 3px; height: 20px;}
+.filter-bar .sort-order, .filter-bar .goods-price {padding: 0 18px; border-right: 1px solid #E0E0E0;}
+.filter-bar .selected-order {color:#FFF; background: #DF1322;}
+.filter-bar .sort-order span.arrow-down,.filter-bar .sort-order span.arrow-up {display: inline-block; width: 9px; height: 9px; margin-left:5px; background: url(/themes/deebeis/images1/category_bg_icons.png) no-repeat; }
+.filter-bar .sort-order span.arrow-down {background-position: 0 0;}
+.filter-bar .sort-order span.arrow-up {background-position: -40px 0;}
+.filter-bar .selected-order span.arrow-down {background-position: -20px 0;}
+.filter-bar .selected-order span.arrow-up {background-position: -60px 0;}
+
+.filter-bar .goods-price .price-input { width: 45px; height: 18px; border: 1px solid #E0E0E0; padding-left: 15px; background:#FFF url(/themes/deebeis/images1/category_bg_icons.png) -80px 0 no-repeat}
+.filter-bar .label-area {padding-left: 22px; border-right: 1px solid #E0E0E0; width: 480px;}
+.filter-bar .label-area .filter-label { border: none; margin-right: 22px;}
+.filter-bar .page-area {float: right; width: 80px; border-left: 1px solid #E0E0E0; line-height: 36px; text-align: center;}
+.filter-bar .page-area label { display:  inline-block; background: url(/themes/deebeis/images1/category_bg_icons.png) no-repeat; width: 6px; height: 9px; cursor: pointer; margin:0 3px;}
+.filter-bar .page-area label.pre-page {background-position: -40px -20px;}
+.filter-bar .page-area label.next-page {background-position: -80px -20px;}
+.filter-bar .page-area .disabled label.pre-page {background-position: -60px -20px;}
+.filter-bar .page-area .disabled label.next-page {background-position: -100px -20px;}
+
+.rounded {-moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; position:relative; behavior:url(/themes/deebeis/style/PIE.htc);}
+.goods_box{ padding: 5px 0px 20px 19px;}
+.category_good{border: solid 1px #FFF; border-bottom:solid 2px #FFF; width: 270px; float: left; margin-right: 15px; margin-bottom: 10px; background: #FFF; padding:2px;cursor: pointer; position: relative;}
+.category_good a {display: block;}
+.category_good img { height: 270px; margin:0 auto;}
+.category_good .simple-description{position: absolute; width: 260px; margin-left: 5px; height: 32px; top: 230px; line-height: 32px; text-align: center; color: #fff; display: none; cursor: pointer;}
+.category_good .simple-description-bg{filter:alpha(opacity:60);opacity:0.6; background: #000;}
+.goodsName {text-align: center; overflow: hidden; font-size: 13px; height: 35px; line-height: 18px; background: none repeat scroll 0% 0% #FFF; padding: 0px 20px;}
+.goodsPrice { height: 40px; line-height: 40px; font-size: 20px; color: #DF1322; background: none repeat scroll 0% 0% #FFF; text-align: left; padding-left: 32px;}
+.goods_box .hover{border:1px solid #E0E0E0; border-bottom: 2px solid #DF1322;}
+
+.left-side-buoy {display: block;}

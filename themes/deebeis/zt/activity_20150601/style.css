@@ -1,0 +1,39 @@
+.wrapper{min-width: 1190px;}
+.poster{background: url(images/poster.jpg) center no-repeat; height: 629px;}
+.coupon-wrapper{background: url(images/coupon.jpg) center no-repeat; height: 215px;}
+.coupon-wrapper .coupon-img{margin: 0px 7px;}
+.gift-wrapper{background: url(images/gift-wrapper.jpg) center no-repeat; height: 1070px;}
+.f1-wrapper{background: url(images/1f-wrapper.jpg) center no-repeat; height: 1400px;}
+.f1-wrapper .f1{background: url(images/1f.jpg) center no-repeat; height: 1400px;}
+.f1-wrapper .goods-box{margin-top: 260px;}
+.f1-wrapper .more{margin-top: 47px;}
+.f1 .hover{background: url(images/1f-hover.png) center no-repeat; width:237px; height: 281px; position: absolute; top: -1px; left: 0px;} 
+
+.f2-wrapper{background: url(images/2f-wrapper.jpg) center no-repeat; height: 1370px;}
+.f2-wrapper .f2{background: url(images/2f.jpg) center no-repeat; height: 1370px;}
+.f2-wrapper .goods-box{margin-top: 240px;}
+
+.f3-wrapper{background: url(images/3f-wrapper.jpg) center no-repeat; height: 1360px;}
+.f3-wrapper .f3{background: url(images/3f.jpg) center no-repeat; height: 1360px;}
+.f3-wrapper .goods-box{margin-top: 240px;}
+
+.f4-wrapper{background: url(images/4f-wrapper.jpg) center no-repeat; height: 1370px;}
+.f4-wrapper .f4{background: url(images/4f.jpg) center no-repeat; height: 1370px;}
+.f4-wrapper .goods-box{margin-top: 240px;}
+
+.f5-wrapper{background: url(images/5f-wrapper.jpg) center no-repeat; height: 1419px;}
+.f5-wrapper .f5{background: url(images/5f.jpg) center no-repeat; height: 1419px;}
+.f5-wrapper .goods-box{margin-top: 240px;}
+
+.safety{background: url(images/safety.jpg) center no-repeat; height: 502px;}
+.trait{background: url(images/trait.jpg) center no-repeat; height: 636px;}
+.service{background: #f56388; padding-bottom: 300px; margin-bottom: -100px; *margin-bottom: 0px;}
+.service .service-ul{width: 1065px;}
+.service .service-ul li{float: left; width: 203px; height: 166px; margin: 0 5px;}
+
+.gboxWrap{width: 1020px; overflow: hidden; padding-bottom: 35px;}
+.goods-box{height: 912px;}
+.goodbox{margin: 23px 2px 0px 13px; cursor: pointer; position: relative;}
+.more{text-align: center; margin-top: 35px;}
+.f2 .hover,.f3 .hover,.f4 .hover,.f5 .hover{background: url(images/hover.png) center no-repeat; width:237px; height: 281px; position: absolute; top: -1px; *top: 0px; left: 0px;}
+

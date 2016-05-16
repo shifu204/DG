@@ -1,0 +1,121 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="/js/artdialog/dialog-min.js"></script>
+<script type="text/javascript" src="/js/artdialog/dialog-plus.js"></script>
+<link rel="stylesheet" type="text/css" href="/js/artdialog/css/ui-dialog.css" />
+<script type="text/javascript" src="/js/payment.js"></script>
+
+<!--{if $mobile_templete}-->
+    <h6 style="text-align:center; height:30px; line-height:30px;">{$lang.remember_order_number}: <font style="color:red">{$order.order_sn}</font></h6>
+    <table class="tableBox" style="border:1px solid #ddd; margin:20px auto;" >
+        <tr>
+            <td><!--{if $order.shipping_name}-->{$lang.select_shipping}: <strong>{$order.shipping_name}</strong>，<!--{/if}-->{$lang.select_payment}: <strong>{$order.pay_name}</strong>。{$lang.order_amount}: <strong>{$total.amount_formated}</strong></td>
+        </tr>
+        <tr>
+            <td>{$order.pay_desc}</td>
+        </tr>
+        <!-- {if $pay_online} --> 
+        <!-- 如果是线上支付则显示支付按钮 -->
+        <tr>
+            <td>{$pay_online}</td>
+        </tr>
+        <!-- {/if} -->
+    </table>
+<!--{else}-->
+<div id="order_submit_success">
+    <!-- 订单提交成功 -->
+    <div class="order_list">
+        <?php if($this->_var['order']):?>
+        <div class="done_order">
+            <div class="done_order_title clearfix">
+                <div class="done_order_title_left">
+                    <span class="green_hook"></span>
+                    <?php if($this->_var['order']['pay_code'] != 'cod'):?>
+                    <div class="done_order_title_left_1">恭喜！订单提交成功，请尽快完成支付</div>
+                    <div class="done_order_title_left_2">请您在<span class="span_red">72小时内</span>完成支付，否则订单自动取消</div>
+                    <?php else:?>
+                    <div class="done_order_title_left_1">恭喜！订单提交成功，我们将尽快为您核对订单信息后安排发货！</div>
+                    <div class="done_order_title_left_2">快递会上门派送，请留意快递跟踪记录，备好货款或订单留意使用POS机支付，并保持电话畅通状态。</div>
+                    <?php endif;?>
+                </div>
+            </div>
+            <div class="done_order_content">
+                <div class="order_sn">
+                    <span class="span_red">订单号：</span><?php echo $this->_var['order']['order_sn'];?>
+                </div>
+                <table style="font-size: 14px;">
+                    <thead>
+                        <tr>
+                            <th>商品</th>
+                            <th>配送方式</th>
+                            <th>支付方式<span class="span_red"></span></th>
+                            <th>支付金额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td  class="c-goods">                                                             
+                                <?php foreach($this->_var['goods_list'] as $goods):?>
+                                <div class="clearfix" style="width: 272px;">
+                                    <div class="c-goodsimg">     
+                                        <img src="<?php echo $goods['goods_thumb'];?>" title="<?php echo $goods['goods_name'];?>" border="0" />
+                                    </div>                                                        
+                                    <div class="c-goodsname">
+                                        <a href="goods.php?id=<?php echo $goods['goods_id'];?>" target="_blank" class="f6"><?php echo $goods['goods_name'];?></a>
+                                    </div>
+                                </div>
+                                <?php endforeach;?>     
+                            </td>
+                            <td><?php echo $this->_var['order']['shipping_name'];?></td>
+                            <td><?php if(!empty($this->_var['order']['pay_logo'])):?>
+                                <img title="<?php echo $this->_var['order']['pay_name'];?>" src="<?php echo $this->_var['order']['pay_logo'];?>" class="pay-logo" style="width: 50px;" />                               
+                                <?php endif;?>
+                                <?php echo $this->_var['order']['pay_name'];?>
+                            </td>
+                            <td><?php echo $this->_var['total']['amount_formated'];?></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <?php if($this->_var['order']['pay_code'] == 'chinabank'):?>
+            <?php echo str_replace('立即支付', '', $this->_var['pay_online']);?>
+            <?php elseif($this->_var['order']['pay_code'] == 'weixin'):?>
+            <a class="pay_order_btn" href="javascript:weixin_pay('<?php echo $this->_var['order']['order_sn'];?>', '<?php echo $this->_var['total']['amount_formated'];?>')" ></a>
+            <?php elseif($this->_var['order']['pay_code'] != 'cod'):?>
+            <a id="pay_order_button" class="pay_order_btn" href="<?php echo $this->_var['pay_online'];?>" target="_blank"></a>
+            <?php endif;?>
+        </div>
+        <div class="orderBlank"></div>
+        <?php endif;?>
+    </div>
+</div>
+<input id="order_sn" type="hidden" value="<?php echo $this->_var['order']['order_sn'];?>" />
+<iframe src="statistics.php?act=cart_done" style="display: none;"></iframe>
+<script type="text/javascript">
+$("#pay_order_button").addClass("pay_order_btn");
+function get_order_data(){
+    //微信支付完成后显示的页面
+    var order_sn = $("#order_sn").val();
+    $.ajax({
+        type:"post",
+        data:{order_sn:order_sn},
+        url:"flow.php?step=pay_success&is_ajax=1",
+        dataType:'json',
+        success:function(data){
+            if(data.err == 0 ){
+                //if(data.redict_url != ''){
+                //    window.location.href = data.redict_url;
+                //} else {
+                $("#order_submit_success").html(data.content);
+            } else {
+                alert("支付遇到了问题。");
+            }
+        }
+    });
+};
+
+<?php if($this->_var['order']['pay_code'] != 'weixin'):?>
+    query_order = true;
+    query_order_pay('<?php echo $this->_var['order']['order_sn'];?>');
+<?php endif;?>
+</script>
+<!--{/if}-->

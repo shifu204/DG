@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^images/(.*)\.(jpg)$ http://www.deebei.net/images/$1.$2 [NC]
+
+RewriteCond %{QUERY_STRING} ^code=(.*)$
+RewriteRule ^qqlogin(.*)$ /?c=user&a=third_login&type=qq&code=%1 [NC]
+</IfModule>

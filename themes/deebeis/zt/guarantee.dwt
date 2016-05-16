@@ -1,0 +1,167 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link rel="stylesheet" type="text/css" href="{$theme_path}zt/guarantee/guarantee.css" />
+<script type='text/javascript' src='/js/common.js'></script>
+<div class="" style="min-width: 1190px; padding-bottom: 60px;">
+    <div class="dunpai"></div>
+    <div class="w1190 navIcons clearfix">
+        <ul>
+            <li><a href="javascript:jump_position('nav1')" class="icon1"></a></li>
+            <li><a href="javascript:jump_position('nav2')" class="icon2"></a></li>
+            <li><a href="javascript:jump_position('nav3')" class="icon3"></a></li>
+            <li><a href="javascript:jump_position('nav4')" class="icon4"></a></li>
+            <li><a href="javascript:jump_position('nav5')" class="icon5"></a></li>
+            <li><a href="javascript:jump_position('nav7')" class="icon6"></a></li>
+            <li><a href="javascript:jump_position('nav8')" class="icon7"></a></li>
+        </ul>
+    </div>
+
+    <div class="floor clearfix floor1" id="nav1">
+        <div class="floorwrap floorwrap1">
+        </div>
+        <div class="floor1 content1"></div>
+        <div class="floor1 content2"></div>
+    </div>
+
+    <div class="floor clearfix floor2" id="nav2">
+        <div class="floorwrap floorwrap2">
+        </div>
+        <div class="floor2 content1"></div>
+        <div class="floor2 content2"></div>
+    </div>
+
+    <div class="floor clearfix floor3" id="nav3">
+        <div class="floorwrap floorwrap3">
+        </div>
+        <div class="floor3 content1"></div>
+        <div class="floor3 content2"></div>
+        <div class="floor3 content3"></div>
+        <div class="floor3 content4"></div>
+    </div>
+
+    <div class="floor clearfix floor4" id="nav4">
+        <div class="floorwrap floorwrap4">
+        </div>
+        <div class="floor4 content1"></div>
+        <div class="floor4 content2"></div>
+        <div class="floor4 content3"></div>
+    </div>
+
+    <div class="floor clearfix floor5" id="nav5">
+        <div class="floorwrap floorwrap5">
+        </div>
+        <div class="floor5 content1"></div>
+        <div class="floor5 content2"></div>
+    </div>
+
+    <div class="floor clearfix floor6" id="nav6">
+        <div class="floorwrap floorwrap6">
+        </div>
+        <div class="floor6 content1"></div>
+        <div class="floor6 content2"></div>
+    </div>
+
+    <div class="floor clearfix floor7" id="nav7">
+        <div class="floorwrap floorwrap7">
+        </div>
+        <div class="floor7 content1"></div>
+        <div class="floor7 content2"></div>
+    </div>
+
+    <div class="floor clearfix floor8" id="nav8" style="margin-bottom: 20px">
+        <div class="floorwrap floorwrap8">
+        </div>
+        <div class="floor8 content1"></div>
+        <?php if( !empty($this->_var['sort_goods_arr'])):?>
+        <?php foreach($this->_var['sort_goods_arr'] as $out=>$inner):?>
+        <div class="floor8 content2 clearfix">
+            <?php foreach($inner as $gk=>$goods):?>
+            <a class="goods_item" href="goods.php?id=<?php echo $goods['goods_id']?>" target="_blank" title="<?php echo $goods['goods_name'];?>">
+                <img src="<?php echo $goods['goods_img'];?>" alt="<?php echo $goods['goods_name'];?>"/>
+            </a>
+            <?php endforeach;?>
+        </div>
+        <?php endforeach;?>
+        <?php endif;?>
+        <div class="floor8 content3">
+
+        </div>
+    </div>
+    <div class="navIcons1 clearfix">
+        <ul>
+            <li><a href="javascript:jump_position('nav1')"><img src="{$theme_path}zt/guarantee/icon-gray-1.png" class="imgicon"/></a></li>
+            <li><a href="javascript:jump_position('nav2')"><img src="{$theme_path}zt/guarantee/icon-gray-2.png" class="imgicon"/></a></li>
+            <li><a href="javascript:jump_position('nav3')"><img src="{$theme_path}zt/guarantee/icon-gray-3.png" class="imgicon"/></a></li>
+            <li><a href="javascript:jump_position('nav4')"><img src="{$theme_path}zt/guarantee/icon-gray-4.png" class="imgicon"/></a></li>
+            <li><a href="javascript:jump_position('nav5')"><img src="{$theme_path}zt/guarantee/icon-gray-5.png" class="imgicon"/></a></li>
+            <li><a href="javascript:jump_position('nav7')"><img src="{$theme_path}zt/guarantee/icon-gray-6.png" class="imgicon"/></a></li>
+            <li><a href="javascript:jump_position('nav8')"><img src="{$theme_path}zt/guarantee/icon-gray-7.png" class="imgicon"/></a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript"> 
+		window.onscroll=function(){ 
+			if ($(document).scrollTop() > 900){ 
+			$(".navIcons1").show();
+			$(".navIcons1").addClass('position'); 
+			}else{  
+			$(".navIcons1").hide();
+			$(".navIcons1").removeClass('position');
+			}
+			var b=$(".imgicon");
+			$.each(b,function(key,value){
+				$(this).bind({
+					mouseenter:function(){
+						   
+						$.each(b,function(key,value){
+							$(b[key]).attr("src","{$theme_path}zt/guarantee/icon-gray-"+(key+1)+".png");
+						});
+						$(this).attr("src","{$theme_path}zt/guarantee/icon-red-"+(key+1)+".png");
+					},
+					mouseleave:function(){
+						   
+						ll();
+					}
+				});
+			});
+		}
+		
+		 $(function(){ 
+			  $(window).scroll(function(){     
+				  ll();
+			  }); 
+         });
+		 
+		 function ee(i){
+			var b=$(".imgicon");
+			//var e=arguments.callee.caller.arguments[0]||event;
+			$.each(b,function(key,value){
+				$(b[key]).attr("src","{$theme_path}zt/guarantee/icon-gray-"+(key+1)+".png");
+				
+			});
+			$(b[i]).attr("src","{$theme_path}zt/guarantee/icon-red-"+(i+1)+".png");
+			//e.stopPropagation();
+		};
+		
+		function ll(){
+			var bodyTop = document.documentElement.scrollTop + document.body.scrollTop;			
+			if(bodyTop < 1720-400 && bodyTop >= 947){
+				ee(0);
+			}else if(bodyTop < 2913-400 && bodyTop >= 1720-400){
+				ee(1); 
+			}else if(bodyTop < 4998-400 && bodyTop >= 2913-400){
+				ee(2); 
+			}else if(bodyTop < 6496-400 && bodyTop >= 4998-400){
+				ee(3); 
+			}else if(bodyTop < 8141-400 && bodyTop >= 6496-400){
+				ee(4);
+			}else if(bodyTop < 9131-400 && bodyTop >= 8141-400){
+				ee(5);	 
+			}else if( bodyTop >= 9131-400){
+				ee(6);
+			}
+		}
+		
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+    </body>
+</html>

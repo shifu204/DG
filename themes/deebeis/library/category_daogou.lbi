@@ -1,0 +1,55 @@
+<!--导购层开始-->
+<div class="daogou_cat">
+    <div class="w1190 clearfix daogouwrap"> 
+        <ul>
+            <li class="li1
+                <?php
+                    if(empty($this->_var['filt']['id'][1])){
+                        echo "li1hover";
+                    }
+                ?>
+                "><a >全部</a></li>
+            <?php $i = 1;?>
+            <?php foreach($this->_var['cat_nav']['powderAge'] as $ck=>$cv):?>
+                <li class="li<?php 
+                echo $i+1;
+                if($this->_var['filt']['id'][1] == $cv['id']){
+                    echo " li".($i+1)."hover";
+                }
+                ?>" data-value="<?php echo $cv['id'];?>"><a><?php echo $cv['name'];?></a></li>
+            <?php $i++?>
+            <?php endforeach;?>
+        </ul>
+    </div>
+</div>
+<!--导购层结束-->
+
+<script type="text/javascript">
+    $(document).ready(function(){
+       // alert($(document).scrollTop());
+       // alert($(".goods_box").position().top);
+        $(window).scroll(function(){
+            var winPos = $(window).scrollTop();
+            var boxPos = $(".goods_box").position().top;
+            if(winPos > boxPos) {
+                $(".daogou_cat").addClass("daogou-start");
+            } else if(winPos <= boxPos){
+                $(".daogou_cat").removeClass("daogou-start");
+            }
+        });
+        $(".daogou_cat li").bind("click",function(event){
+            event.preventDefault();
+            var num = $(this).prevAll().length;
+            set_daogou(num);
+            set_daogouBig(num);
+            var data_value = $(this).attr("data-value");
+            set_age(data_value);
+            getData();
+        });
+        
+        $(".daogou_cat li").hover(function(){
+            var num = $(this).prevAll().length;
+            set_daogou(num);
+        });
+    });
+</script>

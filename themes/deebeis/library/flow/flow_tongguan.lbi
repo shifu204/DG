@@ -1,0 +1,36 @@
+<!-- 通关资料 -->
+<!--{if $tongguan}-->
+<div id="step-8" class="step step-complete clearfix">
+    <h6></h6>
+    <div class="step-title">
+        <div id="save-consignee-tip" class="step-right"> </div>
+        <strong>通关资料</strong> <span class="step-action" id="consignee_edit_action"></span>
+    </div>
+    <div class="step-content">
+        <div class="sbox-wrap">
+            <div class="sbox">
+                <div class="s-content">
+                    <div>
+                        <div class="info_form">
+                            <div class="row">
+                               <span class="label"> <em>*</em>身份证真实姓名：</span>
+                                <div class="field"><input type="text" name="true_name" id="true_name" /></div>
+                            </div>
+                            <div class="row">
+                               <span class="label"> <em>*</em>身份证号码：</span>
+                                <div class="field"><input type="text" name="id_num" id="id_num" /></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explain">
+                        亲爱的用户，根据海关规定，保税区内跨国直邮商品需要提交收货人本人的身份证号码，为了避免影响您正常收货，<br/>
+                        收货人姓名和身份证号码要同身份证保持一致，请认真填写哦。
+                    </div>
+                    <div class="save_consignee_btn"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--{/if}-->
+<!-- / 通关资料 --> 

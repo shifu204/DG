@@ -1,0 +1,26 @@
+<!-- 支付方式 --> 
+<div id="step-3" class="step step-complete clearfix">
+    <div class="step-title"> <strong><?php echo $this->_var['lang']['payment_method'];?></strong> </div>
+    <div class="pay_method clearfix">
+        <?php if(!empty($this->_var['payment_list'])):?>
+        <?php foreach ($this->_var['payment_list'] as $pk=>$pv):?>
+        <div class="pay_field pay_name <?php if($this->_var['cod_disabled'] && $pv['pay_code'] == 'cod'):?>disabled<?php endif;?> <?php if($this->_var['order']['pay_id'] == $pv['pay_id']):?>method-selected<?php endif;?>">
+            <input type="radio" class="hookbox" name="payment" <?php if($this->_var['cod_disabled'] && $pv['is_cod'] == 1):?>disabled="disabled"<?php endif;?> <?php if($this->_var['order']['pay_id'] == $pv['pay_id']):?> checked="checked" <?php endif;?> data-id="<?php echo $pv['pay_id'];?>" is_cod ="<?php echo $pv['is_cod'];?>" value="<?php echo $pv['pay_id'];?>" style="display:none;"/>
+            <?php if(!empty($pv['pay_logo'])):?>
+            <!--<img src="<?php echo $pv['pay_logo']?>" class="pay-logo"/>-->
+            <?php endif;?>
+            <?php echo $pv['pay_name']?>
+        </div>
+        <?php endforeach;?>
+        <?php endif;?>
+    </div>
+</div>
+<!-- / 支付方式 --> 
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".method").click(function(){
+           $(".method").removeClass("method-selected");
+           $(this).addClass("method-selected");
+       }); 
+    });
+</script>

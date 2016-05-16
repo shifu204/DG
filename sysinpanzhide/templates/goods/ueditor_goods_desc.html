@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    {insert_scripts files="../js/jquery.min.js"}
+    {insert_scripts files="../js/ueditor/ueditor.config.js,../js/ueditor/ueditor.all.min.js,../js/ueditor/lang/zh-cn/zh-cn.js"}
+    <style type="text/css">
+        div{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+<div>
+    {$ueditor}
+</div>
+<div style="text-align: center; padding-top: 20px;">
+    <input type="button" value="提交" id="submit" />
+    <input type="button" value="关闭" id="close" />
+</div>
+</body>
+<script type="text/javascript">
+$(document).ready(function(){
+    var ue = UE.getEditor('{$ueid}');  
+    $("#submit").click(function(){
+        $.post('/sysinpanzhide/goods.php?act=submit_ueditor_goods_desc&goods_id={$goods_id}',{desc:ue.getContent()},function(data){
+            if(data.error == ''){
+                alert("成功保存。");
+            }else {
+                alert("保存失败。");
+            }
+        },'json');
+    });
+    $("#close").click(function(){
+        window.close();
+    });
+});
+
+</script>
+</html>

@@ -1,0 +1,329 @@
+.icon-arrow{
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url(images1/common.png) no-repeat;
+    top:18px;
+    right:-10px;
+    cursor: pointer;
+}
+.icon-arrow-down {
+    background-position: -110px 0;
+}
+
+.icon-arrow-up{
+     background-position: -110px -15px;
+}
+
+/*各种按钮*/
+.form_buttons {
+    min-height: 39px;
+    text-align: center;
+    margin-top: 7px;
+}
+.form_buttons .reg_button{
+    display: block;
+    height: 39px;
+    width: 116px;
+    background: url(images1/common.png) 0 -540px no-repeat;
+    margin:0 auto;
+}
+
+.form_buttons .login_button{
+    display: inline-block;
+    height: 39px;
+    width: 116px;
+    background: url(images1/common.png) 0 -585px no-repeat;
+    margin:0 auto;
+}
+.free_reg_btn {
+    display: block;
+    width:102px;
+    height: 40px;
+    background: url(images1/common.png) 0 -630px no-repeat;
+}
+
+.qq_login_btn {
+    display:block;
+    width:91px;
+    height: 22px;
+    background: url(images1/common.png) 0 -675px no-repeat;
+}
+
+.user_span {
+    display: block;
+    width: 29px;
+    height: 29px;
+    background: url(images1/common.png) 0 -705px no-repeat;
+}
+.password_span {
+    display: block;
+    width: 29px;
+    height: 29px;
+    background: url(images1/common.png) -50px -705px no-repeat;
+}
+.close_form_icon {
+    display: block;
+    width: 34px;
+    height: 34px;
+    background: url(images1/common.png) 0 -500px no-repeat;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+
+.icon-success {
+    display: block;
+    width:45px;
+    height: 45px;
+    background: url(images1/icons.png) no-repeat;
+}
+.icon-gift {
+    display:block;
+    width:35px;
+    height: 31px;
+    background: url(images1/icons.png) -50px 0 no-repeat;
+}
+.sign_down_btn {
+    display:block;
+    width:89px;
+    height: 35px;
+    background: url(images1/common.png) 0 -745px no-repeat;
+}
+
+.save_consignee_btn {
+    display: block;
+    width:135px;
+    height: 33px;
+    background: url(images1/common.png) 0 -785px no-repeat;
+    cursor: pointer;
+}
+
+.use_bonus_btn{
+    display: block;
+    width:60px;
+    height: 26px;
+    background: url(images1/common.png) 0 -825px no-repeat;
+}
+.bonus_verify_btn{
+    display: block;
+    width:38px;
+    height: 26px;
+    background: url(images1/common.png) 0 -860px no-repeat;
+    cursor: pointer;
+}
+.no_login_shopping_btn {
+    display: inline-block;
+    width:190px;
+    height: 38px;
+    background: url(images1/common.png) 0 -945px no-repeat;
+}
+.green_hook{
+    width: 69px;
+    height: 62px;
+    background: url(images1/icons.png) -220px -100px no-repeat;
+    display: inline-block;
+}
+.cart_green_hook {
+    width: 23px;
+    height: 23px;
+    background: url(images1/icons.png) -360px -100px no-repeat;
+    display:inline-block;
+    vertical-align: middle;
+}
+.pay_order_btn{
+    display: block;
+    width: 173px;
+    height: 47px;
+    background: url(images1/common.png) 0 -1630px no-repeat;
+    cursor: pointer;
+}
+.pay_order_btn_m {
+    display: block;
+    width:50px;
+    height: 19px;
+    background: url(images1/common.png) 0 -1030px no-repeat;
+}
+
+#order_submit_success .pay_order_btn_m {
+    width: 105px;
+    height: 37px;
+    background: url(images1/common.png) 0 -990px no-repeat;
+    cursor: pointer;
+    float: right;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.sub_goods_num {
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    background: url(images1/goods_detail.png) 0 -60px;
+    cursor: pointer;
+}
+.plus_goods_num {
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    background: url(images1/goods_detail.png) -170px -60px;
+    cursor: pointer;
+}
+.zan {
+    display: block;
+    width: 44px;
+    height: 23px;
+    background: url(images1/goods_detail.png) -960px -60px;
+    cursor: pointer;
+}
+.add_to_cart_btn {
+    display: block;
+    width: 128px;
+    height: 38px;
+    background: #CA1724;
+}
+.addToCart_close_cross {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(images1/goods_detail.png) -1015px -60px;
+    cursor: pointer;
+}
+.go_to_pay_btn{
+    display: inline-block;
+    width: 130px;
+    height: 50px;
+    background: url(images1/goods_detail.png) -335px -60px;
+    cursor: pointer;
+}
+.go_on_buy_btn{
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+    background: url(images1/goods_detail.png) -500px -60px;
+    cursor: pointer;
+}
+.cart_go_pay_btn {
+    display: block;
+    width: 92px;
+    height: 35px;
+    background: url(images1/common1.png) 0 -8px;
+}
+.cart_go_on_buy_btn {
+    display: block;
+    width: 111px;
+    height: 35px;
+    background: url(images1/common1.png) 0 -64px;
+}
+.contact_service_btn {
+    display: block;
+    width:71px;
+    height: 22px;
+    background: url(images1/common1.png) 0 -122px;
+}
+
+.addToCart_btn {
+    display: inline-block;
+    width: 190px;
+    height: 46px;
+    background: url(images1/goods_detail.png) -500px 0 no-repeat;
+}
+.addToCart_btn:hover{
+    background: url(images1/goods_detail.png) 0 -220px no-repeat;
+}
+.tryonebuy_btn {
+    display: inline-block;
+    width: 100px;
+    height: 43px;
+    background: url(images1/goods_detail.png) -700px 0 no-repeat;
+}
+.tryonebuy_btn:hover{
+    background: url(images1/goods_detail.png) -700px -245px no-repeat;
+}
+.oversea_direct_buy_btn {
+    display: inline-block;
+    width: 88px;
+    height: 38px;
+    background: url(images1/goods_detail.png) -800px 0 no-repeat;
+}
+
+.go_shaidan_hall_btn {
+    display: inline-block;
+    width: 107px;
+    height: 33px;
+    background: url(images1/user_center.png) -110px 0 no-repeat;
+}
+
+.submit_comment_btn {
+    display: inline-block;
+    width: 92px;
+    height: 35px;
+    background: url(images1/common.png) 0 -1250px no-repeat;
+}
+.user_cancel_btn {
+    display: inline-block;
+    width: 66px;
+    height: 35px;
+    background: url(images1/common.png) 0 -1330px no-repeat;
+}
+.submit_shaidan_btn {
+    display: inline-block;
+    width: 92px;
+    height: 35px;
+    background: url(images1/common.png) 0 -1290px no-repeat;
+}
+.tryonebuy_close_btn {
+    display: inline-block;
+    width: 179px;
+    height: 61px;
+    background: url(images1/tryonebuy/tryonebuy-close.png)  no-repeat;
+}
+
+.order_list_detail_btn {
+    display: inline-block;
+    width: 50px;
+    height: 19px;
+    background: url(images1/common.png) 0 -1370px no-repeat;
+}
+.order_list_cancel_btn {
+    display: inline-block;
+    width: 50px;
+    height: 19px;
+    background: url(images1/common.png) 0 -1440px no-repeat;
+}
+.order_list_delete_btn {
+    display: inline-block;
+    width: 50px;
+    height: 19px;
+    background: url(images1/common.png) 0 -1465px no-repeat;
+}
+.order_list_comment_btn {
+    display: inline-block;
+    width: 50px;
+    height: 19px;
+    background: url(images1/common.png) 0 -1390px no-repeat;
+}
+.order_list_shaidan_btn {
+    display: inline-block;
+    width: 50px;
+    height: 19px;
+    background: url(images1/common.png) 0 -1415px no-repeat;
+}
+.order_list_confirm_btn {
+    display: inline-block;
+    width: 50px;
+    height: 19px;
+    background: url(images1/common.png) 0 -1490px no-repeat;
+}
+.go_to_shop_btn {
+    display: inline-block;
+    width: 63px;
+    height: 21px;
+    background: url(images1/common.png) 0 -210px no-repeat;
+}
+.go_to_user_clips_btn {
+    display: inline-block;
+    width: 63px;
+    height: 21px;
+    background: url(images1/common.png) 0 -280px no-repeat;
+}

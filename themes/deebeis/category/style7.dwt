@@ -1,0 +1,38 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}category/{$category_style}/{$category_style}.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{$theme_path}js/category.js"></script>
+<input type="hidden" id="category" value="{$category}" name="category" />
+<div class="milk_powder">
+    <div class="poster"></div>
+    <div class="a1">
+    	<div class="wm01190">
+        	<div class="coupon clearfix">
+                <ul class="cul">
+                    <li class="c10" data-href="bonus.php?act=user_ajax_get&type_id=21" onclick="get_bonus(this);"></li>
+                    <li class="c30" data-href="bonus.php?act=user_ajax_get&type_id=22" onclick="get_bonus(this);"></li>
+                    <li class="c50" data-href="bonus.php?act=user_ajax_get&type_id=23" onclick="get_bonus(this);"></li>
+                    <li class="c70" data-href="bonus.php?act=user_ajax_get&type_id=24" onclick="get_bonus(this);"></li>
+                </ul>
+            </div>      
+        </div>
+    </div>
+    <div class="a2">
+    	<div class="category_nav_wrap wm01190">
+            <div class="category_nav wm01190">
+                <div id="filter_area">
+                    <!-- #BeginLibraryItem "/library/goods/category_goods_filter.lbi" --><!-- #EndLibraryItem -->
+                </div>
+            </div>
+            <div class="more">更多品牌</div>
+        </div>
+    </div>
+     
+    <div class="a3">
+        <!-- #BeginLibraryItem "/library/goods/category_goods_list.lbi" --><!-- #EndLibraryItem -->
+    </div>
+</div>
+<script type="text/javascript">
+    $.categoryNav("cate_nav_item");
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --></body>
+</html>

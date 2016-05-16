@@ -1,0 +1,55 @@
+<!-- $Id: articlecat_info.htm 16752 2009-10-20 09:59:38Z wangleisvn $ -->
+{include file="pageheader.htm"}
+<div class="main-div">
+<form method="post" action="sms.php" name="theForm"  onsubmit="return validate()">
+<table cellspacing="1" cellpadding="3" width="100%">
+  <tr>
+    <td class="label">{$lang.sms_template_t}：</td>
+    <td><input type="text" name="template_name" maxlength="60" size = "30" value="{$sms.template_subject|escape}" /></td>
+  </tr>
+  <tr>
+    <td class="label">{$lang.sms_template_u}：</td>
+    <td><input type="text" name="template_user" maxlength="60" size = "30" value="{$sms.template_user|escape}" /></td>
+  </tr>
+  <tr>
+    <td class="label">{$lang.sms_template_c}：</td>
+    <td><textarea  name="template_desc" cols="60" rows="7">{$sms.template_content|escape}</textarea></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><br />
+      <input type="submit" class="button" value="{$lang.button_submit}" />
+      <input type="reset" class="button" value="{$lang.button_reset}" />
+      <input type="hidden" name="act" value="{$form_action}" />
+      <input type="hidden" name="id" value="{$sms.template_id}" />
+      <input type="hidden" name="old_template_name" value="{$sms.template_subject}" />
+    </td>
+  </tr>
+</table>
+</form>
+</div>
+{insert_scripts files="../js/utils.js,validator.js"}
+{literal}
+<script language="JavaScript">
+<!--
+/**
+ * 检查表单输入的数据
+ */
+function validate()
+{
+    validator = new Validator("theForm");
+    validator.required("template_name",  no_template_subject);
+    validator.required("template_user",  template_user);
+    validator.required("template_desc",  template_content);
+    return validator.passed();
+}
+
+
+onload = function()
+{
+    // 开始检查订单
+    startCheckOrder();
+}
+//-->
+</script>
+{/literal}
+{include file="pagefooter.htm"}

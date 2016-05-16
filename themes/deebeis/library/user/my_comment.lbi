@@ -1,0 +1,174 @@
+<script type="text/javascript" src="/js/artdialog/dialog-min.js"></script>
+<script type="text/javascript" src="/js/artdialog/dialog-plus.js"></script>
+<link rel="stylesheet" type="text/css" href="/js/artdialog/css/ui-dialog.css" />  
+<h2 class="my-title">
+    <span>我的晒单</span>
+</h2>
+<div class="my-title-red my-coment-title"><span>商品评价/晒单</span></div>
+<div class="my-coment-table">
+    <table>
+        {if $comments}
+            {foreach from=$comments item=comment}
+                <tr class="tr-title border">
+                    <td class="order-num">商品信息<span class="color-blue"></span></td>
+                    <td class="order-time">评论时间</td>
+                    <td class="order-state">评价状态</td>
+                    <td>操作</td>
+                </tr>
+                <tr class="border">
+                    <td class="td-img">
+                        <a href="goods.php?id={$comment.goods_id}" target="_blank" title="{$comment.cmt_name}">
+                            <div class="order-img">
+
+                                    <img src="{$comment.goods_thumb}" height="65" width="65" />                        
+                            </div>
+                            <div class="goods-name">
+                                {$comment.cmt_name}
+                            </div>
+                        </a>
+                    </td>
+                    <td><span class="color-gay">{$comment.formated_add_time}</span></td>
+                    <td>{$comment.comment_status}</td>
+                    <td>
+                        <a href="javascript:void(0)" class="discuss-add" id="{$comment.comment_id}">
+                            <span class="color-blue comment_discuss">查看评论</span>                          
+                        </a>
+                        {if $comment.is_return}
+                        <br />
+                        <span class="color-gay">（已返现{$comment.return_amount}元）</span>
+                        {/if}
+                        {if $comment.status != 1}
+                        <br />
+                        <a href="javascript:void(0)" class="check-comment" id="{$comment.comment_id}">
+                            <span class="color-blue comment_discuss">修改评论</span>
+                        </a>
+                        {/if}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="my-discuss" style="display: none;">
+                            <div class="tr-arrow">
+                                <img src="themes/deebeis/images1/user_clips_20150420/arrow-green.jpg" />
+                            </div>
+                            <div class="discuss-wrapper">
+                                正在为您加载中...
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            {/foreach}
+        {else}
+        <tr><td colspan="6" style="height: 200px;"><img src="{$theme_path}images1/user_clips_20150420/none.jpg"/></td></tr>
+        {/if}
+        
+    </table>
+    <input type="hidden" value="{$page}" id="comment_page" />
+</div>
+<div class="clearfix" style="height: 10px;"></div>
+<!-- paging -->
+{include file="library/ajax_pages.lbi"}
+<!-- paging end -->
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    {if $default_page == 'my_comment'}
+        get_comment_data();
+    {/if}
+    var order_tags = $(".order-tag").find("li");
+    $(order_tags).click(function(){
+        if($(this).hasClass("on")){
+            return;
+        }
+        $(order_tags).removeClass("on");
+        $(this).addClass("on");
+        get_comment_data();
+    });   
+    $(".check-comment").click(function(){
+        var id=$(this).attr("id");
+        var wrapper=$(this).closest(".border").next("tr").find(".my-discuss");
+        var comment=wrapper.find(".discuss-wrapper");
+        $.ajax({
+            url:'user.php?act=ajax_edit_comment&comment_id='+id,
+            type:'post',
+            dataType:'json',
+            error: function(){alert('error');},
+            success:function(data){
+                if(data.error == ''){
+                    comment.html(data.content);
+                }else {
+                    alert("不能修改该评论。");
+                }
+            }
+        }); 
+        wrapper.css("display","block");
+    });
+    
+    $(".discuss-add").click(function(){
+        var id=$(this).attr("id");
+        var wrapper=$(this).closest(".border").next("tr").find(".my-discuss");
+        var comment=wrapper.find(".discuss-wrapper");
+        $.ajax({
+            url:'user.php?act=ajax_comment_detail&comment_id='+id,
+            type:'post',
+            dataType:'json',
+            error: function(){alert('error');},
+            success:function(data){
+                comment.html(data);
+            }
+        }); 
+        wrapper.css("display","block");
+    });    
+});
+
+function get_comment_data(page){
+    if(typeof(page) == 'undefined'){
+        page = 1;
+    }
+    var comment_status = $(".order-tag").find("li[class='on']").attr("data-value");
+    $.ajax({
+        type:'get',
+        dataType:'json',
+        url:'user.php?act=ajax_get_comment'+"&page="+page+"&comment_status="+comment_status,
+        success:function(data){
+            $("#user_right_content").empty();
+            $("#user_right_content").append(data.content);
+        }
+    });
+}
+
+function edit_comment(comment_id){
+   $.ajax({
+       type:'get',
+       dataType:'json',
+       url:'user.php?act=ajax_edit_comment&comment_id='+comment_id,
+       success:function(data){
+            var d = dialog({
+            title:"修改评论内容",
+            content:data,
+            onclose:function(){
+                hideMask();
+            },
+            onshow:function(){
+                showMask();
+            },
+            button: [
+             {
+                 value:'提交',
+                 callback:function(){
+                    return submit_edit_shaidan();
+                 }
+             },
+             {
+                 value: '关闭'
+             }
+         ],
+        });
+        d.show();
+       }
+   });
+}
+
+</script>

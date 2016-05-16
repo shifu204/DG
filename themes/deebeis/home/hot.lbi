@@ -1,0 +1,244 @@
+<style type="text/css">#snProlist ol{display:none;}.proItemMain .btnL,.proItemMain .btnR{display:none;}</style>
+<div class="w1190 snProlist zindex">
+    <div id="snProlist" class="prolist l">
+        <!-- 选项卡按钮 -->
+        <ul>
+        <!-- {if $hot_goods} --><li class="hover">热销</li><!-- {/if} -->
+        <!-- {if $new_goods} --><li>新品</li><!-- {/if} -->
+        <!-- {if $best_goods} --><li>精品</li><!-- {/if} -->
+        </ul>
+
+    <ol>
+    <!-- {if $hot_goods} --><li><span>1</span>/<?php echo ceil(count($this->_var[hot_goods])/4);?></li><!-- {/if} -->
+    <!-- {if $new_goods} --><li class="hide"><span>1</span>/<?php echo ceil(count($this->_var[new_goods])/4);?></li><!-- {/if} -->
+    <!-- {if $best_goods} --><li class="hide"><span>1</span>/<?php echo ceil(count($this->_var[best_goods])/4);?></li><!-- {/if} -->
+    </ol>
+    <!-- 热销 -->
+    <!-- {if $hot_goods} -->
+    <div class="proArae hotArea"><dl><dd>
+    <div class="proItemMain">
+    <div class="btnL"><a target="_self" href="javascript:;">上一页</a></div>
+    <div class="btnR"><a target="_self" href="javascript:;">下一页</a></div>
+    <div class="proItemScroll">
+
+    <div class="proItemList">
+    <!--{foreach from=$hot_goods key=goodskey item=goods}-->
+    {if $goodskey && $goodskey%4==0}</div><div class="proItemList">{/if}
+    <div class="proItem">
+    <a target="_blank" href="{$goods.url}" title="{$goods.name|escape:html}">
+    <img width="100" height="100" src="{$goods.thumb}" class="err-product">
+    </a>
+    <p><a target="_blank" title="{$goods.name|escape:html}" href="{$goods.url}">{$goods.short_style_name}</a></p>
+    <em class="snPrice">{if $goods.promote_price}<del style="color:#ccc">{$goods.shop_price}</del> {$goods.promote_price}{else}{$goods.shop_price}{/if}</em>
+    </div>
+    <!--{/foreach}-->
+    </div><!-- End proItemList -->
+
+    </div>
+    </div>
+    <div class="proAreaimg">
+    <?php echo get_adv('home','hot_goods_1');?><!-- 295*60 -->
+    <?php echo get_adv('home','hot_goods_2');?><!-- 295*60 -->
+    </div>
+    </dd></dl></div>
+    <!-- {/if} -->
+
+    <!-- 新品 -->
+    <!-- {if $new_goods} -->
+    <div class="proArae newArea hide"><dl><dd>
+    <div class="proItemMain">
+    <div class="btnL"><a target="_self" href="javascript:;">上一页</a></div>
+    <div class="btnR"><a target="_self" href="javascript:;">下一页</a></div>
+    <div class="proItemScroll">
+
+    <div class="proItemList">
+    <!--{foreach from=$new_goods key=goodskey item=goods}-->
+    {if $goodskey && $goodskey%4==0}</div><div class="proItemList">{/if}
+    <div class="proItem">
+    <a target="_blank" href="{$goods.url}" title="{$goods.name|escape:html}">
+    <img width="100" height="100" src="{$goods.thumb}" class="err-product">
+    </a>
+    <p><a target="_blank" title="{$goods.name|escape:html}" href="{$goods.url}">{$goods.short_style_name}</a></p>
+    <em class="snPrice">{if $goods.promote_price}<del style="color:#ccc">{$goods.shop_price}</del> {$goods.promote_price}{else}{$goods.shop_price}{/if}</em>
+    </div>
+    <!--{/foreach}-->
+    </div>
+
+    </div>
+    </div>
+    <div class="proAreaimg">
+    <?php echo get_adv('home','new_goods_1');?><!-- 295*60 -->
+    <?php echo get_adv('home','new_goods_2');?><!-- 295*60 -->
+    </div>
+    </dd></dl>
+    </div>
+    <!-- {/if} -->
+
+    <!-- 精品 -->
+    <!-- {if $best_goods} -->
+    <div class="proArae newArea hide"><dl><dd>
+    <div class="proItemMain">
+    <div class="btnL"><a target="_self" href="javascript:;">上一页</a></div>
+    <div class="btnR"><a target="_self" href="javascript:;">下一页</a></div>
+    <div class="proItemScroll">
+
+    <div class="proItemList">
+    <!--{foreach from=$best_goods key=goodskey item=goods}-->
+    {if $goodskey && $goodskey%4==0}</div><div class="proItemList">{/if}
+    <div class="proItem">
+    <a target="_blank" href="{$goods.url}" title="{$goods.name|escape:html}">
+    <img width="100" height="100" src="{$goods.thumb}" class="err-product">
+    </a>
+    <p><a target="_blank" title="{$goods.name|escape:html}" href="{$goods.url}">{$goods.short_style_name}</a></p>
+    <em class="snPrice">{if $goods.promote_price}<del style="color:#ccc">{$goods.shop_price}</del> {$goods.promote_price}{else}{$goods.shop_price}{/if}</em>
+    </div>
+    <!--{/foreach}-->
+    </div>
+
+    </div>
+    </div>
+    <div class="proAreaimg">
+    <?php echo get_adv('home','best_goods_1');?><!-- 295*60 -->
+    <?php echo get_adv('home','best_goods_2');?><!-- 295*60 -->
+    </div>
+    </dd></dl>
+    </div>
+    <!-- {/if} -->
+
+    </div>
+    <!-- 促销抢购 -->
+    <div id="snSub" class="l snSub">
+        <h2>促销抢购 <a target="_blank" href="../search.php?intro=promotion">更多促销 &gt;</a></h2>
+        <!-- {if $promotion_goods} -->
+        <dl>
+            <dd class="snFirst">
+                <ul>
+                    <!--{foreach from=$promotion_goods key=key item=goods name="promotion_foreach"}-->
+                    {if $smarty.foreach.promotion_foreach.index < 2}
+                    <li style="margin:10px 10px 8px;">
+                        <div><a href="{$goods.url}"><img src="{$goods.thumb}" width="100" height="100" class="err-product" border="0" alt="{$goods.name|escape:html}"/></a></div>
+                        <h4 style="font-size:12px; padding-bottom:4px; height:32px; overflow:hidden;"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a></h4>
+                        <p style="font-size:14px;margin:4px 0 0;padding:0; height:18px;">抢购价: <font class="shop">{$goods.promote_price}</font></p>
+                        <p style="line-height:18px;margin:2px 0 0;padding:0;"><span style="font-size:12px;" id="TimeCounter_{$goods.id}" class="time-counter">{$lang.please_waiting}</span><br>
+                        <img src="themes/deebeis/images/runbuy.gif" width="122" height="27" onClick="javascript:addToCart({$goods.id});" style="cursor:pointer; margin-top:1px;"></p>
+                    </li>
+    <script>
+        /*
+    Tday[{$key}] = new Date("{$goods.gmt_end_time}");   
+    window.setInterval(function(){clock({$key});}, 1000); 
+    */
+    </script>
+    <script type="text/javascript">
+        /*
+        var Tday = new Array();
+        var daysms = 24 * 60 * 60 * 1000;
+        var hoursms = 60 * 60 * 1000;
+        var Secondms = 60 * 1000;
+        var microsecond = 1000;
+        var DifferHour = -1;
+        var DifferMinute = -1;
+        var DifferSecond = -1;
+
+        var _delay = 1000; 
+        var clientTime = new Date(); 
+        var serverTime = new Date("<?php echo local_date('M d, Y H:i:s',gmtime());?>");
+        var _diff = serverTime.getTime() - clientTime.getTime();  
+
+        function clock(key){
+           var clientTime = new Date(); 
+           var time = serverTime; 
+           time.setTime(clientTime.getTime()+_diff+_delay); 
+           
+           var hour = time.getHours();
+           var minute = time.getMinutes();
+           var second = time.getSeconds();
+           var timevalue = ""+((hour > 12) ? hour-12:hour);
+           timevalue +=((minute < 10) ? ":0":":")+minute;
+           timevalue +=((second < 10) ? ":0":":")+second;
+           timevalue +=((hour >12 ) ? " PM":" AM");
+           var convertHour = DifferHour;
+           var convertMinute = DifferMinute;
+           var convertSecond = DifferSecond;
+           var Diffms = Tday[key].getTime() - time.getTime();
+           DifferHour = Math.floor(Diffms / daysms);
+           Diffms -= DifferHour * daysms;
+           DifferMinute = Math.floor(Diffms / hoursms);
+           Diffms -= DifferMinute * hoursms;
+           DifferSecond = Math.floor(Diffms / Secondms);
+           Diffms -= DifferSecond * Secondms;
+           var dSecs = Math.floor(Diffms / microsecond);
+           
+           if(convertHour != DifferHour) a="<font color=red>"+DifferHour+"</font>天";
+           if(convertMinute != DifferMinute) b="<font color=red>"+DifferMinute+"</font>小时";
+           if(convertSecond != DifferSecond) c="<font color=red>"+DifferSecond+"</font>分";
+           d="<font color=red>"+dSecs+"</font>秒";
+           if (DifferHour>0){a=a}else{a=''}
+           document.getElementById("leftTime"+key).innerHTML = '剩'+a + b + c + d; //显示倒计时信息
+        }
+        */
+    </script>
+{insert_scripts files='lefttime_topic.js'}
+<script language="javascript" type="text/javascript">
+target[target.length] = {$goods.gmt_end_time}*1000;
+ServerTime = new Date();
+time_id[time_id.length] = "TimeCounter_{$goods.id}";				
+</script>
+                    {/if}
+                    <!--{/foreach}-->
+                </ul>
+            </dd>
+        </dl>
+
+
+        <!-- {else} 暂无促销产品-->
+        <div><img src="themes/deebeis/images/nonecs.jpg" width="243" height="110"></div>
+        <!-- {/if} -->
+    </div>
+    <!-- / 促销抢购 -->
+
+
+    <!-- 商城公告 -->
+    <div id="shop-notice" class="r snSub">
+        <h2>德贝母婴商城公告 <a target="_blank" href="/article_cat-12.html">更多公告 &gt;</a></h2>
+        <ul class="text-list">
+            <!--{foreach from=$new_articles item=article}-->
+            <li><a href="{$article.url}" title="{$article.s_title|escape:html}">{$article.title}</a> </li>
+            <!--{/foreach}-->
+        </ul>
+
+
+    <div style="text-align:center;width:90%;">
+    <script type="text/javascript">
+    function getdayjf(){
+    Ajax.call( 'jf.php', '', getdayjf_callback , 'GET', 'TEXT', true, true);
+    }
+    function getdayjf_callback(result){
+        if(result==0){
+            alert('您还未登录，请先登录再来获取积分！');
+        }else if(result==1){
+            alert('今天您已经领取了积分，请明天再继续努力啦！');
+        }else if(result>1){
+            alert('恭喜您获得'+result+'积分');
+        }else{
+            alert('暂未开放登录获取积分，请稍后再试！');
+        }
+    }
+    </script>
+    <?php $this->_var['logintojf'] = isset($GLOBALS['_CFG']['logintojf'])?intval($GLOBALS['_CFG']['logintojf']):30;?>
+    <div style="clear:both;width:268px; margin-bottom:12px; position:relative;">
+    {if $logintojf}
+    <div style="position:absolute;top:18px;left:22px;"><strong style="font-size:22px;color:#F60; font-family:Arial;">{$logintojf}</strong></div>
+    <div style="height:68px;"><img src="../images/jfbtn.jpg" style="cursor:pointer;" onClick="getdayjf();" /></div>
+    {/if}
+    </div>
+    {if $logintojf}每天登录点击即可获取<strong style="color:#F60;">{$logintojf}</strong>积分{else}暂未开放登录获取积分，请留意开放！{/if}
+    </div>
+    <dl>
+    <dd class="snFirst">
+
+    </dd>
+    </dl>
+    </div>
+    <!-- / 商城公告 -->
+    <div class="clear"></div>
+</div>

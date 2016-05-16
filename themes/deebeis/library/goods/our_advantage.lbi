@@ -1,0 +1,77 @@
+<div class="our_advantage" id="our_advantage">
+    <div class="advantage_poster">
+        <img src="/themes/deebeis/images1/our_advantage/1.jpg" />
+    </div>
+    <div class="advantage_tabs_warp">
+        <div class="advantage_tabs clearfix">
+            <div class="advantage_tabs_hover_container clearfix">
+                <div class="advantage_tabs_hover">
+                    <img src="themes/deebeis/images1/our_advantage/advantage_tabs_hover1.jpg" />
+                </div>
+                <div class="advantage_tabs_hover">
+                    <img src="themes/deebeis/images1/our_advantage/advantage_tabs_hover2_none.jpg" />
+                </div>
+                <div class="advantage_tabs_hover">
+                    <img src="themes/deebeis/images1/our_advantage/advantage_tabs_hover3_none.jpg" />
+                </div>
+                <div class="advantage_tabs_hover">
+                    <img src="themes/deebeis/images1/our_advantage/advantage_tabs_hover4_none.jpg" />
+                </div>
+            </div>
+            <div class="advantage_tabs_tab_container">
+                <div class="advantage_tabs_tab">
+                    <img src="themes/deebeis/images1/our_advantage/advantage_tabs_tab1.jpg" />
+                </div>
+                <div class="advantage_tabs_tab">
+                    <img src="themes/deebeis/images1/our_advantage/advantage_tabs_tab2.jpg" />
+                </div>
+                <div class="advantage_tabs_tab">
+                    <img src="themes/deebeis/images1/our_advantage/advantage_tabs_tab3.jpg" />
+                </div>
+                <div class="advantage_tabs_tab">
+                    <img src="themes/deebeis/images1/our_advantage/advantage_tabs_tab4.jpg" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="advantage_content">
+        <div>
+            <img src="/themes/deebeis/images1/our_advantage/3.jpg" />
+            <img src="/themes/deebeis/images1/our_advantage/4.jpg" />
+            <img src="/themes/deebeis/images1/our_advantage/5.jpg" />
+            <img src="/themes/deebeis/images1/our_advantage/6.jpg" />
+            <img src="/themes/deebeis/images1/our_advantage/7.jpg" />
+            <div class="advantage8">
+                <div class="advantage8_ul_warp">
+                    <ul class="advantage8_ul clearfix">
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=18"><img src="/themes/deebeis/images1/our_advantage/8_1.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=16"><img src="/themes/deebeis/images1/our_advantage/8_2.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="/themes/deebeis/images1/our_advantage/8_3.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="/themes/deebeis/images1/our_advantage/8_4.jpg" /></a></li>
+                        <li><a href="http://m.deebei.net/"><img src="/themes/deebeis/images1/our_advantage/8_5.jpg" /></a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+    var aBtn = $(".advantage_tabs_hover");
+    var aDiv = $(".advantage_tabs_tab");
+    aBtn.hover(function(){
+        var pos = $(this).prevAll().length + 1;
+        $.each(aBtn,function(i,j){
+            var key = i+1;
+            $(this).find("img").attr("src","themes/deebeis/images1/our_advantage/advantage_tabs_hover"+key+"_none.jpg");
+        });
+        $(this).find("img").attr("src","themes/deebeis/images1/our_advantage/advantage_tabs_hover"+pos+".jpg");
+        aDiv.hide();
+        aDiv.eq(pos-1).show();
+    },function(){});
+});
+</script>

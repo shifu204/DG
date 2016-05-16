@@ -1,0 +1,167 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/style.css" rel="stylesheet" type="text/css">
+<link href="{$theme_path}zt/cow&cate20150416/style.css" rel="stylesheet" type="text/css">
+<div class="wrapper">
+    <div class="header clearfix">
+        <div class="wm01190">
+            <div class="header-left">
+                <img src="{$theme_path}zt/cow&cate20150416/images/header-left.jpg" />
+            </div>
+            <div class="header-right clearfix">
+                <a href="#container_introduce">
+                    <img src="{$theme_path}zt/cow&cate20150416/images/header-right-1.jpg" />
+                </a>
+                <a href="#container-series">
+                    <img src="{$theme_path}zt/cow&cate20150416/images/header-right-2.jpg" />
+                </a>
+                <a href="#container-suit">
+                    <img src="{$theme_path}zt/cow&cate20150416/images/header-right-3.jpg" />
+                </a>
+                <a href="#container-comment">
+                    <img src="{$theme_path}zt/cow&cate20150416/images/header-right-4.jpg" />
+                </a>
+                <a href="#container-underwrite ">
+                    <img src="{$theme_path}zt/cow&cate20150416/images/header-right-5.jpg" />
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="container_introduce" id="container_introduce">
+            <div class="title"></div>
+            <div class="containers wm01190">
+                <img src="{$theme_path}zt/cow&cate20150416/images/container-introduce-c1.jpg" />
+                <img src="{$theme_path}zt/cow&cate20150416/images/container-introduce-c2.jpg" />
+                <img src="{$theme_path}zt/cow&cate20150416/images/container-introduce-c3.jpg" />
+            </div>
+    </div>
+    <div class="container-process">
+            <div class="title"><img src="{$theme_path}zt/cow&cate20150416/images/container-process-t.jpg" /></div>
+            <div class="containers wm01190">
+                <img src="{$theme_path}zt/cow&cate20150416/images/container-process-c1.jpg" />
+                <img src="{$theme_path}zt/cow&cate20150416/images/container-process-c2.jpg" />
+                <img src="{$theme_path}zt/cow&cate20150416/images/container-process-c3.jpg" />
+                <img src="{$theme_path}zt/cow&cate20150416/images/container-process-c4.jpg" />
+                <img src="{$theme_path}zt/cow&cate20150416/images/container-process-c5.jpg" />
+            </div>
+    </div>
+    <div class="container-series" id="container-series">
+        <div class="title"><img src="{$theme_path}zt/cow&cate20150416/images/standard-t.jpg" /></div> 
+        <div class="containers wm01190 clearfix">
+            <div class="goodbox"><a href="http://www.deebei.net/goods-242.html" target="_blank"><img src="themes/deebeis/zt/cow&amp;cate20150416/images/series-goods-box-1.jpg"></a></div>
+            <div class="goodbox"><a href="http://www.deebei.net/goods-89.html" target="_blank"><img src="themes/deebeis/zt/cow&amp;cate20150416/images/series-goods-box-2.jpg"></a></div>
+            <div class="goodbox"><a href="http://www.deebei.net/goods-90.html" target="_blank"><img src="themes/deebeis/zt/cow&amp;cate20150416/images/series-goods-box-3.jpg"></a></div>
+            <div class="goodbox"><a href="http://www.deebei.net/goods-92.html" target="_blank"><img src="themes/deebeis/zt/cow&amp;cate20150416/images/series-goods-box-4.jpg"></a></div>
+            <div class="goodbox"><a href="http://www.deebei.net/goods-133.html" target="_blank"><img src="themes/deebeis/zt/cow&amp;cate20150416/images/series-goods-box-5.jpg"></a></div>
+            
+        </div>
+    </div>
+    <div class="container-suit" id="container-suit">
+        <div class="title"><img src="{$theme_path}zt/cow&cate20150416/images/suit-t.jpg" /></div> 
+        <div class="container wm01190 clearfix goods-suit">
+            <?php foreach ($this->_var['topic_class']['suit']['goods_list'] as $goods): ?>
+                <div class="goodbox <?php if($goods['is_buy_nine']){ echo 'w600';}?>">
+                    <a target="_blank" href="<?php echo $goods['url'];?>">
+                        <div class="goods">
+                            <div class="give-tip">
+                                <?php if ($goods['is_buy_six'] == 1): ?>
+                                    <img src="{$theme_path}zt/images/give-tip/m5s1-blue.png"/>
+                                <?php elseif ($goods['is_buy_nine'] == 1): ?>
+                                    <img src="{$theme_path}zt/images/give-tip/m8s2-blue.png"/>
+                                <?php endif; ?>
+                            </div>
+                            <img src="<?php echo $goods['index_img'];?>"/>
+                            <div class="details">
+                                <div class="explain clearfix">
+                                    <span class="left">
+                                        <?php if ($goods['is_buy_six'] == 1): ?>
+                                            共7罐
+                                        <?php elseif ($goods['is_buy_nine'] == 1): ?>
+                                            共11罐
+                                        <?php endif; ?>
+                                    </span>
+                                    <span class="right"><?php echo $goods['tag1'];?></span>
+                                </div>
+                                <div class="goods-name"><?php echo $goods['topic_name'];?></div>
+                                <div class="goods-price">
+                                    <span class="unit-price">单罐仅：<?php echo $goods['formated_real_price'];?></span>
+                                    <div class="total">
+                                        <span class="total-l">极致品质价：</span><span class="total-r">￥<span class="fw"><?php echo $goods['shop_price'];?></span></span>
+                                        <img src="{$theme_path}zt/images/suit-btn-3.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div> 
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <div class="container-comment" id="container-comment">
+        <div class="title"></div>
+        <div class="container wm01190">
+            <img src="{$theme_path}zt/cow&cate20150416/images/comment-1.jpg" />
+            <img src="{$theme_path}zt/cow&cate20150416/images/comment-2.jpg" />
+            <img src="{$theme_path}zt/cow&cate20150416/images/comment-3.jpg" />
+            <img src="{$theme_path}zt/cow&cate20150416/images/comment-4.jpg" />
+        </div>
+    </div>
+    <div class="container-feed">
+        <div class="title"></div>
+        <div class="container wm01190">
+            <img src="{$theme_path}zt/cow&cate20150416/images/feed-1.jpg" />
+            <img src="{$theme_path}zt/cow&cate20150416/images/feed-2.jpg" />
+            <img src="{$theme_path}zt/cow&cate20150416/images/feed-3.jpg" />
+            <img src="{$theme_path}zt/cow&cate20150416/images/feed-4.jpg" />
+            <img src="{$theme_path}zt/cow&cate20150416/images/feed-5.jpg" />
+        </div>
+    </div>
+    <div class="container-underwrite" id="container-underwrite">
+        <div class="title"></div>
+        <div class="wm01190">
+            <img src="{$theme_path}zt/cow&cate20150416/images/underwrite-1.jpg" />
+            <img src="{$theme_path}zt/cow&cate20150416/images/underwrite-2.jpg" />
+        </div>
+    </div>
+    <div class="container-norm">
+        <div class="title"></div>
+        <div class="container wm01190">
+            <img src="{$theme_path}zt/cow&cate20150416/images/norm-1.jpg" />
+            <img src="{$theme_path}zt/cow&cate20150416/images/norm-2.jpg" />
+            <img src="{$theme_path}zt/cow&cate20150416/images/norm-3.jpg" />
+            <img src="{$theme_path}zt/cow&cate20150416/images/norm-4.jpg" />
+            <img src="{$theme_path}zt/cow&cate20150416/images/norm-5.jpg" />
+        </div>
+    </div>
+    <div class="container-quality ">
+        <div class="title"></div>
+        <div class="wm01190">
+            <img src="{$theme_path}zt/cow&cate20150416/images/quality-1.jpg" />
+            <img src="{$theme_path}zt/cow&cate20150416/images/quality-2.jpg" />
+        </div>
+    </div>
+    <div class="container-recommend">
+        <div class="title"></div>
+        <div class="container">
+            <div class="container-ul">
+                <ul class="clearfix">
+                    <li><a href="http://www.deebei.net/topic.php?topic_id=18"><img src="{$theme_path}zt/cow&cate20150416/images/recommend-img-1.jpg" /></a></li>
+                    <li><a href="http://www.deebei.net/topic.php?topic_id=16"><img src="{$theme_path}zt/cow&cate20150416/images/recommend-img-2.jpg" /></a></li>
+                    <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="{$theme_path}zt/cow&cate20150416/images/recommend-img-3.jpg" /></a></li>
+                    <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="{$theme_path}zt/cow&cate20150416/images/recommend-img-4.jpg" /></a></li>
+                    <li><a href="http://m.deebei.net/"><img src="{$theme_path}zt/cow&cate20150416/images/recommend-img-5.jpg" /></a></li>
+
+                </ul>
+            </div>
+            <div class="return-index">
+                <a href="/">
+                    <img src="{$theme_path}zt/cow&cate20150416/images/return-index.jpg" />
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>﻿

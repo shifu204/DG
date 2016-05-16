@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$topic.title}_{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{insert_scripts files='common.js'}
+{insert_scripts files='jquery.min.js,jquery.json.min.js'}
+<!-- #BeginLibraryItem "/library/google_analytics.lbi" --><!-- #EndLibraryItem -->
+</head>
+
+<body  onselectstart="return false;"><a name="top" ></a>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="themes/deebeis/zt/children_s_day/style.css" rel="stylesheet" type="text/css" />
+<div class="bigimg"></div>
+{$topic.intro}
+
+
+<div style="background-color: rgb(255, 239, 175); padding-bottom:40px;">
+    <div id="container">
+        <div id="cms_first_dom">
+            <div class="newCmsWrap643010 haveFive" id="anchor_div643010" showbegintime="" showendtime="" lazyimg="y">
+                    <!--{foreach from=$goods_list item=brand key=key}-->
+                        <!--{foreach from=$brand item=goods name=brand_box key=ooo}-->
+                        <!--{if $smarty.foreach.brand_box.iteration eq 1}-->
+                    <h3><p>{$goods.1.brand_name}</p>
+                    </h3>
+                    <div class="productListBox orange">
+                        <!--{/if}-->
+                        <!--{if $ooo neq 0}-->
+                        <div class="productItemBox" name="3_2891486_2">
+                            <div class="productItemBoxIn green">
+                                <div class="productPicBox gray size160">
+                                    <a href="{$goods.6.url}" target="_top"> <img src="{$goods.1.goods_thumb}" alt=""></a>
+                                </div>
+                                <div class="productInfoBox">
+                                    <p class="name"><a class="nameWhite" href="{$goods.6.url}" target="_top">{$goods.1.goods_name}<em class="nameHot orange"></em></a></p>
+                                    <div class="promotion promotion_6 clearfix"><a href="{$goods.6.url}" target="_blank">6罐装</a><strong>{$goods.6.shop_price}</strong><span>每{$goods.6.unit}低至<br /><em>{$goods.6.single_price}</em></span></div>
+                                    <div class="promotion promotion_12 clearfix"><a href="{$goods.12.url}" target="_blank">12罐装</a><strong>{$goods.12.shop_price}</strong><span>每{$goods.12.unit}低至<br /><em>{$goods.12.single_price}</em></span></div>
+                                    <p class="buy">
+                                        <a href="javascript:addToCart({$goods.6.goods_id});" class="buy buy6"></a>
+                                        <a href="javascript:addToCart({$goods.12.goods_id});" class="buy buy12"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--{/if}-->
+                        <!--{/foreach}-->
+                    </div>
+                    <!--{/foreach}-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

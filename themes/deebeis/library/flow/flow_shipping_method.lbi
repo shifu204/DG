@@ -1,0 +1,43 @@
+<!-- 配送方式 --> 
+<!--<div id="step-2-1" class="step step-complete clearfix">
+    <div class="step-title"><strong>配送方式</strong></div>
+    <div class="step-express clearfix">
+        <?php if(!empty($this->_var['shipping_list'])):?>
+        <?php foreach($this->_var['shipping_list'] as $sk=>$sv):?>
+            <div class="express <?php if($sk == 0):?>express-selected<?php endif;?>" data-id="<?php echo $sv['shipping_id'];?>">
+                <?php echo $sv['shipping_name'];?>
+            </div>
+        <?php endforeach;?>
+        <?php endif;?>
+        <div class="express express-selected">顺丰快递(满500包邮)</div> 
+        <div class="express">普通快递(全场包邮)</div>
+        <div class="express">EMS快递(满500包邮)</div>
+    </div>
+</div>-->
+<div id="step-2" class="step step-complete clearfix">
+    <div class="step-title"> <strong>配送方式</strong> </div>
+<!--    <div class="ship_field_title clearfix">
+        <div class="ship_field">名称</div>
+        <div class="ship_field">运费</div>
+    </div>  -->
+    <div class="step-express clearfix">
+        <?php if(!empty($this->_var['shipping_list'])):?>
+        <?php foreach($this->_var['shipping_list'] as $sk=>$sv):?>
+        <div class="ship_method clearfix <?php if($this->_var['order']['shipping_id'] == $sv['shipping_id']):?> express-selected <?php endif;?>">
+            <div class="ship_field ship_name">
+                <input type="radio" class="hookbox" name="shipping" <?php if($sk == 0):?> checked="checked" <?php endif;?> data-id="<?php echo $sv['shipping_id'];?>" value="<?php echo $sv['shipping_id'];?>" style="display:none;"/>
+                <?php echo $sv['shipping_name'];?>
+                <?php if($sv['shipping_code'] == 'normal'):?>
+                <?php echo "(全场包邮)";?>
+                <?php else:?>               
+                <?php echo "(满500包邮)";?>
+                <?php endif;?>
+            </div>
+            <div class="ship_field ship_fee"><?php // echo $sv['format_shipping_fee'];?></div>
+            <!--<div class="ship_description">(<?php //echo $sv['shipping_desc'];?>)</div>-->
+        </div>
+        <?php endforeach;?>
+        <?php endif;?>
+    </div>
+</div>
+<!-- / 配送方式 -->

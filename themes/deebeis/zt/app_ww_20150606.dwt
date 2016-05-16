@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{$theme_path}/style1.css" rel="stylesheet" type="text/css"/>
+        <link href="{$theme_path}/zt/app_ww_20150606/style.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="{$theme_path}/zt/app_ww_20150606/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="{$theme_path}/zt/app_ww_20150606/jq.js"></script>
+        <title>养宠不用钱，你的宠物我包养-汪汪宠物社交</title>
+        <link href="/themes/deebeis/zt/app_ww_20150606/images/logo.png" rel="shortcut icon" type="image/x-icon" />
+        
+    </head>
+    <body>
+        <div class="advertisement-bg"></div>
+        <div class="advertisement">
+            <div class="advertisement-img">
+                <img src="{$theme_path}/zt/app_ww_20150606/images/advertisement.png" />
+                <div class="close"><img src="{$theme_path}/zt/app_ww_20150606/images/advertisement-close.png" /></div>
+                <div class="btn"><img src="{$theme_path}/zt/app_ww_20150606/images/advertisement-btn.png" /></div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="header">
+                <div class="logo">
+                    <img src="{$theme_path}/zt/app_ww_20150606/images/logo.jpg" />
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li>汪汪首页</li>
+                        <li class="WeChat">官方微信<img src="{$theme_path}zt/app_ww_20150606/images/QR-Code.jpg" width="200" /></li>
+                        <li class="nav-last">关于我们</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="download">
+                <div class="wm01190">
+                    <div class="f_l">
+                        <img src="{$theme_path}zt/app_ww_20150606/images/download-img-1.jpg" />
+                    </div>
+                    <div class="f_r">
+                        <img src="{$theme_path}zt/app_ww_20150606/images/download-img-2.jpg" />
+                        <div class="clearfix">
+                            <div class="btn">
+<!--                                <div class="down-btn rounded clearfix"><span class="system">Android <span class="down-span">下载</span></span></div>
+                                <div class="down-btn rounded clearfix"><span class="system">iphone <span class="down-span">下载</span></span></div>-->
+                                <div class="down-btn Android clearfix"></div>
+                                <div class="down-btn iphone clearfix"></div>
+                            </div>
+                            <div class="QR-Code rounded">
+                                <div class="photograph-me"><img src="{$theme_path}zt/app_ww_20150606/images/photograph-me.png" /></div>
+                                <img src="{$theme_path}zt/app_ww_20150606/images/QR-Code.jpg" width="158" height="158" class="rounded"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="activity-list w846">
+                <div class="" style="">
+                    <img src="{$theme_path}zt/app_ww_20150606/images/activity-list-1.jpg" />
+                    <img src="{$theme_path}zt/app_ww_20150606/images/activity-list-2.jpg" />
+                    <img src="{$theme_path}zt/app_ww_20150606/images/activity-list-3.jpg" />
+                </div>
+            </div>
+            <div class="footer">
+                <div class="wm01190">
+                    <div class="footer-nav">
+                        <ul class="clearfix">
+                            <li class="frist-list">首页</li>
+                            <li>关于汪汪</li>
+                            <li>联系我们</li>
+                        </ul>
+                    </div>
+                    <div class="company">Copyright <img src="{$theme_path}zt/app_ww_20150606/images/symbol.png" /> 2015 Wangwang. All Rights Reserved.</div>
+                    <div class="filing-number">粤ICP备13016260号-2</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

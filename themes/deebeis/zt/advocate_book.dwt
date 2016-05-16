@@ -1,0 +1,115 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/new_sytle.css" rel="stylesheet" type="text/css">
+<link href="{$theme_path}zt/advocate_book/advocate_book.css" rel="stylesheet" type="text/css">
+<div class="advocate_book">
+    <div class="poster">
+        <div class="wm01190">
+            <img src="{$theme_path}zt/advocate_book/images/poster_title.gif"/>
+        </div>
+    </div>
+    <div class="advocate_book1">
+        <div class="wm01190">
+            <img class="ab_1_title" src="{$theme_path}zt/advocate_book/images/ab_1_title.png" />
+            <div class="ab_1">
+                <div class="ab_1t clearfix">
+                    <div class="ab_1_hover1"></div>
+                    <div class="ab_1_hover2"></div>
+                    <div class="ab_1_hover3"></div>
+                    <div class="ab_1_hover4"></div>
+                </div>
+                <div class="ab_1c">
+                    <div class="ab_1_tab1"></div>
+                    <div class="ab_1_tab2"></div>
+                    <div class="ab_1_tab3"></div>
+                    <div class="ab_1_tab4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="advocate_book2_bg">
+        <div class="wm01190">
+            <div class="clearfix">
+                <img src="{$theme_path}zt/advocate_book/images/quality.png" class="quality"/>
+            </div>
+            <img src="{$theme_path}zt/advocate_book/images/advocate_book2_1.png" />
+            <img src="{$theme_path}zt/advocate_book/images/advocate_book2_2.png" />
+            <img src="{$theme_path}zt/advocate_book/images/advocate_book2_3.png" />
+            <div class="advocate_book2_4">
+                <img src="{$theme_path}zt/advocate_book/images/advocate_book2_4_img.gif" style="margin-top: -7%; margin-left: 2%;" />
+            </div>
+            <img src="{$theme_path}zt/advocate_book/images/advocate_book2_5.png" />
+        </div>
+    </div>
+    <div class="advocate_book3_bg">
+        <div class="wm01190">
+            <img class="advocate_book3_1" src="{$theme_path}zt/advocate_book/images/advocate_book3_1.png" />
+            <img class="advocate_book3_2" src="{$theme_path}zt/advocate_book/images/advocate_book3_2.png" />
+            <div class="advocate_book3_3">
+                <img src="{$theme_path}zt/advocate_book/images/advocate_book3_3_1.png" />
+                <img src="{$theme_path}zt/advocate_book/images/advocate_book3_3_2.png" />
+            </div>
+            <img class="advocate_book3_4" src="{$theme_path}zt/advocate_book/images/advocate_book3_4.png" />
+            <div class="advocate_book3_5">
+                <img src="{$theme_path}zt/advocate_book/images/advocate_book3_5_1.png" />
+                <img src="{$theme_path}zt/advocate_book/images/advocate_book3_5_2.png" />
+            </div>
+        </div>
+    </div>
+    <div class="advocate_book4">
+        <div class="advocate_book4_t_bg">
+            <img src="{$theme_path}zt/advocate_book/images/advocate_book4_t.png" class="advocate_book4_t" />
+        </div>
+        <div class="advocate_book4_c">
+            <div class="advocate_book4_c1"></div>
+            <div class="advocate_book4_c2"></div>
+        </div> 
+    </div>
+    <div class="advocate_book5_bg">
+        <img src="{$theme_path}zt/advocate_book/images/advocate_book5_t.png" class="advocate_book4_t" />
+    </div>
+    <div class="advocate_book6">
+        <div class="advocate_book6_1"></div>
+        <div class="advocate_book6_2"></div>
+        <div class="to12">
+            <div class="to12_bg wm01190">
+                <div class="to12_ul_warp">
+                    <ul class="to12_ul clearfix">
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=18"><img src="{$theme_path}zt/trial_order2/images/to12_ul_1.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=16"><img src="{$theme_path}zt/trial_order2/images/to12_ul_2.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="{$theme_path}zt/trial_order2/images/to12_ul_3.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="{$theme_path}zt/trial_order2/images/to12_ul_4.jpg" /></a></li>
+                        <li><a href="http://m.deebei.net/"><img src="{$theme_path}zt/trial_order2/images/to12_ul_5.jpg" /></a></li>
+                    </ul>
+
+                </div>
+                <div class="to12_ingdex_but">
+                    <a href="/">
+                        <img src="{$theme_path}zt/trial_order2/images/to12_but.png" />
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    $(function(){
+    var aBtn = $(".ab_1t").find("div");
+    var aDiv = $(".ab_1c").find("div");
+    aBtn.hover(function(){
+        for(var i=0; i<=aBtn.index();i++){
+            var num=i+1;
+            aBtn.eq(i).css("background","url(themes/deebeis/zt/advocate_book/images/ab_1_hover"+num+"_none.png)");
+        }
+        var index=$(this).index()+1;
+        $(this).css("background","url(themes/deebeis/zt/advocate_book/images/ab_1_hover"+index+"_hover.png)");
+        aDiv.css("display","none");
+        aDiv.eq($(this).index()).css('display', 'block');
+    });
+    
+});
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

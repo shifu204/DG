@@ -1,0 +1,188 @@
+/* CSS Document */
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+a {text-decoration:none}
+
+.bigimg { height:548px; background-image: url(big.jpg); background-repeat:no-repeat; background-position:center; background-color:#e8b3a5; }
+
+#cms_first_dom h3 { width:980px; height:99px; margin:0 auto; background:url('title_bg.jpg') no-repeat; text-align:center; color:#cf0200; font-size:30px; font-family:'微软雅黑'; }
+#cms_first_dom h3 p { padding-top:40px; }
+
+
+
+#container { height: auto; margin: 0px auto; padding: 0px; width: 980px; }
+.topimg {  }
+a.same_classification_label { display: none; position: absolute; top: 0px; right: 0px; width: auto; height: 23px; margin: 0px; padding: 0px 28px 0px 0px; background: url('similarpro_label.png') no-repeat scroll right 0px transparent; color: rgb(255, 255, 255); line-height: 23px; font-style: normal; overflow: visible; }
+a.same_classification_label i { position: relative; float: left; display: block; height: 23px; margin-left: -8px; padding-left: 8px; background: url('similarpro_label.png') no-repeat scroll 0px 0px transparent; }
+a.same_classification_label:hover { color: rgb(255, 255, 255); }
+a.brand_label { display: none; position: absolute; top: 30px; right: 0px; width: auto; height: 23px; margin: 0px; padding: 0px 28px 0px 0px; background: url('similarpro_label.png') no-repeat scroll right -40px transparent; color: rgb(255, 255, 255); line-height: 23px; font-style: normal; overflow: visible; }
+a.brand_label i { position: relative; float: left; display: block; height: 23px; margin-left: -8px; padding-left: 8px; background: url('similarpro_label.png') no-repeat scroll 0px -40px transparent; }
+a.brand_label:hover { color: rgb(255, 255, 255); }
+/* ::::: http://image.yihaodianimg.com/static-cms/front-cms/global/css/global_yhdLib.css?804809 ::::: */
+
+.firebugResetStyles { z-index: 2147483646 ! important; top: 0px ! important; left: 0px ! important; display: block ! important; border: 0px none ! important; margin: 0px ! important; padding: 0px ! important; outline: 0px none ! important; min-width: 0px ! important; max-width: none ! important; min-height: 0px ! important; max-height: none ! important; position: fixed ! important; transform: rotate(0deg) ! important; transform-origin: 50% 50% 0px ! important; border-radius: 0px 0px 0px 0px ! important; box-shadow: none ! important; background: none repeat scroll 0% 0% transparent ! important; pointer-events: none ! important; white-space: normal ! important; }
+.firebugBlockBackgroundColor { background-color: transparent ! important; }
+.firebugResetStyles:before, .firebugResetStyles:after { content: "" ! important; }
+.firebugCanvas { display: none ! important; }
+.newCmsWrap643010 { position: relative; margin: 0px auto; width: 980px; }
+h2.blue { background: none repeat scroll 0% 0% rgb(59, 89, 153); color: rgb(255, 255, 255); }
+.newCmsWrap643010 .productListBox { padding: 0px 0px 10px 5px; overflow: hidden; }
+.newCmsWrap643010 .productListBox.orange { background: none repeat scroll 0% 0% rgb(255, 158, 4); }
+.newCmsWrap643010 .productListBox .productItemBox { float: left; display: inline; margin: 10px 4px 0px 0px; }
+.newCmsWrap643010 .productItemBoxIn { float: left; padding: 5px; overflow: hidden; }
+.newCmsWrap643010 .productItemBoxIn.green { background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+.newCmsWrap643010 .productPicBox { position: relative; padding: 5px; overflow: hidden; }
+.newCmsWrap643010 .productPicBox.size160 a img { width: 145px; height: 145px; display: block; }
+.newCmsWrap643010 .productPicBox.gray {  }
+.newCmsWrap643010 .productPicBox .sup { position: absolute; }
+.productPicBox .sup img { width: auto; height: auto; }
+.newCmsWrap643010 .productInfoBox { padding: 0px 0px 0px 5px; width: 136px; font-size: 12px; }
+.newCmsWrap643010 .productInfoBox p { line-height: 20px; overflow: hidden; }
+.newCmsWrap643010 .productInfoBox p.name { margin-bottom: 10px; height: 60px; }
+.newCmsWrap643010 .productInfoBox p.buy { padding-top: 10px; text-align: center; line-height: normal; }
+.newCmsWrap643010 .productInfoBox p.buy a { margin-right: 5px; }
+.newCmsWrap643010 .productInfoBox p.buy a.not_start, .newCmsWrap643010 .productInfoBox p.buy a.buy, .newCmsWrap643010 .productInfoBox p.buy a.finished, .newCmsWrap643010 .productInfoBox p.buy a.view { display: inline-block; overflow: hidden; width: 132px; height: 35px; background: url('cgmbmvjqefwaytf_aaam-cwuavu33600.png') no-repeat scroll center center transparent; font-size: 0px; }
+.newCmsWrap643010 .nameWhite { font-style: normal; font-size: 12px; color: rgb(0, 0, 0); }
+.newCmsWrap643010 .nameHot { font-size: 12px; color: rgb(204, 0, 0); }
+.newCmsWrap643010 .name .orange { background-color: transparent; font-style: normal; }
+.newCmsWrap643010 .nameWhite:hover { color: rgb(204, 0, 0); }
+.newCmsWrap643010 .scareBuy { font-size: 12px; color: rgb(0, 0, 0); }
+.newCmsWrap643010 .scareBuy.yellow { font-size: 24px; color: #cf0200; }
+.newCmsWrap643010 .normalBuy { color: rgb(0, 0, 0); font-size: 12px; }
+.newCmsWrap643010 .normalBuy.white { font-size: 12px; color: rgb(0, 0, 0); }
+.newCmsWrap643010.haveFive .productListBox { padding: 0px 0px 10px 13px; }
+.newCmsWrap643010.haveFive .productListBox .productItemBox { float: left; margin: 10px 13px 0px 0px; width: 180px; }
+.newCmsWrap643010.haveFive .productListBox .productItemBox .productInfoBox { padding: 0px; width: 170px; }
+.newCmsWrap643010.haveFour .productListBox .productItemBox .productInfoBox p.name, .newCmsWrap643010.haveFive .productListBox .productItemBox .productInfoBox p.name, .newCmsWrap643010.haveThree .productListBox .productItemBox .productInfoBox p.name { height: 38px; }
+.newCmsWrap643010 .cms_promotion_info, .newCmsWrap643010 .cms_promotion_info a { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all; height: 20px; font-size: 12px; color: rgb(204, 0, 0); width: 160px; }
+.newCmsWrap643010 .productPicBox { position: relative; text-align:center; }
+.newCmsWrap643010 a.same_classification_label { display: none; position: absolute; top: 0px; right: 0px; width: auto; height: 23px; margin: 0px; padding: 0px 28px 0px 0px; background: url('similarpro_label.png') no-repeat scroll right 0px transparent; color: rgb(255, 255, 255); line-height: 23px; font-style: normal; overflow: visible; }
+.newCmsWrap643010 a.same_classification_label i { position: relative; float: left; display: block; height: 23px; margin-left: -8px; padding-left: 8px; background: url('similarpro_label.png') no-repeat scroll 0px 0px transparent; }
+.newCmsWrap643010 a.brand_label { display: none; position: absolute; top: 30px; right: 0px; width: auto; height: 23px; margin: 0px; padding: 0px 28px 0px 0px; background: url('similarpro_label.png') no-repeat scroll right -40px transparent; color: rgb(255, 255, 255); line-height: 23px; font-style: normal; overflow: visible; }
+.newCmsWrap643010 a.brand_label i { position: relative; float: left; display: block; height: 23px; margin-left: -8px; padding-left: 8px; background: url('similarpro_label.png') no-repeat scroll 0px -40px transparent; }
+.newCmsWrap643010 a.same_classification_label:hover { color: rgb(255, 255, 255); }
+.newCmsWrap643010 a.brand_label:hover { color: rgb(255, 255, 255); }
+.newCmsWrap643364 { position: relative; margin: 0px auto; width: 980px; }
+h2.blue { background: none repeat scroll 0% 0% rgb(59, 89, 153); color: rgb(255, 255, 255); }
+.newCmsWrap643364 .productListBox { padding: 0px 0px 10px 5px; overflow: hidden; }
+.newCmsWrap643364 .productListBox.orange { background: none repeat scroll 0% 0% rgb(255, 158, 4); }
+.newCmsWrap643364 .productListBox .productItemBox { float: left; display: inline; margin: 10px 4px 0px 0px; }
+.newCmsWrap643364 .productItemBoxIn { float: left; padding: 5px; overflow: hidden; }
+.newCmsWrap643364 .productItemBoxIn.green { background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+.newCmsWrap643364 .productPicBox { position: relative; padding: 5px; overflow: hidden; }
+.newCmsWrap643364 .productPicBox.size160 a img { width: 160px; height: 160px; display: block; }
+.newCmsWrap643364 .productPicBox.gray {  }
+.newCmsWrap643364 .productPicBox .sup { position: absolute; }
+.productPicBox .sup img { width: auto; height: auto; }
+.newCmsWrap643364 .productInfoBox { padding: 0px 0px 0px 5px; width: 136px; font-size: 12px; }
+.newCmsWrap643364 .productInfoBox p { line-height: 20px; overflow: hidden; }
+.newCmsWrap643364 .productInfoBox p.name { margin-bottom: 10px; height: 60px; }
+.newCmsWrap643364 .productInfoBox p.buy { padding-top: 10px; text-align: center; line-height: normal; }
+.newCmsWrap643364 .productInfoBox p.buy a { margin-right: 5px; }
+.newCmsWrap643364 .productInfoBox p.buy a.not_start, .newCmsWrap643364 .productInfoBox p.buy a.buy, .newCmsWrap643364 .productInfoBox p.buy a.finished, .newCmsWrap643364 .productInfoBox p.buy a.view { display: inline-block; overflow: hidden; width: 132px; height: 35px; background: url('cgmbmvjqefwaytf_aaam-cwuavu33600.png') no-repeat scroll center center transparent; font-size: 0px; }
+.newCmsWrap643364 .nameWhite { font-style: normal; font-size: 12px; color: rgb(0, 0, 0); }
+.newCmsWrap643364 .nameHot { font-size: 12px; color: rgb(204, 0, 0); }
+.newCmsWrap643364 .name .orange { background-color: transparent; font-style: normal; }
+.newCmsWrap643364 .nameWhite:hover { color: rgb(204, 0, 0); }
+.newCmsWrap643364 .scareBuy { font-size: 12px; color: rgb(0, 0, 0); }
+.newCmsWrap643364 .scareBuy.yellow { font-size: 12px; color: rgb(0, 0, 0); }
+.newCmsWrap643364 .normalBuy { color: rgb(0, 0, 0); font-size: 12px; }
+.newCmsWrap643364 .normalBuy.white { font-size: 12px; color: rgb(0, 0, 0); }
+.newCmsWrap643364.haveFive .productListBox { padding: 0px 0px 10px 13px; }
+.newCmsWrap643364.haveFive .productListBox .productItemBox { float: left; margin: 10px 13px 0px 0px; width: 180px; }
+.newCmsWrap643364.haveFive .productListBox .productItemBox .productInfoBox { padding: 0px; width: 170px; }
+.newCmsWrap643364.haveFour .productListBox .productItemBox .productInfoBox p.name, .newCmsWrap643364.haveFive .productListBox .productItemBox .productInfoBox p.name, .newCmsWrap643364.haveThree .productListBox .productItemBox .productInfoBox p.name { height: 38px; }
+.newCmsWrap643364 .cms_promotion_info, .newCmsWrap643364 .cms_promotion_info a { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all; height: 20px; font-size: 12px; color: rgb(204, 0, 0); width: 160px; }
+.newCmsWrap643364 .productPicBox { position: relative; }
+.newCmsWrap643364 a.same_classification_label { display: none; position: absolute; top: 0px; right: 0px; width: auto; height: 23px; margin: 0px; padding: 0px 28px 0px 0px; background: url('similarpro_label.png') no-repeat scroll right 0px transparent; color: rgb(255, 255, 255); line-height: 23px; font-style: normal; overflow: visible; }
+.newCmsWrap643364 a.same_classification_label i { position: relative; float: left; display: block; height: 23px; margin-left: -8px; padding-left: 8px; background: url('similarpro_label.png') no-repeat scroll 0px 0px transparent; }
+.newCmsWrap643364 a.brand_label { display: none; position: absolute; top: 30px; right: 0px; width: auto; height: 23px; margin: 0px; padding: 0px 28px 0px 0px; background: url('similarpro_label.png') no-repeat scroll right -40px transparent; color: rgb(255, 255, 255); line-height: 23px; font-style: normal; overflow: visible; }
+.newCmsWrap643364 a.brand_label i { position: relative; float: left; display: block; height: 23px; margin-left: -8px; padding-left: 8px; background: url('similarpro_label.png') no-repeat scroll 0px -40px transparent; }
+.newCmsWrap643364 a.same_classification_label:hover { color: rgb(255, 255, 255); }
+.newCmsWrap643364 a.brand_label:hover { color: rgb(255, 255, 255); }
+.newCmsWrap643365 { position: relative; margin: 0px auto; width: 980px; }
+h2.blue { background: none repeat scroll 0% 0% rgb(59, 89, 153); color: rgb(255, 255, 255); }
+.newCmsWrap643365 .productListBox { padding: 0px 0px 10px 5px; overflow: hidden; }
+.newCmsWrap643365 .productListBox.orange { background: none repeat scroll 0% 0% rgb(255, 158, 4); }
+.newCmsWrap643365 .productListBox .productItemBox { float: left; display: inline; margin: 10px 4px 0px 0px; }
+.newCmsWrap643365 .productItemBoxIn { float: left; padding: 5px; overflow: hidden; }
+.newCmsWrap643365 .productItemBoxIn.green { background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+.newCmsWrap643365 .productPicBox { position: relative; padding: 5px; overflow: hidden; }
+.newCmsWrap643365 .productPicBox.size160 a img { width: 160px; height: 160px; display: block; }
+.newCmsWrap643365 .productPicBox.gray {  }
+.newCmsWrap643365 .productPicBox .sup { position: absolute; }
+.productPicBox .sup img { width: auto; height: auto; }
+.newCmsWrap643365 .productInfoBox { padding: 0px 0px 0px 5px; width: 136px; font-size: 12px; }
+.newCmsWrap643365 .productInfoBox p { line-height: 20px; overflow: hidden; }
+.newCmsWrap643365 .productInfoBox p.name { margin-bottom: 10px; height: 60px; }
+.newCmsWrap643365 .productInfoBox p.buy { padding-top: 10px; text-align: center; line-height: normal; }
+.newCmsWrap643365 .productInfoBox p.buy a { margin-right: 5px; }
+.newCmsWrap643365 .productInfoBox p.buy a.not_start, .newCmsWrap643365 .productInfoBox p.buy a.buy, .newCmsWrap643365 .productInfoBox p.buy a.finished, .newCmsWrap643365 .productInfoBox p.buy a.view { display: inline-block; overflow: hidden; width: 132px; height: 35px; background: url('cgmbmvjqefwaytf_aaam-cwuavu33600.png') no-repeat scroll center center transparent; font-size: 0px; }
+.newCmsWrap643365 .nameWhite { font-style: normal; font-size: 12px; color: rgb(0, 0, 0); }
+.newCmsWrap643365 .nameHot { font-size: 12px; color: rgb(204, 0, 0); }
+.newCmsWrap643365 .name .orange { background-color: transparent; font-style: normal; }
+.newCmsWrap643365 .nameWhite:hover { color: rgb(204, 0, 0); }
+.newCmsWrap643365 .scareBuy { font-size: 12px; color: rgb(0, 0, 0); }
+.newCmsWrap643365 .scareBuy.yellow { font-size: 12px; color: rgb(0, 0, 0); }
+.newCmsWrap643365 .normalBuy { color: rgb(0, 0, 0); font-size: 12px; }
+.newCmsWrap643365 .normalBuy.white { font-size: 12px; color: rgb(0, 0, 0); }
+.newCmsWrap643365.haveFive .productListBox { padding: 0px 0px 10px 13px; }
+.newCmsWrap643365.haveFive .productListBox .productItemBox { float: left; margin: 10px 13px 0px 0px; width: 180px; }
+.newCmsWrap643365.haveFive .productListBox .productItemBox .productInfoBox { padding: 0px; width: 170px; }
+.newCmsWrap643365.haveFour .productListBox .productItemBox .productInfoBox p.name, .newCmsWrap643365.haveFive .productListBox .productItemBox .productInfoBox p.name, .newCmsWrap643365.haveThree .productListBox .productItemBox .productInfoBox p.name { height: 38px; }
+.newCmsWrap643365 .cms_promotion_info, .newCmsWrap643365 .cms_promotion_info a { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all; height: 20px; font-size: 12px; color: rgb(204, 0, 0); width: 160px; }
+.newCmsWrap643365 .productPicBox { position: relative; }
+.newCmsWrap643365 a.same_classification_label { display: none; position: absolute; top: 0px; right: 0px; width: auto; height: 23px; margin: 0px; padding: 0px 28px 0px 0px; background: url('similarpro_label.png') no-repeat scroll right 0px transparent; color: rgb(255, 255, 255); line-height: 23px; font-style: normal; overflow: visible; }
+.newCmsWrap643365 a.same_classification_label i { position: relative; float: left; display: block; height: 23px; margin-left: -8px; padding-left: 8px; background: url('similarpro_label.png') no-repeat scroll 0px 0px transparent; }
+.newCmsWrap643365 a.brand_label { display: none; position: absolute; top: 30px; right: 0px; width: auto; height: 23px; margin: 0px; padding: 0px 28px 0px 0px; background: url('similarpro_label.png') no-repeat scroll right -40px transparent; color: rgb(255, 255, 255); line-height: 23px; font-style: normal; overflow: visible; }
+.newCmsWrap643365 a.brand_label i { position: relative; float: left; display: block; height: 23px; margin-left: -8px; padding-left: 8px; background: url('similarpro_label.png') no-repeat scroll 0px -40px transparent; }
+.newCmsWrap643365 a.same_classification_label:hover { color: rgb(255, 255, 255); }
+.newCmsWrap643365 a.brand_label:hover { color: rgb(255, 255, 255); }
+.newCmsWrap643366 { position: relative; margin: 0px auto; width: 980px; }
+h2.blue { background: none repeat scroll 0% 0% rgb(59, 89, 153); color: rgb(255, 255, 255); }
+.newCmsWrap643366 .productListBox { padding: 0px 0px 10px 5px; overflow: hidden; }
+.newCmsWrap643366 .productListBox.orange { background: none repeat scroll 0% 0% rgb(255, 158, 4); }
+.newCmsWrap643366 .productListBox .productItemBox { float: left; display: inline; margin: 10px 4px 0px 0px; }
+.newCmsWrap643366 .productItemBoxIn { float: left; padding: 5px; overflow: hidden; }
+.newCmsWrap643366 .productItemBoxIn.green { background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+.newCmsWrap643366 .productPicBox { position: relative; padding: 5px; overflow: hidden; }
+.newCmsWrap643366 .productPicBox.size160 a img { width: 160px; height: 160px; display: block; }
+.newCmsWrap643366 .productPicBox.gray {  }
+.newCmsWrap643366 .productPicBox .sup { position: absolute; }
+.productPicBox .sup img { width: auto; height: auto; }
+.newCmsWrap643366 .productInfoBox { padding: 0px 0px 0px 5px; width: 136px; font-size: 12px; }
+.newCmsWrap643366 .productInfoBox p { line-height: 20px; overflow: hidden; }
+.newCmsWrap643366 .productInfoBox p.name { margin-bottom: 10px; height: 60px; }
+.newCmsWrap643366 .productInfoBox p.buy { padding-top: 10px; text-align: center; line-height: normal; }
+.newCmsWrap643366 .productInfoBox p.buy a { margin-right: 5px; }
+.newCmsWrap643366 .productInfoBox p.buy a.not_start, .newCmsWrap643366 .productInfoBox p.buy a.buy, .newCmsWrap643366 .productInfoBox p.buy a.finished, .newCmsWrap643366 .productInfoBox p.buy a.view { display: inline-block; overflow: hidden; width: 132px; height: 35px; background: url('cgmbmvjqefwaytf_aaam-cwuavu33600.png') no-repeat scroll center center transparent; font-size: 0px; }
+.newCmsWrap643366 .nameWhite { font-style: normal; font-size: 12px; color: rgb(0, 0, 0); }
+.newCmsWrap643366 .nameHot { font-size: 12px; color: rgb(204, 0, 0); }
+.newCmsWrap643366 .name .orange { background-color: transparent; font-style: normal; }
+.newCmsWrap643366 .nameWhite:hover { color: rgb(204, 0, 0); }
+.newCmsWrap643366 .scareBuy { font-size: 12px; color: rgb(0, 0, 0); }
+.newCmsWrap643366 .scareBuy.yellow { font-size: 12px; color: rgb(0, 0, 0); }
+.newCmsWrap643366 .normalBuy { color: rgb(0, 0, 0); font-size: 12px; }
+.newCmsWrap643366 .normalBuy.white { font-size: 12px; color: rgb(0, 0, 0); }
+.newCmsWrap643366.haveFive .productListBox { padding: 0px 0px 10px 13px; }
+.newCmsWrap643366.haveFive .productListBox .productItemBox { float: left; margin: 10px 13px 0px 0px; width: 180px; }
+.newCmsWrap643366.haveFive .productListBox .productItemBox .productInfoBox { padding: 0px; width: 170px; }
+.newCmsWrap643366.haveFour .productListBox .productItemBox .productInfoBox p.name, .newCmsWrap643366.haveFive .productListBox .productItemBox .productInfoBox p.name, .newCmsWrap643366.haveThree .productListBox .productItemBox .productInfoBox p.name { height: 38px; }
+.newCmsWrap643366 .cms_promotion_info, .newCmsWrap643366 .cms_promotion_info a { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all; height: 20px; font-size: 12px; color: rgb(204, 0, 0); width: 160px; }
+.newCmsWrap643366 .productPicBox { position: relative; }
+.newCmsWrap643366 a.same_classification_label { display: none; position: absolute; top: 0px; right: 0px; width: auto; height: 23px; margin: 0px; padding: 0px 28px 0px 0px; background: url('similarpro_label.png') no-repeat scroll right 0px transparent; color: rgb(255, 255, 255); line-height: 23px; font-style: normal; overflow: visible; }
+.newCmsWrap643366 a.same_classification_label i { position: relative; float: left; display: block; height: 23px; margin-left: -8px; padding-left: 8px; background: url('similarpro_label.png') no-repeat scroll 0px 0px transparent; }
+.newCmsWrap643366 a.brand_label { display: none; position: absolute; top: 30px; right: 0px; width: auto; height: 23px; margin: 0px; padding: 0px 28px 0px 0px; background: url('similarpro_label.png') no-repeat scroll right -40px transparent; color: rgb(255, 255, 255); line-height: 23px; font-style: normal; overflow: visible; }
+.newCmsWrap643366 a.brand_label i { position: relative; float: left; display: block; height: 23px; margin-left: -8px; padding-left: 8px; background: url('similarpro_label.png') no-repeat scroll 0px -40px transparent; }
+.newCmsWrap643366 a.same_classification_label:hover { color: rgb(255, 255, 255); }
+.newCmsWrap643366 a.brand_label:hover { color: rgb(255, 255, 255); }
+h2.blue { background: none repeat scroll 0% 0% rgb(59, 89, 153); color: rgb(255, 255, 255); }
+.productPicBox .sup img { width: auto; height: auto; }

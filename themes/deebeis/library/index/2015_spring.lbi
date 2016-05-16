@@ -1,0 +1,8 @@
+<div id="holiday_info" class="wm01190" style="position: fixed; display: none; z-index: 999; top:0;" >
+    <div style="background: url(/themes/deebeis/images1/holiday/2015-spring-festival.png); width: 1048px; height: 907px;"></div>
+    <div onclick="close_form('holiday_info')" style="position: absolute; background: url(/themes/deebeis/images1/holiday/close-48.png) no-repeat; right:80px; top:20px; width: 48px; height: 48px; cursor: pointer;"></div>
+    <div onclick="close_form('holiday_info')" style="background: url(/themes/deebeis/images1/holiday/back-to-index.png) no-repeat; width: 153px; height: 51px; position: absolute; bottom: 40px; left: 518px; cursor:pointer;"></div>
+</div>
+<script type="text/javascript">
+    open_dialog("holiday_info");
+</script>

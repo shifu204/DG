@@ -1,0 +1,148 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/new_style.css" rel="stylesheet" type="text/css">
+<link href="{$theme_path}zt/friso20150411/style.css" rel="stylesheet" type="text/css">
+<script src="{$theme_path}zt/friso20150411/meisu.js"></script>
+<div class="wrapper">
+    <div class="poster"></div>
+    <div class="container_introduce">
+        <div class="wm01190">
+            <img src="{$theme_path}zt/friso20150411/images/container_introduce.jpg" />
+        </div>
+    </div>
+    <div class="container_1 rounded">
+        <div class="container_standard ">
+            <div class="title"><img src="{$theme_path}zt/friso20150411/images/container_standard_t.jpg" /></div> 
+            <div class="container_frame">
+                <img src="{$theme_path}zt/friso20150411/images/container_standard_c.jpg" />
+                <div class="containers">
+                    <div class="goodbox_warp ">
+                        <div class="w1 clearfix">
+                            <a href="http://www.deebei.net/goods-130.html" target="_blank">
+                            <div class="goodbox">
+                               <img src="{$theme_path}zt/friso20150411/images/container_standard_db1.jpg"/>
+                            </div>
+                            </a>
+                            <a href="http://www.deebei.net/goods-88.html" target="_blank">
+                            <div class="goodbox">
+                                <img src="{$theme_path}zt/friso20150411/images/container_standard_db2.jpg"/>
+                            </div>
+                            </a>
+                            <a href="http://www.deebei.net/goods-94.html" target="_blank">
+                            <div class="goodbox">
+                                <img src="{$theme_path}zt/friso20150411/images/container_standard_db3.jpg"/>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="goodbox_warp border">
+                        <div class="w2 clearfix">
+                            <a href="http://www.deebei.net/goods-93.html" target="_blank">
+                            <div class="goodbox">
+                                <img src="{$theme_path}zt/friso20150411/images/container_standard_db4.jpg"/>
+                            </div>
+                            </a>
+                            <a href="http://www.deebei.net/goods-95.html" target="_blank">
+                            <div class="goodbox">
+                                <img src="{$theme_path}zt/friso20150411/images/container_standard_db5.jpg"/>
+                            </div>
+                            </a>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container_9s2">
+            <div class="title"><img src="{$theme_path}zt/friso20150411/images/container_9s2_t.jpg" /></div> 
+            <div class="container">
+                <div class="goodbox_warp clearfix">
+                    <div class="goodbox"><a href="http://www.deebei.net/goods-286.html"target="_blank"><img src="{$theme_path}zt/friso20150411/images/container_9s2_db1.jpg" /></a></div>
+                    <div class="goodbox"><a href="http://www.deebei.net/goods-281.html"target="_blank"><img src="{$theme_path}zt/friso20150411/images/container_9s2_db2.jpg" /></a></div>
+                </div>
+                <div class="goodbox_warp border clearfix">
+                    <div class="goodbox"><a href="http://www.deebei.net/goods-287.html"target="_blank"><img src="{$theme_path}zt/friso20150411/images/container_9s2_db3.jpg" /></a></div>
+                    <div class="goodbox"><a href="http://www.deebei.net/goods-282.html"target="_blank"><img src="{$theme_path}zt/friso20150411/images/container_9s2_db4.jpg" /></a></div>
+                </div>
+                <div class="goodbox_warp border clearfix">
+                    <div class="goodbox"><a href="http://www.deebei.net/goods-288.html"target="_blank"><img src="{$theme_path}zt/friso20150411/images/container_9s2_db5.jpg" /></a></div>
+                    <div class="goodbox"><a href="http://www.deebei.net/goods-283.html"target="_blank"><img src="{$theme_path}zt/friso20150411/images/container_9s2_db6.jpg" /></a></div>
+                </div>
+                <div class="goodbox_warp border clearfix">
+                    <div class="goodbox"><a href="http://www.deebei.net/goods-289.html"target="_blank"><img src="{$theme_path}zt/friso20150411/images/container_9s2_db7.jpg" /></a></div>
+                    <div class="goodbox"><a href="http://www.deebei.net/goods-284.html"target="_blank"><img src="{$theme_path}zt/friso20150411/images/container_9s2_db8.jpg" /></a></div>
+                </div>
+                <div class="goodbox_warp border clearfix">
+                    <div class="goodbox"><a href="http://www.deebei.net/goods-290.html"target="_blank"><img src="{$theme_path}zt/friso20150411/images/container_9s2_db9.jpg" /></a></div>
+                    <div class="goodbox"><a href="http://www.deebei.net/goods-285.html"target="_blank"><img src="{$theme_path}zt/friso20150411/images/container_9s2_db10.jpg" /></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container_2">
+        <div class="container_comment">
+            <div class="title"></div>
+            <div class="container rounded">
+                <img src="{$theme_path}zt/friso20150411/images/container_comment_c.jpg" />
+            </div>
+        </div>
+        <div class="container_feed">
+            <div class="title"></div>
+            <div class="container rounded">
+                <img src="{$theme_path}zt/friso20150411/images/container_feed_c1.jpg" />
+                <img src="{$theme_path}zt/friso20150411/images/container_feed_c2.jpg" />
+                <img src="{$theme_path}zt/friso20150411/images/container_feed_c3.jpg" />
+                <img src="{$theme_path}zt/friso20150411/images/container_feed_c4.jpg" />
+            </div>
+        </div>
+        <div class="container_underwrite ">
+            <div class="title"></div>
+            <div class="wm01190 rounded">
+                <img src="{$theme_path}zt/friso20150411/images/container_underwrite_c.jpg" />
+            </div>
+        </div>
+        <div class="container_norm">
+            <div class="title"></div>
+            <div class="container rounded">
+                <img src="{$theme_path}zt/friso20150411/images/container_norm_c1.jpg" />
+                <img src="{$theme_path}zt/friso20150411/images/container_norm_c2.jpg" />
+                <img src="{$theme_path}zt/friso20150411/images/container_norm_c3.jpg" />
+            </div>
+        </div>
+        <div class="container_quality ">
+            <div class="title"></div>
+            <div class="wm01190 rounded">
+                <img src="{$theme_path}zt/friso20150411/images/container_quality_c.jpg" />
+            </div>
+        </div>
+        <div class="container_recommend">
+            <div class="title"></div>
+            <div class="container">
+                <div class="container_ul">
+                    <ul class="clearfix">
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=18"><img src="{$theme_path}zt/friso20150411/images/container_recommend_img1.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=16"><img src="{$theme_path}zt/friso20150411/images/container_recommend_img2.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="{$theme_path}zt/friso20150411/images/container_recommend_img3.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="{$theme_path}zt/friso20150411/images/container_recommend_img4.jpg" /></a></li>
+                        <li><a href="http://m.deebei.net/"><img src="{$theme_path}zt/friso20150411/images/container_recommend_img5.jpg" /></a></li>
+
+                    </ul>
+                </div>
+                <div class="return_index">
+                    <a href="/">
+                        <img src="{$theme_path}zt/yapei/images/return_index.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<a target="_blank" href="tencent://message/?uin=2462814798&Site=www.deebei.net&Menu=yes">
+<div id="debei-service"></div>
+</a>
+<script type="text/javascript">
+    side_bar_fixed($("#debei-service"),'right','undefined','top');  
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>﻿

@@ -1,0 +1,38 @@
+<!--商品图片和相册 start-->
+<script type="text/javascript" src="/themes/deebeis/js/jquery.jqzoom.js"></script>
+<script type="text/javascript" src="/themes/deebeis/js/goods.js"></script>
+<div class="clearfix f_l" style="width: 405px;">
+    <div class="relative" >
+        <div class="goodsGive 
+        {if $goods.is_buy_nine}
+        nine_give_two
+        {/if}
+        {if $goods.is_buy_six}
+        six_give_one
+        {/if}
+        {if $goods.is_total_four}
+        total_four
+        {/if}
+        {if $goods.is_total_two}
+        total_two
+        {/if}
+             "></div>
+    </div>
+    <div>
+        <div id="preview" class="spec-preview"> <span class="jqzoom"><img jqimg="{$goods.original_img}" src="{$goods.original_img}" width="400" height="400" /></span> </div> 
+        <!--缩图开始-->
+        <div class="spec-scroll clearfix"> <a class="prev">&lt;</a> <a class="next">&gt;</a>
+          <div class="items">
+            <?php if(!empty($this->_var['pictures'])):?>
+            <ul>
+              <?php foreach($this->_var['pictures'] as $picture):?>
+                <li><img alt="<?php echo $this->_var['goods']['goods_name'];?>" bimg="<?php echo $picture['img_url'];?>" src="<?php echo $picture['thumb_url'];?>" onmousemove="preview(this);"></li>
+              <?php endforeach;?>
+            </ul>
+            <?php endif;?>
+          </div>
+        </div>
+    </div>   
+</div>
+<!--缩图结束-->
+<!--商品图片和相册 end--> 

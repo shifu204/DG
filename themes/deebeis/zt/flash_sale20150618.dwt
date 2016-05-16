@@ -1,0 +1,683 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/new_style.css" rel="stylesheet" type="text/css">
+<link href="{$theme_path}zt/flash_sale20150618/style.css" rel="stylesheet" type="text/css">
+<script  type="text/javascript" src="{$theme_path}zt/flash_sale20150618/countdown.js"></script>
+<input id="activity_end_time" type="hidden" value="<?php echo $this->_var['topic']['keywords']?>"/>
+<div class="wrapper">
+    <div class="poster"></div>
+    <div class="container">
+        <div class="part1">
+            <div class="w1012">
+                <img src="{$theme_path}zt/flash_sale20150618/images/part-1-t.jpg" />
+                <div class="bg clearfix">
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=55" target="_blank">
+                            <div class="bg-w">
+                                <div class="goodbox-img">
+                                    <img src="{$theme_path}zt/flash_sale20150618/images/part-1-bg01.jpg" />
+                                    <div class="countdown-bg"></div>
+                                    <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                                </div>
+                                <div class="bto clearfix">
+                                    <div class="details f_l">
+                                        <span class="prince">6.8<span class="prince-s">折起</span></span>
+                                        <div class="name">德国爱他美</div>
+                                    </div>
+                                    <div class="f_r">
+                                        <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-bule-01.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=19" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-1-bg02.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince">7.0<span class="prince-s">折起</span></span>
+                                    <div class="name">荷兰牛栏</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-bule-01.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=18" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-1-bg03.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince">8.0<span class="prince-s">折起</span></span>
+                                    <div class="name">荷兰美素</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-bule-01.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-196.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-1-bg04.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>214.0</span>
+                                    <div class="name">德国喜宝有机奶粉1段</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-bule-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-1343.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-1-bg05.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>238.0</span>
+                                    <div class="name">日本明治奶粉1段</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-bule-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-119.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-1-bg06.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>298.0</span>
+                                    <div class="name">新西兰爱他美奶粉1段</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-bule-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="part2">
+            <div class="w1012">
+                <img src="{$theme_path}zt/flash_sale20150618/images/part-2-t.jpg" />
+                <div class="bg clearfix">
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/category.php?id=266&brand=32" target="_blank">
+                            <div class="bg-w">
+                                <div class="goodbox-img">
+                                    <img src="{$theme_path}zt/flash_sale20150618/images/part-2-bg01.jpg" />
+                                    <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                                </div>
+                                <div class="bto clearfix">
+                                    <div class="details f_l">
+                                        <span class="prince">8.0<span class="prince-s">折起</span></span>
+                                        <div class="name">童年时光专场</div>
+                                    </div>
+                                    <div class="f_r">
+                                        <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-green-01.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-409.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-2-bg02.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>148.0</span>
+                                    <div class="name">BabyDdrops维生素</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-green-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-413.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-2-bg03.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>138.0</span>
+                                    <div class="name">挪威小鱼DHA鳕鱼肝油</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-green-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-223.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-2-bg04.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>70.0</span>
+                                    <div class="name">和光堂婴儿滋养糖</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-green-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-1383.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-2-bg05.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>138.0</span>
+                                    <div class="name">Swisse排毒补充液</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-green-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-414.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-2-bg06.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>178.0</span>
+                                    <div class="name">美国LGG儿童益生菌</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-green-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="part3">
+            <div class="w1012">
+                <img src="{$theme_path}zt/flash_sale20150618/images/part-3-t.jpg" />
+                <div class="bg clearfix">
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/category.php?id=138&brand=78" target="_blank">
+                            <div class="bg-w">
+                                <div class="goodbox-img">
+                                    <img src="{$theme_path}zt/flash_sale20150618/images/part-3-bg01.jpg" />
+                                    <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                                </div>
+                                <div class="bto clearfix">
+                                    <div class="details f_l">
+                                        <span class="prince">6.8<span class="prince-s">折起</span></span>
+                                        <div class="name">世界最好专场</div>
+                                    </div>
+                                    <div class="f_r">
+                                        <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-orange-01.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/category.php?id=138&brand=59" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-3-bg02.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince">7.0<span class="prince-s">折起</span></span>
+                                    <div class="name">喜宝专场</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-orange-01.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/category.php?id=138&brand=30" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-3-bg03.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince">8.0<span class="prince-s">折起</span></span>
+                                    <div class="name">嘉宝专场</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-orange-01.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-561.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-3-bg04.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>28.0</span>
+                                    <div class="name">喜宝吸吸乐</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-orange-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-400.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-3-bg05.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>28.0</span>
+                                    <div class="name">和光堂婴儿威化饼干</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-orange-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-522.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-3-bg06.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>28.0</span>
+                                    <div class="name">嘉宝黄桃酸奶溶溶豆</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-orange-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="part4">
+            <div class="w1012">
+                <img src="{$theme_path}zt/flash_sale20150618/images/part-4-t.jpg" />
+                <div class="bg clearfix">
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/category.php?id=141&brand=41" target="_blank">
+                            <div class="bg-w">
+                                <div class="goodbox-img">
+                                    <img src="{$theme_path}zt/flash_sale20150618/images/part-4-bg01.jpg" />
+                                    <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                                </div>
+                                <div class="bto clearfix">
+                                    <div class="details f_l">
+                                        <span class="prince">6.8<span class="prince-s">折起</span></span>
+                                        <div class="name">日本花王纸尿裤专场</div>
+                                    </div>
+                                    <div class="f_r">
+                                        <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-pink-01.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/category.php?id=141&brand=38" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-4-bg02.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince">7.0<span class="prince-s">折起</span></span>
+                                    <div class="name">大王GOO.N纸尿裤专场</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-pink-01.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-449.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-4-bg03.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>58.0</span>
+                                    <div class="name">小林制药婴儿退热贴</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-pink-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-429.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-4-bg04.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>148.0</span>
+                                    <div class="name">加州宝宝爽身粉</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-pink-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-178.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-4-bg05.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>79.0</span>
+                                    <div class="name">小蜜蜂草本防敏驱蚊喷雾</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-pink-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-227.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-4-bg06.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>98.0</span>
+                                    <div class="name">美国水宝宝防晒霜</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-pink-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="part5">
+            <div class="w1012">
+                <img src="{$theme_path}zt/flash_sale20150618/images/part-5-t.jpg" />
+                <div class="bg clearfix">
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-175.html" target="_blank">
+                            <div class="bg-w">
+                                <div class="goodbox-img">
+                                    <img src="{$theme_path}zt/flash_sale20150618/images/part-5-bg01.jpg" />
+                                    <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                                </div>
+                                <div class="bto clearfix">
+                                    <div class="details f_l">
+                                        <span class="prince"><span class="prince-m">¥</span>88.0</span>
+                                        <div class="name">布朗博士玻璃标准婴儿奶瓶</div>
+                                    </div>
+                                    <div class="f_r">
+                                        <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-purple-02.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-475.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-5-bg02.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>88.0</span>
+                                    <div class="name">努比硅胶挤压喂养勺子</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-purple-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-468.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-5-bg03.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>188.0</span>
+                                    <div class="name">BABYBJORN防碎屑围兜</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-purple-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-466.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-5-bg04.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>98.0</span>
+                                    <div class="name">麦肯齐儿童训练安全餐具</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-purple-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-461.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-5-bg05.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>138.0</span>
+                                    <div class="name">贝亲母乳实感宽口径奶瓶</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-purple-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="goodbox-bg">
+                        <a href="http://www.deebei.net/goods-470.html" target="_blank">
+                            <div class="bg-w">
+                            <div class="goodbox-img">
+                                <img src="{$theme_path}zt/flash_sale20150618/images/part-5-bg06.jpg" />
+                                <div class="countdown-bg"></div>
+                                <div class="countdown"><img src="{$theme_path}zt/flash_sale20150618/images/countdown.png" />剩余<span class="time_d">0</span>天<span class="time_h">0</span>时<span class="time_m">0</span>分<span class="time_s">0</span>秒</div>
+                            </div>
+                            <div class="bto clearfix">
+                                <div class="details f_l">
+                                    <span class="prince"><span class="prince-m">¥</span>58.0</span>
+                                    <div class="name">Boon训练勺子叉子套装</div>
+                                </div>
+                                <div class="f_r">
+                                    <img class="btn" src="{$theme_path}zt/flash_sale20150618/images/btn-purple-02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper-footer">
+        <div class="part1">
+            <div class="title"></div>
+            <div class="container wm01190">
+                <img src="{$theme_path}zt/flash_sale20150618/images/b-part-1.jpg" />
+            </div>
+        </div>
+        <div class="part2">
+            <div class="title"></div>
+            <div class="container wm01190">
+                <img src="{$theme_path}zt/flash_sale20150618/images/b-part-2.jpg" />
+            </div>
+        </div>
+        <div class="container_recommend">
+            <div class="title"></div>
+            <div class="container">
+                <div class="container_ul">
+                    <ul class="clearfix">
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=18"><img src="{$theme_path}zt/flash_sale20150618/images/container_recommend_img1.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=16"><img src="{$theme_path}zt/flash_sale20150618/images/container_recommend_img2.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244&brand=56#filter_area"><img src="{$theme_path}zt/flash_sale20150618/images/container_recommend_img3.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244&brand=56#filter_area"><img src="{$theme_path}zt/flash_sale20150618/images/container_recommend_img4.jpg" /></a></li>
+                        <li><a href="http://m.deebei.net/"><img src="{$theme_path}zt/flash_sale20150618/images/container_recommend_img5.jpg" /></a></li>
+
+                    </ul>
+                </div>
+                <div class="return_index">
+                    <a href="/">
+                        <img src="{$theme_path}zt/flash_sale20150618/images/return_index.jpg" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>﻿

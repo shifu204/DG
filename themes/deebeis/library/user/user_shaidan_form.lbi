@@ -1,0 +1,112 @@
+<div class="shaidan_form" id="shaidan_form">
+<link rel="stylesheet" type="text/css" href="js/uploadify.css">
+<script type="text/javascript" src="/js/jquery.uploadify.min.js"></script>
+    <div class="clearfix"><span class="shaidan-close add-close">收起</span></div>
+    <form id="shaidan_form_{$order.order_id}">
+        <div class="shaidan_form_content">
+            {foreach from=$order.goods item=goods}
+            <div class="row clearfix" id="goods_id_{$goods.goods_id}" name="shaidan_row">
+                <div class="shaidan">
+                    <div class="shaidan_row ">
+                        商品信息：
+                        <font class="blue">
+                            <a href="goods.php?id={$goods.goods_id}" target="_blank">{$goods.goods_name}</a>
+                        </font>
+                    </div>
+                    <div class="shaidan_row goods_rank clearfix" style="width: 150px;">
+                        <div>
+                            <font>*</font>评分：
+                        </div>
+                        <div class="rank_star">
+                            <a name="goods_rank" data-value="1" href="javascript:void(0);"></a>
+                            <a name="goods_rank" data-value="2" href="javascript:void(0);"></a>
+                            <a name="goods_rank" data-value="3" href="javascript:void(0);"></a>
+                            <a name="goods_rank" data-value="4" href="javascript:void(0);"></a>
+                            <a name="goods_rank" data-value="5" href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="shaidan_row">
+                        <span><font>*</font>标题：</span>
+                        <input type="text" name="shaidan_title" class="shaidan_title"  />
+                        <span class="shaidan_tips">（不上传图片可不填）</span>
+                    </div>
+                    <div class="shaidan_row margin_1">
+                        <span class="fl"><font>*</font>心得：</span>
+                        <textarea name="shaidan_content" style="width:480px;"></textarea>
+                        <div class="clearfix">
+                            <span class="xinde-l">上传图片最高返现10元，每张图片大小不能超过2M</span>
+                            <span class="xinde-r">10-500字</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shaidan_img" token="{$goods.token}" style="height:100px;">
+                    晒单图片：
+                    <div class="images clearfix" >
+                        {if $goods.images}
+                            {foreach from=$goods.images item=image}
+                            <div class="fl relative shaidan_img_div" data-id="{$image.img_id}">
+                                <img src="{$image.shaidan_img}" />
+                                <div class="rsp"></div>
+                                <div class="operate">删除</div>
+                            </div>
+                            {/foreach}
+                        {/if}
+                    </div>
+                    <input id="file_upload_{$goods.goods_id}" name="file_upload" type="file" multiple="true" >
+                   
+                </div>
+            </div>
+            {/foreach}
+            <div class="shaidan-but clearfix">
+                <input type="button" class="green_but right_content-rounded fr" onclick="submit_comment('{$order.order_id}');" value="提交" />
+            </div>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+<?php $timestamp = time();?>
+$(document).ready(function(){
+    var inputs = $("input[name='file_upload']");
+    $.each(inputs,function(i,j){   
+        var myparent = $(this).parent();
+        var token = $(myparent).attr("token");
+        $(this).uploadify({
+            'formData'     : {
+                'timestamp' : '<?php echo $timestamp;?>',
+                'token'     : token
+            },
+            'swf'      : 'js/uploadify.swf',
+            'uploader' : 'js/uploadify.php',
+            'fileTypeExts': '*.gif; *.jpg; *.png',
+            'onUploadSuccess': function(file, data, response) {
+                if (data == 'five') {
+                    alert("最多上传5张图片");
+                }
+                else if(data == 'no_dir'){
+                    alert("目录不存在。");
+                }
+                else {
+                    var img_id = data;
+                    $.ajax({
+                        type:'get',
+                        url:'user.php',
+                        async:false,
+                        data:{ act: "upload_shaidan_img", token: token, shaidan_img : data},
+                        success:function(getData){
+                            img_id = getData;
+                        }
+                    });
+                    $('#' + file.id).find('.data').html(' 上传完毕');
+                    $(myparent).find(".images").append("<div class='fl relative shaidan_img_div' data-id="+img_id+"><img src='"+data+"' /><div class='rsp'></div><div class='operate'>删除</div></div>");
+                }
+            } 
+        });
+    });   
+    $(".add-close").click(function(){
+        $(this).closest(".ininin").css("display","none");
+    });   
+});
+
+</script>
+

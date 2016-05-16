@@ -1,0 +1,219 @@
+<!-- $Id: ads_info.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<form method="POST" action="mc_shaidan.php?act=allow_deny" name="listForm" onsubmit="return confirm_allow_deny()">
+<div class="list-div" id="listDiv">
+           <table width="100%" cellspacing="1" cellpadding="5" border="0">
+            <tbody><tr>
+              <th align="left"><input onclick='listTable.selectAll(this, "checkboxes")' type="checkbox" />编号</th>
+              <th>用户</th>
+              <th>晒单类型</th>
+              <th>晒单标题</th>
+              <th>发布时间</th>
+              <th>当前状态</th>
+              <th>商品金额</th>
+              <th>奖励金额</th>
+              <th>奖励积分</th>
+              <th width="60">操作</th>
+            </tr>
+            <!--{foreach from=$shaidan_list item=shaidan key=key} -->
+            <tr>
+              <td><input type="checkbox" name="checkboxes[]" value="{$shaidan.msg_id}" />{$shaidan.msg_key}</td>
+              <td>
+                  {if $shaidan.user_type}<img src="/images/login/login{$shaidan.user_type}.png" />{/if}
+                  <a href="account_log.php?act=list&user_id={$shaidan.user_id}">{$shaidan.buyer}</a></td>
+              <td>{if $shaidan.parent_id}晒单回复{else}{$shaidan.msg_type}{/if}</td>
+              <td>{if $shaidan.parent_id}<strong style="color:red;">Re:</strong>{$shaidan.msg_title}<br />{$shaidan.msg_content}{else}{$shaidan.msg_title}{/if}</td>
+              <td>{$shaidan.msg_time}</td>
+              <td>
+              {if !$shaidan.msg_status}
+              <font color="blue">审核中</font>
+              {else}
+              <font color="green">已通过</font>
+              {/if}
+              <!-- <a href="data/feedbackimg/{$shaidan.shaidan_img}" target="_bank" class="f6">{$lang.view_upload_file}</a> --></td>
+              <td>{if !$shaidan.parent_id}{$shaidan.goods_amount}{/if}</td>
+              <td>{if !$shaidan.parent_id}{$shaidan.return_amount}{/if}</td>
+              <td>{if !$shaidan.parent_id}{$shaidan.return_integral}{/if}</td>
+              <td>
+              {if !$shaidan.msg_status && !$shaidan.is_return}
+                {if $shaidan.parent_id}
+                <a href="mc_shaidan.php?act=shaidan_allow&msg_id={$shaidan.msg_id}">显示评论</a><br />
+                {else}
+                <a href="mc_shaidan.php?act=allow_single&msg_id={$shaidan.msg_id}">审核奖励</a><br />
+                {/if}
+              {/if}
+                  <a target="_blank" href="../shaidan.php?id={$shaidan.goods_id}&s_id={if $shaidan.parent_id}{$shaidan.parent_id}{else}{$shaidan.msg_id}{/if}">查看详情</a></td>
+            </tr>
+            <!-- {/foreach} -->
+           </tbody></table>
+           
+<table id="page-table" cellspacing="0">
+<tr>
+  <td><div>
+      <select name="sel_action">
+	    <option value="">{$lang.select_please}</option>
+        <option value="remove">批量删除</option>
+        <option value="allow">批量显示</option>
+        <option value="deny">批量隐藏</option>
+      </select>
+      <input type="hidden" name="act" value="allow_deny" />
+      <input type="submit" name="drop" id="btnSubmit" value="{$lang.button_submit}" class="button" disabled="true" /></div></td>
+  <td align="right" nowrap="true">
+  {include file="page.htm"}
+  </td>
+</tr>
+</table>
+</div>
+</form>
+
+<script language="javascript">
+var cfm = new Object();
+cfm['remove'] = '确定要删除所选择的晒单吗？';
+cfm['allow'] = '确定要显示所选择的晒单吗？';
+cfm['deny'] = '确定要隐藏所选择的晒单吗？';
+
+function confirm_allow_deny(){
+    var action = document.forms['listForm'].elements['sel_action'].value;
+    if (action == 'allow'||action == 'remove'||action == 'deny'){
+          return confirm(cfm[action]);
+    }
+}
+
+</script>
+
+<div class="main-div">
+          
+          <form action="mc_shaidan.php" method="post" enctype="multipart/form-data" name="formMsg" onSubmit="return submitShaidan();">
+                  <table width="100%" border="0" cellpadding="3">
+                    <tr>
+                      <td align="right">会员ID：</td>
+                      <td><input name="user_id" type="text" value="" /></td>
+                    </tr>
+                     <input name="msg_type" type="hidden" value="0" />
+                    <!--<tr>
+                      <td align="right">晒单类型：</td>
+                      <td><input name="msg_type" type="radio" value="0" checked="checked" />
+                        晒晒商品
+                        <input type="radio" name="msg_type" value="1" />
+                        晒快递单
+                        <input type="radio" name="msg_type" value="2" />
+                        随便晒晒
+                        </td>
+                    </tr> -->
+                    <tr>
+                        <td align="right">晒单主题：</td>
+                        <td><input name="msg_title" type="text" size="30" class="inputBg" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td align="right">晒单商品：</td>
+                      <td>
+                      <select onchange="getGoods(this.value)" name="brand_id">
+                    	<option value="0">请选择品牌</option>
+                        {html_options options=$brand_list}
+                      </select>
+                      <select id="goods_id" name="goods_id">
+                    	<option value="0">请选择产品</option>
+                      </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right" valign="top">晒单内容：</td>
+                      <td><textarea name="msg_content" cols="60" rows="8" wrap="virtual" class="B_blue" style="width: 675px; height: 190px;"></textarea></td>
+                    </tr>
+                    <tr>
+                      <td align="right" valign="top"><!--<strong onclick="addImgInput()" style="cursor:pointer;color:red;">[+]</strong> -->上传文件：</td>
+                      <td id="shaidan_img"><input type="file" name="shaidan_img"  size="45"  class="inputBg" /></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td><input type="hidden" name="act" value="act_add_shaidan" />
+                        <input type="submit" value="{$lang.button_submit}" class="button" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>
+                      {$lang.img_type_tips}<br />
+                      {$lang.img_type_list}
+                      </td>
+                    </tr>
+                  </table>
+                </form>
+                
+<script language="javascript">
+			function getGoodsResponse(result){
+				var sel = document.getElementById("goods_id");
+			    sel.length = 1;
+			    sel.selectedIndex = 0;
+			
+			    if (document.all){
+				  sel.fireEvent("onchange");
+			    }else{
+				  var evt = document.createEvent("HTMLEvents");
+				  evt.initEvent('change', true, true);
+				  sel.dispatchEvent(evt);
+			    }
+			
+				sel.options.length=0;
+				
+			    if (result.goods)
+			    {
+			  	  if(result.goods.length==1&&result.goods[0].goods_id==0){
+					var opt = document.createElement("OPTION");
+					opt.value = result.goods[0].goods_id;
+					opt.text  = result.goods[0].goods_name;
+					sel.options.add(opt);
+				  }else{
+					var opt = document.createElement("OPTION");
+					opt.value = '';
+					opt.text  = '请选择产品';
+					sel.options.add(opt);
+					  for (i = 0; i < result.goods.length; i ++ )
+					  {
+						var opt = document.createElement("OPTION");
+						opt.value = result.goods[i].goods_id;
+						opt.text  = result.goods[i].goods_name;
+						sel.options.add(opt);
+					  }
+				  }
+			    }else{
+					var opt = document.createElement("OPTION");
+					opt.value = '';
+					opt.text  = '请选择产品';
+					sel.options.add(opt);
+				} 
+			}
+		  	function getGoods(value){
+				Ajax.call('mc_shaidan.php', 'act=get_goods&brand_id=' + value, getGoodsResponse, 'GET', 'JSON');
+			}
+			
+		  	function addImgInput(){
+				document.getElementById("shaidan_img").innerHTML = document.getElementById("shaidan_img").innerHTML + '<br /><input type="file" name="shaidan_imgs[]" size="45"  class="inputBg" />';
+			}
+		  	
+			function submitShaidan(){
+				var sdFome = document.formMsg;
+				if(sdFome.goods_id.value == 0){
+					alert('请选择商品！');
+					sdFome.goods_id.focus();
+					return false;
+				}
+				if(sdFome.msg_content.value == ''){
+					alert('请填写晒单内容！');
+					//sdFome.s_content.focus();
+					return false;
+				}	
+				if(sdFome.shaidan_img.value == ''){
+					alert('请上传晒单图片！');
+					//sdFome.s_content.focus();
+					return false;
+				}	
+				return true;
+			}
+</script>                
+</div>
+
+
+{include file="pagefooter.htm"}

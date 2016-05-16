@@ -1,0 +1,139 @@
+{insert_scripts files='region.js,utils.js','jquery.json.min.js'}
+<script type="text/javascript" src="themes/deebeis/tryonebuy/trybuy.js"></script> 
+<script type="text/javascript">
+region.isAdmin = false;
+var tryonebuyformre = false;
+var tryonebuyformObj = false;
+function $trybuy(element) {
+  return document.getElementById(element);
+}
+function tryonebuypostx(obj){
+	return false;
+}
+function trybuy1Response(html){
+	document.getElementById('trybuyformhtml').innerHTML = html;
+	$trybuy('trybuyformbtn').style.display = 'block';
+}
+function trybuy0(goods_id,brand_id){
+	$trybuy('trybuyoverplay').style.display = 'block';
+	$trybuy('trybuywelcome').style.display = 'block';
+	$trybuy('trybuyformbtn').style.display = 'none';
+	$trybuy('trybuyform').style.display = 'none';
+	$trybuy('trybuyshow').style.display = 'none';
+	$trybuy('trybuyok').style.display = 'none';
+        var pre_goods_id = $trybuy('trybuy_goods_id').value;
+        if(pre_goods_id == goods_id){
+            tryonebuyformre = true;
+        } else {
+            tryonebuyformre = false;
+        }
+        $trybuy('trybuy_brand_id').value = brand_id;
+        $trybuy('trybuy_goods_id').value = goods_id;
+}
+function trybuy1(){
+	$trybuy('trybuywelcome').style.display = 'none';
+	$trybuy('trybuyform').style.display = 'block';
+        var goods_id = $trybuy('trybuy_goods_id').value;
+	if(!tryonebuyformre){
+		//Ajax.call('tryonebuy.php', 'act=tryonebuymin&id='+goods_id, trybuy1Response, 'GET');
+                $.get('tryonebuy.php?act=tryonebuymin&id='+goods_id,function(html){
+                    trybuy1Response(html);
+                });
+	}else{
+		$trybuy('trybuyformbtn').style.display = 'block';
+	}
+}
+function trybuy2(){
+	tryonebuyformObj = tryonebuypost($trybuy('tryonebuyform'));
+	if(tryonebuyformObj){
+        var html = "";
+        var obj = document.tryonebuyform;
+        html = "收货人姓名：" + document.tryonebuyform.consignee.value + "&nbsp;&nbsp;"
+             + "联系电话：" + document.tryonebuyform.tel.value + "<br />"
+             + "收货地址：" + obj.country.options[obj.country.options.selectedIndex].text
+             + obj.province.options[obj.province.options.selectedIndex].text
+             + obj.city.options[obj.city.options.selectedIndex].text
+             + obj.district.options[obj.district.options.selectedIndex].text + "&nbsp;&nbsp;"
+             + document.tryonebuyform.address.value + "<br />"
+             + "邮政编码：" + document.tryonebuyform.zipcode.value;
+        document.getElementById('consignee_info').innerHTML = html;
+		$trybuy('trybuyform').style.display = 'none';
+		$trybuy('trybuyshow').style.display = 'block';
+	}
+}
+function edit_consignee() {
+    $trybuy('trybuyform').style.display = 'block';
+    $trybuy('trybuyshow').style.display = 'none';
+    //$id('trybuyoverplay').style.display = 'none';
+}
+function tryonebuysubmit(){
+	if(tryonebuyformObj){
+		//Ajax.call('tryonebuy.php?act=buy', 'goods=' + $.toJSON(tryonebuyformObj), trybuyresponse, 'POST', 'JSON');//
+                $.post('tryonebuy.php?act=buy',{goods:$.toJSON(tryonebuyformObj)},function(result){
+                    trybuyresponse(result);
+                },'json');
+	}
+}
+function trybuyresponse(result){
+	if(result.error){
+		alert(result.message);
+	}else{
+		$trybuy('trybuyshow').style.display = 'none';
+		$trybuy('trybuyok').style.display = 'block';
+		$trybuy('trybuyoktxt').innerHTML = result.message;
+		tryonebuyformre = false;
+	}
+}
+</script>
+<form id="tryonebuyform" name="tryonebuyform" action="tryonebuy.php?act=buy" method="post" onsubmit="return tryonebuypostx(this);">
+    <input name="isajax" type="hidden" value="1" />
+    <input name="brand_id" id="trybuy_brand_id" type="hidden" value="" />
+    <input style="display: none;" id="trybuy_goods_id" name="goods_id" type="radio" value="" checked="checked" />
+    <div id="trybuyoverplay" style="height:150%; display:{if $is_tryone}block{else}none{/if};">
+        <div id="trybuyoverplaybg" style="height:100%;"></div>
+        <div id="trybuybox">
+            <div class="t clearfix" style="display: block;">
+                <div class="mbx"><a onclick="$trybuy('trybuyoverplay').style.display = 'none';" class="colsetrybuy"></a>
+                    <div class='b' id="trybuywelcome" style="display:{if $is_tryone}block{else}none{/if};">
+                        <a href="javascript:trybuy1();">
+                            <img style="padding-left: 30px;" src="/themes/deebeis/images1/tryonebuy/welcome.jpg" />
+                        </a>
+                    </div>
+                    <div id="trybuyform" style="display:none;position:relative;">
+                        <div id="trybuyformhtml" style="text-align: left;"><!-- 一听表单 -->
+                            <h1 style="text-align:center; font-size:18px; margin-top:50px;">请稍后，努力加载中...</h1>
+                        </div>
+                        <p id="trybuyformbtn" style="text-align:center;display:none;">
+                            <input class="trybuybtn" type="button" onclick="trybuy2();">
+                        </p>
+                    </div>
+                    <div id="trybuyshow" style="padding:0 30px;display:none;position:relative;">
+                        <h2 style="text-align:center; font-size:14px; margin:26px 10px 10px;" class="color8">温馨提示</h2>
+                        <p style="line-height: 25px;"> 
+                            <!--
+您好，您的订单中包含德国爱他美奶粉，其罐内通过锡纸密封，由于发货路途遥远，货物在运输过程中会受到一定程度的震荡而可能出现锡纸裂开漏粉的情况，虽然我们已经用尽一切办法提高包装质量和在发货前严格检查，同时我们极不愿意看到这种情况的发生，但运输途中的意外我们实在无法避免，如出现以上情况不作为退换货的理由和依据，敬请广大客户注意，如您继续选择购买则表示你已经同意以上条款。请选择是否需要继续购买：
+    --> 
+                            购买的商品：<span style="color:#F00;">{$goods.goods_style_name}</span><br />
+                            请确认你的送货信息：<br />
+                            <span id="consignee_info"></span> </p>
+                        <div style="text-align:center;width:300px;margin:0 auto;position:relative;">
+                            <input class="trybuygobtn" type="button" onclick="tryonebuysubmit();" style="float:left;">
+                            <a onclick="edit_consignee(); return false;" style="margin-top:34px;display:block;float:right;font-size:14px;" class="color8">修改收货人信息</a> </div>
+                    </div>
+                    <div id="trybuyok" style="padding:0 30px;display:none;position:relative; text-align: center;">
+                        <h2>恭喜您，试购成功！ </h2>
+                        <p style="color:#FF74B2; font-weight:bold; font-size:14px; text-align:center;" id="trybuyoktxt"></p>
+                        <div style="text-align:center;width:260px;margin:50px auto 0 auto;position:relative;"> <a class="tryonebuy_close_btn" onclick="$trybuy('trybuyoverplay').style.display = 'none';" style="font-size:14px;"></a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">  
+var trybuyboxleft = 0;
+if (window.innerWidth){trybuyboxleft = window.innerWidth;// 获取窗口宽度
+}else if ((document.body) && (document.body.clientWidth)){trybuyboxleft = document.body.clientWidth;}
+if(trybuyboxleft){trybuyboxleft = ((trybuyboxleft-900)/2)+'px';}else{trybuyboxleft='36%';}
+$trybuy('trybuybox').style.left = trybuyboxleft;
+</script> 

@@ -1,0 +1,53 @@
+<div class="product_details" id="order_detail">
+<link href="{$theme_path}style/order_details_20150420.css" rel="stylesheet" type="text/css">
+    <div class="state-wrapper">
+        <div class="arrow">
+            <img src="{$theme_path}images1/user_clips_20150420/arrow.jpg"/>
+        </div>
+        <div class="state">
+            <div class="state_title clearfix">
+                <div class="information">
+                    订单信息
+                </div>
+                <div class="order_sn">
+                    订单编号：<span>{$order.order_sn}</span>
+                    <div class="order-close">收起</div>
+                </div>
+            </div>
+            <div class="logistics-wrapper">
+                <div class="logistics">
+                    <div class="logistics-title">处理时间</div>
+                    <div class="logistics-details">
+                        <div id="express_info_{$order.order_id}"></div>
+                    </div>
+                    <div class="logistics-price">
+                        <table>
+                            <tr><td colspan="2">付款方式：{$order.pay_name}</td></tr>
+                            <tr><td>商品金额：{$order.formated_goods_amount}</td><td>运费金额：{$order.formated_shipping_fee}</td></tr>
+                            <tr><td>应支付金额：{$order.formated_should_pay}</td><td>实际运费：{$order.formated_shipping_fee}</td></tr>
+                            <tr><td colspan="2">付款时间：{$order.formated_pay_time}</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".order-close").click(function(){
+            $(this).closest('.ininin').css("display","none");
+        });    
+        var obj = $("#express_info_"+{$order.order_id});
+        {if $order.invoice_no neq 0}
+            $(obj).html("<center>正在查询物流信息，请稍后...</center>");
+            var expressid =encodeURIComponent('{$order.shipping_name}');
+            var expressno = '{$order.invoice_no}';
+            $.get('/plugins/express.php?com='+ expressid+'&nu=' + expressno,function(data){
+                $(obj).html(data);
+            },'text');
+        {else}
+            $(obj).html("<div style='height:50px; text-align:center; line-height:50px;'>暂无物流信息</div>");
+        {/if}                             
+    });
+</script>

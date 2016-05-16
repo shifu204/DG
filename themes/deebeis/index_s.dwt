@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<meta name="baidu-site-verification" content="">
+<meta name="Description" content="{$description}">
+<meta name="Keywords" content="{$keywords}">
+<title>{$page_title}</title>
+<link rel="stylesheet" type="text/css" href="/themes/deebeis/style/mobile_s.css">
+{insert_scripts files='jquery.min.js,jquery.json.min.js'}
+<!-- #BeginLibraryItem "/library/google_analytics.lbi" --><!-- #EndLibraryItem -->
+</head>
+<?php include_once('themes/' . $GLOBALS['_CFG']['template'].'/init.php');?>
+<body>
+<!-- #BeginLibraryItem "/library/page_header_s.lbi" --><!-- #EndLibraryItem -->
+<div class="category padding10">
+	<ul class="cate_list">
+        <?php $this->_var['categories_all'] = get_categories_tree();?>
+        <!--{foreach from=$categories_all key=alltop_flr_key item=cat name=alltop_i}-->
+        <li class="font_gray">
+        <a href="{$cat.url}" class="font_red cate_title">[{$cat.name|escape:html}]</a>
+        <!--{foreach from=$cat.cat_id item=child name=child_cat}-->
+        <!--{if $smarty.foreach.child_cat.iteration neq 1}-->|<!--{/if}-->
+    	<a href="{$child.url}">{$child.name|escape:html}</a>
+        <!--{/foreach}-->
+    	</li>
+        <!--{/foreach}-->
+    </ul>
+    <!--<a href="#" class="all_categories font_red">查看全部分类&gt;</a>-->
+</div>
+<div class="section">
+	<div class="section_top">
+    	<h2 class="section_title">品牌精选</h2>
+    </div>  
+    <div class="hot_brands">
+        <?php $this->_var['brand_list_this'] = kl3w_get_brands(8);?>
+        <!-- {if $brand_list_this} -->
+            <!-- {foreach from=$brand_list_this item=brand name="brand_foreach"} -->
+            {if $smarty.foreach.brand_foreach.index <= 11}
+                <a href="{$brand.url}"><span id="keyword_cate">{$brand.brand_name|escape:html}</span></a>
+            {/if}
+          <!-- {/foreach} -->
+        <!-- {/if} -->                      
+    </div>	
+</div>
+<div class="section">
+	<div class="section_top">
+    	<span class="section_title">商城公告</span>
+    </div>
+    <ul class="goods_links">
+        <!--{foreach from=$new_articles item=article}-->
+        <li><a href="{$article.url}" title="{$article.s_title|escape:html}">{$article.title}</a> </li>
+        <!--{/foreach}-->
+    </ul>
+</div>
+<div class="section" style="display:none;">
+	<div class="section_top">
+    	<span class="section_title">食品饮料酒水</span>
+        	<span><a href="/listproduct/28980_1">牛奶</a></span>
+            <span><a href="/listproduct/5237_1">啤酒</a></span>
+            <span><a href="/listproduct/5228_1">饮用水</a></span>
+            <span class="flt_more"><a href="/secsort/5135">更多&gt;</a></span>
+    </div>
+    <ul class="goods_show">
+    	<li>
+        	<a href="/product/3315733_1" class="goods_pic"><img src="index_yhd_files/e217919a27784655YY_115x115.jpg" height="60px" width="60px"></a>
+            </li>
+        <li>
+        	<a href="/product/1026443_1" class="goods_pic"><img src="index_yhd_files/1741355_115x115.jpg" height="60px" width="60px"></a>
+            </li>
+    </ul>
+    <ul class="goods_links">
+    	<li><a href="/act/2012081601">七夕大礼饮料大促</a></li>
+        <li><a href="/act/2012081602">七夕零食大集合</a></li>
+        <li><a href="/product/2455433_1">香蕉味牛奶饮料6盒组合装</a></li>
+        <li><a href="/product/2182850_1">有友泡凤爪5折起</a></li>
+        <li><a href="/product/1112298_1">百威啤酒限时抢购</a></li>
+    </ul>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer_s.lbi" --><!-- #EndLibraryItem -->
+</body></html>

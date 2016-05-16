@@ -1,0 +1,43 @@
+<table>
+    <thead>
+        <tr>
+            <th>红包序列号</th>
+            <th>红包金额</th>
+            <th>最小订单金额</th>
+            <th>使用时间</th>
+            <th>状态</th>
+        </tr>
+    </thead>
+    {if $bonus}
+    <tbody>
+        {foreach from=$bonus item=bom}
+        <tr>
+            <td>{$bom.bonus_sn}</td>
+            <td>{$bom.type_money}</td>
+            <td>{$bom.min_goods_amount}</td>
+            <td>{$bom.used_time}</td>
+            <td>{$bom.status}</td>
+        </tr>
+        {/foreach}
+    </tbody>
+    {/if}
+</table>
+{include file="library/ajax_pages.lbi"}
+<script type="text/javascript">
+function get_bonus_data(page){
+    if(typeof(page) == 'undefined'){
+        page = 1;
+    }
+    var bonus_status = $("#bonus_status").val();
+    var bonus_over_time = $("#bonus_over_time").val();
+    $.ajax({
+        type:'get',
+        dataType:'json',
+        url:'user.php?act=ajax_get_bonus&bonus_status='+bonus_status+"&bonus_over_time="+bonus_over_time+"&page="+page,
+        success:function(data){
+            $("#bonus_list").empty();
+            $("#bonus_list").append(data.content);
+        }
+    });
+}
+</script>

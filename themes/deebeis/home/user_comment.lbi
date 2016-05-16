@@ -1,0 +1,65 @@
+<div class="floor clearfix">
+    <div class="w1190 floorwrap">
+        <div class="floor_box floor_box2">
+            <div class="box_title">
+                天天特卖
+            </div>
+            <div class="box_content">
+                <div class="user_comment_flexslider relative">
+                    <ul class="slides">   
+                        <?php foreach($this->_var['day_promote'] as $dk=>$dv):?>
+                        <?php if($dk % 2 == 0):?>
+                        <li>
+                        <?php endif;?>
+                            <a href="<?php echo $dv['url']?>" target="_blank">
+                                <img class="ad_div_img" src="<?php echo $dv['promote_img']?>" />
+                            </a> 
+                        <?php if($dk % 2 == 1):?>
+                        </li>  
+                        <?php endif;?>
+                        <?php endforeach;?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="floor_box floor_box1">
+            <div class="box_title">
+                用户评价
+            </div>
+            <div class="box_content clearfix">
+                <?php if(!empty($this->_var['shaidan'])):?>
+                <?php foreach($this->_var['shaidan'] as $sk=>$sv):?>
+                <a href="goods.php?id=<?php echo $sv['goods_id']?>" target="_blank">
+                <div class="comment_item clearfix <?php if($sk == 0):?>first_item<?php endif;?>">
+                    <div class="item_left">
+                        <img width="80" src="<?php echo $sv['shaidan_img']?>" />
+                    </div>
+                    <div class="item_right">
+                        <div class="shaidan_title"><?php echo $sv['msg_title'];?></div>
+                        <div class="shaidan_content"><?php echo $sv['user_name']?>：<?php echo $sv['msg_content'];?></div>
+                    </div>
+                </div>
+                </a>
+                <?php endforeach;?>
+                <?php endif;?>
+            </div>
+        </div>
+        <div class="floor_box floor_box1">
+            <div class="box_title">
+                手机网站
+            </div>
+            <div class="box_content">
+                <img src="/themes/deebeis/images1/erweima.jpg" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(".user_comment_flexslider").flexslider({
+    animation: "fade",
+    slideshow: true,
+    directionNav:false,
+    animationSpeed:500
+});
+</script>

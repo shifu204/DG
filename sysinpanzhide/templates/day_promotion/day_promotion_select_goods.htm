@@ -1,0 +1,55 @@
+{include file="easyui_page_header.htm"}
+<div id="goods_search">
+    关键词：<input name="keyword" type="text" id="goods_keyword" />
+    <a href="javascript:goods_search()" class="easyui-linkbutton" plain="true">搜索</a>  
+    (双击选择商品)
+</div>
+<table id="goods_table"></table>
+<script type="text/javascript">
+    var now = new Date().getTime();
+    $(document).ready(function(){
+        $("#goods_table").datagrid({
+            pagination:true,
+            pageSize:20,
+            url:'day_promotion.php?act=get_goods&_t='+now,
+            method:'post',
+            singleSelect:true,
+            toolbar:'#search_goods',
+            fitColumns:true,
+            columns:[[ 
+                {field:'goods_id',title:'编号',width:100,align:'center'},    
+                {field:'goods_name',title:'商品名称',width:300,align:'center'},    
+                {field:'goods_sn',title:'货号',width:100,align:'center'},
+                {field:'shop_price',title:'原价',width:100,align:'center'},    
+                {field:'promote_price',title:'天天特价',width:100,align:'center'},    
+                {field:'goods_number',title:'库存',width:100,align:'center'}            
+            ]],
+            onDblClickRow:function(index,data){
+                set_goods(index,data);
+            }
+        });
+    });
+    
+    
+    function goods_search() {
+        $('#goods_table').datagrid('load',{    
+            keyword:$('#goods_keyword').val()
+        });  
+    }
+    
+    function set_goods(index,data){
+        var row = $("#promotion_goods").datagrid('getSelected');
+        var row_index = $("#promotion_goods").datagrid('getRowIndex',row);
+        if(row){
+            $("#promotion_goods").datagrid("updateRow",{index:row_index,row:{goods_id:data.goods_id,goods_name:data.goods_name,goods_sn:data.goods_sn,shop_price:data.shop_price,goods_number:data.goods_number}});               
+            $('#promotion_goods').datagrid('endEdit', row_index);           
+            $('#promotion_goods').datagrid('selectRow', row_index);
+            $('#promotion_goods').datagrid('beginEdit', row_index);
+            var is_change =  $("#promotion_goods").datagrid('getEditor',{index:row_index,field:'is_change'});
+            is_change.target.textbox('setValue',1);
+            $("#goods_list").dialog("close");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+@charset "utf-8";
+body {
+    background: #FFFFFF;
+}
+.f_l { float:left;}
+.f_r { float:right;}
+.clear{clear:both;display:block;height:0;overflow:hidden;font-size:0;}
+.clearfix:after{
+    content:"."; display:block; height:0; clear:both;
+    visibility:hidden;
+}
+.header-logo {
+    margin:0;
+    height: 60px;
+}
+.etc-header-logo {
+    height: 58px;
+    float:left;
+}
+.ect-header-username {
+    line-height: 60px;
+    padding-right: 20px;
+    font-size: 12px;
+}
+.ect-bg {
+    background: #C91623 !important;
+}
+.ect-colory, .ect-color {
+    color: #C91623 !important;
+}
+.ect-bg-colory {
+    background: #C91623 !important;
+}
+.ect-category-all ul li .ect-category-child a {
+    display: inline;
+    border:none;
+    padding:0;
+}
+.ect-category-all ul li .ect-category-child .filter {   
+    padding:0;
+    border-bottom: 1px solid #D6D6D6;
+}
+.ect-category-all ul li .ect-category-child .filter .filter-title{
+    text-align: center;
+    border-bottom: 1px dashed #D6D6D6;
+    padding:0.5em 0px;
+}
+.ect-category-all ul li .ect-category-child .filter-empty .filter-title {
+    text-align: center;
+}
+.ect-category-all ul li .ect-category-child .filter .filter-item {
+    display: inline-block; 
+    width: 32%;
+    text-align: center; 
+    padding:2px 0;
+    overflow: hidden;
+}
+.focus .hd ul .on {
+    background: #C91623;
+}
+.user-tab ul li.active a, .user-tab ul li.active a:link {
+    color:#C91623;
+}
+.ect-radio input:checked + label i, .ect-checkbox input:checked + label i {
+    background-color: #C91623;
+}
+.touchweb_mod_Filter .btn1 .sure {
+    background-color:#C91623;
+    border:1px solid #C91623;
+}
+.touchweb-com_headerFilter .right {
+    color:#C91623;
+}
+
+/*多买多送图标*/
+.ect-pro-list ul li a {
+    position: relative;
+}
+.ect-pro-list ul li .buy_more_send_x{
+    width: 50%;
+    height: 50%;
+}
+.buy_more_send_x {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    right:0%;
+    top:0%;
+}
+
+/*商品详情页*/
+.goods-info .same-goods-div { border-top: 1px solid #e3e3e3;}
+.goods-info .same-goods-div .goods-item {padding-top: 0.6em;}
+.goods-info .same-goods-div .goods-item .goods-img img {width: 100%;}
+.goods-info .same-goods-div .goods-item .goods-price {text-align: center;}
+/*底部客服按钮*/
+.online-service {position: fixed; top:60px; right: 0;}
+.online-service img { width: 25px;}

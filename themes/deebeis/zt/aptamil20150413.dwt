@@ -1,0 +1,178 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/style.css" rel="stylesheet" type="text/css">
+<link href="{$theme_path}zt/aptamil20150413/style.css" rel="stylesheet" type="text/css">
+<script src="{$theme_path}zt/aptamil20150413/aptamil.js"></script>
+<script type="text/javascript">
+    function scroll_to(target){
+        var target_top = $("#"+target).offset().top;
+        $("html,body").animate({
+            scrollTop:target_top+"px"
+        },380);
+    }
+</script>
+<div class="wrapper">
+    <div class="poster">
+        <div class="wm01190">
+            <a href=""></a>
+        </div>
+    </div>
+    <div class="container_introduce">
+        <div class="introduce_wrap clearfix">
+            <div class="wrap">
+                <div class="introduce_01">
+                    <a class="but" href="javascript:scroll_to('process_0');"></a>
+                </div>
+            </div>
+            <div class="wrap">
+            <div class="introduce_02">
+                <a class="but" href="javascript:scroll_to('process_1');"></a>
+            </div>
+            </div>
+            <div class="wrap">
+            <div class="introduce_03">
+                <a class="but" href="javascript:scroll_to('process_4');"></a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="container_process">
+        <div id="process_0"><a href="#process_1"><div class="arr" style="bottom: 19px; left: 49%;"></div></a></div>
+        <div id="process_1"><a href="#process_2"><div class="arr" style="bottom: 21px; left: 49.4%;"></div></a></div>
+        <div id="process_2"><a href="#process_3"><div class="arr" style="bottom: 21px; left: 49.5%;"></div></a></div>
+        <div id="process_3"><a href="#process_4"><div class="arr" style="bottom: 5px; left: 48.9%;"></div></a></div>
+        <div id="process_4"><a href="#container_standard"><div class="arr" style="bottom: 15px; left: 49.1%;"></div></a></div>
+    </div>
+    <div class="container_1 rounded wm01190">
+        <div class="container_standard " id="container_standard">
+            <div class="title"><img src="{$theme_path}zt/aptamil20150413/images/container_standard_t.jpg" /></div> 
+            <div class="container_frame">
+                <div class="containers">
+                    <div class="goodbox_warp clearfix">
+                            <div class="goodbox"><a href="http://www.deebei.net/goods-119.html"target="_blank"><img src="{$theme_path}zt/aptamil20150413/images/container_standard_db1.jpg"/></a></div>
+                            <div class="goodbox"><a href="http://www.deebei.net/goods-132.html"target="_blank"><img src="{$theme_path}zt/aptamil20150413/images/container_standard_db2.jpg"/></a></div>
+                            <div class="goodbox"><a href="http://www.deebei.net/goods-118.html"target="_blank"><img src="{$theme_path}zt/aptamil20150413/images/container_standard_db3.jpg"/></a></div>
+                            <div class="goodbox"><a href="http://www.deebei.net/goods-121.html"target="_blank"><img src="{$theme_path}zt/aptamil20150413/images/container_standard_db4.jpg"/></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container_9s2">
+            <div class="title"><img src="{$theme_path}zt/aptamil20150413/images/container_9s2_t.jpg" /></div> 
+            <div class="container goods-suit clearfix">
+                <?php foreach ($this->_var['topic_class']['suit']['goods_list'] as $goods):?>
+                <div class="goodbox">
+                    <a target="_blank" href="<?php echo $goods['url'];?>">
+                        <div class="goods">                           
+                            <div class="give-tip">
+                                <?php if( $goods['is_buy_six'] == 1):?>
+                                    <img src="{$theme_path}zt/images/give-tip/m5s1-blue.png"/>
+                                <?php elseif($goods['is_buy_nine'] == 1):?>
+                                    <img src="{$theme_path}zt/images/give-tip/m8s2-blue.png"/>
+                                <?php elseif($goods['is_total_four'] == 1):?>
+                                    <img src="{$theme_path}zt/images/give-tip/m4s4-blue.png"/>
+                                <?php endif;?>
+                            </div>                         
+                            <img src="<?php echo $goods['index_img'];?>"/>
+                            <div class="details">
+                                <div class="explain clearfix">
+                                    <span class="left">
+                                        <?php if($goods['is_buy_six'] == 1):?>
+                                            共7罐
+                                        <?php elseif($goods['is_buy_nine'] == 1):?>
+                                            共11罐
+                                        <?php elseif($goods['is_total_four'] == 1):?>
+                                            共4罐
+                                        <?php endif;?>
+                                    </span>
+                                    <span class="right" <?php if($goods['sort_order']==0 || $goods['sort_order']==1){echo "style='background:#f0aa00;'";}elseif ($goods['sort_order']==2 || $goods['sort_order']==3){echo "style='background:#89c23d;'";}elseif ($goods['sort_order']==4 || $goods['sort_order']==5){echo "style='background:#00a0f0;'";}elseif ($goods['sort_order']==6 || $goods['sort_order']==7){echo "style='background:#ff5ca5;'";} {
+                                        
+                                    }?>><?php echo $goods['tag1'];?></span>
+                                </div>
+                                <div class="goods-name"><?php echo $goods['topic_name'];?></div>
+                                <div class="goods-price">
+                                    <span class="unit-price">单罐仅：<?php echo $goods['formated_real_price']?></span>
+                                    <div class="total">
+                                        <span class="total-l">极致品质价：</span><span class="total-r">￥<span class="fw"><?php echo $goods['shop_price'];?></span></span>
+                                        &nbsp;&nbsp;<img src="{$theme_path}zt/images/suit-btn-3.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach;?>
+            </div>
+        </div>
+    </div>
+    <div class="container_2">
+        <div class="container_comment">
+            <div class="title"></div>
+            <div class="container rounded">
+                <img src="{$theme_path}zt/aptamil20150413/images/container_comment_c1.jpg" />
+                <img src="{$theme_path}zt/aptamil20150413/images/container_comment_c2.jpg" />
+            </div>
+        </div>
+        <div class="container_feed">
+            <div class="title"></div>
+            <div class="container rounded">
+                <img src="{$theme_path}zt/aptamil20150413/images/container_feed_c1.jpg" />
+                <img src="{$theme_path}zt/aptamil20150413/images/container_feed_c2.jpg" />
+                <img src="{$theme_path}zt/aptamil20150413/images/container_feed_c3.jpg" />
+                <img src="{$theme_path}zt/aptamil20150413/images/container_feed_c4.jpg" />
+            </div>
+        </div>
+        <div class="container_underwrite ">
+            <div class="title"></div>
+            <div class="wm01190 rounded">
+                <img src="{$theme_path}zt/aptamil20150413/images/container_underwrite_c.jpg" />
+            </div>
+        </div>
+        <div class="container_norm">
+            <div class="title"></div>
+            <div class="container rounded">
+                <img src="{$theme_path}zt/aptamil20150413/images/container_norm_c1.jpg" />
+                <img src="{$theme_path}zt/aptamil20150413/images/container_norm_c2.jpg" />
+                <img src="{$theme_path}zt/aptamil20150413/images/container_norm_c3.jpg" />
+                <img src="{$theme_path}zt/aptamil20150413/images/container_norm_c4.jpg" />
+                <img src="{$theme_path}zt/aptamil20150413/images/container_norm_c5.jpg" />
+            </div>
+        </div>
+        <div class="container_quality ">
+            <div class="title"></div>
+            <div class="wm01190 rounded">
+                <img src="{$theme_path}zt/aptamil20150413/images/container_quality_c1.jpg" />
+                <img src="{$theme_path}zt/aptamil20150413/images/container_quality_c2.jpg" />
+            </div>
+        </div>
+        <div class="container_recommend">
+            <div class="title"></div>
+            <div class="container">
+                <div class="container_ul">
+                    <ul class="clearfix">
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=18"><img src="{$theme_path}zt/aptamil20150413/images/container_recommend_img1.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=16"><img src="{$theme_path}zt/aptamil20150413/images/container_recommend_img2.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=71"><img src="{$theme_path}zt/aptamil20150413/images/container_recommend_img3.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=71"><img src="{$theme_path}zt/aptamil20150413/images/container_recommend_img4.jpg" /></a></li>
+                        <li><a href="http://m.deebei.net/"><img src="{$theme_path}zt/aptamil20150413/images/container_recommend_img5.jpg" /></a></li>
+
+                    </ul>
+                </div>
+                <div class="return_index">
+                    <a href="/">
+                        <img src="{$theme_path}zt/yapei/images/return_index.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<a target="_blank" href="tencent://message/?uin=2462814798&Site=www.deebei.net&Menu=yes">
+<div id="debei-service"></div>
+</a>
+<script type="text/javascript">
+    side_bar_fixed($("#debei-service"),'right','undefined','top');  
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>﻿

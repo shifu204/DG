@@ -1,0 +1,162 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/style.css" rel="stylesheet" type="text/css">
+<link href="{$theme_path}zt/hipp20150414/style.css" rel="stylesheet" type="text/css">
+<div class="wrapper">
+    <div class="poster"></div>
+    <div class="container_introduce">
+            <div class="title"><img src="{$theme_path}zt/hipp20150414/images/container_introduce_t.jpg" /></div>
+            <div class="containers">
+                <img src="{$theme_path}zt/hipp20150414/images/container_introduce_c1.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_introduce_c2.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_introduce_c3.jpg" />
+            </div>
+    </div>
+    <div class="container_1 rounded-1">
+        <div class="container_standard ">
+            <div class="title"><img src="{$theme_path}zt/hipp20150414/images/container_standard_t.jpg" /></div> 
+            <div class="container_frame">
+                <img src="{$theme_path}zt/hipp20150414/images/container_standard_c.jpg" />
+                <div class="containers">
+                    <div class="goodbox_warp clearfix">
+                            <div class="goodbox"><a href="http://www.deebei.net/goods-200.html"target="_blank"><img src="{$theme_path}zt/hipp20150414/images/container_standard_db1.jpg"/></a></div>
+                            <div class="goodbox"><a href="http://www.deebei.net/goods-196.html"target="_blank"><img src="{$theme_path}zt/hipp20150414/images/container_standard_db2.jpg"/></a></div>
+                            <div class="goodbox"><a href="http://www.deebei.net/goods-197.html"target="_blank"><img src="{$theme_path}zt/hipp20150414/images/container_standard_db3.jpg"/></a></div>
+                            <div class="goodbox"><a href="http://www.deebei.net/goods-198.html"target="_blank"><img src="{$theme_path}zt/hipp20150414/images/container_standard_db4.jpg"/></a></div>
+                            <div class="goodbox"><a href="http://www.deebei.net/goods-199.html"target="_blank"><img src="{$theme_path}zt/hipp20150414/images/container_standard_db5.jpg"/></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="goods-suit">
+            <div class="title"><img src="{$theme_path}zt/hipp20150414/images/container_9s2_t.jpg" /></div> 
+            <div class="container">
+                <?php foreach ($this->_var['topic_class']['suit']['goods_list'] as $goods): ?>
+                    <?php if($goods['sort_order']%2==0):?>
+                        <?php if($goods['sort_order']==0):?>
+                            <div class="goodbox_warp clearfix">
+                        <?php elseif($goods['sort_order']!=0):?>
+                            <div class="goodbox_warp border clearfix">
+                        <?php endif;?>
+                    <?php endif;?>         
+                    <div class="goodbox <?php if($goods['is_buy_nine']){ echo 'w450';}?>">
+                        <a target="_blank" href="<?php echo $goods['url'];?>">
+                            <div class="goods">
+                                <div class="give-tip">
+                                    <?php if ($goods['is_buy_six'] == 1): ?>
+                                        <img src="{$theme_path}zt/images/give-tip/m5s1-blue.png"/>
+                                    <?php elseif ($goods['is_buy_nine'] == 1): ?>
+                                        <img src="{$theme_path}zt/images/give-tip/m8s2-blue.png"/>
+                                    <?php endif; ?>
+                                </div>
+                                <img src="<?php echo $goods['index_img'];?>"/>
+                                <div class="details">
+                                    <div class="goods-name"><?php echo $goods['topic_name'];?></div>
+                                    <div class="explain rounded clearfix">
+                                        <span class="left right-rounded">
+                                            <?php echo $goods['tag1'];?>
+                                        </span>
+                                        <span class="right left-rounded">
+                                            <?php if ($goods['is_buy_six'] == 1): ?>
+                                                共7盒
+                                            <?php elseif ($goods['is_buy_nine'] == 1): ?>
+                                                共11盒
+                                            <?php endif; ?>
+                                        </span>
+                                    </div>
+                                    <div class="goods-price">
+                                        <span class="unit-price">单罐仅：<?php echo $goods['formated_real_price'];?></span>
+                                        <div class="total">
+                                            <span class="total-l">极致品质价：</span><span class="total-r">￥<span class="fw"><?php echo $goods['shop_price'];?></span></span>
+                                            &nbsp;<img src="{$theme_path}zt/images/suit-btn-1.jpg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <?php if($goods['sort_order']%2!=0 ):?>
+                        </div>
+                    <?php endif;?>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+    <div class="container_2">
+        <div class="container_comment">
+            <div class="title"></div>
+            <div class="container wm01190">
+                <img src="{$theme_path}zt/hipp20150414/images/container_comment_c1.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_comment_c2.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_comment_c3.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_comment_c4.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_comment_c5.jpg" />
+            </div>
+        </div>
+        <div class="container_feed">
+            <div class="title"></div>
+            <div class="container wm01190">
+                <img src="{$theme_path}zt/hipp20150414/images/container_feed_c1.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_feed_c2.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_feed_c3.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_feed_c4.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_feed_c5.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_feed_c6.jpg" />
+            </div>
+        </div>
+        <div class="container_underwrite ">
+            <div class="title"></div>
+            <div class="wm01190 rounded-1">
+                <img src="{$theme_path}zt/hipp20150414/images/container_underwrite_c1.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_underwrite_c2.jpg" />
+            </div>
+        </div>
+        <div class="container_norm">
+            <div class="title"></div>
+            <div class="container wm01190">
+                <img src="{$theme_path}zt/hipp20150414/images/container_norm_c1.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_norm_c2.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_norm_c3.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_norm_c4.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_norm_c5.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_norm_c6.jpg" />
+            </div>
+        </div>
+        <div class="container_quality ">
+            <div class="title"></div>
+            <div class="wm01190">
+                <img src="{$theme_path}zt/hipp20150414/images/container_quality_c1.jpg" />
+                <img src="{$theme_path}zt/hipp20150414/images/container_quality_c2.jpg" />
+            </div>
+        </div>
+        <div class="container_recommend">
+            <div class="title"></div>
+            <div class="container">
+                <div class="container_ul">
+                    <ul class="clearfix">
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=18"><img src="{$theme_path}zt/hipp20150414/images/container_recommend_img1.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=16"><img src="{$theme_path}zt/hipp20150414/images/container_recommend_img2.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244&brand=45#filter_area"><img src="{$theme_path}zt/hipp20150414/images/container_recommend_img3.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244&brand=45#filter_area"><img src="{$theme_path}zt/hipp20150414/images/container_recommend_img4.jpg" /></a></li>
+                        <li><a href="http://m.deebei.net/"><img src="{$theme_path}zt/hipp20150414/images/container_recommend_img5.jpg" /></a></li>
+
+                    </ul>
+                </div>
+                <div class="return_index">
+                    <a href="/">
+                        <img src="{$theme_path}zt/hipp20150414/images/return_index.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<a target="_blank" href="tencent://message/?uin=2462814798&Site=www.deebei.net&Menu=yes">
+<div id="debei-service"></div>
+</a>
+<script type="text/javascript">
+    side_bar_fixed($("#debei-service"),'right','undefined','top');  
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>﻿

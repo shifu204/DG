@@ -1,0 +1,26 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="footer">
+    <div class="in">
+        <div class="footSearch">
+            <form method="get" action="search.php" name="searchForm" id="searchForm_id">
+                <input name="keywords" id="keywordfoot" type="text">
+                <button type="submit"></button>
+            </form>
+        </div>
+        <a href="/" class="homeBtn"><span></span></a>
+        <a href="#top" class="gotop">
+            <span></span>
+            <p>回顶部</p>
+        </a>
+    </div>
+    <p class="link">
+    <a href="/user.php">用户中心</a>
+    <a href="http://{$computer_domain}/?from=mobile&site_version=computer">电脑版</a>
+    </p>
+    <p>粤ICP备13016260号-1    Copyright © 德贝母婴，All Rights Reserved</p>
+</div>
+<script type='text/javascript' src='http://tb.53kf.com/kf.php?arg=10043377&style=1'></script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F60879ddbf3bb8cc6e6cd67c9f4f7ae25' type='text/javascript'%3E%3C/script%3E"));
+</script>

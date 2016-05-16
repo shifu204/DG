@@ -1,0 +1,69 @@
+/*通用样式 左侧分类导航栏*/
+.catlist_menu{display:block; width:87px;height:457px;overflow:hidden;top:50%;z-index:500;zoom:1; position: fixed; display: none;}
+.catlist_body{overflow:hidden;}
+.side_close{ background:url('/themes/deebeis/images1/side_close.png') no-repeat; }
+.catlist_list{height:100%; background:#fff;position:relative;}
+.catlist_repeaty{background:url("/themes/deebeis/images1/cat_list_style.png") repeat-y; width:12px;}
+.catlist_style{ height:390px;position:absolute;top:49px;right:0;}
+.catlist_bottom{ height:19px;overflow:hidden;padding-left:14px;position:relative;}
+.catlist_side{height:13px;position:absolute; right:0;bottom:6px;}
+.catlist_bottom_bg{background:url("img/goods_list/cat_list_bg.png") repeat-x; height:100%; width:100%;}
+.catlist_title{overflow:hidden;height:31px;line-height:31px; color:#fff; font-size:16px; position:relative; font-weight:bold; text-align:center; background-position:0 -21px;}
+.just_show {height: 40px;padding-left: 9px;padding-right: 9px;width: 1182px; margin-bottom:15px;}
+.catlist_ul{float:left;margin-right:5px;overflow:hidden;}
+.catlist_ul li{text-align:right;padding:7px 0;width:75px;height:16px; cursor: pointer;}
+.catlist_ul .selected { background: #DF1322; color: #FFF;}
+.catlist_ul .selected .category_name_div { color:#FFF;}
+.category_name_div{width:63px;height:16px;float:left; overflow: hidden;}
+.catlist_arrow{color:#fff;}
+.category_name{display:block;width:52px;height:16px;float:right;overflow:hidden;color:#7b7b7b;}
+.cat_hover{cursor:pointer; color:#028cd7;}
+.catlist_menu_close{display:block;position:absolute;top:8px;right:9px;width:14px;height:13px;background-position:0 0;}
+.catlist_ctl{width:87px;height:18px;background:#FFF;cursor:pointer;background:url("/themes/deebeis/images1/menu_list.png");}
+.catlist_up{background-position:0 -64px;}
+.catlist_up_hover{background-position:0 -89px;}
+.catlist_down{height:25px;background-position:0 0;}
+.catlist_down_hover{background-position:0 -32px;}
+.catlist_scroll{width:87px;height:390px;overflow:hidden; background: #FFF;}
+
+.cate_nav_item{border-top: solid 2px #644d36; padding: 0 40px 0 30px;}
+.first_nav_item {border-top:none;}
+.nav_left{font-size: 16px; font-weight: bold; width: 20px; float: left; line-height: 25px; padding-top: 15px;}
+.nav_all { float: left; text-align: center; width: 80px; margin-top: 10px; margin-left: 10px; height: 28px; line-height: 28px; color:#765C40; cursor: pointer;}
+.nav_all a { padding:2px 5px;}
+.nav_all_selected a { background: #4F351C; color:#FFF;}
+.cate_nav_item ul{ padding: 10px 0 10px 110px; *overflow:hidden;}
+.cate_nav_item ul li{float: left; width: 120px; height: 28px; line-height: 28px; color: #765c40; overflow:hidden; cursor: pointer; text-align: left;}
+.cate_nav_item ul li a { color:#765c40; cursor: pointer; padding:2px 5px;}
+.cate_nav_item ul li label { cursor: pointer;}
+.cate_nav_item ul .selected a {background: #4F351C; color:#FFF;}
+.cate_nav_item ul .disabled a {color:#CCC;}
+.frist_li{width: 80px;}
+.nav_more{cursor: pointer; color: #765c40; width: 100px;}
+.item_li label{cursor: pointer;}
+
+.goods_box{ padding: 25px 0px 20px 19px;}
+.category_good{border: solid 1px #FFF; border-bottom:solid 2px #FFF; width: 270px; float: left; margin-right: 15px; margin-bottom: 20px; background: #FFF; padding:2px;}
+.goodsImg{height: 270px;}
+.goodsImg img { width: 100%; height: 100%;}
+.goodsName {text-align: center; overflow: hidden; font-size: 13px; height: 35px; line-height: 18px; background: none repeat scroll 0% 0% #FFF; padding: 0px 20px;}
+.goodsPrice { height: 40px; line-height: 40px; font-size: 20px; color: #DF1322; background: none repeat scroll 0% 0% #FFF; text-align: left; padding-left: 32px;}
+.goods_box .hover{border:1px solid #CCC; border-bottom: 2px solid #DF1322;}
+
+.catlist_menu{ background:url(images/nav.png) center top no-repeat; width:253px;height:488px}
+.side_close{ background: none;}
+.catlist_title { background: url(images/left_nav_title.png) no-repeat; height: 55px;}
+.catlist_body { padding-top:115px;}
+.catlist_scroll { background: none;}
+.catlist_ctl{display: none;}
+.catlist_ul { float:none; margin:0}
+.catlist_ul li { text-align: center; width: 100%; background: url(images/left_nav_li.png) no-repeat; height: 40px; line-height: 20px; padding:0;}
+.catlist_ul .selected { background: none;}
+.category_name_div { width:70%; height: 50%; margin-top:7px; margin-left: 13px;}
+.catlist_ul .selected .category_name_div { color:#FFF; background: #DF1322;}
+.catlist_repeaty {display: none;}
+.catlist_foot { background: url(images/left_nav_foot.png) right top no-repeat; height: 59px;}
+
+.rounded {-moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; position:relative; behavior:url(/themes/deebeis/style/PIE.htc);}
+
+

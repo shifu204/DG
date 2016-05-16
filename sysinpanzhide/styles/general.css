@@ -1,0 +1,78 @@
+/*
+$Id: general.css 13504 2007-11-08 09:51:13Z weberliu $
+*/
+
+body {
+  margin: 0px;
+  padding: 0px;
+  color: #192E32;
+  font: 12px "sans-serif", "Arial", "Verdana";
+}
+
+p, td, div {
+  font: 12px "sans-serif", "Arial", "Verdana";
+}
+
+th {
+  font: 12px "sans-serif", "Arial", "Verdana";
+  font-weight: bold;
+}
+
+form {
+  margin: 0px;
+  padding: 0px;
+}
+
+input, textarea, select {
+  font: 12px "courier new";
+}
+
+a:visited {
+  color: #335B64;
+  text-decoration: none;
+}
+
+a:link {
+  color: #335B64;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #EB8A3D;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #EB8A3D;
+  text-decoration: underline;
+}
+
+.clear {
+  clear: both;
+  float: none;
+  font-size: 0px;
+  margin: 0;
+  padding: 0;
+  display:block;
+}
+
+.nowrap {
+  white-space:nowrap;
+}
+/*===== 短信信息模板-开始 =====*/
+.btn-save{display: none;}
+.btn-revise{display: none;}
+.btn-ok{}
+.msg-w .msg-add{display: inline-block; margin-left: 50px; color: #000; cursor: pointer;}
+.msg-w .msg-update{display: inline-block; margin-left: 50px; color: #000; cursor: pointer; display: none;}
+.msg-w .msg-del{display: inline-block; margin-left: 50px; color: #000; cursor: pointer; display: none;}
+#sms_title{display: inline-block; border-bottom: solid 1px #000; min-width: 300px; height: 25px; line-height: 25px; font-size: 14px; padding-left: 5px;}
+/*#sms_title{ min-width: 300px; font-size: 14px; height: 25px; line-height: 25px; padding-left: 5px;}*/
+
+#sms_user{ min-width: 300px; font-size: 14px; height: 25px; line-height: 25px; padding-left: 5px;}
+/*.editor-c{width: 500px; min-height: 200px; font-size: 14px; border: solid 1px #000;}*/
+.editor-c{width: 500px; min-height: 200px; font-size: 14px;}
+.send_sms{display: none;}
+
+
+/*===== 短信信息模板-结束 =====*/

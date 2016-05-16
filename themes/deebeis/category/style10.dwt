@@ -1,0 +1,106 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link rel="stylesheet" type="text/css" href="{$theme_path}/category/css/category_style.css" />
+<link rel="stylesheet" type="text/css" href="{$theme_path}/category/css/category_style4.css" />
+<div class="category_header"></div>
+<div class="category_content">
+    <div class="wm01190 category_nav_wrap">        
+        <div class="category_nav wm01190" id="content">
+            <!--分类选择区-->          
+            <div id="filter_area">
+            <?php if(!empty($this->_var['cat_nav']['id'])):?>
+            <?php $cat_id_count = 0;?>
+            <?php foreach($this->_var['cat_nav']['id'] as $cat_id=>$cat):?>
+            <div class="cate_nav_item">
+                <div class="nav_left">
+                    <?php echo $cat['cat_name']?>
+                </div>
+                <ul class="clearfix <?php if($cat_id_count == 0) echo "first_ul" ;?>">
+                    <li data-value="0" cat-id="<?php echo $cat_id;?>" <?php if($this->_var['filt']['filt'][$cat_id_count] == 0):?> class="selected" <?php endif;?>><a><label>全部</label></a></li> 
+                    <?php if(!empty($cat['children'])):?>
+                    <?php $child_count = 0;?>
+                    <?php foreach($cat['children'] as $fk=>$fv):?>
+                        <?php if($child_count == 9):?>
+                            <li class="relative more">
+                                <span>更多</span>
+                                <em class="icon-arrow absolute icon-arrow-up"></em>
+                            </li>                      
+                        <?php endif?>
+                        
+                        <li  data-value="<?php echo $fv['id'];?>" cat-id="<?php echo $cat_id;?>" <?php if($this->_var['filt']['filt'][$cat_id_count] == $fv['id']):?> class="selected" <?php endif;?>><a><label><?php echo $fv['name']?></label></a></li>                      
+                    <?php $child_count++;?>
+                    <?php endforeach;?>
+                    <?php endif;?>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <?php $cat_id_count++;?>
+            <?php endforeach;?>
+            <?php endif;?>
+            
+            <?php if(!empty($this->_var['cat_nav']['brand'])):?>
+            <div class="cate_nav_item" data-name="brand_id">
+                <div class="nav_left">
+                    品牌
+                </div>
+                <ul class="clearfix">
+                    <li
+                        <?php
+                            if(empty($this->_var['filt']['brand_id'])){
+                                echo "class='selected'";
+                            }
+                        ?>
+                        data-value="0" ><a><label>全部</label></a></li> 
+                    <?php foreach($this->_var['cat_nav']['brand'] as $bk=>$bv):?>
+                        <?php if($bk == 9):?>
+                        <li class="relative more">
+                            <span>更多</span>
+                            <em class="icon-arrow absolute icon-arrow-up"></em>
+                        </li>      
+                        <li>
+                            <a></a>
+                        </li>
+                        <?php endif?>
+                        <?php if($bk > 9 && $bk%9 == 0):?>
+                        <li>
+                            <a></a>
+                        </li>
+                        <li>
+                            <a></a>
+                        </li>
+                        <?php endif;?>
+                        <li
+                            <?php
+                                if($this->_var['filt']['brand_id'] == $bv['brand_id']){
+                                    echo "class='selected'";
+                                }
+                            ?>
+                            data-value="<?php echo $bv['brand_id']?>"><a><label><?php echo $bv['brand_name']?></label></a>
+                        </li>                      
+                    <?php endforeach;?>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <?php endif;?>
+            </div>
+            <!--分类选择区结束-->               
+        </div>                        
+    </div>
+    <!-- #BeginLibraryItem "/library/goods/category_goods_list.lbi" --><!-- #EndLibraryItem -->
+</div>
+<input type="hidden" id="category" value="{$category}" name="category" />
+<script type="text/javascript" src="{$theme_path}js/category.js"></script>
+<script type="text/javascript">
+    $.categoryNav("cate_nav_item");   
+    $(".daogouBig li").bind("click",function(event){
+        event.preventDefault();
+        var data_value = $(this).attr("data-value");
+        set_age(data_value);
+        var num = $(this).prevAll().length;
+        set_daogouBig(num);
+        set_daogou(num);
+        getData();
+    });
+</script>
+<div class="floorBlank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --></body>
+</html>

@@ -1,0 +1,124 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem --> 
+<!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+<link rel="stylesheet" type="text/css" href="{$theme_path}/category/common_cat.css" />
+<script type="text/javascript" src="{$theme_path}js/category.js"></script>
+<input type="hidden" id="category" value="{$category}" name="category" />
+<div>
+    <div id="left-side-buoy"></div>
+    <div class="wm01190 clearfix filter-wrap" id="filter_area">
+        {if $cat_nav.id}
+            {foreach from=$cat_nav.id item=filter}
+            <div class="cate_nav_item clearfix">
+                <table class="filter-table" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td class="item-left">{$filter.cat_name}</td>
+                            <!--<td class="nav_all {if !$filt.selected_filter[$filter.cat_id]} nav_all_selected {/if}" cat-id="{$filter.cat_id}"><a>全部</a></td>-->
+                            <td class="item-right">
+                                <div class="nav_all {if !$filt.selected_filter[$filter.cat_id]} nav_all_selected {/if}" cat-id="{$filter.cat_id}"><a>全部</a></div>
+                                <ul class="clearfix">
+                                    {if $filter.children}
+                                        {foreach from=$filter.children item=children}
+                                        <li data-value="{$children.id}" cat-id="{$filter.cat_id}" {if in_array($children.id, $filt.selected_filter[$filter.cat_id])} class='selected' {/if}>
+                                            <a href="javascript:;">{$children.name}</a>
+                                        </li>
+                                        {/foreach}
+                                    {/if}
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            {/foreach}
+        {/if}
+        {if $cat_nav.brand}
+        <div class="cate_nav_item clearfix" data-name="brand_id">
+            <table class="filter-table" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td class="item-left">品牌</td>
+                        <!--<td class="nav_all {if !$filt.brand_id} nav_all_selected {/if}" data-value="0"><a>全部</a></td>-->
+                        <td class="item-right">
+                            <div class="nav_all {if !$filt.brand_id} nav_all_selected {/if}" data-value="0"><a>全部</a></div>
+                            <ul class="clearfix">
+                                {foreach from=$cat_nav.brand item=brand}
+                                <li data-value="{$brand.brand_id}" {if $filt.brand_id == $brand.brand_id}class='selected'{/if}>
+                                    <a href="javascript:;">{$brand.brand_name}</a>
+                                </li>
+                                {/foreach}
+                            </ul>
+                            <div class="more">更多品牌<span class="icon-arrow icon-arrow-down"></span></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {/if}
+    </div>
+</div>
+<div>
+    <div class="filter-bar clearfix" id="filter_bar">
+        <div class="clearfix f_l">
+            <a  href="javascript:;" class="sort-order selected-order" data-value="default" order="asc">默认<span class="arrow-up"></span></a>
+            <a  href="javascript:;" class="sort-order" data-value="sales" order="desc">销量<span class="arrow-down"></span></a>
+            <a  href="javascript:;" class="sort-order" data-value="views" order="desc">人气<span class="arrow-down"></span></a>
+            <a  href="javascript:;" class="sort-order" data-value="rank" order="desc">信用<span class="arrow-down"></span></a>
+            <a  href="javascript:;" class="sort-order" data-value="price" order="desc">价格<span class="arrow-down"></span></a>
+            <a class="goods-price">
+                <input class="price-input" id="price_min" type="text"/> - 
+                <input class="price-input" id="price_max" type="text"/>
+                <input class="sure-btn" type="button" value="确定" onclick="getData();"/>
+            </a>
+        </div>
+        <!--<div class="label-area f_l clearfix">
+            <a class="filter-label">
+                保险承保
+            </a>
+            <a class="filter-label">
+                顺丰包邮
+            </a>
+            <a class="filter-label">
+                支持货到付款
+            </a>
+            <a class="filter-label">
+                买九送二
+            </a>
+            <a class="filter-label">
+                买六送一
+            </a>
+        </div> -->
+        <div class="view-area">
+            <a></a>
+            <a></a>
+        </div>
+        <div id="filter_bar_pager">
+        <!-- #BeginLibraryItem "/category/library/category_filter_bar_page.lbi" --><!-- #EndLibraryItem -->
+        </div>
+    </div>
+</div>
+<div>
+    <div class="wm01190">
+        <!-- #BeginLibraryItem "/library/goods/category_goods_list.lbi" --><!-- #EndLibraryItem -->
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/index/index_left_nav.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript">
+    $(".category_good").ishover("hover");
+    $.categoryNav({jump:false});
+    $(".filter-bar").GoodsFilterBar();
+    $(document).ready(function(){
+        window.onkeydown=function(e){
+            if(e.keyCode == 13){
+               e.preventDefault();
+               var jump_page = parseInt($("#jump_page").val());
+               if(jump_page > 0 ){
+                   selectPage();
+               } else {                  
+                   getData();
+               }             
+            }
+       };
+    });
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --></body></html>

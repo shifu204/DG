@@ -1,0 +1,157 @@
+.shaidan_left{
+	width:705px;
+	height:275px;
+	float:left;
+	overflow:hidden;
+}
+.shaidan_right{
+	width:245px;
+	height:275px;
+	float:right;
+	overflow:hidden;
+}
+.shaidan_right .add_shaidan_bnt{
+	width:245px;
+	height:61px;
+	text-align:center;
+	margin:20px 0px;
+	overflow:hidden;
+}
+.shaidan_right .shaidan_share{
+	width:215px;
+	height:40px;
+	text-align:center;
+	overflow:hidden;
+	padding-left:30px;
+	border-bottom:1px solid #DDD;
+}
+.shaidan_right .shaidan_best_goods{
+	width:245px;
+	height:110px;
+	overflow:hidden;
+	margin-top:20px;
+}
+.shaidan_right .shaidan_best_goods span{
+	font-size:14px;
+	font-weight:bold;
+	padding-left:15px;
+	color:#09F;
+}
+.blank10{
+	height:10px;
+	width:100%;
+}
+.middle_ad{
+	width:950px;
+	height:75px;
+	border-top:1px double #DDD;
+	border-bottom:1px double #DDD;
+}
+.middle_ad ul{
+	width:950px;
+	height:75px;
+}
+.middle_ad ul li{
+	width:237px;
+	height:65px;
+	float:left;
+	list-style:none;
+	text-align:center;
+	padding:5px 0px;
+}
+.shaidan_content{
+	/*width:950px;*/
+	height:auto;
+	overflow:hidden;
+	margin:10px 0px;
+}
+
+.shaidan_content #main{background:#FFF;height:auto; float:left; width:950px;}
+.shaidan_content .shaiitem{ width:200px;  border:1px solid #EEE;float: left;display: inline;padding: 10px; margin:10px 7px 0px 7px;position: relative;}
+.shaidan_content .shaiitem img{max-width:200px;border: none;}
+.shaidan_content .shaiitem .like{width:200px;height:30px;padding:0px;margin:0px;overflow:hidden; margin-top:10px;}
+.shaidan_content .shaiitem .like ul{width:100px;float:left;}
+.shaidan_content .shaiitem .like ul li{width:25px;float:left;list-style:none; padding-left:18px; line-height:25px; }
+.shaidan_content .shaiitem .like ul .li1{ background:url(shaidan/xin.gif) left no-repeat;}
+.shaidan_content .shaiitem .like ul .li2{ background:url(shaidan/pinglun.gif) left no-repeat;}
+.shaidan_content .shaiitem .like .fenxiang{width:80px;float:right; line-height:15px; text-align:right;}
+.shaidan_content .shaiitem .content{width:200px;height:auto; overflow:hidden; margin-top:10px; line-height:18px; color:#666}
+.shaidan_content .shaiitem .content span{color:#06C}
+.shaidan_content .shaiitem .pinglun{width:200px;height:auto; overflow:hidden; padding-top:5px; margin-top:5px; line-height:18px; color:#666; border-top:1px solid #DDD;}
+.shaidan_content .shaiitem .pinglun span{ background:url(shaidan/pinglun.gif) left no-repeat; padding-left:18px; color:#06C}
+.shaidan_content .shaiitem .pinglun p{ color:#666; margin:5px 0px;}
+.shaidan_content .shaiitem .pinglun .viewall{width:200px; height:25px; line-height:25px; text-align:center; color:#999;}
+.shaidan_content .shaiitem .pinglun .viewall a{color:#999;}
+
+.shaidan_content .shaiitem .doit{width:150px;height:35px;line-height:35px; border:1px solid #EEE; position:absolute; z-index:100; background:#fafafa; left:35px; top:20px; display:none;}
+.shaidan_content .shaiitem .doit li{width:74px;height:35px;line-height:37px; float:left; list-style:none; text-align:center; }
+.shaidan_content .shaiitem .doit .li1{ background:url(shaidan/xin.gif) 8px 13px no-repeat;}
+.shaidan_content .shaiitem .doit .li2{ background:url(shaidan/pinglun.gif) 8px 13px no-repeat; border-left:1px solid #DDD;}
+.shaidan_content .shaiitem .doit li a{font-family:"微软雅黑";}
+
+.shaidan_content .shaiitem_hover .doit{display:block;}
+
+
+.s_case{/*width:950px; */height:26px;}
+.s_case ul{/*width:768px;*/ height:26px;}
+.s_case ul li{width:190px; height:26px; float:left; list-style:none; padding-right:2px;}
+
+.s_brand{/*width:948px;*/ height:auto; overflow:hidden; padding:10px 0px; border:1px solid #DDD}
+.s_brand ul{/*width:950px;*/ margin-bottom:10px;}
+.s_brand ul li{float:left; list-style:none; padding-left:5px;}
+.s_brand ul .title{width:85px;float:left; color:#06C; line-height:30px;}
+.s_brand ul .value{/*width:845px;*/float:left; margin-left:90px; color:#333; line-height:30px; padding-right:10px;}
+.s_brand ul .value .select{ background:#F66; height:15px; line-height:15px; border:1px solid #DDD; padding:2px 5px; margin-right:5px; color:#FFF;display:inline-block}
+.s_brand ul .value .noselect{ background:#EEE; height:15px; line-height:15px; border:1px solid #DDD; padding:2px 5px; margin-right:5px; color:#333;display:inline-block}
+
+
+.rollBox_x{width:249px;overflow:hidden;margin-top:15px;}/*--滚动-*/
+.rollBox_x .LeftBotton_x{height:52px;width:14px;overflow:hidden;float:left;display:inline; margin-top:27px;cursor:pointer;background:url(shaidan/zuo.gif) center 0px no-repeat;}
+.rollBox_x .RightBotton_x{height:52px;width:15px;overflow:hidden;float:left;display:inline;margin-top:27px;cursor:pointer; background:url(shaidan/you.gif) center 0px no-repeat;}
+.rollBox_x .Cont_x{width:220px;overflow:hidden;float:left;}
+.rollBox_x .ScrCont_x{width:10000000px;}
+.rollBox_x .Cont_x .pic_x{width:66px;float:left;text-align:center;display:inline; padding-right:10px;overflow:hidden;zoom:1;}
+.rollBox_x .Cont_x .pic_x img{padding:3px;background:#fff;border:1px solid #ccc;display:block;margin:0 auto;}
+.rollBox_x .Cont_x .pic_x img:hover{padding:3px;background:#fff;border:1px solid #b5e8cd;display:block;margin:0 auto;}
+.rollBox_x .Cont_x .pic_x p{line-height:26px;color:#505050;}
+.rollBox_x .Cont_x a:link,.rollBox_x .Cont_x a:visited{color:#626466;text-decoration:none;}
+.rollBox_x .Cont_x a:hover{color:#f00;text-decoration:underline;}
+.rollBox_x #List1,.rollBox_x #List2_x{float:left;}/*--滚动end-*/
+
+/* qqshop focus */
+#focus {width:705px; height:275px; overflow:hidden; position:relative;}
+#focus ul {height:380px; position:absolute;}
+#focus ul li {float:left; width:705px; height:275px; overflow:hidden; position:relative; background:#000;}
+#focus ul li div {position:absolute; overflow:hidden;}
+#focus .btnBg {position:absolute; width:705px; height:20px; left:0; bottom:0; background:#000;}
+#focus .btn {position:absolute; width:685px; height:10px; padding:5px 10px; right:0; bottom:0; text-align:right;}
+#focus .btn span {display:inline-block; _display:inline; _zoom:1; width:25px; height:10px; _font-size:0; margin-left:5px; cursor:pointer; background:#fff;}
+#focus .btn span.on {background:#fff;}
+#focus .preNext {width:45px; height:100px; position:absolute; top:90px; background:url(shaidan/sprite.png) no-repeat 0 0; cursor:pointer;}
+#focus .pre {left:0;}
+#focus .next {right:0; background-position:right top;}
+
+.shaidan_tab{margin:10px 0px; background:#fafafa; border-left:1px solid #EEE;border-top:1px solid #EEE;}
+.shaidan_tab td{padding:5px; border-right:1px solid #EEE;border-bottom:1px solid #EEE; color:#999}
+
+.pinglun_list{
+	width:750px; height:auto; overflow:hidden;
+}
+
+.pinglun_list span{
+	width:730px; height:25px; line-height:25px; background:url(shaidan/pinglun.gif) left no-repeat; padding-left:20px; color:#666; overflow:hidden;
+}
+.pinglun_list .content{ height:35px; line-height:35px;width:728px; padding:0px 10px; background:#fafafa; border:1px solid #EEE; border-bottom:none; margin-top:5px; }
+
+.pinglun_list .reply{ height:35px; line-height:35px;width:728px; padding:0px 10px; background:#EEE; border:1px solid #DDD; border-top:none; color:#06C  }
+
+/*-------------------------------------------------【买家秀】-------------------------------------------------*/
+.mjx_thumb_pan{width:745px; height:170px; background-color:#f2f2f2; margin-left:1px;}
+.mjx_thumb_pan li{ float:left; list-style:none}
+.mjx_thumb_li{width:685px; height:100%;}
+.mjx_thumb{width:685px; height:152px; margin-top:9px; overflow:hidden;}
+.mjx_thumb dd{width:120px; height:150px; margin:0 11px; border:1px solid #f2f2f2; cursor:pointer; float:left;}
+
+.prev_mjx{width:30px; height:100%; background:url(shaidan/mjx_left.png) no-repeat 10px 73px; cursor:pointer;}
+.next_mjx{width:30px; height:100%; background:url(shaidan/mjx_right.png) no-repeat 10px 73px; cursor:pointer;}
+/*-------------------------------------------------【买家秀 end】-------------------------------------------------*/

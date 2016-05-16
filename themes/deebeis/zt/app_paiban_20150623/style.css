@@ -1,0 +1,107 @@
+/*.wrapper{width: 720px; margin: 0 auto; text-align: center; overflow: hidden;}
+.app-logo{margin: 17px 0 15px 0px;}
+img,span{vertical-align: middle;}
+
+
+.rounded{-moz-border-radius:15px; -webkit-border-radius:15px; border-radius:15px; position:relative; behavior:url(/themes/deebeis/style/PIE.htc);}
+.synopsis{width: 680px; height: 82px; background: #e5e5e5; padding-top: 3px;}
+.synopsis.rounded {-moz-border-radius:15px; -webkit-border-radius:15px; border-radius:15px;}
+.synopsis .portrait{width: 80px; height: 80px; overflow: hidden; margin-left: 15px; float: left;}
+.synopsis .portrait.rounded {-moz-border-radius:40px; -webkit-border-radius:40px; border-radius:40px;}
+
+.synopsis .details{padding: 6px 0 0 5px;}
+.synopsis .details .name{text-align: left; font-family: ZhunYuan; font-size: 28px; color: #ff5654; padding-left: 5px; line-height: 45px;}
+.synopsis .details ul{}
+.synopsis .details ul li{float: left; font-family: 黑体; font-size: 18px; color: #a2a2a2; margin: 0 5px; line-height: 23px;}
+.synopsis .details ul li .border{border-right: solid 1px #a2a2a2; height: 13px; margin-top: 6px; width: 0px; display: block;}
+
+.synopsis .data{font-family: 微软雅黑; font-size: 16px; color: #000; line-height: 80px; padding-right: 18px;}
+
+.pet-img{padding-top: 20px; height: 720px;}
+.mood{text-align: left; padding: 24px 20px 24px 20px; font-family: 微软雅黑; font-size: 18px; color: #000; line-height: 27px;}
+
+.praise-list{padding: 18px 4px; height: 55px; background: #e8e8e8;}
+.praise-list .portrait-img{width: 55px; height: 55px; float: left; overflow: hidden; margin-left: 30px;}
+.praise-list .portrait-img.rounded{-moz-border-radius:30px; -webkit-border-radius:30px; border-radius:30px;}
+.praise-list .praise{background: #a9a9a9; color: #fff; font-family: 微软雅黑; font-size: 18px; line-height: 55px;}
+
+.exchange .exchange-t{text-align: left; padding: 24px 20px; height:22px; line-height: 22px; background: #fe6631; color: #fff; font-family: 微软雅黑; font-size: 22px;}
+.exchange .exchange-list{padding-top: 10px; background: #f1f1f1; font-size: 14px;}
+.exchange .exchange-list .exchange-ing{height: 55px; line-height: 55px; padding:10px 0px 20px 20px;; text-align: left; font-family: 微软雅黑;}
+.exchange .exchange-list .exchange-ing .portrait-img{width: 55px; height: 55px; overflow: hidden;}
+.exchange .exchange-list .exchange-ing .portrait-img.rounded{-moz-border-radius:30px; -webkit-border-radius:30px; border-radius:30px;}
+.exchange .exchange-list .exchange-ing .name{margin-left: 10px; width: 100px; font-size: 18px; color: #fe6631; height: 55px; overflow: hidden;}
+.exchange .exchange-list .exchange-ing .state{margin-left: 15px; width: 56px;}
+.exchange .exchange-list .exchange-ing .goods-name{margin-left: 26px; width: 365px;}
+.exchange .exchange-list .exchange-ing .goods-img{width: 55px; height: 55px;}
+
+.app-down{font-family: 微软雅黑; font-size: 22px; color: #fff; background: #fe6631; text-align: left; padding: 14px 0px 14px 20px; line-height: 36px; height: 72px;}
+.app-down .down{padding-top: 16px; padding-right: 20px;}
+
+
+ 字体 
+.font-1{font-family: 经典黑粗筒; font-size: 43px; color: #ff5654; line-height: 53px; font-weight: bold; display: inline-block;}
+.font-2{font-family: ZhunYuan; font-size: 20px; color: #ff8843; line-height: 24px; border-bottom: solid 1px #ff8843; display: inline-block; margin-top: 16px;}*/
+
+
+
+.wrapper{max-width: 1024px; margin: 0 auto; text-align: center; overflow: hidden;}
+.app-logo{margin: 2.361% 0 2.083% 0px;}
+.app-logo .logo-img{width: 7.361%; height: 100%; background: red; display: inline-block;}
+img,span{vertical-align: middle;}
+
+
+.rounded{-moz-border-radius:15px; -webkit-border-radius:15px; border-radius:15px; position:relative; behavior:url(/themes/deebeis/style/PIE.htc);}
+.synopsis{width: 94.444%; background: #e5e5e5; padding-top: 1%; padding-bottom: 1%;}
+.synopsis.rounded {-moz-border-radius:15px; -webkit-border-radius:15px; border-radius:15px;}
+.synopsis .portrait{width: 11.764%; height: 11.764%; overflow: hidden; margin-left: 2.205%; float: left;}
+.synopsis .portrait.rounded {-moz-border-radius:100%; -webkit-border-radius:100%; border-radius:100%;}
+
+.synopsis .details{padding: 0.8% 0 0 0.735%;}
+.synopsis .details .name{text-align: left; font-family: ZhunYuan; font-size: 56px; color: #ff5654; padding-left: 1%; line-height: 100%; height: 4.117%;}
+.synopsis .details .jieshao{width: 200%;}
+.synopsis .details ul{margin-top: 3%;}
+.synopsis .details ul li{float: left; font-family: 黑体; font-size: 36px; color: #a2a2a2; margin: 0 1%;line-height: 100%;}
+
+.synopsis .data{font-family: 微软雅黑; font-size: 32px; color: #000; padding-right: 2.647%; padding-top: 3.5%;}
+
+.pet-img{padding-top: 2.777%; height: 100%; width: 100%;}
+.mood{text-align: left; padding: 3.333% 2.777%; font-family: 微软雅黑; font-size: 36px; color: #000; line-height: 130%;}
+
+.praise-list{padding: 2.4% 0.533%; background: #e8e8e8;}
+.praise-list .portrait-img{width: 7.638%; height: 7.638%; float: left; overflow: hidden; margin-left: 4.2%;}
+.praise-list .portrait-img.rounded{-moz-border-radius:100%; -webkit-border-radius:100%; border-radius:100%;}
+.praise-list .praise{background: #a9a9a9; color: #fff; font-family: 微软雅黑; font-size: 36px;}
+
+.exchange .exchange-t{text-align: left; padding: 3.2% 2.666%; height:100%; line-height: 100%; background: #fe6631; color: #fff; font-family: 微软雅黑; font-size: 44px;}
+/*.exchange .exchange-list{padding-top: 1.388%; background: #f1f1f1; font-size: 28px;}
+.exchange .exchange-list .exchange-ing{height: 100%; line-height: 100%; padding:1.388% 0px 2.777% 2.777%; text-align: left; font-family: 微软雅黑;}
+.exchange .exchange-list .exchange-ing .portrait-img{width: 7.638%;  overflow: hidden;}
+.exchange .exchange-list .exchange-ing .portrait-img.rounded{-moz-border-radius:100%; -webkit-border-radius:100%; border-radius:100%;}
+.exchange .exchange-list .exchange-ing .name{margin-left: 1.388%; width: 13.88%; font-size: 36px; color: #fe6631; word-wrap: break-word; }
+.exchange .exchange-list .exchange-ing .state{margin-left: 2.083%; width: 11.8%;}
+.exchange .exchange-list .exchange-ing .single{display:inline-block; font-size: 0}
+.exchange .exchange-list .exchange-ing .double{vertical-align:middle;display:inline-block; line-height: 100%;}
+.exchange .exchange-list .exchange-ing .goods-name{margin-left: 3.611%; width: 50.694%;}
+.exchange .exchange-list .exchange-ing .goods-img{width: 7.638%; height: 7.638%;}*/
+.exchange{width: 100%;}
+.exchange-list table{width: 95%; text-align: left; font-size: 28px; margin: 0 auto;}
+.exchange-list table tr{display: block; margin-top: 3%; margin-bottom: 5%; width: 100%;}
+.exchange-list table tr td:nth-child(1){width: 8.3%;}
+.exchange-list table tr td:nth-child(2){width:20%; padding-left: 2%;}
+.exchange-list table tr td .name{word-wrap: break-word; margin-left: 0px;font-size: 36px; color: #fe6631;}
+.exchange-list table tr td:nth-child(3){width: 17%; padding-left: 2%;}
+.exchange-list table tr td:nth-child(4){ padding-left: 2%;}
+.exchange-list table tr td:nth-child(5){width: 8.3%; }
+
+.exchange-list table .portrait-img{width: 100%;  overflow: hidden;}
+.exchange-list table .goods-img{width: 100%}
+.portrait-img.rounded{-moz-border-radius:100%; -webkit-border-radius:100%; border-radius:100%;}
+.app-down{background: #fe6631; text-align: left; padding: 1.944% 0px 1.944% 2.777%;}
+.app-down .register{display: block; line-height: 60px; height: 60px;font-family: 微软雅黑; font-size: 44px; color: #fff;}
+.app-down .wwb{margin-top: -6px;}
+.app-down .down{margin-right: 2.777%; width: 32.36%; font-family: 微软雅黑; font-size: 44px; color: #ca3f0f; background: #ffd02e; text-align: center;}
+.app-down .down.rounded{-moz-border-radius:100px; -webkit-border-radius:100px; border-radius:100px;}
+/* 字体 */
+.font-1{font-family: 经典黑粗筒; font-size: 86px; color: #ff5654; line-height: 100%; font-weight: bold; display: inline-block;}
+.font-2{font-family: ZhunYuan; font-size: 40px; color: #ff8843; line-height: 100%; border-bottom: solid 1px #ff8843; display: inline-block; margin-top: 2.22%;}

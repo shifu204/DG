@@ -1,0 +1,59 @@
+<div class="f_l relative navAllCat">
+    <a class="all-cat-name" href="javascript:;">全部商品分类</a>
+    <div class="all-downlist absolute clearfix">
+        <div class="left-area">
+            <ul class="left-nav clearfix">
+                {foreach from=$all_catlist item=top_cat}
+                <li class="top-li clearfix">
+                    <a href="javascript:;">
+                        <div class="top-nav">{$top_cat.name}</div>
+                        <label>></label>
+                    </a>                             
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+        <div class="right-area clearfix">
+            <div class="f_l" >
+            {foreach from=$all_catlist item=top_cat}
+            <div class="right-area-list"style="width: 990px;">
+                {foreach from=$top_cat.filter item=child_cat name=child_cat_foo}
+                {if $smarty.foreach.child_cat_foo.index == 1}
+                <!--品牌-->
+                <div class="child-cat-item clearfix">
+                    <div class="child-cat-name"><span class="category-icons {$top_cat.cat_ico}-brand"></span>品牌</div>                                 
+                    <div class="child-cat-list clearfix">
+                        {foreach from=$top_cat.brands item=brand}
+                        <a href="category.php?id={$top_cat.id}&brand={$brand.brand_id}"><div class="child-cat-child">{$brand.brand_name}</div></a>
+                        {/foreach}
+                    </div>                                                                   
+                </div>
+                {/if}
+                <div class="child-cat-item clearfix">
+                    <div class="child-cat-name"><span class="{if $child_cat.cat_ico}category-icons {$child_cat.cat_ico}{/if}"></span>{$child_cat.name}</div>
+                    <div class="child-cat-list clearfix">                                                                     
+                        {foreach from=$child_cat.cat_id item=cat_array}
+                        {if $child_cat.cat_tag == 'discount_suit'}
+                        <a href="category.php?id={$top_cat.id}&filter_id={$cat_array.id},{$child_cat.id}"><div class="child-cat-child">{$cat_array.name}</div></a>
+                        {else}
+                        <a href="category.php?id={$top_cat.id}&filter_id={$cat_array.id}"><div class="child-cat-child">{$cat_array.name}</div></a>
+                        {/if}
+                        {/foreach}
+                    </div>                                    
+                </div>              
+                {/foreach}                               
+            </div>
+            {/foreach}
+            </div>
+            <div class="f_r nav-img-frame">
+                <a href="http://nutrilon.deebei.net" target="_blank"><img src="{$theme_path}images1/nav_zt/nutrilon.jpg" class="nav-img"/></a>
+                <a href="http://cowgate.deebei.net" target="_blank"><img src="{$theme_path}images1/nav_zt/cowgate.jpg" class="nav-img"/></a>
+                <a href="http://aptamil.deebei.net" target="_blank"><img src="{$theme_path}images1/nav_zt/aptamil.jpg" class="nav-img"/></a>
+                <a href="http://friso.deebei.net" target="_blank"><img src="{$theme_path}images1/nav_zt/friso.jpg" class="nav-img"/></a>
+                <a href="http://hipp.deebei.net" target="_blank"><img src="{$theme_path}images1/nav_zt/hipp.jpg" class="nav-img"/></a>
+                <a href="http://neocate.deebei.net" target="_blank"><img src="{$theme_path}images1/nav_zt/neocate.jpg" class="nav-img"/></a>
+                <a href="http://www.deebei.net/category.php?id=131&brand=50" target="_blank"><img src="{$theme_path}images1/nav_zt/aptamil_yg.jpg" class="nav-img"/></a>
+            </div>
+        </div>
+    </div>
+</div>

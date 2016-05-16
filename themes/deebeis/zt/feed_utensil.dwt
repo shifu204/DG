@@ -1,0 +1,332 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/feed_utensil/feed_utensil.css" rel="stylesheet" type="text/css" >
+<script type="text/javascript">
+    $(function(){
+        var nav1=$("#classify label");
+	$.each(nav1,function(){
+		$(this).click(function(){
+			$(nav1).removeClass("nav_onclick");
+			$(this).addClass("nav_onclick");
+		});
+	});
+	var nav2=$("#country label");
+	$.each(nav2,function(){
+		$(this).click(function(){
+			$(nav2).removeClass("nav_onclick");
+			$(this).addClass("nav_onclick");
+		});
+	});
+	var nav4=$("#brand label");
+	$.each(nav4,function(){
+		$(this).click(function(){
+			$(nav4).removeClass("nav_onclick");
+			$(this).addClass("nav_onclick");
+		});
+	});
+    });
+</script>
+<div class="feed_utensil">
+    <div class="poster"></div>
+    <div class="nav_no">
+        <div class="classify_nav">
+            <div class="classify_1">分类1</div>
+            <div class="classify_1">分类2</div>
+            <div class="classify_1">分类3</div>
+            <div class="classify_1">分类4</div>
+            <div class="classify_1">分类5</div>
+            <div class="classify_1">分类6</div>
+            <div class="classify_1">分类7</div>
+            <div class="classify_1">分类8</div>
+        </div>
+    </div>
+    <script type="text/javascript"> 
+        window.onscroll=function(){ 
+            if ($(document).scrollTop() > 800){ 
+            $(".nav_no").addClass('nav_pf'); 
+            }else{ 
+            $(".nav_no").removeClass('nav_pf'); 
+            } 
+        } 
+    </script>
+    <div class="fu1">
+        <div class="wm01190">
+            <div class="category_nav">
+                <div class="cate_nav_item frist_item clearfix">
+                    <div class="nav_left">分类</div>
+                    <ul class="clearfix" id="classify">
+                        <li class="item_li frist_li">
+                            <label class="nav_onclick">全部</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品1</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品2</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品3</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品4</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品5</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品6</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品7</label>
+                        </li>
+                        <li class="item_li frist_li"></li>
+                        <li class="item_li">
+                            <label>喂养日用品8</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品9</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品10</label>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="cate_nav_item clearfix">
+                    <div class="nav_left">国家</div>
+                    <ul class="clearfix" id="country">
+                        <li class="item_li frist_li">
+                            <label class="nav_onclick">全部</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品1</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品2</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品3</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品4</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品5</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品6</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品7</label>
+                        </li>
+                        <li class="item_li frist_li"></li>
+                        <li class="item_li">
+                            <label>喂养日用品8</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品9</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品10</label>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="cate_nav_item clearfix">
+                    <div class="nav_left">品牌</div>
+                    <ul class="clearfix" id="brand">
+                        <li class="item_li frist_li">
+                            <label class="nav_onclick">全部</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品1</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品2</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品3</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品4</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品5</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品6</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品7</label>
+                        </li>
+                        <li class="item_li frist_li"></li>
+                        <li class="item_li">
+                            <label>喂养日用品8</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品9</label>
+                        </li>
+                        <li class="item_li">
+                            <label>喂养日用品10</label>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="nav_more">更多品牌</div>
+            </div>
+        </div>
+    </div>
+    <div class="fu2">
+        <div class="wm01190">
+            <div class="frame clearfix">
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                <div class="goodbox">
+                    <div class="goodsTop"></div>
+                    <div class="goodsPrice">
+                        <img src="/themes/deebeis/images1/category_qianggou.png" style="vertical-align: middle; margin-left: 20px; cursor: pointer;">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

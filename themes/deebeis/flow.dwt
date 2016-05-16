@@ -1,0 +1,101 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="themes/deebeis/style/flow_checkout.css" rel="stylesheet" type="text/css" />
+{insert_scripts files='common.js,jquery.json.min.js'}
+<!--{if !$goods_list && $step eq 'cart'}-->
+    <style type="text/css"> 
+    .emptyCart {width:990px;height: 240px;overflow: hidden;}
+    .emptyCart dl {margin: 60px 0 80px 220px;overflow: hidden;}
+    .emptyCart dl dt {float: left;display: inline;width: 110px;height: 116px;margin-right: 10px;background: url(themes/deebeis/images/shopCartBg.png?v=20130508);}
+    .emptyCart dl dd {float: left;}
+    .emptyCart dl dd h4 {margin: 30px 0 10px;font-size: 14px;}
+    .emptyCart dl dd p {line-height: 1.8;}
+    .emptyCart dl dd p a {color: #006FCA;}
+    </style>
+    <div class="emptyCart">
+        <dl>
+            <dt></dt>
+            <dd>
+                <h4>您的购物车还是空的，赶紧行动吧！您可以：</h4>
+                <span>
+                <p>{if !$smarty.session.user_id}您还未登录，可能导致购物车为空，请<a href="user.php" title="登录">马上登录</a>{else}您有可能清空了购物车，入<a href="user.php" title="登录">会员中心</a>看看{/if}</p>
+                <p>马上去 <a href="./">随便逛逛</a></p>
+                </span> </dd>
+        </dl>
+    </div>
+    <?php
+    $hot_goods = get_recommend_goods('hot');
+    $hot_num = count($hot_goods);
+    $this->_val['hot_num'] = $hot_num;
+    if ($hot_num > 0){
+        $i = 0;
+        foreach  ($hot_goods as $key => $hot_data){
+            //$hot_goods[$key]['shop_price'] = encode_output($hot_data['shop_price']);
+            //$hot_goods[$key]['name'] = encode_output($hot_data['name']);
+            /*if ($i > 2)
+            {
+                break;
+            }*/
+            $i++;
+        }
+        $this->_var['hot_goods'] = $hot_goods;
+    }
+    ?>
+
+    <!-- 热销产品 {if $hot_goods} -->
+    <div class="block" >
+        <h1>热销产品</h1>
+        <!--{foreach from=$hot_goods item=goods}-->
+        <a href="{$goods.url}" class="goodsimgbox">
+            <div class="goodsItem"> 
+                <div class="goodsImg">
+                    <img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" />
+                </div>
+                <div class="goodsName">{$goods.name}</div>
+                <div class="goodsPrice">{$goods.shop_price}</div>           
+            </div>
+        </a>
+        <!--{/foreach}--> 
+    </div>
+    <!-- {/if} --> 
+
+<!--{else}-->
+    <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+    <div class="w1190"> 
+        <!--{if $step eq 'cart'}-->
+        <!-- #BeginLibraryItem "/library/cart_list.lbi" --><!-- #EndLibraryItem -->
+        <!-- {/if} --> 
+        
+        <!-- {if $step eq "consignee"} --> 
+            <!-- #BeginLibraryItem "/library/consignee.lbi" --><!-- #EndLibraryItem -->
+        <!-- {/if} --> 
+        
+        <!--{if $step eq "checkout"}-->
+        <!-- #BeginLibraryItem "/library/cart_checkout.lbi" --><!-- #EndLibraryItem -->
+        <!--{/if}--> 
+        
+        <!-- {if $step eq "done"} --> 
+        <!-- #BeginLibraryItem "/library/cart_done.lbi" --><!-- #EndLibraryItem -->
+        <!-- {/if} --> 
+
+        <!-- {if $step eq "login"} --> 
+        <!-- #BeginLibraryItem "/library/cart_login.lbi" --><!-- #EndLibraryItem -->
+        <!-- {/if} -->    
+    </div>
+<!--{/if}-->
+</div>
+<div class="floorBlank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+{foreach from=$lang.passport_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var username_exist = "{$lang.username_exist}";
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>
+</html>

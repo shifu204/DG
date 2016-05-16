@@ -1,0 +1,25 @@
+<!--{foreach name=goods_catid from=$floor.cat_list key=catkeys item=cats}-->
+<div class="sub_cat_content"{if $smarty.foreach.goods_catid.index==0}{else} style="display:none"{/if}>
+    <?php $this->_var['goodsarr']=assign_cat_goods($this->_var['cats']['id'],7,'wap');?>
+    <ol class="w170 noline">
+    <!--{foreach from=$goodsarr.goods name=xxxx item=goods}-->
+    {if $goods.thumb}
+        <li><p><a target="_blank" href="{$goods.url}">{$goods.name}</a></p>
+        <em class="snPrice">{if $goods.promote_price}<del style="color:#ccc">{$goods.shop_price}</del> {$goods.promote_price}{else}{$goods.shop_price}{/if}</em>
+        <a target="_blank" href="{$goods.url}"><img class="err-product lazy" data-original="{$goods.thumb}" src="/images/loading.gif" width="120" height="120" alt="{$goods.name}"></a></li>
+        <!--{if $smarty.foreach.xxxx.iteration==3}-->
+    </ol>
+    <ol class="w540"><!--{/if}-->
+        <!--{if $smarty.foreach.xxxx.iteration==5}-->
+        <li><?php echo get_adv('home_fl4_goods_ad1',$this->_var['catkeys']);?><!-- 270*125 --></li>
+        <li><?php echo get_adv('home_fl4_goods_ad2',$this->_var['catkeys']);?><!-- 270*125 --></li>
+        <li><?php echo get_adv('home_fl4_goods_ad3',$this->_var['catkeys']);?><!-- 270*125 --></li>
+        <li><?php echo get_adv('home_fl4_goods_ad4',$this->_var['catkeys']);?><!-- 270*125 --></li>
+    </ol>
+    <ol class="w170">
+    <!--{/if}-->
+    {/if}
+    <!--{/foreach}-->
+    </ol>
+</div>
+<!--{/foreach}-->

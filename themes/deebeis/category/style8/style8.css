@@ -1,0 +1,42 @@
+.milk_powder{ margin:0 auto; padding:0; text-align:center;}
+
+/* 海报*/
+.poster{ background:url(images/poster.jpg) no-repeat center; height:599px; min-width:1190px;}
+.content{background: #fffeed; overflow:hidden; min-width: 1190px;}
+.category{background: url(images/category_nav.png) center no-repeat; height: 655px; margin-bottom: 50px;}
+.category_nav_wrap{ overflow:hidden;}
+.category_nav{margin: 90px 30px 0px 45px;}
+
+.cate_nav_item{border-top: dashed 2px #ffbded; padding: 10px 40px 10px 30px;}
+.first_nav_item {border-top:none; padding-left: 70px;}
+.nav_left{color: #095b8b;}
+.nav_all a { color: #3090ca;}
+.nav_all_selected a { background: #095b8b; color: #ffffff;}
+.cate_nav_item ul li{color: #3090ca; }
+.cate_nav_item ul li a { color:#3090ca; }
+.cate_nav_item ul .selected a { background: #095b8b; color: #ffffff;}
+.nav_more{ color: #3090ca; }
+
+
+.catlist_menu{ background:url(images/nav_bg.png) center top no-repeat; width:100px;}
+.side_close{ background: none;}
+.catlist_title { background: url(images/left_nav_title.png) no-repeat; height: 55px;}
+.catlist_body { padding-top:75px; height: 308px; position: relative;}
+.catlist_scroll { background: none; width: 158px; height: 260px; margin-top: 15px;}
+.catlist_ctl{display: block; position: absolute; background: url(images/menu_list.png) no-repeat; }
+.catlist_top { top:72px}
+.catlist_down { bottom:0;}
+.catlist_up{background-position:0 -64px;}
+.catlist_up_hover{background-position:0 -89px;}
+.catlist_down{height:25px;background-position:0 0;}
+.catlist_down_hover{background-position:0 -32px;}
+.catlist_ul { float:none; margin:0; }
+.catlist_ul li { text-align: center; width: 100%; background: url(images/left_nav_li.png) no-repeat; height: 35px; line-height: 35px; padding:0; margin-top:8px;}
+.catlist_ul .selected { background: none;}
+.category_name_div { width:77px; height: 100%; margin-top:0px; margin-left:2px; background: #FDE65E;}
+.catlist_ul .selected .category_name_div { color:#FFF; background: #DF1322;}
+.catlist_repeaty {display: none;}
+.catlist_foot { background: url(images/left_nav_foot.png) right top no-repeat; height: 30px;}
+
+
+

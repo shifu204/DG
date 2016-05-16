@@ -1,0 +1,64 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/trial_order/trial_order.css" rel="stylesheet" type="text/css">
+<div class="trial_order">
+	<div class="img">
+    	<div class="poster"></div>
+        <div class="procedure_bg">
+            <div class="procedure"></div>
+        </div>
+    </div>
+    <div class="w1190">
+    	<div class="border">
+            <div class="advantage">
+                <div class="advantage_title"></div>
+                <div class="advantage_content">
+                    <div class="advantage_1"></div>
+                    <div class="advantage_2"></div>
+                    <div class="advantage_3"></div>
+                </div>
+            </div>
+            <div class="safe">
+                <div class="safe_title"></div>
+                <div class="safe_content">
+                    <div class="import">
+                        <div class="import_title"></div>
+                        <div class="import_content">
+                        	<div class="products">
+                            	<div class="milk_1 clearfix">
+                                    {if $goods_list}
+                                    {foreach from=$goods_list item=goods}
+                                    <a href="javascript:trybuy0({$goods.goods_id},{$goods.brand_id});" title="{$goods.goods_name}">
+                                        <div class="frame">
+                                            <div class="frame_milk">
+                                                <img width="213" src="{$goods.goods_thumb}" />
+                                            </div>
+                                            <div class="frame_bottom">
+                                                <font class="color8" style="font-size: 14px;font-weight: bold; padding-right: 10px;">{$goods.shop_price}</font>
+                                                <img src="/themes/deebeis/images1/trial-order-buy.png" width="74" height="26"  style="vertical-align: middle;"/>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    {/foreach}
+                                    {/if}
+                                </div>                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pack"></div>
+                </div>
+            </div>
+            <div class="quality">
+                <div class="quality_title"></div>
+                <div class="quality_content">
+                    <div class="quality_1"></div>
+                    <div class="quality_2"></div>
+                </div>
+            </div>
+    	</div>
+    </div>
+    <!-- #BeginLibraryItem "/library/goods/tryonebuy.lbi" --><!-- #EndLibraryItem -->
+    <div class="floorBlank"></div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

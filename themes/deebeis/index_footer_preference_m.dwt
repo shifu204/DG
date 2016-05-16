@@ -1,0 +1,52 @@
+        <!-- 奇数是是开始 -->
+                <div class="item_show_type3 flex_box">
+                <div>
+                      <!--18表示外跳 -->
+                         <a href="javascript:gettypeurl(1,'6','2255','%E5%91%A8%E6%9C%AB%E4%B8%93%E4%BA%AB','','','bottom_1')">
+                         <img src="index_m_files/CgMBmFLY4muABkrTAAB6A7-MUI450300.jpg">
+                            <div class="activity_desc">
+                                <div class="title">周末专享</div>
+                                <div class="text">9.9元起包邮</div>
+                            </div>
+                        </a>
+                    </div>
+                 <!-- 偶数行结束-->	
+                <!-- 奇数是是开始 -->
+                <div>
+                      <!--18表示外跳 -->
+                         <a href="javascript:gettypeurl(1,'6','2257','%E5%B9%B4%E8%B4%A7%E7%8B%82%E6%AC%A2%E5%AD%A3','','','bottom_2')">
+                         <img src="index_m_files/CgMBmFKFygGAeoLyAAAVBos1UT482200.jpg">
+                            <div class="activity_desc">
+                                <div class="title">年货狂欢季</div>
+                                <div class="text">团购把爱带回家</div>
+                            </div>
+                        </a>
+                    </div>
+                 <!-- 偶数行结束-->	
+                </div>
+               <!-- 奇数是是开始 -->
+                <div class="item_show_type3 flex_box">
+                <div>
+                      <!--18表示外跳 -->
+                         <a href="javascript:gettypeurl(1,'14','2204','%E5%9B%A2%E8%B4%AD%E7%8B%82%E6%AC%A2','','','bottom_3')">
+                         <img src="index_m_files/CgMBmVK0JHyALh93AAAOyzW7_5898700.jpg">
+                            <div class="activity_desc">
+                                <div class="title">团购狂欢</div>
+                                <div class="text">品牌团疯狂购</div>
+                            </div>
+                        </a>
+                    </div>
+                 <!-- 偶数行结束-->	
+                <!-- 奇数是是开始 -->
+                <div>
+                      <!--18表示外跳 -->
+                         <a href="javascript:gettypeurl(1,'14','2080','1%E5%8F%B7%E7%94%9F%E9%B2%9C','','','bottom_4')">
+                         <img src="index_m_files/CgQCsFK49uyACmh6AAANW0JUTZM56400.jpg">
+                            <div class="activity_desc">
+                                <div class="title">1号生鲜</div>
+                                <div class="text">冷冻产品重磅上市</div>
+                            </div>
+                        </a>
+                    </div>
+                 <!-- 偶数行结束-->	
+                </div>

@@ -1,0 +1,340 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/hl_friso/friso.css" rel="stylesheet" type="text/css">
+<div class="friso">
+    <div class="poster"></div>
+    <div class="friso1">
+        <div class="wm01190">
+            <div class="f1">
+                <div class="f1_t"></div>
+                <div class="f1_c"></div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="friso2">
+        <div class="wm01190">
+            <div class="f2">
+                <div class="f2_t"></div>
+                <div class="f2_c">
+                    <div class="f2_c1"></div>
+                    <div class="f2_c2">
+                        <div class="f2_frame">
+                            <div class="f2_goodbox1 clearfix">
+                                <a href="http://www.deebei.net/goods-130.html" target="_blank">
+                                <div class="f2_goodbox">
+                                    <div class="f2_img">
+                                        <img src="{$theme_path}zt/hl_friso/images/f2/f2_1.png" style=" height:251px;">
+                                    </div>
+                                    <div class="f2_info1">
+                                        <div class="f2_but1"></div>
+                                        <div class="f2_but2"></div>
+                                    </div>
+                                </div>
+                                </a>
+                                <a href="http://www.deebei.net/goods-88.html" target="_blank">
+                                <div class="f2_goodbox">
+                                    <div class="f2_img">
+                                        <img src="{$theme_path}zt/hl_friso/images/f2/f2_2.png" style=" height:251px;">
+                                    </div>
+                                    <div class="f2_info2">
+                                        <div class="f2_but1"></div>
+                                        <div class="f2_but2"></div>
+                                    </div>
+                                </div>
+                                </a>
+                                <a href="http://www.deebei.net/goods-94.html" target="_blank">
+                                <div class="f2_goodbox">
+                                    <div class="f2_img">
+                                        <img src="{$theme_path}zt/hl_friso/images/f2/f2_3.png" style=" height:251px;">
+                                    </div>
+                                    <div class="f2_info3">
+                                        <div class="f2_but1"></div>
+                                        <div class="f2_but2"></div>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="f2_goodbox2 clearfix">
+                                <a href="http://www.deebei.net/goods-93.html" target="_blank">
+                                <div class="f2_goodbox">
+                                    <div class="f2_img">
+                                        <img src="{$theme_path}zt/hl_friso/images/f2/f2_4.png" style=" height:251px;">
+                                    </div>
+                                    <div class="f2_info4">
+                                        <div class="f2_but1"></div>
+                                        <div class="f2_but2"></div>
+                                    </div>
+                                </div>
+                                </a>
+                                <a href="http://www.deebei.net/goods-95.html" target="_blank">
+                                <div class="f2_goodbox">
+                                    <div class="f2_img">
+                                        <img src="{$theme_path}zt/hl_friso/images/f2/f2_5.png" style=" height:251px;">
+                                    </div>
+                                    <div class="f2_info5">
+                                        <div class="f2_but1"></div>
+                                        <div class="f2_but2"></div>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="friso3">
+        <div class="wm01190">
+            <div class="f3">
+                <div class="f3_t"></div>
+                <div class="f3_c">
+                    <div class="f3_frame">
+                        <a href="http://www.deebei.net/goods-286.html" target="_blank">
+                        <div class="f3_goodbox">
+                            <div class="f3_img">
+                                <div class="img_92"></div>
+                                <div class="img_goodbox">
+                                    <img src="{$theme_path}zt/hl_friso/images/f3/f3_1.png" style=" height:239px; margin-top: 140px;">
+                                </div>
+                            </div>
+                            <div class="f3_price">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/price_1705.png" style=" height:29px;">
+                                <div class="f3_but"></div>
+                            </div>
+                            <div class="f3_name">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/f3_n1.png" style=" height:29px;">
+                            </div>
+                        </div>
+                        </a>
+                        <a href="http://www.deebei.net/goods-281.html" target="_blank">
+                        <div class="f3_goodbox">
+                            <div class="f3_img">
+                                <div class="img_61"></div>
+                                <div class="img_goodbox">
+                                    <img src="{$theme_path}zt/hl_friso/images/f3/f3_2.png" style=" height:239px; margin-top: 140px;">
+                                </div>
+                            </div>
+                            <div class="f3_price">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/price_1141.png" style=" height:29px;">
+                                <div class="f3_but"></div>
+                            </div>
+                            <div class="f3_name">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/f3_n2.png" style=" height:29px;">
+                            </div>
+                        </div>
+                        </a>
+                        <a href="http://www.deebei.net/goods-287.html" target="_blank">
+                        <div class="f3_goodbox">
+                            <div class="f3_img">
+                                <div class="img_92"></div>
+                                <div class="img_goodbox">
+                                    <img src="{$theme_path}zt/hl_friso/images/f3/f3_3.png" style=" height:239px; margin-top: 140px;">
+                                </div>
+                            </div>
+                            <div class="f3_price">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/price_1705.png" style=" height:29px;">
+                                <div class="f3_but"></div>
+                            </div>
+                            <div class="f3_name">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/f3_n3.png" style=" height:29px;">
+                            </div>
+                        </div>
+                        </a>
+                        <a href="http://www.deebei.net/goods-282.html" target="_blank">
+                        <div class="f3_goodbox">
+                            <div class="f3_img">
+                                <div class="img_61"></div>
+                                <div class="img_goodbox">
+                                    <img src="{$theme_path}zt/hl_friso/images/f3/f3_4.png" style=" height:239px; margin-top: 140px;">
+                                </div>
+                            </div>
+                            <div class="f3_price">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/price_1141.png" style=" height:29px;">
+                                <div class="f3_but"></div>
+                            </div>
+                            <div class="f3_name">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/f3_n4.png" style=" height:29px;">
+                            </div>
+                        </div>
+                        </a>
+                        <a href="http://www.deebei.net/goods-288.html" target="_blank">
+                        <div class="f3_goodbox">
+                            <div class="f3_img">
+                                <div class="img_92"></div>
+                                <div class="img_goodbox">
+                                    <img src="{$theme_path}zt/hl_friso/images/f3/f3_5.png" style=" height:239px; margin-top: 140px;">
+                                </div>
+                            </div>
+                            <div class="f3_price">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/price_1705.png" style=" height:29px;">
+                                <div class="f3_but"></div>
+                            </div>
+                            <div class="f3_name">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/f3_n5.png" style=" height:29px;">
+                            </div>
+                        </div>
+                        </a>
+                        <a href="http://www.deebei.net/goods-283.html" target="_blank">
+                        <div class="f3_goodbox">
+                            <div class="f3_img">
+                                <div class="img_61"></div>
+                                <div class="img_goodbox">
+                                    <img src="{$theme_path}zt/hl_friso/images/f3/f3_6.png" style=" height:239px; margin-top: 140px;">
+                                </div>
+                            </div>
+                            <div class="f3_price">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/price_1141.png" style=" height:29px;">
+                                <div class="f3_but"></div>
+                            </div>
+                            <div class="f3_name">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/f3_n6.png" style=" height:29px;">
+                            </div>
+                        </div>
+                        </a>
+                        <a href="http://www.deebei.net/goods-289.html" target="_blank">
+                        <div class="f3_goodbox">
+                            <div class="f3_img">
+                                <div class="img_92"></div>
+                                <div class="img_goodbox">
+                                    <img src="{$theme_path}zt/hl_friso/images/f3/f3_7.png" style=" height:239px; margin-top: 140px;">
+                                </div>
+                            </div>
+                            <div class="f3_price">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/price_1705.png" style=" height:29px;">
+                                <div class="f3_but"></div>
+                            </div>
+                            <div class="f3_name">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/f3_n7.png" style=" height:29px;">
+                            </div>
+                        </div>
+                        </a>
+                        <a href="http://www.deebei.net/goods-284.html" target="_blank">
+                        <div class="f3_goodbox">
+                            <div class="f3_img">
+                                <div class="img_61"></div>
+                                <div class="img_goodbox">
+                                    <img src="{$theme_path}zt/hl_friso/images/f3/f3_8.png" style=" height:239px; margin-top: 140px;">
+                                </div>
+                            </div>
+                            <div class="f3_price">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/price_1141.png" style=" height:29px;">
+                                <div class="f3_but"></div>
+                            </div>
+                            <div class="f3_name">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/f3_n8.png" style=" height:29px;">
+                            </div>
+                        </div>
+                        </a>
+                        <a href="http://www.deebei.net/goods-290.html" target="_blank">
+                        <div class="f3_goodbox">
+                            <div class="f3_img">
+                                <div class="img_92"></div>
+                                <div class="img_goodbox">
+                                    <img src="{$theme_path}zt/hl_friso/images/f3/f3_9.png" style=" height:239px; margin-top: 140px;">
+                                </div>
+                            </div>
+                            <div class="f3_price">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/price_1705.png" style=" height:29px;">
+                                <div class="f3_but"></div>
+                            </div>
+                            <div class="f3_name">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/f3_n9.png" style=" height:29px;">
+                            </div>
+                        </div>
+                        </a>
+                        <a href="http://www.deebei.net/goods-285.html" target="_blank">
+                        <div class="f3_goodbox">
+                            <div class="f3_img">
+                                <div class="img_61"></div>
+                                <div class="img_goodbox">
+                                    <img src="{$theme_path}zt/hl_friso/images/f3/f3_10.png" style=" height:239px; margin-top: 140px;">
+                                </div>
+                            </div>
+                            <div class="f3_price">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/price_1141.png" style=" height:29px;">
+                                <div class="f3_but"></div>
+                            </div>
+                            <div class="f3_name">
+                                <img src="{$theme_path}zt/hl_friso/images/f3/f3_n10.png" style=" height:29px;">
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="friso4">
+        <div class="wm01190">
+            <div class="f4">
+                <div class="f4_t"></div>
+                <div class="f4_c"></div>
+            </div>
+        </div>
+    </div>
+    <div class="friso5">
+        <div class="wm01190">
+            <div class="f5">
+                <div class="f5_t"></div>
+                <div class="f5_c">
+                    <div class="f5_c1"></div>
+                    <div class="f5_c2">
+                        <input type="button" class="f5_sd" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="friso6">
+        <div class="wm01190">
+            <div class="f6">
+                <div class="f6_t"></div>
+                <div class="f6_c"></div>
+            </div>
+        </div>
+    </div>
+    <div class="friso7">
+        <div class="wm01190">
+            <div class="f7">
+                <div class="f7_t"></div>
+                <div class="f7_c">
+                    <div class="f7_c1">
+                        <ul class="f7_contact clearfix">
+                            <li>
+                                <div class="img_wx"></div>
+                                <div class="but_f7">
+                                    <input type="button" class="f7_wx" />
+                                </div>
+                                <div class="span_f7">微信号：德贝海外商城</div>
+                            </li>
+                            <li>
+                                <div class="img_service"></div>
+                                <div class="but_f7">
+                                    <input type="button" class="f7_service" />
+                                </div>
+                                <div class="span_f7">4000-397-006</div>
+                            </li>
+                            <li>
+                                <div class="img_qq"></div>
+                                <div class="but_f7">
+                                    <a  class="n7_qq" href="tencent://message/?uin=2462814798&Site=www.deebei.net&Menu=yes" target="_blank"></a>
+                                </div>
+                                <div class="span_f7">2462814798</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="f7_c2 clearfix">
+                        <div class="f7_c2_l"></div>
+                        <div class="f7_c2_r">
+                            <input class="register" type="button" onclick="user_login_dialog('register');"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

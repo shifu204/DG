@@ -1,0 +1,66 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem --> 
+<!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+<link rel="stylesheet" type="text/css" href="/themes/deebeis/style/member.css" />  
+<script type="text/javascript" src="/themes/deebeis/js/user_clips.js"></script>
+<div class="m-warper">
+    <div class="m-top"></div>
+    <!--左侧内容 开始-->
+    <div class="m-left">
+    <!--头像个人信息--> 
+    <dl class="m-left-head"> 
+       <!-- <dt id="tou" class="tou"> 
+            <a href="" style="display:block;width:48px;height:48px;">&nbsp;&nbsp;</a>
+        </dt>-->
+        <dd style="float: none; margin:0 auto; width: 100%; text-align: center;">
+            <font class="is-bold-yellow">{$profile.user_name}</font>
+            <span style='color:#A5A5A5;'>（上次登录：{$profile.last_login}）</span>
+            <span class="level1">{$profile.rank_name}&nbsp;&nbsp;<font class="is-bold-yellow">{$profile.discount}</font>折&nbsp;&nbsp;<img class="rank-img" src="/themes/deebeis/images1/rank{$profile.rank_level}.jpg" /></span>
+        </dd>
+    </dl>
+    
+    <!--左侧菜单-->
+    <div class="clear"></div>
+    <div class="m-left-menu">
+        <dl>
+            <dt><i class="m-menu-02"></i><span>我的德贝</span></dt>
+            <dd>
+                <ul class="menu-list">
+                    <li class=""><a href="javascript:void(0);" data-href="user.php?act=ajax_get_orders">我的订单</a></li>
+                    <li class=""><a href="javascript:void(0);" data-href="user.php?act=ajax_get_bonus">我的红包</a></li>
+                    <li class=""><a href="javascript:void(0);" data-href="user.php?act=ajax_get_comment">我的晒单</a></li>
+                    <!--<li><a href="/uc_youhui-brand.html">我的品牌券</a></li>-->
+                </ul>
+            </dd>
+        </dl>
+        <dl>
+            <dt><i class="m-menu-01"></i><span>会员资料</span></dt>
+            <dd>
+                <ul class="menu-list">
+                    <li class="{if $act == 'default'}on{/if}"><a href="javascript:void(0);" data-href="user.php?act=default&is_ajax=1">我的资料</a></li>
+                    <li class=""><a href="javascript:void(0);" data-href="user.php?act=ajax_get_addresses">配送地址</a></li>
+                    <li class="{if $act == 'user_mobile_email'}on{/if}"><a href="javascript:void(0);" data-href="user.php?act=user_mobile_email&is_ajax=1">手机&邮箱绑定</a></li>
+                    <li class=""><a href="javascript:void(0);" data-href="user.php?act=edit_password">修改密码</a></li>
+                    <!-- <li class=""><a href="/uc_account-share.html">我的分享&nbsp;(<em class="red">0</em>)</a></li> -->
+                   <!--  <li class=""><a href="javascript:void(0);">实名认证</a></li> -->
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</div>
+    <!--左侧内容 结束-->
+    <!--右侧内容 开始-->
+    <div class="m-right" id='user_right_content'>
+        {if $act == 'default'}
+        <!-- #BeginLibraryItem "/library/user/my_profile.lbi" --><!-- #EndLibraryItem -->
+        {elseif $act == 'user_mobile_email'}
+        <!-- #BeginLibraryItem "/library/user/my_contact.lbi" --><!-- #EndLibraryItem -->
+        {/if}      
+    </div> 
+    <!--右侧内容 结束-->
+    <div class="clear"></div>
+    <div class="m-bot"></div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<script type='text/javascript'>
+    seajs.use('themejs/user_clips');
+</script>

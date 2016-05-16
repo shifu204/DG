@@ -1,0 +1,26 @@
+<!-- $Id: ads_info.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<style>
+    .ul-form { line-height: 25px; }
+    .ul-form li { list-style-type: none; }
+</style>
+<!-- {if $shaidan.is_return} -->
+已晒单
+<!-- {else} -->
+<form method="POST" action="mc_shaidan.php?act=shaidan_return&msg_id={$shaidan.msg_id}" name="listForm" onsubmit="return confirm_allow_deny()">
+<div class="list-div" id="listDiv">
+    <ul class="ul-form">
+        <li><strong>晒单标题：</strong><span>{$shaidan.msg_title} <a href="/shaidan.php?id={$shaidan.goods_id}&s_id={$shaidan.msg_id}" target="_blank">查看详情</a></span>
+        <li><strong>商品名称：</strong><span>{$shaidan.goods_name}</span></li>
+        <li><strong>商品单价：</strong>{$shaidan.goods_price}</li>
+        <li><strong>商品数量：</strong>{$shaidan.goods_number}</li>
+        <li><strong>商品金额：</strong>{$shaidan.goods_amount}</li>
+        <li><strong>返现金额：</strong><input name="return_amount" type="text" />元（最高不超过5元）</li>
+        <li><strong>赠送积分：</strong><input name="return_integral" type="text" />积分（最高不超过500积分）</li>
+        <li><input type="submit" value="审核通过并奖励" /></li>
+    </ul>
+</div>
+</form>
+<!-- {/if} -->
+{include file="pagefooter.htm"}

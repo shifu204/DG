@@ -1,0 +1,13 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<style type="text/css">
+    .user_form900 {
+        margin-top:20px;
+    }
+    .user_form900 .icons-close {
+        display: none;
+    }
+</style>
+<!-- #BeginLibraryItem "/library/user/register_login.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+    </body>
+</html>

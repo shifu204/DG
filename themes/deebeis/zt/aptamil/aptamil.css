@@ -1,0 +1,115 @@
+.aptamil{ text-align: center; margin: 0; padding: 0;}
+
+
+
+
+
+
+
+/*goodsbox2*/
+.goods_box2{background: url(images/gb2/gb2_bg.png) center left no-repeat; width: 502px; height: 515px; float: left; margin: 0px 0px 25px 8px;}
+.gb2_img{margin-top: 53px; margin-left: 19px; height: 327px; width: 459px; position: relative;}
+.gb2_price{height: 67px; margin-right: 2px; position: relative;}
+.gb2_but{background: url(images/button.png) no-repeat; background-position: 0px -59px; width: 129px; height: 47px; position: absolute; right: -2px; top:7px; cursor: pointer;}
+.gb2_n{height: 67px;margin-right: 16px;}
+.gb2_92{background: url(images/gb2/gb2_92.png) center no-repeat; width: 210px; height: 104px; position: absolute; top: 1px; left: 1px;}
+.gb2_61{background: url(images/gb2/gb2_61.png) center no-repeat; width: 210px; height: 104px; position: absolute; top: 1px; left: 1px;}
+.price_2805{background: url(images/gb2/price_2805.png) center no-repeat; width: 157px; height: 29px; position: absolute; left: 40px; top:15px;}
+.price_1862{background: url(images/gb2/price_1862.png) center no-repeat; width: 157px; height: 29px; position: absolute; left: 40px; top:15px;}
+.gb2_n01{background: url(images/gb2/gb2_n01.png) center no-repeat; width: 410px; height: 32px; padding-top: 35px;}
+.gb2_n02{background: url(images/gb2/gb2_n02.png) center no-repeat; width: 410px; height: 32px; padding-top: 35px;}
+.gb2_n11{background: url(images/gb2/gb2_n11.png) center no-repeat; width: 410px; height: 32px; padding-top: 35px;}
+.gb2_n12{background: url(images/gb2/gb2_n12.png) center no-repeat; width: 410px; height: 32px; padding-top: 35px;}
+.gb2_n21{background: url(images/gb2/gb2_n21.png) center no-repeat; width: 410px; height: 32px; padding-top: 35px;}
+.gb2_n22{background: url(images/gb2/gb2_n22.png) center no-repeat; width: 410px; height: 32px; padding-top: 35px;}
+.gb2_n31{background: url(images/gb2/gb2_n31.png) center no-repeat; width: 410px; height: 32px; padding-top: 35px;}
+.gb2_n32{background: url(images/gb2/gb2_n32.png) center no-repeat; width: 410px; height: 32px; padding-top: 35px;}
+.gb2_n41{background: url(images/gb2/gb2_n41.png) center no-repeat; width: 410px; height: 32px; padding-top: 35px;}
+.gb2_n42{background: url(images/gb2/gb2_n42.png) center no-repeat; width: 410px; height: 32px; padding-top: 35px;}
+.gb2_n51{background: url(images/gb2/gb2_n51.png) center no-repeat; width: 410px; height: 32px; padding-top: 35px;}
+.gb2_n52{background: url(images/gb2/gb2_n52.png) center no-repeat; width: 410px; height: 32px; padding-top: 35px;}
+
+.gb2_01{height: 240px; width: 460px; background: url(images/gb2/gb2_01.png) center bottom no-repeat; position: absolute; bottom: 5px; left: 0px;}
+.gb2_02{height: 240px; width: 460px; background: url(images/gb2/gb2_02.png) center bottom no-repeat; position: absolute; bottom: 5px; left: 0px;}
+.gb2_11{height: 240px; width: 460px; background: url(images/gb2/gb2_11.png) center bottom no-repeat; position: absolute; bottom: 5px; left: 0px;}
+.gb2_12{height: 240px; width: 460px; background: url(images/gb2/gb2_12.png) center bottom no-repeat; position: absolute; bottom: 5px; left: 0px;}
+.gb2_21{height: 240px; width: 460px; background: url(images/gb2/gb2_21.png) center bottom no-repeat; position: absolute; bottom: 5px; left: 0px;}
+.gb2_22{height: 240px; width: 460px; background: url(images/gb2/gb2_22.png) center bottom no-repeat; position: absolute; bottom: 5px; left: 0px;}
+.gb2_31{height: 240px; width: 460px; background: url(images/gb2/gb2_31.png) center bottom no-repeat; position: absolute; bottom: 5px; left: 0px;}
+.gb2_32{height: 240px; width: 460px; background: url(images/gb2/gb2_32.png) center bottom no-repeat; position: absolute; bottom: 5px; left: 0px;}
+.gb2_41{height: 240px; width: 460px; background: url(images/gb2/gb2_41.png) center bottom no-repeat; position: absolute; bottom: 5px; left: 0px;}
+.gb2_42{height: 240px; width: 460px; background: url(images/gb2/gb2_42.png) center bottom no-repeat; position: absolute; bottom: 5px; left: 0px;}
+.gb2_51{height: 240px; width: 460px; background: url(images/gb2/gb2_51.png) center bottom no-repeat; position: absolute; bottom: 5px; left: 0px;}
+.gb2_52{height: 240px; width: 460px; background: url(images/gb2/gb2_52.png) center bottom no-repeat; position: absolute; bottom: 5px; left: 0px;}
+
+
+
+
+
+.poster{background: url(images/poster.jpg) center no-repeat; height: 750px;}
+
+/* aptamil1 */
+.a1_title{background: url(images/a1_t.jpg) center no-repeat; height: 83px;}
+.a1_c1{background: url(images/a1_c1.jpg) center no-repeat; height: 365px;}
+.a1_c2{background: url(images/a1_c2.jpg) center no-repeat; height: 424px;}
+
+/* aptamil2 */
+.a2_title{background: url(images/a2_t.jpg) center no-repeat; height: 54px;}
+.a2_c1{background: url(images/a2_c1.jpg) center no-repeat; height: 165px;}
+.a2_c2{background: url(images/gb1/a2_c2.jpg) center no-repeat; height: 550px;}
+.a2_c3{background: url(images/gb1/a2_c3.jpg) center no-repeat; height: 550px;}
+.a2_c4{background: url(images/gb1/a2_c4.jpg) center no-repeat; height: 600px;}
+.a2_c5{background: url(images/gb1/a2_c5.jpg) center no-repeat; height: 600px;}
+.a2_c6{background: url(images/gb1/a2_c6.jpg) center no-repeat; height: 600px;}
+.a2_c7{background: url(images/gb1/a2_c7.jpg) center no-repeat; height: 600px;}
+
+.a2_1{background: url(images/gb1/a2_1.png) center bottom no-repeat; width: 400px; height: 450px; float: left; margin-left: 195px;}
+.a2_2{background: url(images/gb1/a2_2.png) center bottom no-repeat; width: 390px; height: 470px; float: left; margin-left: 195px;}
+.a2_3{background: url(images/gb1/a2_3.png) center bottom no-repeat; width: 400px; height: 500px; float: left; margin-left: 195px;}
+.a2_4{background: url(images/gb1/a2_4.png) center bottom no-repeat; width: 400px; height: 510px; float: left; margin-left: 195px;}
+.a2_5{background: url(images/gb1/a2_5.png) center bottom no-repeat; width: 400px; height: 450px; float: left; margin-left: 195px;}
+.a2_6{background: url(images/gb1/a2_6.png) center bottom no-repeat; width: 400px; height: 460px; float: left; margin-left: 195px;}
+
+
+
+
+/* aptamil3 */
+.a3_title{background: url(images/a3_t.jpg) center no-repeat; height: 54px;}
+.a3_c{background: url(images/a3_bg.jpg) center;}
+
+/* aptamil4 */
+.a4_title{background: url(images/a4_t.jpg) center no-repeat; height: 54px;}
+.a4_c1{background: url(images/a4_c1.jpg) center no-repeat; height: 455px;}
+.a4_c2{background: url(images/a4_c2.jpg) center no-repeat; height: 505px;}
+
+/* aptamil5 */
+.a5_title{background: url(images/a5_t.jpg) center no-repeat; height: 54px;}
+.a5_c1{background: url(images/a5_c1.jpg) center no-repeat; height: 451px;}
+.a5_c2{background: url(images/a5_c2.jpg) center no-repeat; height: 1155px; position: relative;}
+.sd_1{position: absolute; right: 153px; bottom: 100px; background: url(images/button.png) no-repeat; background-position: 0px -150px; width: 170px; height: 51px; border: 0px; cursor: pointer;}
+
+
+/* aptamil6 */
+.a6_title{background: url(images/a6_t.jpg) center no-repeat; height: 70px;}
+.a6_c{background: url(images/a6_c.jpg) center no-repeat; height: 861px;}
+
+/* aptamil7 */
+.a7_title{background: url(images/a7_t.jpg) center no-repeat; height: 55px;}
+.a7_c{background: url(images/a7_c.jpg) center no-repeat; height: 538px;}
+.a7_c1{padding-left: 255px; padding-top: 89px; height: 250px;}
+.a7c1{float: left; margin-right: 125px; width: 150px;}
+.gzh_img{background: url(images/c7_gzh.png) center no-repeat; height: 150px; width: 150px;}
+.rx_img{background: url(images/c7_rx.png) center no-repeat; height: 150px; width: 150px;}
+.qq_img{background: url(images/c7_qq.png) center no-repeat; height: 150px; width: 150px;}
+.gzh1{cursor: pointer; background: url(images/button.png) no-repeat; background-position: 0px -230px ; width: 104px; height: 33px; border: 0px; }
+.rx1{cursor: pointer; background: url(images/button.png) no-repeat; background-position: 0px -297px ; width: 104px; height: 33px; border: 0px;}
+.qq1{cursor: pointer; background: url(images/button.png) no-repeat; background-position: 0px -350px ; width: 104px; height: 33px; border: 0px;}
+.buttom7{font-size: 14px; color: #1637a0; font-weight: bold; line-height: 35px;}
+.but7{margin-top: 17px;}
+.a7_c2{padding-left: 122px; margin-top: 41px;}
+.a7_c2l{float: left; height: 49px; width: 763px; background: url(images/bottom_160.png) center no-repeat;}
+.a7_c2r{float: left; background: #06a9ff; height: 49px; width: 185px;}
+.register{cursor: pointer; background: url(images/button.png) no-repeat; background-position: 0px -415px; border: 0px; width: 161px; height: 35px; margin-top: 7px;}
+
+.c3_frame{width:1020px;  padding-top: 40px; padding-bottom: 40px;}
+.n7_qq{cursor: pointer; background: url(images/button.png) no-repeat; background-position: 0px -350px ; width: 104px; height: 33px; border: 0px; display: block; margin:0 auto;}

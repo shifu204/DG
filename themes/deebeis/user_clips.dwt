@@ -1,0 +1,265 @@
+<!-- #BeginLibraryItem "/library/user_clips_header.lbi" --><!-- #EndLibraryItem -->
+<!---------------导航栏结束------------->
+<script type="text/javascript" src="/themes/deebeis/js/user_clips.js"></script>
+<div class="user-clips-warper">
+    <div class="wm01190">
+        <div class="m-header">
+            <div class="header opacity"></div>
+            <div class="header clearfix">
+               <div class="portrait rounded">
+                   {if $profile.headimgurl}
+                   <img src="{$profile.headimgurl}" width="103" height="103" />
+                   {else}
+                   <img src="{$theme_path}images1/user_clips_20150420/portrait.jpg" />
+                   {/if}
+               </div>
+                <div class="user">
+                    <span class="span16">{$profile.user_name}</span><br/>
+                    {$profile.rank_name}<br/>
+                    <div class="level">
+                        {$profile.rank_discount_header}
+                    </div>
+                    <span class="level-check"><a href="http://www.deebei.net/article-9.html" target="_blank">查看</a></span><br/>
+                </div>
+                <div class="order">
+                    <ul class="clearfix">
+                        <li>
+                            <div class="wait-payment"></div>
+                            待付款 <span class="red_order">{$order_wait_pay}</span>
+                        </li>
+                        <li>
+                            <div class="wait-receive"></div>
+                            待收货 <span class="red_order">{$order_wait_get}</span>
+                        </li>
+                       <!-- <li>
+                            <div class="wait-appraise"></div>
+                            待评论 <span class="red_order">{$order_finish}</span>
+                        </li> -->
+                        <li>
+                            <div class="wait-appraise"></div>
+                            已完成 <span class="red_order">{$order_finish}</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="other clearfix">
+                    <div class="other-left">
+                        <label style="padding-left: 12px;">有效红包：</label><span class="red_order decoration_other">{$bonus_num}</span>个<br/>
+                        <label style="padding-left: 12px;">账户余额：</label><span class="red_order decoration_other">{$surplus}</span>元<br/>
+                        可消费积分：<span class="red_order decoration_other">{$profile.pay_points}</span>分
+                    </div>
+                   <!-- <div class="other-right">
+                        <span class="decoration_other">充值</span>
+                    </div>
+                   -->
+                </div>
+            </div>
+            <script type="text/javascript">
+                var now_points = {$profile.rank_points} - {$profile.min_points};
+                var next_points = {$profile.next_min_points} - {$profile.min_points};
+                $(document).ready(function(){
+                    var width = ((parseInt(now_points) / parseInt(next_points))*100)+"%";
+                    $(".rank-points-header").css("width",width);
+                });
+            </script>
+        </div>
+        
+        <div class="m-warper clearfix">
+            <!--左侧内容 开始-->
+            <div class="m-left">
+                <!--左侧菜单开始-->
+                <div class="m-left-menu">
+                    <dl>
+                        <dt><i class="m-menu-02"></i><span>我的德贝</span></dt>
+                        <dd>
+                            <ul class="menu-list">
+                                <li class="{if $default_page == 'my_order'}on{/if}"><a href="javascript:void(0);" data-href="user.php?act=ajax_get_orders">我的订单</a></li>
+                                <li class="{if $default_page == 'my_bonus'}on{/if}"><a href="javascript:void(0);" data-href="user.php?act=ajax_get_bonus">我的红包</a></li>
+                                <li class="{if $default_page == 'my_comment'}on{/if}"><a href="javascript:void(0);" data-href="user.php?act=ajax_get_comment">我的晒单</a></li>
+                                <!--<li><a href="/uc_youhui-brand.html">我的品牌券</a></li>-->
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><i class="m-menu-01"></i><span>会员资料</span></dt>
+                        <dd>
+                            <ul class="menu-list">
+                                <li class="{if $default_page == 'default' || $default_page == 'my_profile'}on{/if}"><a href="javascript:void(0);" data-href="user.php?act=default&is_ajax=1">我的资料</a></li>
+                                <!-- <li class=""><a href="javascript:void(0);" data-href="user.php?act=ajax_get_account">我的帐户</a></li> -->
+                                <li class=""><a href="javascript:void(0);" data-href="user.php?act=ajax_get_addresses">配送地址</a></li>                               
+                                <li class=""><a href="javascript:void(0);" data-href="user.php?act=edit_password">修改密码</a></li>
+                                <!-- <li class=""><a href="/uc_account-share.html">我的分享&nbsp;(<em class="red">0</em>)</a></li> -->
+                               <!--  <li class=""><a href="javascript:void(0);">实名认证</a></li> -->
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+                <!--左侧菜单结束-->
+            </div>
+            <!--左侧内容 结束-->
+            
+            <div class="user-clips-center">
+                <div id="user_center_top"></div>
+                <!--中间-上 内容 开始-->
+                <div class="m-center" id='user_right_content'>
+                {if $default_page == 'my_profile' || $default_page == 'default'}
+                <!-- #BeginLibraryItem "/library/user/my_profile.lbi" --><!-- #EndLibraryItem -->
+                {elseif $default_page == 'my_order'}
+                <!-- #BeginLibraryItem "/library/user/my_order.lbi" --><!-- #EndLibraryItem -->
+                {elseif $default_page == 'my_bonus'}
+                <!-- #BeginLibraryItem "/library/user/my_bonus.lbi" --><!-- #EndLibraryItem -->
+                {elseif $default_page == 'my_comment'}
+                <!-- #BeginLibraryItem "/library/user/my_comment.lbi" --><!-- #EndLibraryItem -->
+                {elseif $default_page == 'my_consignee'}
+                <!-- #BeginLibraryItem "/library/user/my_consignee.lbi" --><!-- #EndLibraryItem -->
+                {elseif $default_page == 'my_edit_password'}
+                <!-- #BeginLibraryItem "/library/user/my_edit_password.lbi" --><!-- #EndLibraryItem -->
+                {/if}
+                </div> 
+                <!--中间-上 内容 结束-->
+                <!--中间底部 开始-->
+                <div class="m-bottom">
+                    <div class="hot">
+                        <div class="hot-title clearfix">
+                            <h2 class="my-hot">
+                                <span>热销推荐</span>
+                            </h2>
+                            <div class="hot-title-right"><a href="http://www.deebei.net/category.php?id=131" target="_blank">查看更多</a></div>
+                        </div>
+                        <div class="hot-goodbox clearfix">
+                            <div class="hot-left">
+                                <img src="{$theme_path}images1/user_clips_20150420/hot-left.png"/>
+                            </div>
+                            <div class="hot-view">
+                                <ul class="hot-view-ul clearfix">
+                                    <?php foreach($this->_var['hot_goods'] as $key=>$hot):?>
+                                        <li>
+                                            <a href="<?php echo $hot['url'];?>" target="_blank">
+                                                <div class="">
+                                                    <img src="/<?php echo $hot['goods_img'];?>" width="168" height="168" />
+                                                    <span><?php echo $hot['shop_price']; ?></span> 
+                                                </div>
+                                            </a>
+                                        </li>
+                                    <?php endforeach;?>
+                                </ul>
+
+
+                            </div>
+                            <div class="hot-right">
+                                <img src="{$theme_path}images1/user_clips_20150420/hot-right.png"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="share-order">
+                        <div class="share-title clearfix">
+                            <h2 class="my-share">
+                                <span>晒单推荐</span>
+                            </h2>
+                            <div class="share-title-right"><a href="user.php?default_page=my_order"></a></div>
+                        </div>
+                        {if $shaidan_list}
+                        <div class="share-box-wrap clearfix">
+                            {foreach from=$shaidan_list item=shaidan key=key}
+                            <div class="share-box" {if $key >2}style="display:none;"{/if}>
+                                <div class="share-img">
+                                    <img src="{$shaidan.imgs[0].shaidan_img}"/>
+                                </div>
+                                <div class="share-comment">
+                                    <span>{$shaidan.user_name}</span><br/>
+                                    <span>{$shaidan.content}</span>
+                                </div>
+                                <div class="comment-num">
+                                    <div class="comment">
+                                        <a href="#user_center_top" onclick="reply_shaidan('{$shaidan.comment_id}')" class="num">评论{$shaidan.reply_num}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {/foreach}
+                        </div>
+                        {/if}
+                        <a class="more" href="javascript:;" onclick="more_shaidan(this);">查看更多</a>
+                    </div>
+                </div>
+                <!--中间底部 结束-->
+            </div>
+            
+            
+            <!--右侧内容 开始-->
+            <div class="m-right" id=''>
+                <a href=""><img src="{$theme_path}images1/user_clips_20150420/m-right-top.jpg" width="287" height="129" /></a>
+                <div class="m-right-recommend clearfix">
+                    <div class="m-right-recommend-title">
+                        <h2 class="my-recommend">
+                            会员推荐
+                        </h2>
+                    </div>
+                    <a target="_blank" href="http://www.deebei.net/category.php?id=131&filter_id=339">
+                    <div class="recommend-box">
+                        <div class="recommend-title">
+                            <div>买九送二</div>
+                            <div>好礼双倍</div>
+                        </div>
+                        <div class="recommend-1"></div>
+                    </div>
+                    </a>
+                    <a target="_blank" href="http://www.deebei.net/category.php?id=131&filter_id=340">
+                    <div class="recommend-box">
+                        <div class="recommend-title">
+                            <div>买六送一</div>
+                            <div>多买多送</div>
+                        </div>
+                        <div class="recommend-2"></div>
+                    </div>
+                    </a>
+                    <a target="_blank" href="">
+                    <div class="recommend-box">
+                        <div class="recommend-title">
+                            <div>扫一扫</div>
+                            <div>有惊喜</div>
+                        </div>
+                        <div class="recommend-4"></div>
+                    </div>
+                    </a>
+                </div>
+                {if $history}
+                <div class="m-right-record">
+                    <div class="record-title clearfix">
+                        <h2 class="my-record">
+                            <span>浏览历史</span>
+                        </h2>
+                        <!--<div class="record-title-right"><a href="">查看更多</a></div>-->
+                    </div>
+                    <div class="record-goodbox clearfix">
+                        <div class="record-left">
+                            <img src="{$theme_path}images1/user_clips_20150420/hot-left.png"/>
+                        </div>
+                        <div class="record-view">
+                            <ul class="record-view-ul clearfix">
+                                {foreach from=$history item=goods}
+                                <li>
+                                    <a href="goods.php?id={$goods.goods_id}" target="_blank" title="{$goods.goods_name}">
+                                        <img src="{$goods.goods_thumb}" width="100" height="100"/>
+                                        <span>{$goods.formated_price}</span>
+                                    </a>
+                                </li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                        <div class="record-right">
+                            <img src="{$theme_path}images1/user_clips_20150420/hot-right.png"/>
+                        </div>
+                    </div>
+                </div>
+                {/if}
+            </div> 
+            <!--右侧内容 结束-->
+            
+            
+        </div>
+    </div>
+</div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<script type='text/javascript'>
+    seajs.use('themejs/user_clips');
+</script>

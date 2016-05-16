@@ -1,0 +1,1116 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/reduce_price/reduce_price.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{$theme_path}js/category.js"></script>
+<div class="reduce_price">
+    <div class="poster" id="zt_top"></div>
+    <div class="reduce_price1"></div>
+    
+    <div class="container_discount">
+        <div class="wm01190">
+            <div class="gift">
+                <img src="{$theme_path}zt/reduce_price/images/gift_t.jpg"/>
+
+                <div class="gift-container">
+                    <div class="gift-btn" style="display: none;">
+                        <img src="{$theme_path}zt/reduce_price/images/gift-btn.png"/>
+                    </div>
+                </div>
+
+            </div>
+            <div class="discount_bg" id="tiantiantemai">
+                <div class="discount">
+                    <div class="discount_1 rounded">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=19#brand_id" target="_blank">
+                        <img src="{$theme_path}zt/reduce_price/images/discount_nutrilon.jpg"/>
+                        </a>
+                    </div>
+                    <div class="discount_2 rounded">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=18#brand_id" target="_blank">
+                        <img src="{$theme_path}zt/reduce_price/images/discount_friso.jpg"/>
+                        </a>
+                    </div>
+                    <div class="discount_2 rounded">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=20#brand_id" target="_blank">
+                        <img src="{$theme_path}zt/reduce_price/images/discount_karicare.jpg"/>
+                        </a>
+                    </div>
+                    <div class="discount_2 rounded">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=24#brand_id" target="_blank">
+                        <img src="{$theme_path}zt/reduce_price/images/discount_cowcate.jpg"/>
+                        </a>
+                    </div>
+                    <div class="discount_2 rounded">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=55#brand_id" target="_blank">
+                        <img src="{$theme_path}zt/reduce_price/images/discount_aptamil.jpg"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="reduce_price3" id="helan">
+        <div class="title wm01190 relative">
+            <a class="absolute more-goods" href="http://www.deebei.net/category.php?id=131&filter_id=159,244#filter_area" target="_blank"></a>
+        </div>
+        <div class="wm01190">
+            <div class="goodsbox_wrap">
+                <div class="goodsbox_frame">
+                    <div class="helan_1 clearfix">                        
+                        <div class="goodsbox">
+                            <a href="{$goods_list[0].url}" target="_blank">
+                                <img src="{$goods_list[0].index_img}" width="450" height="270"/>
+                                <div class="goods-price">
+                                    <div class="shop-price">德贝价：{$goods_list[0].formated_shop_price}</div>
+                                    <div class="topic-price">
+                                        <div class="topic-price-label">单罐仅：</div>
+                                        <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[0].real_price}</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="buy-more-send-x <?php if($this->_var['goods_list'][0]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][0]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][0]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                        </div>
+                        <div class="goodsbox">
+                            <a href="{$goods_list[1].url}" target="_blank">
+                                <img src="{$goods_list[1].index_img}" width="450" height="270"/>
+                                <div class="goods-price">
+                                    <div class="shop-price">德贝价：{$goods_list[1].formated_shop_price}</div>
+                                    <div class="topic-price">
+                                        <div class="topic-price-label">单罐仅：</div>
+                                        <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[1].real_price}</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="buy-more-send-x <?php if($this->_var['goods_list'][1]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][1]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][1]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="helan_2 clearfix">
+                        <div class="goodsbox goodsbox2">
+                            <a href="{$goods_list[2].url}" target="_blank">
+                                <img src="{$goods_list[2].index_img}" width="330" height="370"/>
+                                <div class="goods-price">
+                                    <div class="shop-price">德贝价：{$goods_list[2].formated_shop_price}</div>
+                                    <div class="topic-price">
+                                        <div class="topic-price-label">单罐仅：</div>
+                                        <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[2].real_price}</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="buy-more-send-x <?php if($this->_var['goods_list'][2]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][2]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][2]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                        </div>
+                        
+                        <div class="goodsbox goodsbox2">
+                            <a href="{$goods_list[3].url}" target="_blank">
+                                <img src="{$goods_list[3].index_img}" width="330" height="370"/>
+                                <div class="goods-price">
+                                    <div class="shop-price">德贝价：{$goods_list[3].formated_shop_price}</div>
+                                    <div class="topic-price">
+                                        <div class="topic-price-label">单罐仅：</div>
+                                        <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[3].real_price}</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="buy-more-send-x <?php if($this->_var['goods_list'][3]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][3]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][3]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                        </div>
+                        
+                        <div class="goodsbox goodsbox2">
+                            <a href="{$goods_list[4].url}" target="_blank">
+                                <img src="{$goods_list[4].index_img}" width="330" height="370"/>
+                                <div class="goods-price">
+                                    <div class="shop-price">德贝价：{$goods_list[4].formated_shop_price}</div>
+                                    <div class="topic-price">
+                                        <div class="topic-price-label">单罐仅：</div>
+                                        <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[4].real_price}</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="buy-more-send-x <?php if($this->_var['goods_list'][4]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][4]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][4]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                        </div>
+                        
+                        <div class="goodsbox goodsbox2">
+                            <a href="{$goods_list[5].url}" target="_blank">
+                                <img src="{$goods_list[5].index_img}" width="330" height="370"/>
+                                <div class="goods-price">
+                                    <div class="shop-price">德贝价：{$goods_list[5].formated_shop_price}</div>
+                                    <div class="topic-price">
+                                        <div class="topic-price-label">单罐仅：</div>
+                                        <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[5].real_price}</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="buy-more-send-x <?php if($this->_var['goods_list'][5]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][5]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][5]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                        </div>
+                        
+                        <div class="goodsbox goodsbox2">
+                            <a href="{$goods_list[6].url}" target="_blank">
+                                <img src="{$goods_list[6].index_img}" width="330" height="370"/>
+                                <div class="goods-price">
+                                    <div class="shop-price">德贝价：{$goods_list[6].formated_shop_price}</div>
+                                    <div class="topic-price">
+                                        <div class="topic-price-label">单罐仅：</div>
+                                        <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[6].real_price}</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="buy-more-send-x <?php if($this->_var['goods_list'][6]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][6]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][6]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                        </div>
+                        
+                        <div class="goodsbox goodsbox2">
+                            <a href="{$goods_list[7].url}" target="_blank">
+                                <img src="{$goods_list[7].index_img}" width="330" height="370"/>
+                                <div class="goods-price">
+                                    <div class="shop-price">德贝价：{$goods_list[7].formated_shop_price}</div>
+                                    <div class="topic-price">
+                                        <div class="topic-price-label">单罐仅：</div>
+                                        <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[7].real_price}</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="buy-more-send-x <?php if($this->_var['goods_list'][7]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][7]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][7]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reduce_price4" id="xinxilan">
+        <div class="wm01190 relative">
+            <a class="absolute more-goods" style="top:100px;" href="http://www.deebei.net/category.php?id=131&filter_id=162,244#filter_area" target="_blank"></a>
+        </div>
+        <div class="wm01190">           
+            <div class="rp4">
+                <div class="rp4_frame clearfix">
+                    <div class="goodsbox">
+                        <a href="{$goods_list[8].url}" target="_blank">
+                            <img src="{$goods_list[8].index_img}" width="450" height="270"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[8].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[8].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][8]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][8]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][8]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox">
+                        <a href="{$goods_list[9].url}" target="_blank">
+                            <img src="{$goods_list[9].index_img}" width="450" height="270"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[9].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[9].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][9]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][9]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][9]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[10].url}" target="_blank">
+                            <img src="{$goods_list[10].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[10].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[10].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][10]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][10]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][10]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[11].url}" target="_blank">
+                            <img src="{$goods_list[11].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[11].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[11].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][11]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][11]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][11]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[12].url}" target="_blank">
+                            <img src="{$goods_list[12].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[12].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[12].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][12]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][12]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][12]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[13].url}" target="_blank">
+                            <img src="{$goods_list[13].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[13].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[13].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][13]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][13]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][13]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[14].url}" target="_blank">
+                            <img src="{$goods_list[14].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[14].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[14].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][14]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][14]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][14]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[15].url}" target="_blank">
+                            <img src="{$goods_list[15].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[15].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[15].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][15]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][15]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][15]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reduce_price5" id="yingguo">
+        <div class="wm01190 relative">
+            <a class="absolute more-goods" style="top:100px;" href="http://www.deebei.net/category.php?id=131&filter_id=161,244#filter_area" target="_blank"></a>
+        </div>
+        <div class="wm01190">
+            <div class="rp5">
+                <div class="rp5_frame clearfix">
+                    <div class="goodsbox">
+                        <a href="{$goods_list[16].url}" target="_blank">
+                            <img src="{$goods_list[16].index_img}" width="450" height="270"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[16].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[16].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][16]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][16]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][16]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox">
+                        <a href="{$goods_list[17].url}" target="_blank">
+                            <img src="{$goods_list[17].index_img}" width="450" height="270"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[17].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[17].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][17]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][17]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][17]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    
+                    
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[18].url}" target="_blank">
+                            <img src="{$goods_list[18].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[18].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[18].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][18]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][18]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][18]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[19].url}" target="_blank">
+                            <img src="{$goods_list[19].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[19].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[19].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][19]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][19]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][19]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[20].url}" target="_blank">
+                            <img src="{$goods_list[20].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[20].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[20].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][20]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][20]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][20]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[21].url}" target="_blank">
+                            <img src="{$goods_list[21].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[21].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[21].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][21]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][21]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][21]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[22].url}" target="_blank">
+                            <img src="{$goods_list[22].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[22].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[22].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][22]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][22]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][22]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[23].url}" target="_blank">
+                            <img src="{$goods_list[23].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[23].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[23].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][23]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][23]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][23]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reduce_price6" id="deguo">
+        <div class="wm01190 relative">
+            <a class="absolute more-goods" style="top:100px;" href="http://www.deebei.net/category.php?id=131&filter_id=160,244#filter_area" target="_blank"></a>
+        </div>
+        <div class="wm01190">
+            <div class="rp6">
+                <div class="rp6_frame clearfix">
+                    <div class="goodsbox">
+                        <a href="{$goods_list[24].url}" target="_blank">
+                            <img src="{$goods_list[24].index_img}" width="450" height="270"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[24].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[24].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][24]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][24]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][24]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox">
+                        <a href="{$goods_list[25].url}" target="_blank">
+                            <img src="{$goods_list[25].index_img}" width="450" height="270"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[25].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[25].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][25]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][25]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][25]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[26].url}" target="_blank">
+                            <img src="{$goods_list[26].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[26].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[26].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][26]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][26]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][26]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[27].url}" target="_blank">
+                            <img src="{$goods_list[27].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[27].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[27].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][27]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][27]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][27]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[28].url}" target="_blank">
+                            <img src="{$goods_list[28].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[28].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[28].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][28]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][28]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][28]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[29].url}" target="_blank">
+                            <img src="{$goods_list[29].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[29].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[29].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][29]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][29]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][29]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[30].url}" target="_blank">
+                            <img src="{$goods_list[30].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[30].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[30].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][30]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][30]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][30]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[31].url}" target="_blank">
+                            <img src="{$goods_list[31].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[31].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[31].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][31]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][31]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][31]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[32].url}" target="_blank">
+                            <img src="{$goods_list[32].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[32].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[32].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][32]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][32]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][32]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[33].url}" target="_blank">
+                            <img src="{$goods_list[33].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[33].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[33].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][33]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][33]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][33]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[34].url}" target="_blank">
+                            <img src="{$goods_list[34].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[34].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[34].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][34]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][34]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][34]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reduce_price7" id="xianggang">
+        <div class="wm01190 relative">
+            <a class="absolute more-goods" style="top:90px;" href="http://www.deebei.net/category.php?id=131&filter_id=165,244#filter_area" target="_blank"></a>
+        </div>
+        <div class="wm01190">
+            <div class="rp7">
+                <div class="rp7_frame clearfix">
+                    <div class="goodsbox">
+                        <a href="{$goods_list[35].url}" target="_blank">
+                            <img src="{$goods_list[35].index_img}" width="450" height="270"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[35].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[35].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][35]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][35]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][35]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox">
+                        <a href="{$goods_list[36].url}" target="_blank">
+                            <img src="{$goods_list[36].index_img}" width="450" height="270"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[36].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[36].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][36]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][36]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][36]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[37].url}" target="_blank">
+                            <img src="{$goods_list[37].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[37].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[37].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][37]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][37]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][37]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[38].url}" target="_blank">
+                            <img src="{$goods_list[38].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[38].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[38].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][38]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][38]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][38]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[39].url}" target="_blank">
+                            <img src="{$goods_list[39].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[39].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[39].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][39]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][39]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][39]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reduce_price8" id="meiguo">
+        <div class="wm01190 relative">
+            <a class="absolute more-goods" style="top:100px;" href="http://www.deebei.net/category.php?id=131&filter_id=164,244#filter_area" target="_blank"></a>
+        </div>
+        <div class="wm01190">
+            <div class="rp8">
+                <div class="rp8_frame clearfix">
+                    <div class="goodsbox">
+                        <a href="{$goods_list[40].url}" target="_blank">
+                            <img src="{$goods_list[40].index_img}" width="450" height="270"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[40].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[40].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][40]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][40]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][40]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox">
+                        <a href="{$goods_list[41].url}" target="_blank">
+                            <img src="{$goods_list[41].index_img}" width="450" height="270"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[41].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[41].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][41]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][41]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][41]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[42].url}" target="_blank">
+                            <img src="{$goods_list[42].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[42].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[42].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][42]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][42]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][42]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[43].url}" target="_blank">
+                            <img src="{$goods_list[43].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[43].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[43].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][43]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][43]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][43]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox goodsbox2">
+                        <a href="{$goods_list[44].url}" target="_blank">
+                            <img src="{$goods_list[44].index_img}" width="330" height="370"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[44].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[44].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][44]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][44]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][44]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reduce_price9" id="aozhou">
+        <div class="wm01190 relative">
+            <a class="absolute more-goods" style="top:85px;" href="http://www.deebei.net/category.php?id=131&filter_id=205,244#filter_area" target="_blank"></a>
+        </div>
+        <div class="wm01190">
+            <div class="rp9">
+                <div class="rp9_frame clearfix">
+                    <div class="goodsbox">
+                        <a href="{$goods_list[45].url}" target="_blank">
+                            <img src="{$goods_list[45].index_img}" width="450" height="270"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[45].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[45].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][45]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][45]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][45]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox">
+                        <a href="{$goods_list[46].url}" target="_blank">
+                            <img src="{$goods_list[46].index_img}" width="450" height="270"/>
+                            <div class="goods-price">
+                                <div class="shop-price">德贝价：{$goods_list[46].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[46].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][46]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][46]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][46]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reduce_price10" id="ruidian">
+        <div class="title wm01190 relative">
+            <a class="absolute more-goods" href="http://www.deebei.net/category.php?id=131&filter_id=163,244#filter_area" target="_blank"></a>
+        </div>
+        <div class="wm01190">
+            <div class="goodsbox_wrap">
+                <div class="goodsbox_frame clearfix">
+                    <div class="goodsbox">
+                        <a href="{$goods_list[47].url}" target="_blank">
+                            <img src="{$goods_list[47].index_img}" width="450" height="270"/>
+                            <div class="goods-price" style='top:120px;'>
+                                <div class="shop-price">德贝价：{$goods_list[47].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[47].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][47]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][47]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][47]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                    <div class="goodsbox">
+                        <a href="{$goods_list[48].url}" target="_blank">
+                            <img src="{$goods_list[48].index_img}" width="450" height="270"/>
+                            <div class="goods-price" style='top:120px;'>
+                                <div class="shop-price">德贝价：{$goods_list[48].formated_shop_price}</div>
+                                <div class="topic-price">
+                                    <div class="topic-price-label">单罐仅：</div>
+                                    <div class="topic-real"><span>￥</span><span class="topic-real-right">{$goods_list[48].real_price}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="buy-more-send-x <?php if($this->_var['goods_list'][48]['is_buy_nine'] == 1):?><?php echo 'nine_give_two'; endif;?>
+                                                        <?php if($this->_var['goods_list'][48]['is_buy_six'] == 1):?><?php echo 'six_give_one'; endif;?>
+                                                        <?php if($this->_var['goods_list'][48]['is_total_four'] == 1):?><?php echo 'is_total_four'; endif;?>
+                                 ">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="side_bar_end"></div>
+    
+    <div class="container_bottom">
+        <div class="container_underwrite ">
+            <div class="title"></div>
+            <div class="wm01190 rounded">
+                <img src="{$theme_path}zt/reduce_price/images/container_underwrite_c1.jpg" />
+                <img src="{$theme_path}zt/reduce_price/images/container_underwrite_c2.jpg" />
+            </div>
+        </div>
+        <div class="container_norm">
+            <div class="title"></div>
+            <div class="container wm01190">
+                <img src="{$theme_path}zt/reduce_price/images/container_norm_c1.jpg" />
+                <img src="{$theme_path}zt/reduce_price/images/container_norm_c2.jpg" />
+                <img src="{$theme_path}zt/reduce_price/images/container_norm_c3.jpg" />
+                <img src="{$theme_path}zt/reduce_price/images/container_norm_c4.jpg" />
+                <img src="{$theme_path}zt/reduce_price/images/container_norm_c5.jpg" />
+            </div>
+        </div>
+        <div class="container_quality ">
+            <div class="title"></div>
+            <div class="wm01190">
+                <img src="{$theme_path}zt/reduce_price/images/container_quality_c1.jpg" />
+                <img src="{$theme_path}zt/reduce_price/images/container_quality_c2.jpg" />
+            </div>
+        </div>
+        <div class="container_recommend">
+            <div class="title"></div>
+            <div class="container">
+                <div class="container_ul">
+                    <ul class="clearfix">
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=18"><img src="{$theme_path}zt/reduce_price/images/container_recommend_img1.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=16"><img src="{$theme_path}zt/reduce_price/images/container_recommend_img2.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="{$theme_path}zt/reduce_price/images/container_recommend_img3.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="{$theme_path}zt/reduce_price/images/container_recommend_img4.jpg" /></a></li>
+                        <li><a href="http://m.deebei.net/"><img src="{$theme_path}zt/reduce_price/images/container_recommend_img5.jpg" /></a></li>
+
+                    </ul>
+                </div>
+                <div class="return_index">
+                    <a href="/">
+                        <img src="{$theme_path}zt/reduce_price/images/return_index.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="side-bar" id="side_bar">
+    <div class="bar-title">       
+    </div>
+    <div class="bar-content">
+        <ul>
+            <li data-id="tiantiantemai">
+                <a href="#tiantiantemai">奶粉天天特卖</a>
+            </li>
+            <li data-id="helan">
+                <a href="#helan">荷兰奶粉</a>
+            </li>
+            <li data-id="xinxilan">
+                <a href="#xinxilan">新西兰奶粉</a>
+            </li>
+            <li data-id="yingguo">
+                <a href="#yingguo">英国奶粉</a>
+            </li>
+            <li data-id="deguo">
+                <a href="#deguo">德国奶粉</a>
+            </li>
+            <li data-id="xianggang">
+                <a href="#xianggang">香港奶粉</a>
+            </li>
+            <li data-id="meiguo">
+                <a href="#meiguo">美国奶粉</a>
+            </li>
+            <li data-id="aozhou">
+                <a href="#aozhou">澳洲奶粉</a>
+            </li>
+            <li data-id="ruidian">
+                <a href="#ruidian">瑞典奶粉</a>
+            </li>
+            <li>
+                <a href="#zt_top">返回顶部</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var bar_left = ($(window).width()-1190)/2 - $("#side_bar").width();
+    var bar_top = ($(window).height() -  $("#side_bar").height())/2;
+    if(bar_left < 0){
+        bar_left = 0;
+    }
+    $("#side_bar").css("left",bar_left);  
+    $("#side_bar").css("top",bar_top);
+    $(document).ready(function(){       
+        /*设置选中的楼层函数*/
+        /*
+         * @param object objs 楼层对象
+         * @param array  pos  全部楼层的高度数组
+         * @returns none
+         */
+        var setSelected = function(objs){
+            $(objs).removeClass("selected");
+            var w_top = $(window).scrollTop();
+            $.each(objs,function(key,obj){
+                var pos_id = $(this).attr("data-id");
+                var obj_top = $("#"+pos_id).offset().top - $("#"+pos_id).height() / 2;
+                var obj_bottom = $("#"+pos_id).offset().top + $("#"+pos_id).height();
+                /*到达相应的楼层，为相应的楼层添加selected*/                
+                if(obj_top <= w_top && w_top < obj_bottom){     
+                    $(objs).removeClass("selected");
+                    $(objs+"[data-id="+pos_id+"]").addClass("selected");
+                }
+            });
+        }
+        
+        var lis = $("#side_bar").find("li[data-id]");
+        setSelected(lis);       
+        $(window).scroll(function(){
+            setSelected(lis);
+        });        
+        
+    });
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

@@ -1,0 +1,144 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+var url = window.location.href;
+var img = new Image();
+var is_big_screen = false;
+
+if (url.indexOf("is_small_screen=1") > 0) {
+// test small screen version
+    var screen_width = 1024;
+} else {
+    var screen_width = screen.width;
+    if (screen_width >= 1200) {
+        is_big_screen = true;
+    }
+}
+var body = document.getElementsByTagName("body")[0];
+body.className = !is_big_screen ? "small-screen" : "";
+var process_request = "{$lang.process_request}";
+</script>
+<link href="{$template_dir}/home.css" rel="stylesheet" type="text/css" />
+{if isset($index_ad)}{/if}
+<?php $this->_var[hometopad] = get_adv('hometop','ad', false);?>
+<!--{if !strstr($hometopad,'hometop_ad')}-->
+<div id="snActive" class="snActive" style="display: block; background:#FFF;">
+    <div class="topWrap" style="height:auto;"><?php echo $this->_var[hometopad];?></div>
+</div>
+<!--{/if}--> 
+
+<!-- 2012-2015 KL3w.com Inc --> 
+<!--<div id="sideTools" style="right:-54px;" onMouseOver="this.style.right='0px';" onMouseOut="this.style.right='-54px';">-->
+<div id="sideTools" style="right:-0px;" onMouseOver="clickOpen();">
+    <p class="miniNav"><a href="/user.php"><s></s><span id="ooo">我的账户</span></a></p>
+    <p class="iRpt"><a href="/user.php?act=order_list" target="_blank"><s></s><span>订单跟踪</span></a></p>
+    <p id="iOnline" class="iOnline"><a href="http://wpa.qq.com/msgrd?v=3&uin=2462814798&site=qq&menu=yes" target="_blank"><s></s><span>在线客服</span></a></p>
+    <p class="iBarcode"><a href="http://gepir.gs1.org/v32/xx/default.aspx?Lang=en-US" target="_blank"><s></s><span>条码查询</span></a></p>
+    <p class="iToTop"><a href="#top"><s></s><span>回顶部</span></a></p>
+    <p id="closeBtn" onclick="clickClose();" style="text-align:right; padding-right:10px; cursor:pointer;"><span><img style="vertical-align:middle; margin-right:3px;" src="/images/part/arrow_right.gif" alt="" />收起</span></p>
+</div>
+<script type="text/javascript">
+function clickOpen() {
+    document.getElementById("sideTools").style.right = '-0px';
+    document.getElementById("closeBtn").style.display = 'block';
+}
+function clickClose() {
+    document.getElementById("sideTools").style.right = '-54px';
+    document.getElementById("closeBtn").style.display = 'none';
+}
+</script>
+<div class="topNav">
+    <div class="w1190" style="margin-bottom:0;">
+        <div class="f_l"> 
+            <!--<a style="cursor: pointer" onClick="window.external.AddFavorite(location.href,document.title);">收藏</a>
+|  -->{if isset($is_shaidan_list)}{insert_scripts files='utils.js'}{else}{insert_scripts files='transport_z.js,utils.js'}{/if} <font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font> </div>
+        <!--<div class="f_l"><img src="../images/tel.png" /></div> -->
+        <div class="f_r">
+            <div style="display:none;" class="f_l"><span style="color:#F30;">食品流通许可证配方奶粉销售资质（SP4406821210027584）</span>&nbsp;|&nbsp;</div>
+            <div class="f_l log"  style="position:relative; z-index:999999999; ">
+                <ul class="ul1" onmouseover="this.className='ul1 ul1_on'" onmouseout="this.className='ul1'">
+                    <a class="a1" href="user.php">我的账户</a>
+                    <div class="ul1_float">
+                        <ul>
+                            <a href="user.php?act=order_list">我的订单</a> <a href="user.php?act=message_list">我的留言</a> <a href="user.php?act=collection_list">我的收藏</a> 
+                            <!--<a href="user.php?act=affiliate">我的推荐</a> --> 
+                            <a href="user.php?act=profile">用户信息</a> <a href="user.php?act=address_list">收货地址</a>
+                        </ul>
+                    </div>
+                    <div class="dang"></div>
+                </ul>
+            </div>
+            <!--{if $navigator_list.top}--> 
+            <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} --> 
+            | <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a> 
+            <!-- {/foreach} --> <!-- {/if} --> 
+        </div>
+    </div>
+</div>
+<div class="headBg">
+<div class="w1190 clearfix" id="masthead">
+    <div id="snlogo"> <a href="<?php echo 'http://'.$_SERVER['SERVER_NAME'];?>"><img src="../images/logo.gif" /></a> </div>
+    <div id="snSearch">
+        <div class="clearfix" id="searchBox">
+            <div class="sLeft"></div>
+            <script type="text/javascript"><!--{literal} -->
+    <!--
+    function checkSearchForm(){
+        if(document.getElementById('keyword').value!=='品名或商品号'&&document.getElementById('keyword').value){
+            return true;
+        }else{
+            alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    <!--{/literal} --></script>
+            <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()"  >
+                <div class="sCenter">
+                    <input name="keywords" type="text" id="keyword" value="品名或商品号" onclick="javascript:this.value=''" class="sInput"/>
+                </div>
+                <div class="sRight">
+                    <input type="submit" value="" id="searchSubmit" class="sBtn">
+                </div>
+            </form>
+        </div>
+        <div id="snKeywordNew"> {if $searchkeywords}<strong>热门搜索：</strong> {foreach from=$searchkeywords item=val} <a href="search.php?keywords={$val|escape:url}">{$val}</a> {/foreach}
+            {/if} </div>
+    </div>
+    <div id="mallNews" class="box_1 mallNewsx" style="border:0;padding-top:18px;">
+        <div style="text-align:center;"><img src="/images/400.png" /></div>
+        <div class="NewsList tc" style="border-top:none; display:none;">
+            <?php $this->_var[all_articles] = kl3w_get_new_articles();?>
+            {if $all_articles}
+            <ul>
+                <!--{foreach from=$all_articles key=articleskeys item=articlearr}--> 
+                {if $articleskeys<3}
+                <li><a href="{$articlearr.url}" title="{$articlearr.title|escape:html}">{$articlearr.short_title|truncate:20:"...":true}</a></li>
+                {/if} 
+                <!--{/foreach}-->
+            </ul>
+            {else}
+            暂无公告资讯
+            {/if} </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="clearfix" style="position:relative;z-index:999;">
+    <div class="g-menu">
+        <div class="g-menu-wrap"><!-- --> 
+                <div class="channel">
+                    <ul>
+                        <li class="m-home"><a href="<?php echo 'http://'.$_SERVER['SERVER_NAME'];?>"{if $navigator_list.config.index eq 1} id="aa_on"{/if}>{$lang.home}</a></li>
+                        <!-- {foreach name=no from=$navigator_list.middle item=nav} -->
+                        <li class="m-home"><a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank"{/if}{if $nav.active eq 1} class="aa_on"{/if}>{$nav.name}</a></li>
+                        <!-- {/foreach} -->
+                    </ul>
+                </div>
+                <div class="buy_car_bg_box ">
+                    <div class="min-cart"  id="ECS_CARTINFO"> {insert name='cart_info'} </div>
+                    <div class="qujiesuan"><a href="flow.php">去结算</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

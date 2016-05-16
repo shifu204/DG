@@ -1,0 +1,216 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--{if $mobile_templete}-->
+    <link href="{$template_dir}/style_m/base.css" type="text/css" rel="stylesheet">
+    <link href="{$template_dir}/style_m/signInsignOut.css" type="text/css" rel="stylesheet">
+    <div class="signIn">
+    <!-- s 专有头部 --> 
+    <!--<header>
+                     <button onclick="javascript:window.location = '#">
+                        <div class="icon_close"></div>
+                    </button>
+                        
+                                              登录
+                                              </header>--> 
+    <!-- e 专有头部 --> 
+
+    <!-- s 登录主体 -->
+    <section class="signIn_main signIn_bg">
+        <form method="post" action="flow.php?step=login">
+            <label class="cssBorder-box">{$lang.username}：
+                <input id="username" name="username" placeholder="用户名" type="text">
+            </label>
+            <label class="cssBorder-box">{$lang.password}：
+                <input name="password" type="password">
+            </label>
+            <input name="logintype" id="logintypeid" value="6" type="hidden">
+            <input name="tempToken" id="tempToken_id" value="null" type="hidden">
+            <input name="loginverflag" id="loginverflag" type="hidden">
+            <p class="cssBox signIn_btn">
+                <input class="icon_checked" type="checkbox" value="1" name="remember" id="remember" checked="checked" />
+                <span>{$lang.remember}</span>
+                <button type="submit" name="login">{$lang.forthwith_login}</button>
+            </p>
+            <p class="cssBox signIn_more">
+                <a class="box_flex_0" href="">免费注册&gt;</a> 
+                <!--  <a class="box_flex_0" href="javascript:void(0);">忘记密码？</a>--> 
+                <!-- {if $anonymous_buy eq 1} 是否允许未登录用户购物 -->
+                <a class="box_flex_0" href="/flow.php?step=consignee&direct_shopping=1">{$lang.direct_shopping}</a>
+                <!-- {/if} -->
+                <input name="act" type="hidden" value="signin" />
+            </p>
+        </form>
+    </section>
+    <!-- e 登录主体 --> 
+    <!-- s 合作帐号登录 -->
+    <section class="signIn_coo" style="display:none;">
+        <header>合作账号登录</header>
+        <ul class="coo_panel cssBox">
+            <li class="box_flex_1">
+                <div class="btn_qq" onclick="javascript:qq();"></div>
+            </li>
+            <li class="box_flex_1">
+                <div class="btn_alipay" onclick="javascript:zfb();"></div>
+            </li>
+            <li class="box_flex_1">
+                <div class="btn_weibo" onclick="javascript:sina();"></div>
+            </li>
+        </ul>
+    </section>
+    <!-- e 合作帐号登录 --> 
+
+<!--{else}--> 
+
+    {insert_scripts files='utils.js,user.js'} 
+    <script type="text/javascript">
+                {foreach from=$lang.flow_login_register item=item key=key}
+                  var {$key} = "{$item}";
+                {/foreach}
+
+                {literal}
+                function checkLoginForm(frm) {
+                  if (Utils.isEmpty(frm.elements['username'].value)) {
+                    alert(username_not_null);
+                    return false;
+                  }
+
+                  if (Utils.isEmpty(frm.elements['password'].value)) {
+                    alert(password_not_null);
+                    return false;
+                  }
+
+                  return true;
+                }
+
+                function checkSignupForm(frm) {
+                  if (Utils.isEmpty(frm.elements['username'].value)) {
+                    alert(username_not_null);
+                    return false;
+                  }
+
+                  if (Utils.trim(frm.elements['username'].value).match(/^\s*$|^c:\\con\\con$|[%,\'\*\"\s\t\<\>\&\\]/))
+                  {
+                    alert(username_invalid);
+                    return false;
+                  }
+
+                  if (Utils.isEmpty(frm.elements['email'].value)) {
+                    alert(email_not_null);
+                    return false;
+                  }
+
+                  if (!Utils.isEmail(frm.elements['email'].value)) {
+                    alert(email_invalid);
+                    return false;
+                  }
+
+                  if (Utils.isEmpty(frm.elements['password'].value)) {
+                    alert(password_not_null);
+                    return false;
+                  }
+
+                  if (frm.elements['password'].value.length < 6) {
+                    alert(password_lt_six);
+                    return false;
+                  }
+
+                  if (frm.elements['password'].value != frm.elements['confirm_password'].value) {
+                    alert(password_not_same);
+                    return false;
+                  }
+                  return true;
+                }
+                {/literal}
+                </script> 
+    <!-- 开始用户登录注册界面 -->
+    <div class="flowstepbg"><img src="images/step_2.gif" /></div>
+    <div class="flowBox" style="border:none; border-top:1px solid #ddd">
+        <table width="100%" border="0" cellpadding="5" cellspacing="1">
+            <tr>
+                <td width="50%" valign="top"><h6><span>用户登录：</span></h6>
+                    <form action="flow.php?step=login" method="post" name="loginForm" id="loginForm" onsubmit="return checkLoginForm(this)">
+                        <table width="90%" border="0" cellpadding="8" cellspacing="0" class="table">
+                            <tr>
+                                <td><div><strong>{$lang.username}</strong></div></td>
+                                <td><input name="username" type="text" class="inputBg" id="username" /></td>
+                            </tr>
+                            <tr>
+                                <td><div><strong>{$lang.password}</strong></div></td>
+                                <td><input name="password" class="inputBg" type="password" /></td>
+                            </tr>
+                            <!-- 判断是否启用验证码{if $enabled_login_captcha} -->
+                            <tr>
+                                <td><div><strong>{$lang.comment_captcha}:</strong></div></td>
+                                <td><input type="text" size="8" name="captcha" class="inputBg" />
+                                    <img src="captcha.php?is_login=1&{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?is_login=1&'+Math.random()" /></td>
+                            </tr>
+                            <!--{/if}-->
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td><input type="checkbox" value="1" name="remember" id="remember" />
+                                    <label for="remember">{$lang.remember}</label></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td><a href="user.php?act=qpassword_name" class="f6">{$lang.get_password_by_question}</a> <a href="user.php?act=get_password" class="f6">{$lang.get_password_by_mail}</a></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td><input type="submit" class="bnt_blue" name="login" value="{$lang.forthwith_login}" />
+                                    
+                                    <!-- {if $anonymous_buy eq 1} 是否允许未登录用户购物 -->
+                                    
+                                    <input type="button" class="bnt_blue_2" value="{$lang.direct_shopping}" onclick="location.href='flow.php?step=consignee&amp;direct_shopping=1'" />
+                                    
+                                    <!-- {/if} -->
+                                    
+                                    <input name="act" type="hidden" value="signin" /></td>
+                            </tr>
+                        </table>
+                    </form></td>
+                <td valign="top"><h6><span>用户注册：</span></h6>
+                    <form action="flow.php?step=login" method="post" name="formUser" id="registerForm" onsubmit="return checkSignupForm(this)">
+                        <table width="98%" border="0" cellpadding="8" cellspacing="0" class="table">
+                            <tr>
+                                <td width="25%"><strong>{$lang.username}</strong></td>
+                                <td><input name="username" type="text" class="inputBg" id="username" onblur="is_registered(this.value);" />
+                                    &nbsp; <span id="username_notice" style="color:#FF0000"></span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>{$lang.email_address}</strong></td>
+                                <td><input name="email" type="text" class="inputBg" id="email" onblur="checkEmail(this.value);" />
+                                    &nbsp; <span id="email_notice" style="color:#FF0000"></span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>{$lang.password}</strong></td>
+                                <td><input name="password" class="inputBg" type="password" id="password1" onblur="check_password(this.value);" onkeyup="checkIntensity(this.value)" />
+                                    &nbsp; <span style="color:#FF0000" id="password_notice"></span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>{$lang.confirm_password}</strong></td>
+                                <td><input name="confirm_password" class="inputBg" type="password" id="confirm_password" onblur="check_conform_password(this.value);" />
+                                    &nbsp; <span style="color:#FF0000" id="conform_password_notice"></span></td>
+                            </tr>
+                            <!-- 判断是否启用验证码{if $enabled_register_captcha} -->
+                            <tr>
+                                <td><strong>{$lang.comment_captcha}:</strong></td>
+                                <td><input type="text" size="8" name="captcha" class="inputBg" />
+                                    <img src="captcha.php?{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?'+Math.random()" /></td>
+                            </tr>
+                            <!--{/if}-->
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td><input type="submit" name="Submit" class="bnt_blue_1" value="{$lang.forthwith_register}" />
+                                    <input name="act" type="hidden" value="signup" /></td>
+                            </tr>
+                        </table>
+                    </form></td>
+            </tr>
+            {if $need_rechoose_gift}
+            <tr>
+                <td colspan="2" style="border-top:1px #ccc solid; padding:5px; color:red;">{$lang.gift_remainder}</td>
+            </tr>
+            {/if}
+        </table>
+    </div>
+    <!-- 结束用户登录注册界面 --> 
+<!--{/if}--> 

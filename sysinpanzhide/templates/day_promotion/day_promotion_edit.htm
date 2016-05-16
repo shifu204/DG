@@ -1,0 +1,173 @@
+{include file="easyui_page_lib_header.htm"}
+{insert_scripts files="easy_common.js"}
+<div class="common-list">
+    <div class="content">
+        <div id="goods_tool">
+            <a href="javascript:add_goods()" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true">添加</a>
+            <a href="javascript:del_goods()" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true">删除</a>
+            <a href="javascript:upload_files()" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true">保存图片</a>
+        </div>
+        <table class="common-table">
+             <tbody>
+                <tr>
+                    <th>活动名称：</th>
+                    <td><input name="act_name" id="act_name" class="easyui-validatebox"  data-options="required:true,missingMessage:'输入活动名称'" value="{$promotion.act_name}" /></td>
+                    <th>活动描述：</th>
+                    <td><input name="act_desc" id="act_desc" class="easyui-validatebox" value="{$promotion.act_desc}" /></td>
+                </tr>
+                <tr>
+                    <th>每次循环开始时间：</th>
+                    <td><input name="start_time" id="start_time" type="text" class="easyui-timespinner" required="required" value="{$promotion.start_time}" /></td>                   
+                    <th>每次循环结束时间：</th>
+                    <td><input name="end_time" id="end_time" type="text" class="easyui-timespinner" required="required" value="{$promotion.end_time}"/><span class="tips">0表示不限制</span></td>                   
+                </tr>
+                <tr>
+                    <th>循环间隔：</th>
+                    <td>
+                        <select name="loop" id="loop" class="easyui-combobox" required="required" style="width:132px" data-options="panelHeight:'auto'" >
+                            <option value='0' {if $promotion.loop==0} selected='selected'{/if}>无限循环</option>
+                            <option value='1' {if $promotion.loop==1} selected='selected'{/if}>1天</option>
+                            <option value='2' {if $promotion.loop==2} selected='selected'{/if}>2天</option>
+                            <option value='3' {if $promotion.loop==3} selected='selected'{/if}>3天</option>
+                            <option value='4' {if $promotion.loop==4} selected='selected'{/if}>4天</option>
+                            <option value='5' {if $promotion.loop==5} selected='selected'{/if}>5天</option>
+                            <option value='6' {if $promotion.loop==6} selected='selected'{/if}>6天</option>
+                            <option value='7' {if $promotion.loop==7} selected='selected'{/if}>7天</option>
+                        </select>
+                    </td>                   
+                    <th>强制结束：</th>
+                    <td>
+                        <select name="is_finished" id="is_finished" class="easyui-combobox" required="required" style="width:132px" data-options="panelHeight:'auto'">
+                            <option value='0' {if $promotion.is_finished==0} selected='selected'{/if}>否</option>
+                            <option value='1' {if $promotion.is_finished==1} selected='selected'{/if}>是</option>
+                            <option value='99' {if $promotion.is_finished==99} selected='selected'{/if}>正在运行</option>
+                        </select>
+                    </td>   
+                </tr>
+                <tr>
+                    <th>排序：</th>
+                    <td><input name="sort_order" id="sort_order" type="text" class="easyui-validatebox" value="0" /><span class="tips">活动的优先顺序</span></td>   
+                    <th>上次运行时间：</th>
+                    <td>{$promotion.last_time}</td>
+                </tr>
+            </tbody>
+        </table>
+        <input id="act_id" type="hidden" name="act_id" value="{$promotion.act_id}" />
+        <form name="goods_form" id="goods_form" method="post" enctype="multipart/form-data" action="day_promotion.php?act=upload_files">
+        <table id="promotion_goods"></table>       
+        </form>
+        <div id="goods_list"></div>
+    </div>
+</div>
+<script type="text/javascript">
+$("#promotion_goods").datagrid({
+    title:'活动商品列表',
+    method:'post',
+    singleSelect:true,
+    fitColumns:true,
+    width:"100%",
+    url:"day_promotion.php?act=get_promotion_goods&act_id="+{$promotion.act_id},
+    columns:[[    
+        {field:'is_change',title:'是否改变',width:100,align:'center',hidden:true,
+            formatter:function(){
+                return 0;
+            },
+            editor:{
+                type:'textbox'
+            }
+        },
+        {field:'dp_id',title:'主键',width:100,align:'center',hidden:true},  
+        {field:'goods_id',title:'编号',width:100,align:'center'},    
+        {field:'goods_name',title:'名称',width:300,align:'center',required:true,
+            editor:{
+                type:'selectitem',
+                options:{
+                          functionName:'select_goods',
+                }
+            }
+        },    
+        {field:'goods_sn',title:'货号',width:100,align:'center'},
+        {field:'shop_price',title:'原价',width:100,align:'center'},    
+        {field:'promote_price',title:'天天特价',width:100,align:'center',
+            editor:{
+                type:"numberbox",
+                options:{
+                    precision:2,
+                    required:true
+                }
+            }
+        },    
+        {field:'goods_number',title:'库存',width:100,align:'center'},
+        {field:'promote_img',title:'活动图片',width:100,align:'center',
+            editor:{
+                type:"filebox",
+                options:{
+                    tableid:"#promotion_goods",
+                    column:"dp_id"
+                }
+            },
+            formatter:function(value,row,index){
+                var img = "<img src='"+value+"' alt='"+row.goods_name+"' width='65' height='65' />";
+                return img;
+            }
+        }
+    ]],
+   onDblClickCell:function(rowIndex, field, value){
+        edit_row(rowIndex, field, value);
+    },
+    toolbar:"#goods_tool"
+});
+
+function selectGoods(rowIndex, rowData){
+    var row = $('#promotion_goods').datagrid('getSelected');
+     if(row) {
+        var index = $('#promotion_goods').datagrid('getRowIndex', row);
+        $('#promotion_goods').datagrid('beginEdit',index);
+     }  
+}
+
+function add_goods(){
+    var lastIndex;           
+    $('#promotion_goods').datagrid('endEdit', lastIndex);
+    $('#promotion_goods').datagrid('appendRow',{
+        goods_name:''
+    });
+    lastIndex = $('#promotion_goods').datagrid('getRows').length-1; 
+    $('#promotion_goods').datagrid('selectRow', lastIndex);
+    $('#promotion_goods').datagrid('beginEdit', lastIndex);
+}
+
+function select_goods(){
+    $("#goods_list").dialog({
+        title:'选择商品',
+        width:1024,
+        maximizable:true,
+        minimizable:true,
+        resizable:true,
+        closable:true,
+        modal:true,
+        top:30,
+        shadow:false,
+        href:'day_promotion.php?act=select_goods',
+    });
+}
+
+function edit_row(rowIndex,rowData){         
+    $('#promotion_goods').datagrid('endEdit', rowIndex); 
+    $('#promotion_goods').datagrid('selectRow', rowIndex);
+    $('#promotion_goods').datagrid('beginEdit', rowIndex);
+}
+
+function del_goods(){
+   var row = $('#promotion_goods').datagrid('getSelected');
+   if(row){
+    var index = $('#promotion_goods').datagrid('getRowIndex', row);
+    $("#promotion_goods").datagrid('deleteRow',index);
+   }
+   
+}
+
+</script>
+
+</body>
+</html>

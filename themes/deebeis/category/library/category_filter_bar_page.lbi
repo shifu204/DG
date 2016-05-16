@@ -1,0 +1,12 @@
+{if $pager.record_count > 0 }
+<div class="page-area">
+    <span onclick="{$pager.page_prev}" {if !$pager.page_prev} class="disabled" {/if}>
+          <label class="pre-page"></label>
+    </span>
+    {$pager.page}/{$pager.page_count}
+    <span onclick="{$pager.page_next}" {if !$pager.page_next} class="disabled" {/if}>
+          <label class="next-page"></label>
+    </span>
+</div>
+{/if}
+

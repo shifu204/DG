@@ -1,0 +1,62 @@
+<div id="step-1" class="step step-complete no-top-dashed clearfix">
+    <div class="step-title">
+        <div id="save-consignee-tip" class="step-right"> </div>
+        <strong>选择收货地址</strong> <span class="step-action" id="consignee_edit_action"></span> 
+    </div>
+    <div class="step-content">
+        <div id="consignee" class="sbox-wrap">
+            <div class="sbox">
+                <div class="s-content clearfix">
+                    <div class="clearfix">
+                        <?php if(!empty($this->_var['addresses'])):?>
+                        <?php foreach($this->_var['addresses'] as $ak=>$address): ?>
+                        <div class="address_row <?php if($address['address_id'] == $this->_var['default_address_id']):?>selected_row <?php endif;?> clearfix" address-id="<?php echo $address['address_id'];?>" id="address_<?php echo $address['address_id'];?>">
+                            <input type="hidden" name="o_consignee" value="<?php echo $address['consignee'];?>" />
+                            <input type="hidden" name="o_mobile" value="<?php echo $address['mobile'];?>" />
+                            <input type="hidden" name="o_tel" value="<?php echo $address['tel'];?>" />
+                            <input type="hidden" name="o_address" value="<?php echo $address['address'];?>" />
+                            <input type="hidden" id="address_province_<?php echo $address['address_id'];?>" name="o_province" value="<?php echo $address['province'];?>" />
+                            <input type="hidden" id="address_city_<?php echo $address['address_id'];?>" name="o_city" value="<?php echo $address['city'];?>" />
+                            <input type="hidden" id="address_district_<?php echo $address['address_id'];?>" name="o_district" value="<?php echo $address['district'];?>" />
+                            <label class="<?php if($address['address_id'] == $this->_var['default_address_id']):?>default<?php endif;?>">
+                                <div class="address-title clearfix">
+                                    <div class="consignee_field consignee_consignee_info"><?php echo $address['consignee_info'];?></div>
+                                    <div class="consignee_field consignee_consignee">(<span data-name="consignee"><?php echo $address['consignee'];?></span> 收)</div>  
+                                </div>
+
+                                <div class="consignee_field consignee_address">
+                                    <?php echo $address['consignee_info'];?>
+                                    <span data-name="address"><?php echo $address['address'];?></span>
+                                    <span data-name="mobile"><?php echo $address['mobile'];?></span>
+                                    <span data-name="tel"><?php echo $address['tel'];?></span>
+                                </div>
+
+                            </label>
+                            <span class="edit_span <?php if($address['address_id'] == $this->_var['default_address_id']):?>selected_span<?php endif;?>">
+                                <a href="javascript:void(0);" class="set-default">设为默认</a>|
+                                <a href="javascript:edit_address(<?php echo $address['address_id'];?>);" class="edit-1">修改</a>|
+                                <a href="javascript:void(0);" class="delete">删除</a>
+                            </span>
+                        </div>
+                        <?php endforeach;?>
+                        <?php endif;?>
+                    </div>
+                    <div class="clearfix">
+                        <div class="address_row_new clearfix" id="add_address">
+                            <a href="javascript:add_address();"><img src="{$theme_path}images1/flow_checkout/address_new.jpg"/></a>                                    
+                        </div>
+                    </div>
+                    
+                </div>
+                <div style="text-align: center;">
+                    <div class="save_consignee_btn" onclick="save_consignee()"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        address_row_click();
+    });
+</script>

@@ -1,0 +1,58 @@
+{include file="easyui_page_lib_header.htm"}
+<form id="add_promotion_form" method="post">
+<div class="common-list">
+    <div class="common-header"></div>
+    <div class="content">
+        <table class="common-table">
+            <tbody>
+                <tr>
+                    <th>活动名称：</th>
+                    <td><input name="act_name" class="easyui-validatebox"  data-options="required:true,missingMessage:'输入活动名称'" /></td>
+                </tr>
+                <tr>
+                    <th>活动描述：</th>
+                    <td><input name="act_desc" class="easyui-validatebox"  /></td>
+                </tr>
+                <tr>
+                    <th>每次循环开始时间：</th>
+                    <td><input name="start_time" type="text" class="easyui-timespinner" required="required" value="10:00" /></td>                   
+                </tr>
+                <tr>
+                    <th>每次循环结束时间：</th>
+                    <td><input name="end_time" type="text" class="easyui-timespinner" required="required" value="0"/><span class="tips">0表示不限制</span></td>                   
+                </tr>
+                <tr>
+                    <th>循环间隔：</th>
+                    <td>
+                        <select name="loop" class="easyui-combobox" required="required" style="width:100px" data-options="panelHeight:'auto'" >
+                            <option value='0'>不循环</option>
+                            <option value='1'>1天</option>
+                            <option value='2'>2天</option>
+                            <option value='3'>3天</option>
+                            <option value='4'>4天</option>
+                            <option value='5'>5天</option>
+                            <option value='6'>6天</option>
+                            <option value='7'>7天</option>
+                        </select>
+                    </td>                   
+                </tr>
+                <tr>
+                    <th>强制结束：</th>
+                    <td>
+                        <select name="is_finished" class="easyui-combobox" required="required" style="width:100px" data-options="panelHeight:'auto'">
+                            <option value='0'>否</option>
+                            <option value='1'>是</option>
+                        </select>
+                    </td>   
+                </tr>
+                <tr>
+                    <th>排序：</th>
+                    <td><input name="sort_order" type="text" class="easyui-validatebox" value="0" /><span class="tips">活动的优先顺序</span></td>   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</form>
+</body>
+</html>

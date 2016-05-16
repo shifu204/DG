@@ -1,0 +1,217 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/style.css" rel="stylesheet" type="text/css" />
+<link href="{$theme_path}zt/semper20150416/style.css" rel="stylesheet" type="text/css" >
+<link href="{$theme_path}zt/common20150410/common.css" rel="stylesheet" type="text/css" >
+<link href="/js/flexSlider/flexslider.css" rel="stylesheet" type="text/css" >
+<script type="text/javascript" src="/js/flexSlider/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+    function scroll_to(target){
+        var target_top = $("#"+target).offset().top;
+        $("html,body").animate({
+            scrollTop:target_top+"px"
+        },500);
+    }
+</script>
+<div class="min-1190">
+    <div class="part-1"></div>
+    <div>
+        <div class="wm01190">
+            <img src="{$theme_path}zt/semper20150416/images/part-2.jpg" />
+            <img src="{$theme_path}zt/semper20150416/images/part-3.jpg" />
+            <a class="down-arrow" href="javascript:scroll_to('scroll-to-1');"></a>
+
+            <img src="{$theme_path}zt/semper20150416/images/part-7.jpg" id="scroll-to-1" />
+            <div class="flex-wrapper clearfix">
+                <div class="flexslider-common clearfix">
+                    <ul class="slides">
+                        <li><img src="{$theme_path}zt/semper20150416/images/sliders-1-1.jpg" /></li>
+                        <li><img src="{$theme_path}zt/semper20150416/images/sliders-1-2.jpg" /></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="down-arrow-div">
+                <a class="down-arrow" href="javascript:scroll_to('scroll-to-2');"></a>
+            </div>
+            <div class="part-4 relative" id="scroll-to-2">
+                <img src="{$theme_path}zt/semper20150416/images/part-4-1.jpg" />
+                <img src="{$theme_path}zt/semper20150416/images/part-4-2.jpg" />
+                <a class="down-arrow down-arrow-absolute" href="javascript:scroll_to('scroll-to-3');"></a>
+            </div>
+
+            <div class="relative" style="margin-top:20px;" id="scroll-to-3">
+                <img src="{$theme_path}zt/semper20150416/images/part-6.jpg" />
+                <div class="text-center" style="padding-bottom: 18px;">
+                    <a class="down-arrow" href="javascript:scroll_to('scroll-to-4');"></a>
+                </div>
+            </div>
+
+
+
+            <img id="scroll-to-4" src="{$theme_path}zt/semper20150416/images/part-11.jpg" />
+            <div class="goods-area clearfix">
+                <div class="goods-box">
+                    <a href="http://www.deebei.net/goods-218.html"target="_blank">
+                        <img src="{$theme_path}zt/semper20150416/images/aptamail-goods-1.jpg" />
+                    </a>
+                </div>
+                <div class="goods-box">
+                    <a href="http://www.deebei.net/goods-217.html"target="_blank">
+                        <img src="{$theme_path}zt/semper20150416/images/aptamail-goods-2.jpg" />
+                    </a>
+                </div>
+                <div class="goods-box-border">
+                    <img src="{$theme_path}zt/semper20150416/images/goods-border.jpg" />
+                </div>
+                <div class="goods-box">
+                    <a href="http://www.deebei.net/goods-216.html"target="_blank">
+                        <img src="{$theme_path}zt/semper20150416/images/aptamail-goods-3.jpg" />
+                    </a>
+                </div>
+                <div class="goods-box">
+                    <a href="http://www.deebei.net/goods-578.html"target="_blank">
+                        <img src="{$theme_path}zt/semper20150416/images/aptamail-goods-4.jpg" />
+                    </a>
+                </div>
+            </div>
+            <div class="down-arrow-div" style="margin-top: 0;">
+                <a class="down-arrow" href="javascript:scroll_to('scroll-to-5');"></a>
+            </div>
+            <img src="{$theme_path}zt/semper20150416/images/part-12.jpg" id="scroll-to-5"/>
+            <div class="goods-area-suit goods-suit clearfix">
+                <?php foreach ($this->_var['topic_class']['suit']['goods_list'] as $goods): ?>
+                    <?php if($goods['sort_order']%2==0 & $goods['sort_order']!=0):?>
+                        <div class="goods-box-border">
+                            <img src="{$theme_path}zt/semper20150416/images/goods-border.jpg" />
+                        </div>
+                    <?php endif;?>         
+                    <div class="goodbox">
+                        <a target="_blank" href="<?php echo $goods['url'];?>">
+                            <div class="goods">
+                                <div class="give-tip">
+                                    <?php if ($goods['is_buy_six'] == 1): ?>
+                                        <img src="{$theme_path}zt/images/give-tip/m5s1-blue.png"/>
+                                    <?php elseif ($goods['is_buy_nine'] == 1): ?>
+                                        <img src="{$theme_path}zt/images/give-tip/m8s2-blue.png"/>
+                                    <?php endif; ?>
+                                </div>
+                                <img src="<?php echo $goods['index_img'];?>"/>
+                                <div class="details">
+                                    <div class="explain rounded clearfix">
+                                        <span class="right right-rounded"><?php echo $goods['tag1'];?></span>
+                                        <span class="left left-rounded">
+                                            <?php if ($goods['is_buy_six'] == 1): ?>
+                                                共7盒
+                                            <?php elseif ($goods['is_buy_nine'] == 1): ?>
+                                                共11盒
+                                            <?php endif; ?>
+                                        </span>
+                                    </div>
+                                    <div class="goods-name"><?php echo $goods['topic_name'];?></div>
+                                    <div class="goods-price">
+                                        <span class="unit-price">单罐仅：<?php echo $goods['formated_real_price'];?></span>
+                                        <div class="total">
+                                            <span class="total-l">极致品质价：</span><span class="total-r">￥<span class="fw"><?php echo $goods['shop_price'];?></span></span>
+                                            &nbsp;&nbsp;<img src="{$theme_path}zt/images/suit-btn-2.jpg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+
+            </div>
+        </div>
+
+        <div class="container_bottom">
+            <div class="container_comment">
+                <div class="title"></div>
+                <div class="container wm01190">
+                    <img src="{$theme_path}zt/semper20150416/images/container_comment_c1.jpg" />
+                    <img src="{$theme_path}zt/semper20150416/images/container_comment_c2.jpg" />
+                    <img src="{$theme_path}zt/semper20150416/images/container_comment_c3.jpg" />
+                </div>
+            </div>
+            <div class="container_feed">
+                <div class="title"></div>
+                <div class="container wm01190">
+                    <img src="{$theme_path}zt/semper20150416/images/container_feed_c1.jpg" />
+                    <img src="{$theme_path}zt/semper20150416/images/container_feed_c2.jpg" />
+                    <img src="{$theme_path}zt/semper20150416/images/container_feed_c3.jpg" />
+                    <img src="{$theme_path}zt/semper20150416/images/container_feed_c4.jpg" />
+                    <img src="{$theme_path}zt/semper20150416/images/container_feed_c5.jpg" />
+                </div>
+            </div>
+            <div class="container_norm">
+                <div class="title"></div>
+                <div class="container wm01190">
+                    <img src="{$theme_path}zt/semper20150416/images/container_norm_c1.jpg" />
+                    <img src="{$theme_path}zt/semper20150416/images/container_norm_c2.jpg" />
+                    <img src="{$theme_path}zt/semper20150416/images/container_norm_c3.jpg" />
+                    <img src="{$theme_path}zt/semper20150416/images/container_norm_c4.jpg" />
+                    <img src="{$theme_path}zt/semper20150416/images/container_norm_c5.jpg" />
+                </div>
+            </div>
+            <div class="container_quality ">
+                <div class="title"></div>
+                <div class="wm01190">
+                    <img src="{$theme_path}zt/semper20150416/images/container_quality_c1.jpg" />
+                    <img src="{$theme_path}zt/semper20150416/images/container_quality_c2.jpg" />
+                </div>
+            </div>
+            <div class="container_recommend">
+                <div class="title"></div>
+                <div class="container">
+                    <div class="container_ul">
+                        <ul class="clearfix">
+                            <li><a href="http://www.deebei.net/topic.php?topic_id=18"><img src="{$theme_path}zt/semper20150416/images/container_recommend_img1.jpg" /></a></li>
+                            <li><a href="http://www.deebei.net/topic.php?topic_id=16"><img src="{$theme_path}zt/semper20150416/images/container_recommend_img2.jpg" /></a></li>
+                            <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244&brand=56#filter_area"><img src="{$theme_path}zt/semper20150416/images/container_recommend_img3.jpg" /></a></li>
+                            <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244&brand=56#filter_area"><img src="{$theme_path}zt/semper20150416/images/container_recommend_img4.jpg" /></a></li>
+                            <li><a href="http://m.deebei.net/"><img src="{$theme_path}zt/semper20150416/images/container_recommend_img5.jpg" /></a></li>
+
+                        </ul>
+                    </div>
+                    <div class="return_index">
+                        <a href="/">
+                            <img src="{$theme_path}zt/semper20150416/images/return_index.jpg" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a target="_blank" href="tencent://message/?uin=2462814798&Site=www.deebei.net&Menu=yes">
+    <div id="debei-service"></div>
+    </a>
+</div>
+<script type="text/javascript">
+    $(".flexslider-aptamail").flexslider({
+        animation: "slide",
+        slideshow: true,
+        directionNav:true,
+        animationSpeed:500,
+        slideshowSpeed:5000,
+        prevText:'',
+        nextText:'',
+        manualControls:'.my-flex-control-ol li'
+    });
+    
+    $(".flexslider-common").flexslider({
+        animation: "slide",
+        slideshow: true,
+        directionNav:true,
+        animationSpeed:500,
+        slideshowSpeed:5000,
+        prevText:'',
+        nextText:''
+    });
+    $("img.lazy").lazyload({
+        placeholder:"/images/loading-blank.gif",
+        effect:"fadeIn"
+    });
+    side_bar_fixed($("#debei-service"),'right','undefined','top');  
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

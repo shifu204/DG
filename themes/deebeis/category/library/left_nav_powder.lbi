@@ -1,0 +1,37 @@
+<div class="catlist_menu" id="catlist_menu">
+    <p class="side_close catlist_title">
+        <a class="side_close catlist_menu_close" href="javascript:;"></a>
+    </p>
+    <div class="catlist_body clearfix">
+        <div id="c_catlist_up" class="catlist_ctl catlist_up"></div>
+        <div id="c_catlist_scroll" class="catlist_scroll">
+            <ul id="c_catlist_ul" class="catlist_ul">
+                <li class="clearfix" cat-id="197" data-value="244" style="margin-top:6px;">
+                    <a>
+                        <div class="category_name_div">优惠套装</div>
+                        <span class="catlist_arrow "></span>
+                    </a>
+                </li>
+                {foreach from=$left_filter.children item=filter}
+                <li class="clearfix" cat-id="{$left_filter.cat_id}" data-value="{$filter.id}">
+                    <a>
+                        <div class="category_name_div">{$filter.name}</div>
+                        <span class="catlist_arrow "></span>
+                    </a>
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+        <div class="catlist_repeaty catlist_style"></div>
+        <div id="c_catlist_down" class="catlist_ctl catlist_down catlist_down_hover"></div>
+    </div>
+    <p class="catlist_foot">
+        <a style="display: block; height: 100%; width: 100%" href="#filter_area"></a>
+    </p>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        side_bar_fixed($(".catlist_menu"));
+        $.leftCatNav();
+    }); 
+</script>

@@ -1,0 +1,413 @@
+<script type="text/javascript" src="/js/jquery.json.min.js"></script>
+<div class="profile-box">
+    <h2 class="my-profile">
+        <span>我的资料</span>
+    </h2>
+    <div class="profile-title"><span>基本信息</span></div>
+    <div class="profile-information">        
+        <!--我的资料-未验证-->
+        <form id="my_profile">
+        <table>
+            <tr>
+                <td class="left">昵称：</td>
+                <td class="right">
+                    {if $profile.nickname}
+                        <span class="black" data-name="nickname">{$profile.nickname}</span>
+                        <span class="update" edit-name="nickname">修改</span>   
+                    {else}
+                    <span class="black" data-name="nickname">
+                        <input type="text" class="profile-item" name="nickname">                       
+                    </span>
+                    <label class='opt-btn save'>保存</label>
+                    {/if}
+                </td>
+            </tr>
+            <tr>
+                <td class="left">性别：</td>
+                <td class="right">
+                    {if $profile.sex < 3}
+                        <span class="black" data-name="sex">{$lang.constant_sex[$profile.sex]}</span>
+                        <span class="update" edit-name="sex">修改</span>
+                    {else}
+                    <span class="black" data-name="sex">
+                        <input type="radio" name="sex" value="1"/>男<label class="radio-blank"></label><input type="radio" name="sex" value="0"/>女<label class="radio-blank"></label><input type="radio" name="sex" checked="checked" value="2"/>保密
+                    </span>
+                    <label class='opt-btn save'>保存</label>
+                    {/if}        
+                </td>
+            </tr>
+          <!--  <tr>
+                <td class="left">生日：</td>
+                <td class="right">
+                    {if $profile.birthday}
+                        <span class="black" data-name="birthday">{$profile.birthday}</span>
+                        <span class="update" edit-name="birthday">修改</span>
+                    {else}
+                    <span class="black profile-birthday">
+                        <select><option>1</option><option>2</option></select>
+                        &nbsp;&nbsp;年&nbsp;&nbsp;
+                        <select><option>1</option><option>2</option></select>
+                        &nbsp;&nbsp;月&nbsp;&nbsp;
+                        <select><option>1</option><option>2</option></select>&nbsp;&nbsp;日
+                    </span>
+                    {/if}
+                </td>
+            </tr>
+          -->
+            <tr>
+                <td class="left">邮箱：</td>
+                <td class="right">
+                    {if $profile.email}
+                        <span class="black" data-name="email">{$profile.email}</span>
+                        {if $give_email_points}
+                        <span class="green">（已送{$give_email_points}积分）</span>
+                        {/if}
+                        <span class="update" edit-name="email">修改</span>                     
+                    {else}
+                    <span class="black" data-name="email">
+                        <input type="text" class="profile-item" name="email" />
+                    </span>
+                    <label class='opt-btn save'>立即验证</label>
+                    <label class='opt-btn cancel' style='display: none;'>取消</label>
+                    <span class="red_yanzheng">（绑定邮箱送300积分）</span>
+                    {/if}
+                </td>
+            </tr>
+            <tr>
+                <td class="left">手机：</td>
+                <td class="right">
+                    {if $profile.mobile_phone}
+                        <span class="black" data-name="mobile_phone">{$profile.mobile_phone}</span>
+                        <span class="green">（已送{$give_mobile_points}积分）</span>
+                        <span class="update" edit-name="mobile_phone">修改</span>
+                    {else}
+                    <span class="black" data-name="mobile_phone">
+                        <input type="text" class="profile-item" name="mobile_phone" />
+                    </span>
+                    <label class='opt-btn save'>立即验证</label>
+                    <label class='opt-btn cancel' style='display: none;'>取消</label>
+                    <span class="red_yanzheng">（绑定手机送500积分）</span>
+                    {/if}
+                </td>
+            </tr>
+            {if $profile.user_type > 0 && $profile.ori_id == 0}
+            <tr>
+                <td class="left">账号绑定：</td>
+                <td class="right">                  
+                    <span class="black" data-name="bindname">
+                        <input type="text" class="profile-item" name="bindname">
+                    </span>
+                    <label class='opt-btn save'>立即验证</label><span class="red_yanzheng">（QQ或微信用户可绑定已有账号）</span>                   
+                </td>
+            </tr>
+            {/if}
+            <!--<tr>
+                <td class="left">真实姓名：</td>
+                <td class="right"><input type="text" class="profile-item"><span class="red_yanzheng">（请填写真实信息）</span></td>
+            </tr>
+            <tr>
+                <td class="left">身份证：</td>
+                <td class="right"><input type="text" class="profile-item"><span class="red_yanzheng">（请填写真实信息）</span></td>
+            </tr>
+            <tr>
+                <td class="left">所在地：</td>
+                <td class="right"><span class="black profile-address">{include file="library/region.lbi"}</span></td>
+            </tr>
+            <tr>
+                <td class="left"></td>
+                <td class="right"><input type="text" class="profile-long"></td>
+            </tr>          
+            <tr>
+                <td></td>
+                <td class="right">
+                    <div class="submit"></div>
+                </td>
+            </tr>
+            -->
+        </table>
+        </form>
+        
+        <!--我的资料-已验证-->
+        <table style="display: block;">
+       <!--     <tr>
+                <td colspan="2" class="center">
+                    (以下信息用于私人直邮)
+                    <img src="{$theme_path}images1/user_clips_20150420/border.jpg"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="left">真实姓名：</td>
+                <td class="right"><span class="black">程欣茹</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">(如需修改信息，请联系客服)</span></td>
+            </tr>
+            <tr>
+                <td class="left">身份证：</td>
+                <td class="right"><span class="black">440682199003314022</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">(如需修改，请联系客服)</span></td>
+            </tr>
+            <tr>
+                <td class="left">所在地：</td>
+                <td class="right"><span class="black">佛山市南海区大沥镇黄岐南方广场H座209</span></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="center">
+                    <div class="submit"><a class="submit" href=""></a></div>
+                </td>
+            </tr>
+       -->
+        </table>
+        
+        <!--弹窗验证-->
+        <div id="fullbg"></div>
+        <div id="proving-bg" class="my-profile-opacity my-profile-proving"></div>
+        <!--邮箱验证-->
+        <div id="proving-mail" class="proving-box">
+            <div class="proving-top">
+                <div class="left">验证邮箱</div>
+                <div class="right"><a href="javascript:closeProving();"><img src="{$theme_path}images1/user_clips_20150420/my-profile-close.jpg"/></a></div>
+            </div>
+            <!--未验证-->
+            <div class="proving-not" style="display: none;">
+                <form id="proving_mail_form" name="proving_mail_form">
+                <table>
+                    <tr>
+                        <td class="proving-left"><font>*</font>我的邮箱:</td><td colspan="2">
+                            <input type="text" class="input-text" name="email" id="proving_email"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="proving-left">
+                            <font>*</font>验证码:</td><td class="captcha-td"><input type="text" name="captcha" class="input-text" id="proving_mail_captcha"/>
+                        </td>
+                        <td>
+                            <img  title="点击刷新" src="captcha.php?captcha_type=get_img" align="absbottom" onclick="this.src='captcha.php?captcha_type=get_img&time='+Math.random();" width="100" height="26" name="proving_mail_num"></img>&nbsp;&nbsp;看不清？<span class="next" onclick="proving_mail_num.src='captcha.php?captcha_type=get_img&time='+Math.random();">换一张</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="proving-but">
+                            <input type="submit" value="发送验证邮箱" class="send right_content-rounded"/><input type="button" value="取消" class="close right_content-rounded" onclick="closeProving()"/>
+                        </td>
+                    </tr>
+                </table>
+                </form>
+            </div>
+            <!--验证中-->
+            <div class="proving-ing" style="display: none;">
+                <div class="top">
+                    <span class="green">已发送验证邮件至：</span><span class="break" id="proving_ing_email"></span><br/>
+                    <span class="red">(请立即完成验证，邮箱验证不通过则修改邮箱失败)</span><br/>
+                    <span class="gray">验证邮件2小时内有效，请尽快登录您的邮箱点击验证链接完成验证</span>
+                </div>
+                <div class="but">
+                    <input type="button" class="check right_content-rounded" value="查看验证邮箱"/>
+                </div>
+            </div>
+            <!--验证完成-->
+            <div class="proving-ok">
+                <div class="top">
+                    <img src="{$theme_path}images1/user_clips_20150420/proving-ing.png" style="vertical-align: middle; margin: -10px 20px 0px 0px;"/><span class="green">恭喜您，邮箱认证成功！</span>
+                </div>
+                <input type="button" class="ok right_content-rounded" onclick="closeProving();"  value="关闭"/>
+            </div>
+        </div>
+        <!--手机验证-->
+        <div id="proving-mobile" class="proving-box">
+            <div class="proving-top">
+                <div class="left">手机验证</div>
+                <div class="right"><a href="javascript:closeProving();"><img src="{$theme_path}images1/user_clips_20150420/my-profile-close.jpg"/></a></div>
+            </div>
+            <!--验证-->
+            <div class="proving-not">
+                <form id="proving_mobile_form">
+                <table>
+                    <tr>
+                        <td class="proving-left">我的手机号:</td>
+                        <td class="captcha-td">
+                            <input type="text" class="input-text" id="proving_mobile" name="mobile_phone"/>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="proving-left">
+                            验证码:
+                        </td>
+                        <td class="captcha-td"><input type="text" name="captcha" class="input-text"/>
+                        </td>
+                        <td>
+                            <img  title="点击刷新" src="captcha.php?captcha_type=get_img" align="absbottom" onclick="this.src='captcha.php?captcha_type=get_img&time='+Math.random();" width="100" height="26" name="proving_mobile_num"></img>&nbsp;&nbsp;看不清？<span class="next" onclick="proving_mobile_num.src='captcha.php?captcha_type=get_img&time='+Math.random();">换一张</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="proving-but">
+                            <input type="submit" value="提交" class="send right_content-rounded"/>
+                            <input type="button" value="取消" class="close right_content-rounded" onclick="closeProving()"/>
+                        </td>
+                    </tr>
+                </table>
+                </form>
+            </div>
+            <!--绑定完成-->
+            <div class="proving-ok" style="display: none;">
+                <div class="top">
+                    <img src="{$theme_path}images1/user_clips_20150420/proving-ing.png" style="vertical-align: middle; margin: -10px 20px 0px 0px;"/><span class="green">恭喜您，手机验证成功！</span>
+                </div>
+                <a type="button" class="ok right_content-rounded" href="javascript:closeProving();" style="display: inline-block;">关闭</a>
+            </div>
+        </div>
+        <!--账号绑定-->
+        <div id="proving-user" class="proving-box">
+            <div class="proving-top">
+                <div class="left">帐号绑定</div>
+                <div class="right"><a href="javascript:closeProving();"><img src="{$theme_path}images1/user_clips_20150420/my-profile-close.jpg"/></a></div>
+            </div>
+            <!--验证-->
+            <div class="proving-not">
+                <form id="proving_user_form" name="proving_user_form">
+                <table>
+                    <tr>
+                        <td class="proving-left">用户名/手机:</td>
+                        <td class="captcha-td" colspan="2">
+                            <input name="bindname" type="text" class="input-text" id="proving_bindname"  />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="proving-left">密码:</td>
+                        <td class="captcha-td" colspan="2">
+                            <input type="password" class="input-text" name="password"/>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="proving-left">
+                            验证码:
+                        </td>
+                        <td class="captcha-td"><input type="text" name="captcha" class="input-text"/>
+                        </td>
+                        <td>
+                            <img  title="点击刷新" src="captcha.php?captcha_type=get_img" align="absbottom" onclick="this.src='captcha.php?captcha_type=get_img&time='+Math.random();" width="100" height="26" name="proving_user_num"></img>&nbsp;&nbsp;看不清？<span class="next" onclick="proving_user_num.src='captcha.php?captcha_type=get_img&time='+Math.random();">换一张</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="proving-but">
+                            <input type="submit" value="提交" class="send right_content-rounded"/><input type="button" value="取消" class="close right_content-rounded" onclick="closeProving()"/>
+                            <input type="reset" value="重置" style="display: none;" />
+                        </td>
+                    </tr>
+                </table>
+                <div class="bindname-error-tips"></div>
+                </form>
+            </div>
+            <!--绑定完成-->
+            <div class="proving-ok" style="display: none;">
+                <div class="top">
+                    <img src="{$theme_path}images1/user_clips_20150420/proving-ing.png" style="vertical-align: middle; margin: -10px 20px 0px 0px;"/><span class="green">恭喜您，账号绑定成功！请您重新登录。</span>
+                </div>
+                <a class="ok right_content-rounded" href="user.php" style="display: inline-block;">重新登录</a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<script type="text/javascript">
+var now_points = {$profile.rank_points} - {$profile.min_points};
+var next_points = {$profile.next_min_points} - {$profile.min_points};
+$(document).ready(function(){
+    var width = ((parseInt(now_points) / parseInt(next_points))*100)+"%";
+    $(".rank-points").css("width",width);
+    $("#my_profile").validate();
+    $("#proving_mail_form").validate({
+        submitHandler:function(form){
+            $(form).ajaxSubmit({
+                url:"user.php?act=send_proving_email",
+                type:"post",
+                dataType:'json',
+                async:false,
+                success:function(data){
+                    if(data.error == ''){
+                        $("#proving_ing_email").html(data.email);
+                        $(".proving-not").hide();
+                        $(".proving-ing").show();
+                        query_email = true;
+                        query_email_validate();
+                    }
+                }
+            });
+        }
+    }); 
+    $("#proving_user_form").validate({
+        submitHandler:function(form){
+            $(form).ajaxSubmit({
+                url:"user.php?act=check_user",
+                type:"post",
+                dataType:'json',
+                async:false,
+                success:function(data){
+                    if(data.error == ''){
+                        $("#proving_user_form .bindname-error-tips").hide();
+                        success_account_proving();
+                    }else if(data.error == 'false'){
+                        //用户名密码不正确
+                        $("#proving_user_form .bindname-error-tips").html("用户名或密码不正确。").show();
+                    }else if(data.error == 1){
+                        $("#proving_user_form .bindname-error-tips").html("您不是第三方注册用户，不能绑定其它帐户。").show();
+                    }else if(data.error == 2){
+                        $("#proving_user_form .bindname-error-tips").html("此用户已绑定德贝帐户").show();
+                    }
+                }
+            });
+        }
+    });
+    $("#proving_mobile_form").validate({
+        submitHandler:function(form){
+            $(form).ajaxSubmit({
+                url:"user.php?act=act_proving_mobile",
+                type:"post",
+                dataType:'json',
+                async:false,
+                success:function(data){
+                    if(data.error == ''){
+                        success_mobile_proving();
+                        //查找是否已经显示了已送积分
+                        var data_span = $("span[data-name='mobile_phone']").parent().find(".green").length;
+                        if(data_span == 0){
+                            if(data.give_points){
+                                $("span[data-name='mobile_phone']").parent().append($("<span class='green'>（"+data.give_points+"）</span>"));
+                            }
+                        }
+                    } else {
+                    
+                    }
+                }
+            });
+        }
+    });
+});
+
+function fullbgShow(){
+    var bh = $("body").height();
+    var bw = $("body").width();
+    $("#fullbg").css({
+       height: bh,
+       width:bw,
+       display:"block"
+    });
+}
+function provingMail(){
+    fullbgShow();
+    $("#proving-bg,#proving-mail").show();
+}
+function provingMobile(){
+    fullbgShow();
+    $("#proving-bg,#proving-mobile").show();
+}
+function provingUser(){
+    fullbgShow();
+    $("#proving-bg,#proving-user").show();
+}
+function closeProving(){
+    $("#fullbg,#proving-bg,.proving-box").hide();
+}
+
+
+
+</script>

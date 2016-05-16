@@ -1,0 +1,112 @@
+<div>
+    <!--注册页面开始-->
+    <div class="register_dialog" id="shopping_register_dialog">
+        <div class="register_form">
+            <div class="register_form_title">
+                用户注册
+            </div>
+            <div class="register_form_body relative">
+                <div class="tips"></div>
+                <p>
+                    <div class="body_left">(昵称)用户名：</div>
+                    <div class="body_right"><input type="text" name="username" id="register_username" /></div>
+                </p>
+                <p>
+                    <div class="body_left">手机号码：</div>
+                    <div class="body_right"><input type="text" name="mobile" id="register_mobile" /></div>
+                </p>
+                <p>
+                    <div class="body_left">密码：</div>
+                    <div class="body_right"><input type="password" name="password" id="register_password" /></div>
+                </p>
+                <p>
+                    <div class="body_left">确认密码：</div>
+                    <div class="body_right"><input type="password" name="repassword" id="register_repassword" /></div>
+                </p>          
+            </div>    
+            <div class="form_buttons">
+                <a class="reg_button" href="javascript:register('shopping_register_dialog');"></a>
+            </div>
+        </div>
+        <a class="close_form_icon" href="javascript:close_form('shopping_register_dialog')"></a>
+    </div>
+    <!--注册页面结束-->
+    <!--登录页面开始-->
+    <div class="login_dialog" id="shopping_login_dialog">
+        <div class="select_shopping_method">
+            <a class='no_login_shopping_btn' href='flow.php?step=checkout&direct_shopping=1'></a>
+        </div>
+        <div class="login_form">
+            <div class="login_form_title">
+                德贝会员登录
+            </div>
+            <div class="login_form_body relative">
+                <div class="f_l body_left">
+                    <div class="tips"></div>
+                    <p>
+                        <span class="user_span"></span>
+                        <input type="text" name="login_username" id="login_username"/>
+                    </p>
+                    <p>
+                        <span class="password_span"></span>
+                        <input type="password" name="login_password" id="login_password"/>
+                        <a class="forget_password" href="/">忘记密码？</a>
+                    </p>             
+                    <p>
+                        <input type="checkbox" class="remember_login" />自动登陆
+                    </p>
+                    <div class="form_buttons">
+                        <a class="login_button" href="javascript:login_ajax('shopping_login_dialog','go_checkout');"></a>
+                    </div>
+                </div>          
+                <div class="f_r body_right">
+                    <a class="free_reg_btn login_free_reg" href="javascript:free_register('shopping_login_dialog','shopping_register_dialog');"></a>
+                    <a class="qq_login_btn login_qq_login" href="/api/qq/deebei/oauth/"></a>
+                </div>
+            </div>   
+        </div>
+        <a class="close_form_icon" href="javascript:close_form('shopping_login_dialog')"></a>
+    </div>
+    <!--登录页面结束-->
+    <!--注册成功页面开始-->
+    <div class="register_success" id="shopping_register_success">
+        <div class="header">
+            <span class="icon-success"></span>
+            <div class="title">恭喜您注册成功</div>
+            <a class="close_register_success" href="javascript:close_form('register_success')">关闭页面</a>
+        </div>
+        <div class="clearfix"></div>
+        <div class="form">
+            <div class="form_title">
+                <span class="icon-gift"></span>
+                登记有好礼
+            </div>
+            <div class="form_body">
+                <div class="row">
+                    <div class="body_left f_l">宝宝生日日期：</div>
+                    <div class="body_right f_l"><input type="text" name="baby_year" style="width: 96px;"/>年<input type="text" name="baby_month" style="width: 55px;"/>月<input type="text" name="baby_day" style="width: 55px;"/>日</div>
+                </div>
+                <div class="row">
+                    <div class="body_left f_l">宝宝昵称：</div>
+                    <div class="body_right f_l"><input type="text" name="baby_name" /></div>
+                </div>
+                <div class="why">
+                    <div class="title" >为什么要登记？</div>
+                    <div class="content">1、用于推荐宝宝适龄产品。&nbsp;&nbsp;&nbsp;&nbsp;2、宝宝生日有神秘大礼。</div>
+                    <div class="sign_down_btn"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--注册成功页面结束-->
+</div>
+
+<script type="text/javascript">
+    open_dialog("shopping_login_dialog");
+    function go_checkout(){
+        if(is_login){
+            window.location.href="flow.php?step=checkout";
+        }
+        return false;
+    }
+</script>

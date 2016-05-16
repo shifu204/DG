@@ -1,0 +1,71 @@
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<script type="text/javascript" src="../js/calendar.php?lang={$cfg_lang}"></script>
+<link href="../js/calendar/calendar.css" rel="stylesheet" type="text/css" />
+<div class="form-div">
+    <form action="javascript:searchKeywords()" name="searchForm">
+        <img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+        日期：<input name="start_date" value="{$start_date}" style="width:80px;" onclick="return showCalendar(this, '%Y-%m-%d', false, false, this);" />-
+            <input name="end_date" value="{$end_date}" style="width:80px;" onclick="return showCalendar(this, '%Y-%m-%d', false, false, this);" />
+        <input type="submit" value="{$lang.button_search}" class="button" />
+    </form>
+</div>
+
+
+<div id="listDiv" class="list-div">
+{/if}
+    {if $keyword_detail}
+    <table id="list-table" cellspacing="1" cellpadding="3">
+        <tbody>
+            <tr>  
+                <th align="center">搜索引擎</th>
+                <th align="center">目标url</th>
+                <th align="center"><a href="javascript:listTable.sort('page_count')">点击页面数</a></th>
+                <th align="center"><a href="javascript:listTable.sort('time')">时间</a></th>
+                <th align="center"><a href="javascript:listTable.sort('from')">点击来源</a></th>
+                <th align="center">IP地址</th>
+                <th align="center"><a href="javascript:listTable.sort('area')">所在区域</a></th>
+                <th align="center"><a href="javascript:listTable.sort('action')">操作类型</a></th>
+                <th align="center">操作</th>
+            </tr>
+            {foreach from=$keyword_detail item=detail}
+            <tr>
+                <td align="center">{$detail.from}</td>
+                <td align="center" style="max-width: 300px; overflow: hidden;">{$detail.target_url}</td>
+                <td align="center">{$detail.page_count}</td>               
+                <td align="center">{$detail.time}</td>
+                <td align="center">{$detail.device}</td>
+                <td align="center">{$detail.ip}</td>
+                <td align="center">{$detail.area}</td>
+                <td align="center">{$detail.action}</td>
+                <td align="center">
+                </td>
+            </tr>
+            {/foreach}
+            <tr>&nbsp;
+                <td align="right" nowrap="true" colspan="8">{include file="page.htm"}</td>
+            </tr>
+        </tbody>
+    </table>
+    {/if}
+{if $full_page}
+</div>
+
+<script type="text/javascript" language="JavaScript">
+  listTable.recordCount = {$record_count};
+  listTable.pageCount = {$page_count};
+  
+  {foreach from=$filter item=item key=key}
+  listTable.filter.{$key} = '{$item}';
+  {/foreach}
+      
+function searchKeywords(){
+    listTable.filter.start_date = Utils.trim(document.forms['searchForm'].elements['start_date'].value);
+    listTable.filter.end_date = Utils.trim(document.forms['searchForm'].elements['end_date'].value);
+    listTable.filter.page = 1;
+    listTable.loadList();
+}
+</script>
+{include file="pagefooter.htm"}
+{/if}

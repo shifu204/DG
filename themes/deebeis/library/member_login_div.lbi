@@ -1,0 +1,26 @@
+<?php if(empty($this->_var['user_info']['username'])):?>
+    <div class="f_l">
+        <a href="javascript:user_login_dialog();"  class="color8">登录</a>
+    </div>
+    <div class="f_l">
+        <a id="free_register_btn" class="color8" href="javascript:user_login_dialog('register');">注册</a>
+    </div>
+    <div  class="f_l qqBtn">
+        <a rel="nofollow" href="/api/qq/deebei/oauth/" onclick="need_query_login=true;query_login(user_is_login);" target="_blank" class="qq_login">QQ登录</a>
+    </div>
+    <?php if(!isset($_SESSION['other_device'])):?>
+    <div class="f_l wxBtn">
+        <a href="<?php echo $this->_var['wx_login_url']?>" onclick="need_query_login=true;query_login(user_is_login);" target="_blank">微信登录</a>
+    </div>
+    <?php endif;?>
+<?php else:?>
+    <span><?php echo $this->_var['lang']['hello']?>，</span><span style="color:#c00"><?php echo $this->_var['user_info']['username'];?></span>
+    <span>，欢迎回来！</span>  
+    <a href="user.php?act=logout">退出登录</a>|
+<?php endif;?>
+<a href="user.php">我的德贝</a>|
+<a id="fav" class="favBtn" href="javascript:void(0);" style="padding-left: 16px;">收藏德贝</a>
+<a class="mobileBtn color8" href="javascript:void(0);" style="padding-left: 16px;">400-039-7006</a>
+<script type="text/javascript" src="/js/jquery.form.js"></script>
+<script type="text/javascript" src="/js/jquery.validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/js/jquery.validate/message_cn.js"></script>

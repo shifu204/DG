@@ -1,0 +1,43 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}category/common.css" rel="stylesheet" type="text/css">
+<link href="{$theme_path}category/{$category_style}/{$category_style}.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{$theme_path}js/category.js"></script>
+<input type="hidden" id="category" value="{$category}" name="category" />
+<div class="milk_powder">
+    <div class="poster"></div>
+    <div class="coupon">
+        <div class="wm01190">
+            <ul class="clearfix">
+                <li data-href="bonus.php?act=user_ajax_get&type_id=21" onclick="get_bonus(this);"><img src="{$theme_path}category/style14/images/c10.png" height="97" /></li>
+                <li data-href="bonus.php?act=user_ajax_get&type_id=22" onclick="get_bonus(this);"><img src="{$theme_path}category/style14/images/c30.png" height="97" /></li>
+                <li data-href="bonus.php?act=user_ajax_get&type_id=23" onclick="get_bonus(this);"><img src="{$theme_path}category/style14/images/c50.png" height="97" /></li>
+                <li data-href="bonus.php?act=user_ajax_get&type_id=24" onclick="get_bonus(this);"><img src="{$theme_path}category/style14/images/c70.png" height="97" /></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="wm01190">
+            <div class="category">
+                <div class="category_nav_wrap">
+                    <div class="category_nav">
+                        <div id="filter_area">
+                            <!-- #BeginLibraryItem "/library/goods/category_goods_filter.lbi" --><!-- #EndLibraryItem -->
+                        </div>
+                    </div>
+                </div>
+                <div class="nav_more">更多品牌</div>
+            </div>
+            <div class="good_frame">
+                <!-- #BeginLibraryItem "/library/goods/category_goods_list.lbi" --><!-- #EndLibraryItem -->
+            </div>
+        </div>
+    </div>
+{if $left_filter}
+    <!-- #BeginLibraryItem "/category/library/left_nav.lbi" --><!-- #EndLibraryItem -->
+{/if}
+</div>
+<script type="text/javascript">
+    $.categoryNav("cate_nav_item");
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --></body>
+</html>

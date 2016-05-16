@@ -1,0 +1,220 @@
+<!-- $Id: ads_info.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+<?php echo $this->fetch('pageheader_normal.html'); ?>
+<script type="text/javascript" src="../js/calendar.php?lang=<?php echo $this->_var['cfg_lang']; ?>"></script>
+<link href="../js/calendar/calendar.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+    .shaidan_img_div {float:left; width: 100px; height: 100px; margin-left: 10px; position: relative;}
+    .shaidan_img_div img {width: 100%}
+    .shaidan_img_div .operate{
+        position: absolute;
+        top:0;
+        right: 0;
+        z-index: 999;
+        color:#000;
+        cursor: pointer;
+        display: block;
+    }
+</style>
+<div class="main-div">
+<form action="mc_comment.php" method="post" enctype="multipart/form-data" name="theForm" onsubmit="return validate()">
+  <table width="100%" id="general-table">
+    <tbody id="1" >
+        <td  class="label">
+            <a href="javascript:showNotice('AdCodeFlash');" title="<?php echo $this->_var['lang']['form_notice']; ?>">
+            <img src="images/notice.gif" width="16" height="16" border="0" alt="<?php echo $this->_var['lang']['form_notice']; ?>"></a>批量导入用户[<span style="color:#F00;">必须注册过</span>]:
+        </td>
+        <td>
+            <select name="select_user">
+                <option value="0">选择用户...</option>              
+                <option value="2000">数据库前2000个用户</option>
+                <option value="4000">数据库前4000个用户</option>
+                <option value="5000">数据库前5000个用户</option>
+                <option value="all">所有用户</option>
+            </select>
+            或者：<input name="userall" id="userall" type="text" value="" style="width:300px;" /> 
+            &nbsp;&nbsp;<span style="color:#F00;">*</span>多个用户名以英文 , 分隔。例: user1,user2...
+        </td>
+    </tr>   
+    <tr>
+        <td class="label">评论的商品ID：</td>
+        <td>
+            <select name="cat_id">
+                <option value="0">选择商品...</option>                
+                <?php echo $this->_var['cat_list']; ?>
+                <option value="all">所有商品分类</option>
+            </select>
+            <select name="brand_id">
+                <option value="0">所有品牌</option>
+                <?php echo $this->html_options(array('options'=>$this->_var['brand_list'])); ?>
+            </select>
+            或者：
+            <input name="comment_id" id="comment_id" type="text" value="" style="width:300px;" />
+            &nbsp;&nbsp;<span style="color:#F00;">*</span>多个商品ID以英文 , 号分隔。例：1,2,3...
+        </td>
+    </tr>
+    
+    <tr>
+      <td  class="label">
+        批量导入留言:</td>
+      <td>
+        <textarea name="msgall" id="msgall" cols="50" rows="10">真不错，喜欢~~
+发货速度很快
+这平台不错
+这产品值得买
+没有买错~~</textarea>
+        &nbsp;&nbsp;<span style="color:#F00;">*</span>每一行为一条评论，多条评论请回车进行换行;</td>
+    </tr>
+    
+    
+    <tr>
+      <td class="label"><span style="color:#F00;">*</span>随机评论次数：</td>
+      <td><input name="comment_num" type="text" id="comment_num" size="10" maxlength="4"  onkeyup="this.value=this.value.replace(/[^\d]/g,'')"/>        
+        &nbsp;&nbsp;<span style="color:#F00;">*</span>最大1000,默认100;系统会自动随机调用户名和随机评论;</td>
+    </tr>
+    </tbody>
+
+    <tr>
+      <td class="label">&nbsp;</td>
+      <td>
+        <input type="submit" value="批量添加评论" class="button" />
+        <input type="reset" value="<?php echo $this->_var['lang']['button_reset']; ?>" class="button" />
+        <input type="hidden" name="act" value="mc_add" /></td>
+    </tr>
+ </table>
+
+</form>
+<hr />
+<link rel="stylesheet" type="text/css" href="/js/uploadify.css">
+<script type="text/javascript" src="/js/jquery.min1.10.js"></script>
+<script type="text/javascript" src="/js/jquery.uploadify.min.js"></script>
+<form>
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td class="label">用户名：</td>
+                <td><input type="text" size="40" name="shaidan_username" /></td>
+            </tr>
+            <tr>
+                <td class="label">商品ID：</td>
+                <td><input type="text" size="40" name="id_value" /></td>
+            </tr>
+            <tr>
+                <td class="label">晒单标题：</td>
+                <td><input type="text" size="40" name="shaidan_title" /></td>
+            </tr>
+            <tr>
+                <td class="label">晒单内容：</td>
+                <td>
+                    <textarea name="shaidan_content" cols="47" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">图片：</td>
+                <td id="img_show_area">
+                    <div class="images"></div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input id="file_upload_shaidan" name="file_upload" type="file" multiple="true" >
+                    <input type="submit" value="提交晒单" class="button" />
+                    <input type="hidden" name="act" value="add_shaidan" />
+                    <input type="hidden" name="token" value="<?php echo $this->_var['token']; ?>" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+</div>
+
+<script type="text/ecmascript" language="javascript">
+/**
+ * 检查表单输入的数据
+ */
+function validate()
+{
+	df = document.theForm;
+
+      if(!df.userall.value && df.select_user.value == 0){
+		  alert('参与评论的用户名,不能为空！');
+		  df.userall.focus();
+		  return false;
+	  }
+
+      if(!df.comment_id.value && df.cat_id.value == 0 && df.brand_id.value == 0){
+		  alert('需评论的商品ID,不能为空！');
+		  df.comment_id.focus();
+		  return false;
+	  }
+
+      if(!df.msgall.value){
+		  alert('需评论的内容,不能为空！');
+		  df.msgall.focus();
+		  return false;
+	  }
+	  
+	  if(!df.comment_num.value){
+		  alert('需评论的次数,必须为整数！');
+		  df.comment_num.focus();
+		  return false;
+	  }
+
+    return true;
+}
+</script>
+<script type="text/javascript">
+function delete_img(obj){
+    var parent = $(obj).parent();
+    var img_id = $(parent).attr("data-id");
+    $.ajax({
+        url:"/user.php?act=delete_shaidan_img&img_id="+img_id,
+        type:'get',
+        success:function(data){
+            if(data != 'false'){
+               $(parent).remove();
+            }
+        }
+    });
+    return false;
+}
+$(document).ready(function(){     
+    var inputs = $("input[name='file_upload']");
+    $.each(inputs,function(i,j){   
+        var myparent = $("#img_show_area");
+        $(this).uploadify({
+            'formData'     : {
+                'timestamp' : '<?php echo $this->_var['timestamp']; ?>',
+                'token':'<?php echo $this->_var['token']; ?>'
+            },
+            'swf'      : '/js/uploadify.swf',
+            'uploader' : '/js/uploadify.php',
+            'fileTypeExts': '*.gif; *.jpg; *.png',
+            'onUploadSuccess': function(file, data, response) {
+                if (data == 'five') {
+                    alert("最多上传5张图片");
+                }
+                else if(data == 'no_dir'){
+                    alert("目录不存在。");
+                }
+                else {
+                    var img_id = data;
+                    $.ajax({
+                        type:'get',
+                        url:'mc_comment.php',
+                        async:false,
+                        data:{ act: "upload_shaidan_img", shaidan_img : data, token:'<?php echo $this->_var['token']; ?>'},
+                        success:function(getData){
+                            img_id = getData;
+                        }
+                    });
+                    $('#' + file.id).find('.data').html(' 上传完毕');
+                    $(myparent).find(".images").append("<div class='shaidan_img_div' data-id="+img_id+"><img src='"+data+"' /><div class='rsp'></div><div class='operate' onclick='delete_img(this)'>删除</div></div>");
+                }
+            } 
+        });
+    });    
+});
+</script>
+</body>
+</html>

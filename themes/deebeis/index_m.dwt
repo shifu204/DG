@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+<link rel="apple-touch-icon-precomposed" href="/icon_desktop.png">
+<link href="{$template_dir}/style_m/mobile.css" type="text/css" rel="stylesheet">
+<link href="{$template_dir}/style_m/index.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <a name="top"></a>
+    <!-- banner -->
+    <div class="home_banner">
+        <div style="background-image: url(&quot; http://www.deebei.net/data/afficheimg/20130809xmdmki.jpg &quot;), url(&quot;http://www.deebei.net/data/afficheimg/20130809xmdmki.jpg&quot;); background-position: 0px 0px, 0px 0px;"
+            index="0" class="header_ads"
+            jsdata="[{&quot;src&quot;:&quot;http://www.deebei.net/data/afficheimg/20130809xmdmki.jpg&quot;,&quot;link&quot;:&quot;1,14,\u00272269\u0027,\u00272013经典回顾\u0027,\u0027null\u0027,\u0027null\u0027,\u0027lunbo0\u0027&quot;},{&quot;src&quot;:&quot;http://www.deebei.net/data/afficheimg/20130803uvzidj.jpg&quot;,&quot;link&quot;:&quot;1,14,\u00272157\u0027,\u0027海外原装进口\u0027,\u0027null\u0027,\u0027null\u0027,\u0027lunbo1\u0027&quot;}]">
+            <img draggable="false" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAYAAAD0In+KAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFMkY3RjAwNjJFQjIxMUUzOTAwN0FGMDI2NEQzQkUzMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFMkY3RjAwNzJFQjIxMUUzOTAwN0FGMDI2NEQzQkUzMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkUyRjdGMDA0MkVCMjExRTM5MDA3QUYwMjY0RDNCRTMzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkUyRjdGMDA1MkVCMjExRTM5MDA3QUYwMjY0RDNCRTMzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+anCzYwAAABFJREFUeNpi/P//PwMIAAQYABT9Av+8RavZAAAAAElFTkSuQmCC">
+            <div class="index_box"><div style="width: 25%; left: 75%;" class="index"></div></div>
+        </div>
+        <div class="deebei_logo_bg">
+            <div class="deebei_logo logo_position"></div>
+        </div>
+        <a href="javascript:void(0)" onclick="keywordfoot.focus(); return false;" class="search">
+            <div class="search_icon"></div>
+        </a>
+    </div>
+    <div class="content">
+        <div class="menu">
+            <ul class="flex_box">
+                <li>
+                <div class="icon item_category">
+                    <a href="catlist.php"></a>
+                    <div>商品分类</div>
+                </div>
+                </li>
+                <li>
+                <div class="icon my_store">
+                    <a href="user.php"></a>
+                    <div>用户中心</div>
+                </div>
+                </li>
+                <li>
+                <div class="icon my_orders">
+                    <a href="catlist.php?is_history=true"></a>
+                    <div>购物足迹</div>
+                </div>
+                </li>
+                <li>
+                <div class="icon my_cart">
+                    <a href="flow.php"></a>
+                    <div>购物车</div>
+                </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="item_list">
+            <!-- type=2功能入口 -->
+            <div class="item_show_type1 flex_box">
+                <!-- 促销 -->
+                <div>
+                    <!--{foreach from=$promotion_goods key=key item=goods name="promotion_foreach"}-->
+                    {if $smarty.foreach.promotion_foreach.index < 1}
+                    <a href="{$goods.url}">
+                        <img src="{$goods.thumb}" class="right">
+                        <div class="corner groupbuy"></div>
+                        <div class="price">{$goods.promote_price}</div>
+                    </a>
+                    {/if}
+                    <!--{/foreach}-->
+                </div>
+                <!-- 买五送一 -->
+                <div>
+                    <a href="/brand.php?id={$buy_five_goods.brand_id}">
+                        <img src="{$buy_five_goods.goods_thumb}" class="left">
+                        <div class="corner discount"></div>
+                        <div class="price price2">{$buy_five_goods.shop_price}</div>
+                    </a>
+                </div>
+            </div>
+            <!-- 楼层 -->
+            <!--{foreach from=$floors name=floors item=floor}-->
+            <div class="item_show_type2">
+                <div>
+                    <!-- 楼层大图 -->
+                    <a {if $floor.i eq 1}href="/category-8-b19-min0-max0-attr0.html"
+                        {elseif $floor.i eq 2}href="/goods-155.html"
+                        {elseif $floor.i eq 2}href="/goods-160.html"
+                        {elseif $floor.i eq 2}href="/goods-205.html"
+                        {else}href="/goods-232.html"{/if}
+                        class="item_img {if $smarty.foreach.floors.iteration % 2 eq 0}right{else}left{/if}">
+                        <img src="/images_m/floorad{$smarty.foreach.floors.iteration}.jpg">
+                    </a>
+                    <div class="tab_content content_{if $smarty.foreach.floors.iteration % 2 eq 0}left{else}right{/if}">
+                        <!-- 楼层促销 -->  
+                        <a href="{$floor.cat_url}" class="tab_banner">
+                            <span>{$floor.name}</span>
+                            <div class="arrow_right"></div>
+                        </a>
+                        <!-- 关键词 -->  	
+                        <div class="tab_container">
+                            <!--{foreach from=$floor.cat_list key=catkey item=cat}-->
+                            <a href="{$cat.url}" class="tab">{$cat.name}</a>
+                            <!--{/foreach}--> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--{/foreach}-->
+            <!-- / 楼层 -->
+
+            <!-- 底部促销 index_footer_preference -->
+        </div>
+    </div>
+
+    <!-- #BeginLibraryItem "/library/page_footer_m.lbi" --><!-- #EndLibraryItem -->
+
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write("<div style='display:none'>"+ unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff31531fca780ed5666345856c7edbf91' type='text/javascript'%3E%3C/script%3E")+"</div>");
+    </script><div style="display:none"><script src="js_m/h.js" type="text/javascript"></script></div>
+    <script type="text/javascript" src="js_m/zepto.js"></script>
+    <script type="text/javascript" src="js_m/zepto_002.js"></script>
+    <script type="text/javascript" src="js_m/v2_tracker_top.js"></script>
+    <script type="text/javascript" src="js_m/tracker.js"></script>
+    <script type="text/javascript" src="js_m/v2_tracker_hijack.js"></script>
+    <script type="text/javascript" src="js_m/index.js"></script>
+    <!-- 如果是客户端写客户端的统计 -->
+    
+<script type="text/javascript" src="js_m/touch.js"></script>
+<script type="text/javascript" src="js_m/scroll.js"></script>
+<script type="text/javascript" src="js_m/v2-mobile.js"></script>
+<script type="text/javascript">
+    //type=1时，根据linktype拼链接广告的链接  
+function getlinkurl(linktype,linkid,title){
+    var href="";
+    linktype =parseInt(linktype);
+    switch(linktype){
+        case 1:  //首页
+            href="/mw/index/"+1;
+            break;
+        case 2:  //日历购首页 
+            href="/mw/dailybuy"+linkid;
+            break;
+        case 3:   //日历购详情页 
+            href="/mw/dailyproduct/"+linkid+"/"+1;
+            break;
+        case 4:  //品牌旗舰页（品牌店铺）          
+            href="/mw/getBrand/1/"+linkid;
+            break;
+        case 5:   //无栏目产品列表页 （包括普通列表，普通促销，普通团购，普通抵购卷，N元N件，满赠）
+            break;
+        case 6:  //多栏目活动页面 (cms页) 
+            href="/mw/oldcms/"+linkid;
+            break;
+        case 7:   //cms活动广告聚合页 
+            href="/mw/optionallist/"+linkid+"/"+1; 
+            break;
+        case 8:  //每日N款（N=1,2,..）（日历购详情页）
+            break;
+        case 9: //抵用券活动页 
+            href="/mw/freecoupon/"+linkid;
+            break;
+        case 10:  //团购产品列表页 
+            href="/mw/grouplist/1/1/-1";
+            break;
+        case 11:   //普通促销（landingpage）商品  
+            break;
+        case 12:   //品牌店铺页   
+            href="/mw/getStore/1/"+linkid;
+            break; 
+        case 13:  //n元n件集合页 
+            href="/mw/optionallist/"+linkid+"/1";
+            break;
+        case 14:  //新cms
+            href="/mw/newcms/"+linkid;
+            break;	
+    }
+    if(linktype==7||linktype==13){
+        href+="?promotiontitle="+title;
+    }
+    return href;
+}
+
+
+function gettypeurl(type,linktype,linkid,title,promotionid,promotionlevel,statisticstype){
+    //调用统计
+    commonStatistics('','1',statisticstype,'');
+    var href="";
+    switch(type){	
+        case 1:
+            href=getlinkurl(linktype,linkid,title);
+            break;
+        case 2:
+            href="javascript:searchkey(&apos;"+title+"&apos;,1,'search')";
+            break;
+        case 4:  //商城店铺
+            href=linkid;
+            break;	
+        case 5:  //1号团 
+            href="/mw/grouplist/1/1/-1";
+            break;
+        case 9:  // 抵购卷列表活动 （通过后台读取的抵购卷数据，使用新接口）
+            href="/mw/freecoupon/"+linkid;
+            break;
+        case 10: // 积分兑换活动 (通过promptionid从pc后台读取的商品数据，使用新接口)
+            href="/mw/newcms/"+linkid;
+            break;
+        case 11:  // 秒杀活动（通过promotionid从PC后台读取的商品数据，秒杀特殊流程，使用新接口）
+            href="/mw/newcms/"+linkid;
+            break;
+        case 12:   //满赠
+            href="/mw/promotionprolist/"+promotionid+"/"+promotionlevel+"/1/1?promotiontitle="+title;
+            break; 
+        case 13:  //满减 
+            href="/mw/promotionprolist/"+promotionid+"/"+promotionlevel+"/1/1?promotiontitle="+title;
+            break;
+        case 14: //满折 
+            href="/mw/promotionprolist/"+promotionid+"/"+promotionlevel+"/1/1?promotiontitle="+title;
+            break;
+        case 16:
+            href="/mw/optionalprolist/"+promotionid+"/"+promotionlevel+"/1";
+            break;
+        case 18: //外链
+            href=linkid;
+            break;	
+    }
+    window.location.href=href;		
+}
+
+function searchkey(keyword,type,statisticstype) {
+    //调用统计
+    commonStatistics('','1',statisticstype,'');
+    window.location.href ="/mw/search?searchid=4&serchtype=1&keyword="+keyword;   	    
+}
+
+function checkInput(){
+    var keyword=document.getElementById("keyword").value;
+    keyword = keyword.replace(/\s/gi,"");
+    if(keyword==""){
+        // alert("搜索关键字不能为空");
+        return false;
+    } 
+    //saveSearchHistory();
+    return SafeStirng(keyword);
+}
+
+getotherinfo();
+function getotherinfo(){ 
+    var now = new Date()+getRandomString(32);
+    $.ajax({   
+type: "POST",   
+url: "/mw/geoareainfo?tt="+now,   
+data: "",   
+dataType : "", 
+success: function(backdata1) { 
+var data1 = backdata1.split("∑");  
+if(data1[2]== null || data1[2]== "null" || data1[2]== "" ){
+data1[2] ="1"; 
+}
+
+if(data1[0] !='true' && data1[1] !='true'){
+if (navigator.geolocation) {  
+//alert( ' 你的浏览器支持 geolocation ' ); 
+var watchInterval = navigator.geolocation.getCurrentPosition(getPositionSuccess,getPositionError,{timeout:15000});
+}else{  
+//alert( ' 你的浏览器不支持 geolocation ' );  
+}
+
+}
+}   
+}); 
+}
+
+function getPositionSuccess( position ){  
+    var lat = position.coords.latitude;  
+    var lng = position.coords.longitude;
+
+    // alert( "您所在的位置： 经度" + lat + "，纬度" + lng );  	 	 
+    $.ajax({   
+type: "POST",   
+url: "/mw/getproidbygeo/"+lat+"/"+lng+"",        
+data: "",   
+dataType : "", 
+success: function(backdata) {
+if(backdata!="上海,1,1"){
+var back = backdata.split(",");
+var data=back[0]; 
+var answer=confirm("定位到你当前在"+data+",需要更换收货省份吗？");
+var currentprovinceId = back[1];
+if(answer==true){
+window.location.href ="/mw/index/"+currentprovinceId+"/"+lat+"/"+lng;
+}        	  
+}	     	       	
+}   
+});   
+}  
+
+var token = '';
+if((token==null||token=="")&&window.localStorage!=null){
+    try{
+        window.localStorage.removeItem("cart_choosed_item");
+    }catch(e){}
+}
+
+function getPositionError(error){ }
+
+$(function(){
+        (function(){
+         var index = 0;
+         var elem =  $('.header_ads');
+         var ads_data = elem.attr('jsdata');
+         if(!ads_data){
+         $('.header_ads img').hide();return;}
+         var ads_obj = JSON.parse(ads_data);
+
+         if(!ads_obj){
+         $('.header_ads img').hide();
+         $('.header_ads .index_box').hide();
+         return;
+         }
+         elem.attr('index',index);
+         elem.css('background-image','url(' + ads_obj[index].src + ')');
+             if(ads_obj.length <= 1){return;}
+
+             $('.header_ads .index').width(1/ads_obj.length * 100 + '%');
+
+             var moving = false;
+             var scrolling = false;
+             var _next;
+
+             var play_next = function(dir){
+             if(dir === undefined){return;}
+             var _target = elem.width() * (-dir);
+             //index++;
+             if(index+dir < 0){
+             _next = ads_obj.length -1;
+             }else if(index + dir >= ads_obj.length){
+             _next = 0;
+             }else{
+             _next = index + dir;
+             }
+
+             elem.css({'background-image':'url('+ads_obj[index].src+'),url('+ads_obj[_next].src+')','background-position':'0 0,'+ (-_target)+'px 0'});
+
+             scrolling = true;
+
+             sin(0,_target,500,function(_mid){
+                     elem.css('background-position',_mid + 'px 0,'+ (-_target+_mid) +'px 0');
+                     },function(){
+                     scrolling = false;
+                     elem.css({'background-image':'url('+ads_obj[_next].src+')','background-position':'0 0'});
+                     index = _next;
+                     $('.header_ads .index').css('left',index/ads_obj.length * 100 + '%');
+                     });
+             }
+
+
+             var outTimer;
+
+             var auto_paly = function(){
+                 if(!!outTimer){clearTimeout(outTimer);}
+                 outTimer = setTimeout(function(){
+                         play_next(1);
+                         auto_paly();
+                         },3000);
+             }
+
+             auto_paly();
+
+             iTouch({
+element : document.querySelector('.header_ads'),
+click : function(e){
+window.location.href="javascript:gettypeurl("+ads_obj[index].link+")";
+},
+move : function(e,dir,disX,disY,x,y){
+if(moving){return false;}
+if(scrolling){return false;}
+if(dir == 'lr' && Math.abs(disX) > 50){
+play_next(-1);
+}else if(dir == 'rl' && Math.abs(disX) > 50){
+play_next(1);
+}else{
+return false;
+}
+moving = true;
+auto_paly(1);
+},
+end : function(){
+moving = false;
+},
+prevent : 'x'
+});
+
+
+
+
+
+})();
+
+var nextFrame = (function() {
+        return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function(callback) { return setTimeout(callback, 1); };
+        })();
+
+var cancelFrame = (function () {
+        return window.cancelRequestAnimationFrame ||
+        window.webkitCancelAnimationFrame ||
+        window.webkitCancelRequestAnimationFrame ||
+        window.mozCancelRequestAnimationFrame ||
+        window.oCancelRequestAnimationFrame ||
+        window.msCancelRequestAnimationFrame ||
+        clearTimeout;
+        })();
+
+var PI = Math.PI;
+var timer;
+
+function sin(start,end,time,callback,finish){
+
+    var _start = new Date().getTime();
+    var _end = _start + time;
+
+    function step() {
+        var _now = new Date().getTime();
+        var _mid = Math.sin((_now-_start)/(_end - _start) * PI / 2) * (end - start) + start;
+        callback && callback.apply(null,[_mid]);
+        if (_now > _end ){
+            cancelFrame(timer);
+            timer = null;
+            finish && finish.apply(null);
+        }else{
+            timer = nextFrame(step);
+        }
+    }
+
+    if(!!timer){
+        cancelFrame(timer);
+        timer = null;
+    }
+
+    timer = nextFrame(step);
+}
+
+
+});
+</script>
+</body></html>

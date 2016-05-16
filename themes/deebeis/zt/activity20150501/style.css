@@ -1,0 +1,103 @@
+.wrapper{min-width: 1190px;margin: 0; padding: 0;}
+.poster {background:url(images/poster.jpg) center no-repeat; height: 635px;}
+.container-coupon-bg{background: url(images/coupon-bg.jpg) no-repeat center; height: 1100px;}
+.container-coupon-bg .container-coupon{background: url(images/coupon.jpg) no-repeat center; height: 1100px; overflow:hidden;}
+.container-coupon-bg .container{margin-top: 250px; margin-left: 110px; width: 970px;}
+.container-coupon-bg .coupon{padding: 20px 0px 23px 0px;}
+.container-coupon-bg .coupon li{float: left; width: 235px; margin:0 3px 0 3px;}
+
+.container-draw-bg{background: url(images/draw-bg.jpg) no-repeat center; height: 1400px;}
+.container-draw-bg .container-draw{background: url(images/draw.jpg) no-repeat center; height: 1400px; overflow:hidden; position: relative;}
+.container-draw-bg .container-draw .draw-edge {background: url(images/zhuanpan/edge.gif) no-repeat; width:1100px;height: 1057px;position: relative; top:160px;}
+.container-draw-bg .container-draw .draw-panel {background: url(images/zhuanpan/panel.png) center no-repeat;width: 708px;height: 708px;position: absolute; top:128px;left: 203px;}
+.container-draw-bg .container-draw .draw-pointer {background: url(images/zhuanpan/pointer.png) no-repeat; width: 149px;height: 195px;z-index: 1;position: absolute; left:50%;top:365px; margin-left: -70px;cursor: pointer;}
+.container-draw .draw-tips {z-index: 2; text-align: left; width: 970px;color:#000;}
+.container-draw .draw-tips .tips-item .title{height: 45px; width: 100%;}
+.container-draw .draw-tips .tips-item .title1{background: url(images/zhuanpan/draw-title1.jpg) no-repeat;}
+.container-draw .draw-tips .tips-item .title2{background: url(images/zhuanpan/draw-title2.jpg) no-repeat; margin-top: 30px;}
+.container-draw .draw-tips .tips-item .content {padding-top: 8px; font-size: 16px;}
+.container-draw .draw-tips .tips-item .content p {text-indent: 12px;}
+
+.container-rankings-bg{background: url(images/rankings-bg.jpg) no-repeat center; height: 1130px;}
+.container-rankings-bg .container-rankings{background: url(images/rankings.jpg) no-repeat center; height: 1130px; overflow:hidden;}
+.container-rankings-bg .container{margin-top: 280px; margin-left: 80px; width: 1110px; height: 750px;}
+.container-rankings-bg .container-left{float: left; color: #000; width: 500px; }
+.container-rankings-bg .container-left h1{letter-spacing:2px; text-indent:20px;font-size: 24px;}
+.container-rankings-bg .container-left .title h1 span{color: #e80731; letter-spacing:5px;}
+.container-rankings-bg .prize-wrap{width:500px;}
+.container-rankings-bg .prize{float:left; width: 220px; text-align: center; margin-top: 12px; margin-right: 30px;}
+.container-rankings-bg .prize h2{font-size: 16px;}
+.container-rankings-bg .prize .more{margin-top: 17px;}
+.container-rankings-bg .container-right{float: left; margin-left: 25px; width: 500px;}
+.rankings-table{margin-left: 27px; text-align: center; color: #000; border-collapse:collapse;}
+.rankings-table td{height: 34px;}
+.rankings-table .yellow{background: #f7ffcc;}
+.rankings-table .rankings-1{width: 70px;}
+.rankings-table .rankings-2{width: 190px;}
+.rankings-table .rankings-3{width: 180px; font-size: 18px; color: #df1322; text-align: left; text-indent: 35px;}
+.rankings-introduce{color: #000; margin-top: 38px; letter-spacing: 2px;}
+.rankings-introduce h2{font-size: 16px;}
+.rankings-introduce span{color: #ee2047;}
+
+.container-milk-bg{background: url(images/milk-bg.jpg) no-repeat center; height: 1460px;}
+.container-milk-bg .container-milk{background: url(images/milk.jpg) no-repeat center; height: 1460px; overflow:hidden;}
+.container-milk .container{margin-left: 78px; margin-top: 287px;}
+.container-milk .goodbox{float: left; margin-right: 12px; margin-top: 30px;}
+.container-milk .more{width: 207px; height: 56px; margin-top: 30px;}
+
+.container-food-bg{background: url(images/food-bg.jpg) no-repeat center; height: 1455px;}
+.container-food-bg .container-food{background: url(images/food.jpg) no-repeat center; height: 1455px; overflow:hidden;}
+.container-food .container{margin-left: 78px; margin-top: 300px;}
+.container-food .goodbox{float: left; margin-right: 12px; margin-top: 27px;}
+.container-food .more{width: 207px; height: 56px; margin-top: 27px;}
+
+.container-alima-bg{background: url(images/alima-bg.jpg) no-repeat center; height: 1430px;}
+.container-alima-bg .container-alima{background: url(images/alima.jpg) no-repeat center; height: 1430px; overflow:hidden;}
+.container-alima .container{margin-left: 78px; margin-top: 300px;}
+.container-alima .goodbox{float: left; margin-right: 12px; margin-top: 23px;}
+.container-alima .more{width: 207px; height: 56px; margin-top: 21px;}
+
+.container-commodity-bg{background: url(images/commodity-bg.jpg) no-repeat center; height: 1420px;}
+.container-commodity-bg .container-commodity{background: url(images/commodity.jpg) no-repeat center; height: 1420px; overflow:hidden;}
+.container-commodity .container{margin-left: 78px; margin-top: 270px;}
+.container-commodity .goodbox{float: left; margin-right: 12px; margin-top: 23px;}
+.container-commodity .more{width: 207px; height: 56px; margin-top: 19px;}
+
+.container-tool-bg{background: url(images/tool-bg.jpg) no-repeat center; height: 1572px;}
+.container-tool-bg .container-tool{background: url(images/tool.jpg) no-repeat center; height: 1572px; overflow:hidden;}
+.container-tool .container{margin-left: 78px; margin-top: 320px;}
+.container-tool .goodbox{float: left; margin-right: 12px; margin-top: 24px;}
+.container-tool .more{width: 207px; height: 56px; margin-top: 25px;}
+
+.container-quality{}
+.container-quality .title{background: url(images/quality-t.jpg) center no-repeat; height: 546px;}
+.container-quality .container{background: url(images/quality.jpg) center no-repeat; height: 605px;}
+
+.container-recommend{background: #2c7b39; padding-bottom: 265px;}
+.container-recommend .container-ul{width: 1065px; padding-top: 95px;}
+.container-recommend .container-ul ul li{float:left; height: 164px; width: 198px; margin: 0 7px;}
+.container-recommend .return-index{margin-top: 50px; width: 202px;}
+/*活动对话框*/
+.dialog51 { width:378px;height:182px; position: fixed; z-index: 999; display: none;}
+.dialog51 .dialog-container { width: 378px;height: 182px;position: relative;}
+.dialog51 .dialog-container .close-dialog {position: absolute;right: 10px;top:10px; width: 20px; height: 20px; background: url(images/51activity-icons.png) -450px 0 no-repeat; cursor: pointer; z-index: 1000;}
+.dialog51 .dialog-container .buttons {position: absolute; bottom: 28px;text-align: center; width: 300px; left: 50%;margin-left: -150px; text-align: center;}
+.dialog51 .dialog-container .buttons .button { background: url(images/51activity-icons.png) no-repeat; width: 75px; height: 28px; cursor: pointer; display: inline-block;}
+.dialog51 .dialog-container .buttons .button-blank {width: 23px; display: inline-block; background: none;}
+.dialog51 .dialog-container .buttons .button1 {background-position:-100px 0; }
+.dialog51 .dialog-container .buttons .button2 {background-position:-375px 0; }
+.dialog51 .dialog-container .buttons .button3 {background-position:0 0; }
+.dialog51 .dialog-container .buttons .button4 {background-position:-300px 0; }
+.dialog51 .dialog-container .buttons .button5 {background-position:-200px 0; }
+.dialog-style4 .dialog-container .buttons, .dialog-style5 .dialog-container .buttons { bottom: 10px;}
+.dialog51 .dialog-container .dialog-content { text-align: center; height: 127px; position: relative}
+.dialog51 .dialog-container .dialog-content .align-center {position: absolute;height: 100%; width: 350px; left: 50%;margin-left: -175px;top:50%;margin-top: -32px; color:#009947; font-size: 14px;}
+.dialog51 .dialog-container .dialog-content .align-center p{line-height: 32px;}
+
+.dialog-style3 .dialog-container .dialog-content .align-center { margin-top: 0;}
+
+.dialog-style1 {background: url(images/dialog-bg/51bg-1.png) no-repeat;}
+.dialog-style2 {background: url(images/dialog-bg/51bg-2.png) no-repeat;}
+.dialog-style3 {background: url(images/dialog-bg/51bg-3.png) no-repeat;}
+.dialog-style4 {background: url(images/dialog-bg/51bg-4.png) no-repeat; height: 199px;}
+.dialog-style5 {background: url(images/dialog-bg/51bg-5.png) no-repeat; height: 199px;}

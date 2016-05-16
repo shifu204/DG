@@ -1,0 +1,276 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/supplementary_food/supplementary_food.css" rel="stylesheet" type="text/css" >
+<script src="{$theme_path}zt/supplementary_food/supplementary_food.js"></script>
+
+<div class="milk_powder">
+    <div class="poster"></div>
+    <div class="a2">
+    	<div class="category_nav_wrap wm01190">
+        	<div class="category_nav wm01190">
+            	<div class="cate_nav_item">
+                	<div class="nav_left clearfix">分类</div>
+                    <ul class="clearfix"  id="classify">
+                    	<li><label class="lab onclick" name="classify">全部</label></li>
+                    	<li><label class="lab" >米粉</label></li>
+                        <li><label class="lab">有机米粉</label></li>
+                        <li><label class="lab">肉泥</label></li>
+                        <li><label class="lab">泡芙</label></li>
+                        <li><label class="lab">泡芙条</label></li>
+                        <li><label class="lab">磨牙饼干</label></li>
+                        <li><label class="lab">果汁</label></li>
+                        <li><label class="lab">调味料</label></li>
+                        <li><label class="lab">面条</label></li>
+                        <li></li>
+                        <li><label class="lab">肉松</label></li>
+                        <li><label class="lab">麦片</label></li>
+                        <li><label class="lab">糖果</label></li>
+                        <li><label class="lab">颗粒面</label></li>
+                        <li><label class="lab">蜂蜜</label></li>
+                        <li><label class="lab">有机小溶豆</label></li>
+                    </ul>
+                </div>
+                <div class="cate_nav_item">
+                	<div class="nav_left clearfix">国家</div>
+                    <ul class="clearfix" id="country">
+                    	<li><label class="lab onclick">全部</label></li>
+                        <li><label class="lab">意大利</label></li>
+                        <li><label class="lab">日本</label></li>
+                        <li><label class="lab">美国</label></li>
+                        <li><label class="lab">德国</label></li>
+                        <li><label class="lab">澳大利亚</label></li>
+                        <li></li>
+                        <li><label class="lab">英国</label></li>
+                        <li><label class="lab">中国台湾</label></li>
+                    </ul>
+                </div>
+                <div class="cate_nav_item">
+                	<div class="nav_left clearfix">月龄</div>
+                    <ul class="clearfix "  id="age">
+                    	<li><label class="lab onclick">全部</label></li>
+                    	<li><label class="lab">0-6个月</label></li>
+                        <li><label class="lab">7-9个月</label></li>
+                        <li><label class="lab">7-12个月</label></li>
+                        <li><label class="lab">1岁以上</label></li>
+                        <li><label class="lab">2岁以上</label></li>
+                    </ul>
+                </div>
+                <div class="cate_nav_item">
+                	<div class="nav_left clearfix">品牌</div>
+                    <ul class="clearfix" id="brand">
+                    	<li><label class="lab onclick">全部</label></li>
+                    	<li><label class="lab">澳洲喜宝有机</label></li>
+                        <li><label class="lab">新西兰康维他Comvita</label></li>
+                        <li><label class="lab">澳洲weet-bix</label></li>
+                        <li><label class="lab">美国Happy Baby</label></li>
+                        <li><label class="lab">日本和光堂wakobo</label></li>
+                        <li><label class="lab">美国Gerber</label></li>
+                        <li></li>
+                        <li><label class="lab">美国Earth`s Best</label></li>
+                        <li><label class="lab">德国Jensen`s</label></li>
+                        <li><label class="lab">美国Bragg</label></li>
+                        <li><label class="lab">英国Bickiepegs</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="more">更多品牌</div>
+        </div>
+    </div>
+    <div class="a1">
+    	<div class="wm01190">
+        	<div class="coupon clearfix">
+                <ul class="cul">
+                    <li class="c10"></li>
+                    <li class="c50"></li>
+                    <li class="c20"></li>
+                    <li class="c70"></li>
+                </ul>
+            </div>      
+        </div>
+    </div>
+    
+    <div class="a3">
+    	<div class="gboxWrap w1190">
+        	<div class="goods_box clearfix">
+            	<div class="category_good first_goods">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good first_goods">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good first_goods">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good first_goods">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good first_goods">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good first_goods">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+                <div class="category_good">
+                	<div class="goodsImg"></div>
+                    <div class="goodsName"></div>
+                    <div class="goodsPrice">
+                    	<input type="button" class="buy" value="立即抢购" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="a4"></div>
+    <div class="a5">
+    	<div class="wm01190">
+              <div class="bottom">
+              返回顶部
+              </div>
+        </div>
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

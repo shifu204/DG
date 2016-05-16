@@ -1,0 +1,22 @@
+/* CSS Document */
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+a {text-decoration:none}
+
+.top1 { height:221px; background-image: url(top1.jpg); background-repeat:no-repeat; background-position:center;}
+.top2 { height:220px; background-image: url(top2.jpg); background-repeat:no-repeat; background-position:center;}
+.top3 { height:221px; background-image: url(top3.jpg); background-repeat:no-repeat; background-position:center;}
+.bg { height:1338px; background-image: url(bg.jpg);background-repeat:no-repeat; background-position:center;}
+.w { width:1002px;margin:0 auto;}
+
+.zj2_1 { height:254px; background-image: url(zj2_1.jpg); background-repeat:no-repeat; background-position:center;}
+.zj3_1 { height:226px; background-image: url(zj3_1.jpg); background-repeat:no-repeat; background-position:center;}
+.zj5_1 { height:233px; background-image: url(zj5_1.jpg); background-repeat:no-repeat; background-position:center;}

@@ -1,0 +1,89 @@
+<script type="text/javascript">
+function AutoResizeImage(maxWidth,maxHeight,objImg){
+var img = new Image();
+img.src = objImg.src;
+var hRatio;
+var wRatio;
+var Ratio = 1;
+var w = img.width;
+var h = img.height;
+wRatio = maxWidth / w;
+hRatio = maxHeight / h;
+if (maxWidth ==0 && maxHeight==0){
+Ratio = 1;
+}else if (maxWidth==0){//
+if (hRatio<1) Ratio = hRatio;
+}else if (maxHeight==0){
+if (wRatio<1) Ratio = wRatio;
+}else if (wRatio<1 || hRatio<1){
+Ratio = (wRatio<=hRatio?wRatio:hRatio);
+}
+if (Ratio<1){
+w = w * Ratio;
+h = h * Ratio;
+}
+objImg.height = h;
+objImg.width = w;
+}
+</script>
+
+<div class="w1190">
+    <div id="shareImg" class="shareImg l">
+        <ul>
+            <li>
+                <p><a target="_blank" name="dac_index_show0" href="shaidan_list.php" style="background:none;">更多传递<br>到的健康</a></p>
+            </li>
+            <?php $this->_var['shaidan_home1']=kl3w_getshaidan(8);?>
+            <!--{foreach from=$shaidan_home1 item=shaidan key=key} -->
+            <li>
+                <a target="_blank" href="shaidan.php?id={$shaidan.goods_id}&amp;s_id={$shaidan.msg_id}">
+                    <img class="err-product lazy" data-original="data/shaidanimg/min/{$shaidan.shaidan_img}" src="/images/loading.gif" onerror="this.onerror=null;this.src='shaidan_list.php?getimg={$shaidan.shaidan_img}'" onload="AutoResizeImage(100,0,this)" width="100">
+                </a>
+                <span style="bottom: -24px;">{$shaidan.msg_title}</span>
+            </li>
+            <!-- {/foreach} -->
+        </ul>
+    </div>
+    <div id="snshare" class="share l">
+        <div class="shareT">
+            <h2><a href="shaidan_list.php">晒单专区</a> <span>分享海外的健康,晒单获积分！</span></h2>
+            <ol style="top:0px;">
+                <a href="shaidan_list.php">更多>></a>
+            </ol>
+            <!-- 选项卡 -->
+            <ol style="display:none">
+                <li class="hover">1</li>
+                <li>2</li>
+                <!--<li>3</li>
+                <li>4</li> -->
+            </ol>
+            <!-- / 选项卡 -->
+        </div>
+        <div class="shareAreaList">
+            <?php $this->_var['shaidan_home1']=kl3w_getshaidan(4,true);?>
+            <!--{foreach from=$shaidan_home1 item=shaidan key=key} -->
+            <dl>
+                <dt> <a target="_blank" href="shaidan.php?id={$shaidan.goods_id}&amp;s_id={$shaidan.msg_id}"> <img class="err-product lazy" data-original="data/shaidanimg/min/{$shaidan.shaidan_img}" src="/images/loading.gif" onload="AutoResizeImage(100,0,this)" width="100" onerror="this.onerror=null;this.src='shaidan_list.php?getimg={$shaidan.shaidan_img}'" /> </a> </dt>
+                <dd>
+                    <h3><a target="_blank" href="shaidan.php?id={$shaidan.goods_id}&amp;s_id={$shaidan.msg_id}">{$shaidan.msg_title}</a></h3>
+                    <span>会员：{$shaidan.user_name}</span>
+                    <p>{$shaidan.msg_content|truncate:50:"...":false}</p>
+                </dd>
+            </dl>
+            <!-- {/foreach} --> 
+        </div>
+
+        <!-- 问答 -->
+        <ul style="display:none;">
+            <?php $this->_var['user_messages']=kl3w_get_user_messages();?>
+            <!-- {foreach from=$user_messages item=msg}-->
+            <li><a target="_blank" href="{$msg.url}" title="{$msg.title|msg:html}">[<span>问答</span>] {$msg.title}</a></li>
+            <!--{/foreach}-->
+        </ul>
+        <!-- / 问答 -->
+    </div>
+    <div class="weibo r" style="text-align:center; padding-top:20px;height: 296px;">
+        <img class="lazy" data-original="themes/deebeis/images/home_qrcode.png" src="/images/loading.gif" width="240" height="283">
+    </div>
+    <div class="clear"></div>
+</div>

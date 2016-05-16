@@ -1,0 +1,73 @@
+<div class="comment_form" id="edit_comment">
+    <form>
+        <input type="hidden" id="comment_id" value="{$comment.comment_id}" />
+        <div class="comment_form_title">
+            修改评论
+            <a class="close_form_icon" href="javascript:remove_form('edit_comment')"></a>
+        </div>
+        <div class="comment_form_content">
+            <div class="row clearfix">
+                <div class="row_goods">
+                    <a href="goods.php?id={$comment.goods_id}" title="{$comment.cmt_name}" target="_blank">
+                        <img  src="{$comment.goods_thumb}" />
+                        <div class="goods_name">
+                            <a href="goods.php?id={$comment.goods_id}" target="_blank">{$comment.cmt_name}</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="comment" name="goods_comments" id="goods_id_{$comment.goods_id}">
+                    <div class="comment_row goods_rank clearfix">
+                        <div>
+                            商品评分：
+                        </div>
+                        <div class="rank_star rank_star{$comment.comment_rank}">
+                            <a name="goods_rank" data-value="1" href="javascript:void(0);" class="{if $comment.comment_rank eq 1}selected{/if}"></a>
+                            <a name="goods_rank" data-value="2" href="javascript:void(0);" class="{if $comment.comment_rank eq 2}selected{/if}"></a>
+                            <a name="goods_rank" data-value="3" href="javascript:void(0);" class="{if $comment.comment_rank eq 3}selected{/if}"></a>
+                            <a name="goods_rank" data-value="4" href="javascript:void(0);" class="{if $comment.comment_rank eq 4}selected{/if}"></a>
+                            <a name="goods_rank" data-value="5" href="javascript:void(0);" class="{if $comment.comment_rank eq 5}selected{/if}"></a>
+                        </div>
+                    </div>
+                    <div class="comment_row">
+                        评论内容：
+                        <textarea name="comment_content">{$comment.content}</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comment_form_buttons">
+            <a class="submit_comment_btn" href="javascript:submit_edit_comment();"></a>
+            <a class="user_cancel_btn" href="javascript:remove_form('edit_comment')"></a>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+    function submit_edit_comment(){
+        var comment_id = $("#edit_comment #comment_id").val();
+        var rank = $("#edit_comment").find(".rank_star a[name='goods_rank'][class='selected']");
+        if($(rank).length == 0){
+            rank = 5;
+        } else {
+            rank = $(rank).attr("data-value");
+        }
+        var comment_content = $("#edit_comment").find("textarea[name='comment_content']").val();
+        var submit = true;
+        if(comment_content == ''){
+            alert("请填写评论内容。");
+            submit = false;
+        }
+        if(submit){
+            $.post("user.php?act=ajax_submit_edit_comment",{comment_id:comment_id,comment_rank:rank,content:comment_content},function(data){
+                if(data.error == ''){
+                    alert("您的评论已经成功更新，请等待管理员审核。");
+                    $("#edit_comment").remove();
+                    hideMask();
+                    get_comment_data($("#comment_page").val());
+                } else {
+                    alert("修改评论失败。");
+                } 
+            },'json');
+        }
+    }
+</script>

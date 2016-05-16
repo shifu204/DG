@@ -1,0 +1,121 @@
+<!-- $Id: goods_list.htm 17126 2010-04-23 10:30:26Z liuhui $ -->
+
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,../js/jquery.min.js,listtable.js"}
+
+<!-- 商品搜索 -->
+<div class="form-div">
+  <form action="javascript:searchGoods()" name="searchForm">
+    <img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+
+    <!-- 分类 -->
+    <select name="cat_id"><option value="0">{$lang.goods_cat}</option>{$cat_list}</select>
+    <!-- 品牌 -->
+    <select name="brand_id"><option value="0">{$lang.goods_brand}</option>{html_options options=$brand_list}</select>
+    <!-- 关键字 -->
+    {$lang.keyword} <input type="text" name="keyword" size="15" />
+    <select name="goods_type">
+            <option value="0">先选择商品类型</option> 
+            {foreach from=$goods_type_list item=type}
+                <option value="{$type.cat_id}">{$type.cat_name}</option>
+            {/foreach}
+    </select>
+    <input type="submit" value="{$lang.button_search}" class="button" />   
+  </form>
+</div>
+
+{literal}
+<script language="JavaScript">
+    function searchGoods()
+    {
+        listTable.filter['cat_id'] = document.forms['searchForm'].elements['cat_id'].value;
+        listTable.filter['brand_id'] = document.forms['searchForm'].elements['brand_id'].value;
+        listTable.filter['keyword'] = Utils.trim(document.forms['searchForm'].elements['keyword'].value);
+        listTable.filter['goods_type'] = document.forms['searchForm'].elements['goods_type'].value;
+        listTable.filter['page'] = 1;
+        listTable.query = 'attr_query';
+        listTable.loadList();
+    }
+</script>
+{/literal}
+<!-- 商品列表 -->
+<form method="post" action="" name="listForm" onsubmit="return confirmSubmit(this)">
+  <!-- start goods list -->
+  <div class="list-div" id="listDiv">
+{/if}
+<table cellpadding="3" cellspacing="1">
+  <tr>
+    <th>
+      <input onclick='listTable.selectAll(this, "checkboxes")' type="checkbox" />
+      <a href="javascript:listTable.sort('goods_id'); ">{$lang.record_id}</a>{$sort_goods_id}
+    </th>
+    <th><a href="javascript:listTable.sort('goods_short_name'); ">{$lang.goods_short_name}</a>{$sort_goods_short_name}</th>
+    <th><a href="javascript:listTable.sort('goods_name'); ">{$lang.goods_name}</a>{$sort_goods_name}</th>
+    <th>{$lang.goods_sub_title}</th>
+    <th><a href="javascript:listTable.sort('sort_order'); ">{$lang.sort_order}</a>{$sort_sort_order}</th>
+    {if $goods_type}
+        {foreach from=$goods_type item=type}
+        <th>{$type.attr_name}</th>
+        {/foreach}
+    {/if}
+  <tr>
+  <?php if(!empty($this->_var['goods_list'])):?>
+    <?php foreach($this->_var['goods_list'] as $goods):?>
+    <tr>
+      <td><input type="checkbox" name="checkboxes[]" value="{$goods.goods_id}" /><?php echo $goods['goods_id'];?></td>
+      <td><span onclick=""><?php echo $goods['goods_short_name'];?></span></td>
+      <td><span onclick=""><?php echo $goods['goods_name'];?></span></td>
+      <td align="center">
+          <div onclick="listTable.edit(this, 'edit_goods_sub_title', '<?php echo $goods['goods_id'];?>')" style="min-width:50px;"><?php echo $goods['goods_sub_title'];?>&nbsp;</div>
+      </td>
+      <td><?php echo $goods['sort_order'];?></td>
+      <?php if(!empty($this->_var['goods_type'])):?>
+        <?php foreach($this->_var['goods_type'] as $type):?>
+        <?php
+            $attr_value = $goods['attrs'][$type['attr_id']]['attr_value'];
+            if(empty($attr_value)){
+                $attr_value = '<div style="width:30px;">&nbsp;</div>';
+            }
+            $goods_attr_id = $goods['attrs'][$type['attr_id']]['goods_attr_id'];
+            if(empty($goods_attr_id)){
+                $goods_attr_id = 0;
+            }
+        ?>
+        <td align="center" style="width: 120px;"><span onclick="listTable.editJquery(this, 'edit_goods_attr', {attr_id:<?php echo $type['attr_id'];?>,goods_id:<?php echo $goods['goods_id'];?>,goods_attr_id:<?php echo $goods_attr_id;?>},1)"><?php echo $attr_value;?></span>           
+        </td>
+        <?php endforeach;?>
+      <?php endif;?>
+    </tr>
+    <?php endforeach;?>
+  <?php else:?>
+  <tr><td class="no-records" colspan="11">{$lang.no_records}</td></tr> 
+  <?php endif;?>
+</table>
+<!-- end goods list -->
+
+<!-- 分页 -->
+<table id="page-table" cellspacing="0">
+  <tr>
+    <td align="right" nowrap="true">
+    {include file="page.htm"}
+    </td>
+  </tr>
+</table>
+
+{if $full_page}
+</div>
+
+</form>
+
+<script type="text/javascript">
+  listTable.recordCount = {$record_count};
+  listTable.pageCount = {$page_count};
+  listTable.query = 'attr_query';
+  {foreach from=$filter item=item key=key}
+  listTable.filter.{$key} = '{$item}';
+  {/foreach}
+
+</script>
+{include file="pagefooter.htm"}
+{/if}

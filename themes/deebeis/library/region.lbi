@@ -1,0 +1,79 @@
+<?php
+    $id_pre = isset($_REQUEST['id_pre'])?trim($_REQUEST['id_pre']):'nor';
+    $province = get_regions(1, 1);
+    $sel_province = isset($this->_var['sel_province'])?$this->_var['sel_province']:0;
+    $sel_city = isset($this->_var['sel_city'])?$this->_var['sel_city']:0;
+    $sel_district = isset($this->_var['sel_district'])?$this->_var['sel_district']:0;
+    if(!empty($sel_city) && !empty($sel_province)){
+        $city = get_regions(2, $sel_province);
+    }
+    if(!empty($sel_district) && !empty($sel_city)){
+        $district = get_regions(3, $sel_city);
+    }
+?>
+<select id="<?php echo $id_pre;?>_province" data-pre="<?php echo $id_pre;?>" data-type="province" onchange="selectPro(this)" name="province">
+    <?php if(!empty($province)):?>
+        <option value="0"><?php echo $this->_var['lang']['all_option']?></option>
+        <?php foreach($province as $pk=>$pv):?>
+        <option value="<?php echo $pv['region_id'];?>" <?php if($sel_province == $pv['region_id']):?>selected="selected"<?php endif;?> ><?php echo $pv['region_name'];?></option>
+        <?php endforeach;?>
+    <?php endif;?>
+</select>
+<select id="<?php echo $id_pre;?>_city" data-pre="<?php echo $id_pre;?>" data-type="city" style="<?php if(empty($city)):?>display: none;<?php endif;?>" onchange="selectCity(this)" name="city">
+    <?php if(!empty($city)):?>
+        <option value="0"></option>
+        <?php foreach($city as $ck=>$cv):?>
+        <option value="<?php echo $cv['region_id'];?>" <?php if($sel_city == $cv['region_id']):?>selected="selected"<?php endif;?>><?php echo $cv['region_name'];?></option>
+        <?php endforeach;?>
+    <?php endif;?>
+</select>
+<select id="<?php echo $id_pre;?>_district" data-pre="<?php echo $id_pre;?>" data-type="district" style="<?php if(empty($district)):?>display: none;<?php endif;?>" name="district">
+    <?php if(!empty($district)):?>
+        <option value="0"></option>
+        <?php foreach($district as $dk=>$dv):?>
+        <option value="<?php echo $dv['region_id'];?>" <?php if($sel_district == $dv['region_id']):?>selected="selected"<?php endif;?>><?php echo $dv['region_name'];?></option>
+        <?php endforeach;?>
+    <?php endif;?>
+</select>
+<script type="text/javascript">
+    function selectPro(obj){
+        var id_pre = $(obj).attr("data-pre");
+        var city = $("#"+id_pre+"_city");
+        var district = $("#"+id_pre+"_district");
+        var type = 2;
+        var parent = $(obj).val();
+        $.getJSON("region.php?type="+type+"&parent="+parent,function(data){
+            region_select_empty(city);
+            region_select_empty(district);
+            $(district).hide();
+            $.each(data.regions,function(i,j){            
+                var option = $("<option value='"+j.region_id+"'>"+j.region_name+"</option>");              
+                $(city).append(option);               
+            });
+            $(city).show();
+        }); 
+    }
+    
+    function selectCity(obj){
+        var id_pre = $(obj).attr("data-pre");
+        var district = $("#"+id_pre+"_district");
+        var type = 3;
+        var parent = $(obj).val();
+        $.getJSON("region.php?type="+type+"&parent="+parent,function(data){
+            region_select_empty(district);
+            if(data.regions != ''){
+                $.each(data.regions,function(i,j){ 
+                    var option = $("<option value='"+j.region_id+"'>"+j.region_name+"</option>");              
+                    $(district).append(option);               
+                });
+                $(district).show();
+            }
+        });
+    }
+    
+    function region_select_empty(obj){
+        $(obj).empty();
+        var option = "<option value='0'></option>";
+        $(obj).append(option);
+    }
+</script>

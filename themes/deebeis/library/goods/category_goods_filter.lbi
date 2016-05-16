@@ -1,0 +1,37 @@
+<?php if(!empty($this->_var['cat_nav']['id'])):?>
+<?php $cat_id_count = 0;?>
+<!--循环输出分类数组-->
+<?php foreach($this->_var['cat_nav']['id'] as $cat_id=>$cat):?>
+<div class="cate_nav_item <?php if($cat_id_count == 0) echo "first_nav_item" ;?>" cat-id="<?php echo $cat_id;?>">
+    <div class="nav_left">
+        <?php echo $cat['cat_name']?>
+    </div>
+    <div class="nav_all <?php if(empty($this->_var['filt']['selected_filter'][$cat_id])): ?>nav_all_selected<?php endif;?>" cat-id="<?php echo $cat_id;?>" ><a>全部</a></div>
+    <ul class="clearfix <?php if($cat_id_count == 0) echo "first_ul" ;?>">
+        <?php if(!empty($cat['children'])):?>
+        <?php foreach($cat['children'] as $fk=>$fv):?>
+            <li  data-value="<?php echo $fv['id'];?>" cat-id="<?php echo $cat_id;?>" <?php if(in_array($fv['id'], $this->_var['filt']['selected_filter'][$cat_id])):?>class="selected"<?php endif;?>><a><label><?php echo $fv['name']?></label></a></li>                      
+        <?php endforeach;?>
+        <?php endif;?>
+    </ul>
+    <div class="clear"></div>
+</div>
+<?php $cat_id_count++;?>
+<?php endforeach;?>
+<?php endif;?>
+
+<?php if(!empty($this->_var['cat_nav']['brand'])):?>
+<div class="cate_nav_item" data-name="brand_id" id="brand_id">
+    <div class="nav_left">
+        品牌
+    </div>
+    <div class="nav_all <?php if(empty($this->_var['filt']['brand_id'])):?>nav_all_selected<?php endif;?>" data-value="0" ><a>全部</a></div>
+    <ul class="clearfix">
+        <?php foreach($this->_var['cat_nav']['brand'] as $bk=>$bv):?>                        
+            <li <?php if($this->_var['filt']['brand_id'] == $bv['brand_id']):?>class="selected"<?php endif;?> data-value="<?php echo $bv['brand_id']?>"><a><label><?php echo $bv['brand_name']?></label></a>
+            </li>   
+        <?php endforeach;?>
+    </ul>
+    <div class="clear"></div>
+</div>
+<?php endif;?>

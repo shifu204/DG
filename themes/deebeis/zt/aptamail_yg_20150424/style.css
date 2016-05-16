@@ -1,0 +1,51 @@
+.wrapper{background: #f3f3f3; margin-bottom: -365px; padding-bottom: 365px;}
+.part-1 {background:url(images/part-1.jpg) center no-repeat; height: 450px;}
+.text-center { text-align: center;}
+/*向下箭头*/
+.down-arrow {width: 28px; height: 21px; display: block;margin:0 auto; background: url(images/arrow.jpg) no-repeat;}
+.down-arrow-absolute {position: absolute; margin:0 auto; left: 50%; margin-left: -14px;}
+.down-arrow-div { margin:50px 0 30px;}
+/*年份滚动条*/
+.flex-wrapper { text-align: center;}
+.flex-wrapper .flexslider-aptamail { width: 915px; margin: 0 auto; position: relative;}
+.flex-wrapper .flexslider-aptamail .flex-direction-nav a  { width: 36px; height: 66px; opacity: 1;}
+.flex-wrapper .flexslider-aptamail .flex-direction-nav .flex-prev { background: url(images/slides-left-nav.png) no-repeat; left:20px;}
+.flex-wrapper .flexslider-aptamail .flex-direction-nav .flex-next { background: url(images/slides-right-nav.png) no-repeat; right:20px;}
+.flex-wrapper .flexslider-aptamail .flex-direction-nav a:before  { content:'';}
+.flex-wrapper .flexslider-aptamail .flex-direction-nav a.flex-next:before  {content:''; }
+/*年份控制条*/
+.my-flex-control .year-line{ position: absolute; width: 100%; border-bottom: 1px solid #62C7E0; z-index: 10; top:391px;}
+.my-flex-control-ol { position: absolute;top:380px; left: 0; width: 100%; z-index: 15;}
+.my-flex-control .year-line:after{ content: '';}
+.my-flex-control-ol li { float:left; width: 16.6%; display: block; padding-top:32px; background: url(images/year-point.png) center top no-repeat; color:#62C7E0; cursor: pointer;}
+.my-flex-control-ol li.flex-active {background: url(images/year-active-point.png) center top no-repeat;}
+
+.detail-arrow { margin-top: 140px; margin-bottom: 30px;}
+
+
+.flex-wrapper .flexslider-common { width: 995px; margin: 0 auto; position: relative;}
+.flex-wrapper .flexslider-common .flex-direction-nav a { width: 34px; height: 64px; opacity:1;}
+.flex-wrapper .flexslider-common .flex-direction-nav .flex-prev { background: url(images/common-left-nav.jpg) no-repeat; left:-63px;}
+.flex-wrapper .flexslider-common .flex-direction-nav .flex-next { background: url(images/common-right-nav.jpg) no-repeat; right:-63px;}
+.flex-wrapper .flexslider-common .flex-direction-nav a:before  { content:'';}
+.flex-wrapper .flexslider-common .flex-direction-nav a.flex-next:before  {content:''; }
+.flex-wrapper .flexslider-common .flex-control-nav { bottom: -16px; }
+.flex-wrapper .flexslider-common .flex-control-paging li a {background: url(images/common-point.jpg) center no-repeat; box-shadow: none;}
+.flex-wrapper .flexslider-common .flex-control-paging li a.flex-active {background: url(images/common-active-point.jpg) center no-repeat;}
+.part-6{margin-top: 191px;}
+.goods-series{}
+.goods-series .goodbox{float: left; padding: 60px 3px 0px 3px;}
+
+
+.comments-title, .custom-title, .pingan-title, .caigou-title, .huanjie-title, .debei-title{ height: 228px;}
+.comments-title { background:url(images/comments-title.jpg) center no-repeat; margin-top: 70px;}
+.custom-title { background:url(images/custom-service.jpg) center no-repeat;}
+.pingan-title { background:url(images/pingan-title.jpg) center no-repeat;}
+.caigou-title { background:url(images/caigou-title.jpg) center no-repeat;}
+.huanjie-title { background:url(images/huanjie-title.jpg) center no-repeat;}
+.debei-title { background:url(images/debei-title.jpg) center no-repeat;}
+.container-recommend{margin-bottom: -50px;}
+.buoy {display:none;}
+#debei-service { background: url(images/online-service.png) no-repeat; width: 64px; height: 81px; position: fixed;}
+#tab1,#tab2,#tab3,#tab4,#tab5 { }
+

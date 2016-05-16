@@ -1,0 +1,6 @@
+.contact_us{margin: 0 auto; padding: 0; text-align: center; min-width: 1190px;}
+.contact_us_title{background: url(images/contact_us_title.jpg) center no-repeat; height: 218px;}
+.contact_us_c{margin-top: 37px; width: 1144px;}
+.contact_us_ul{}
+.contact_us_ul li{float: left; border: solid 1px #e2e2e2; width: 284px; height: 387px;}
+.contact_us_bottom{padding-top: 25px;}

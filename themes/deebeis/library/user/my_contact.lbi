@@ -1,0 +1,105 @@
+<h2 class="m-right-title">
+    <span>手机&邮箱绑定</span>
+</h2>
+<div class="m-right-box">
+    <form method="post" action="user.php?act=update_profile" onsubmit="return checkForm(this);" id="myform">
+       <!-- <div class="tou-area"> 
+            <a href=""> 
+            <img src="" height="90" width="90">
+            <span id="tou-pop">修改头像</span></a> 
+        </div> -->
+        <fieldset class="user-form">            
+            <dl>
+                <dt>
+                    手机号码
+                </dt>
+                <dd>
+                    <span class="field_value" id="mobile_phone">{$profile.mobile_phone}</span>
+                    <button data-type="mobile_phone" class="btn user-profile-edit" id="editMobile" onclick="return edit_field(this)">修改</button>
+                    <input type="button" class="btn save_btn user-profile-save" style="display: none;" value="保存"></input>
+                </dd>
+            </dl>
+            <div class="err" id="errmobile_phone">
+            </div>
+            <dl>
+                <dt>
+                    邮箱地址
+                </dt>
+                <dd>
+                    <span class="field_value" id="email">{$profile.email}</span>                   
+                    <button data-type="email" class="btn user-profile-edit" id="editEmail" onclick="return edit_field(this)" >修改</button>
+                    <input type="button" class="btn save_btn user-profile-save" style="display: none;" value="保存"></input>
+                </dd>
+            </dl>
+            <div class="err" id="erremail"></div>
+        </fieldset>
+    </form>
+</div>
+<script type="text/javascript">
+    var validate = null;
+    seajs.use("my_validate",function(v){
+        validate = v;
+    });
+    
+    function edit_field(obj){
+            var type = $(obj).attr("data-type");
+            var box = $("#"+type);
+            var save =  $(obj).parent().find(".user-profile-save");
+            if($(box).find("input").length == 0){
+                var ori = $(box).html();
+                $(box).empty();
+                var input = "<input type='text' value='"+ori+"' name='"+type+"' />";
+                $(box).append(input);
+            }
+            $(obj).hide();
+            $(save).show();
+            $(save).bind("click",function(){
+                var submit = false;
+                var value = $(box).find("input").val();
+                if(value == ''){
+                    $("#err"+type).html("该值不能为空");
+                }     
+                if(type == 'mobile_phone'){
+                    if(validate.check_mobile(value)){
+                        submit = true;
+                    }
+                }else if(type == 'email'){
+                    if(validate.check_email(value)){
+                        submit = true;
+                    }
+                }
+                if(submit){
+                    $.ajax({
+                        url:'user.php?act=ajax_submit_user_field',
+                        type:'post',
+                        dataType:'json',
+                        data:{field:type,value:value},
+                        success:function(data){
+                            if(data.error == ''){
+                                $(save).hide();
+                                $(obj).show();
+                                $(box).find("input").remove();
+                                $(box).html(value);
+                                $("#err"+type).html('');
+                            } else {
+                                var msg = '';
+                                if(data.error == 1){
+                                    msg = '该字段不能为空';
+                                }else if(data.error == 2){
+                                    msg = '该字段不能更改';
+                                }else if(data.error == 3){
+                                    msg = '该字段已被其他用户绑定';
+                                }
+                                $("#err"+type).html(msg);
+                            }
+                        }
+                    })
+                } else {
+                    $("#err"+type).html("格式不正确");
+                }
+            });
+            return false;
+        }
+    
+    
+</script>

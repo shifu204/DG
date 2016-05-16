@@ -1,0 +1,346 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/style.css" rel="stylesheet" type="text/css">
+<link href="{$theme_path}zt/yapei/yapei.css" rel="stylesheet" type="text/css">
+<script src="{$theme_path}zt/yapei/yapei.js"></script>
+<div class="wrapper">
+    <div class="poster"></div>
+    <div class="scroll_wrap">
+        <div class="scroll">
+            <div class="scroll_tip">
+                <ul class="tip clearfix">
+                    <li><img src="{$theme_path}zt/yapei/images/scroll_tip_hover1.jpg"/></li>
+                    <li><img src="{$theme_path}zt/yapei/images/scroll_tip_2.jpg"/></li>
+                    <li><img src="{$theme_path}zt/yapei/images/scroll_tip_3.jpg"/></li>
+                    <li><img src="{$theme_path}zt/yapei/images/scroll_tip_4.jpg"/></li>
+                </ul>
+                <ul class="arr clearfix">
+                    <li><img src="{$theme_path}zt/yapei/images/scroll_tip_arr.jpg"/></li>
+                    <li><img src="{$theme_path}zt/yapei/images/scroll_tip_arr.jpg" style="display: none;"/></li>
+                    <li><img src="{$theme_path}zt/yapei/images/scroll_tip_arr.jpg" style="display: none;"/></li>
+                    <li><img src="{$theme_path}zt/yapei/images/scroll_tip_arr.jpg" style="display: none;"/></li>
+                </ul>
+            </div>
+            <div class="scroll_img_wrap">
+                <div class="scroll_img">
+                    <img src="{$theme_path}zt/yapei/images/scroll_img1.jpg"/>
+                </div>
+                <div class="scroll_img" style="display: none;">
+                    <img src="{$theme_path}zt/yapei/images/scroll_img2.jpg"/>
+                </div>
+                <div class="scroll_img" style="display: none;">
+                    <img src="{$theme_path}zt/yapei/images/scroll_img3.jpg"/>
+                    <div class="scroll_img3">
+                        <ul class="scroll_img3_ul clearfix">
+                            <li><img src="{$theme_path}zt/yapei/images/scroll_img3_1.jpg"/></li>
+                            <li><img src="{$theme_path}zt/yapei/images/scroll_img3_2.jpg"/></li>
+                            <li><img src="{$theme_path}zt/yapei/images/scroll_img3_3.jpg"/></li>
+                            <li><img src="{$theme_path}zt/yapei/images/scroll_img3_4.jpg"/></li>
+                            <li><img src="{$theme_path}zt/yapei/images/scroll_img3_5.jpg"/></li>
+                        </ul>
+                    </div>
+                    <div class="scroll_left">
+                        <img src="{$theme_path}zt/yapei/images/scroll_left.png" />
+                    </div>
+                    <div class="scroll_right">
+                        <img src="{$theme_path}zt/yapei/images/scroll_right.png" />
+                    </div>
+                </div>
+                <div class="scroll_img" style="display: none;">
+                    <img src="{$theme_path}zt/yapei/images/scroll_img4.jpg" />
+                    <div class="scroll_left">
+                        <img src="{$theme_path}zt/yapei/images/scroll_left.png" />
+                    </div>
+                    <div class="scroll_img3 scroll_img4">
+                        <ul class="scroll_img3_ul clearfix">
+                            <li><img src="{$theme_path}zt/yapei/images/scroll_img4_1.jpg"/></li>
+                            <li><img src="{$theme_path}zt/yapei/images/scroll_img4_2.jpg"/></li>
+                            <li><img src="{$theme_path}zt/yapei/images/scroll_img4_3.jpg"/></li>
+                        </ul>
+                    </div>
+                    <div class="scroll_right">
+                        <img src="{$theme_path}zt/yapei/images/scroll_right.png" />
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="main_div1 rounded">
+        <div class="module1">
+            <div class="title">
+                <img src="{$theme_path}zt/yapei/images/title1.jpg"/>
+            </div>
+            <div class="content">
+                <img src="{$theme_path}zt/yapei/images/module1_img.jpg" />
+                <div class="goodbox clearfix">
+                    <div class="products_left">
+                        <img src="{$theme_path}zt/yapei/images/module1_img1_1.jpg"/>
+                        <img src="{$theme_path}zt/yapei/images/module1_img2_1.jpg" style="display: none;"/>
+                        <img src="{$theme_path}zt/yapei/images/module1_img3_1.jpg" style="display: none;"/>
+                        <img src="{$theme_path}zt/yapei/images/module1_img4_1.jpg" style="display: none;"/>
+                        <img src="{$theme_path}zt/yapei/images/module1_img5_1.jpg" style="display: none;"/>
+                    </div>
+                    <div class="products_right">
+                        <div class="products_description">
+                            <div class="module1_img">
+                                <img src="{$theme_path}zt/yapei/images/module1_img1_2.jpg"/>
+                                <div class="buy">
+                                    <a href="http://www.deebei.net/goods-134.html"target="_blank"><img src="{$theme_path}zt/yapei/images/products_buy.jpg"/></a>
+                                </div>
+                            </div>
+                            <div class="module1_img" style="display: none;">
+                                <img src="{$theme_path}zt/yapei/images/module1_img2_2.jpg"/>
+                                <div class="buy">
+                                    <a href="http://www.deebei.net/goods-580.html"target="_blank"><img src="{$theme_path}zt/yapei/images/products_buy.jpg"/></a>
+                                </div>
+                            </div>
+                            <div class="module1_img" style="display: none;">
+                                <img src="{$theme_path}zt/yapei/images/module1_img3_2.jpg"/>
+                                <div class="buy">
+                                    <a href="http://www.deebei.net/goods-98.html"target="_blank"><img src="{$theme_path}zt/yapei/images/products_buy.jpg"/></a>
+                                </div>
+                            </div>
+                            <div class="module1_img" style="display: none;">
+                                <img src="{$theme_path}zt/yapei/images/module1_img4_2.jpg"/>
+                                <div class="buy">
+                                    <a href="http://www.deebei.net/goods-579.html"target="_blank"><img src="{$theme_path}zt/yapei/images/products_buy.jpg"/></a>
+                                </div>
+                            </div>
+                            <div class="module1_img" style="display: none;">
+                                <img src="{$theme_path}zt/yapei/images/module1_img5_2.jpg"/>
+                                <div class="buy">
+                                    <a href="http://www.deebei.net/goods-581.html"target="_blank"><img src="{$theme_path}zt/yapei/images/products_buy.jpg"/></a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="screenshot_warp">
+                            <div class="screenshot_list">
+                                <ul class="arr clearfix">
+                                    <li>
+                                        <div class="arr_img"><img src="{$theme_path}zt/yapei/images/module1_arr.jpg" style=""/></div>
+                                    </li>
+                                    <li>
+                                        <div class="arr_img"><img src="{$theme_path}zt/yapei/images/module1_arr.jpg" style="display: none;"/></div>
+                                    </li>
+                                    <li>
+                                        <div class="arr_img"><img src="{$theme_path}zt/yapei/images/module1_arr.jpg" style="display: none;"/></div>
+                                    </li>
+                                    <li>
+                                        <div class="arr_img"><img src="{$theme_path}zt/yapei/images/module1_arr.jpg" style="display: none;"/></div>
+                                    </li>
+                                    <li>
+                                        <div class="arr_img"><img src="{$theme_path}zt/yapei/images/module1_arr.jpg" style="display: none;"/></div>
+                                    </li>
+
+                                </ul>
+                                <ul class="screenshot_ul clearfix">
+                                    <li>
+                                        <div class="screenshot rounded">
+                                            <img src="{$theme_path}zt/yapei/images/module1_screenshot1.jpg"/>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="screenshot rounded">
+                                            <img src="{$theme_path}zt/yapei/images/module1_screenshot2.jpg"/>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="screenshot rounded">
+                                            <img src="{$theme_path}zt/yapei/images/module1_screenshot3.jpg"/>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="screenshot rounded">
+                                            <img src="{$theme_path}zt/yapei/images/module1_screenshot4.jpg"/>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="screenshot rounded">
+                                            <img src="{$theme_path}zt/yapei/images/module1_screenshot5.jpg"/>
+                                        </div>
+                                    </li>
+
+                                </ul>
+<!--
+
+                                <div class="arr"><img src="{$theme_path}zt/yapei/images/module1_arr.jpg" style="margin-top: -1px;"/></div>
+                                
+                                <div class="arr"><img src="{$theme_path}zt/yapei/images/module1_arr.jpg" style="margin-top: -1px; display: none;"/></div>
+                                <div class="arr"><img src="{$theme_path}zt/yapei/images/module1_arr.jpg" style="margin-top: -1px; display: none;"/></div>
+                                <div class="arr"><img src="{$theme_path}zt/yapei/images/module1_arr.jpg" style="margin-top: -1px; display: none;"/></div>
+                                <div class="arr"><img src="{$theme_path}zt/yapei/images/module1_arr.jpg" style="margin-top: -1px; display: none;"/></div>-->
+<!--                                
+                                <div class="screenshot rounded">
+                                    <img src="{$theme_path}zt/yapei/images/module1_screenshot2.jpg"/>
+                                </div>
+                                <div class="screenshot rounded">
+                                    <img src="{$theme_path}zt/yapei/images/module1_screenshot3.jpg"/>
+                                </div>
+                                <div class="screenshot rounded">
+                                    <img src="{$theme_path}zt/yapei/images/module1_screenshot4.jpg"/>
+                                </div>
+                                <div class="screenshot rounded">
+                                    <img src="{$theme_path}zt/yapei/images/module1_screenshot5.jpg"/>
+                                </div>-->
+                            </div>
+<!--                            <div class="screenshot_list">
+                                <div class="arr"><img src="{$theme_path}zt/yapei/images/module1_arr.jpg" style="margin-top: -1px; display: none;"/></div>
+                                <div class="screenshot rounded">
+                                    <img src="{$theme_path}zt/yapei/images/module1_screenshot2.jpg"/>
+                                </div>
+                            </div>
+                            <div class="screenshot_list">
+                                <div class="arr"><img src="{$theme_path}zt/yapei/images/module1_arr.jpg" style="margin-top: -1px; display: none;"/></div>
+                                <div class="screenshot rounded">
+                                    <img src="{$theme_path}zt/yapei/images/module1_screenshot3.jpg"/>
+                                </div>
+                            </div>
+                            <div class="screenshot_list">
+                                <div class="arr"><img src="{$theme_path}zt/yapei/images/module1_arr.jpg" style="margin-top: -1px; display: none;"/></div>
+                                <div class="screenshot rounded">
+                                    <img src="{$theme_path}zt/yapei/images/module1_screenshot4.jpg"/>
+                                </div>
+                            </div>
+                            <div class="screenshot_list">
+                                <div class="arr"><img src="{$theme_path}zt/yapei/images/module1_arr.jpg" style="margin-top: -1px; display: none;"/></div>
+                                <div class="screenshot rounded">
+                                    <img src="{$theme_path}zt/yapei/images/module1_screenshot5.jpg"/>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="module2">
+            <div class="title">
+                <img src="{$theme_path}zt/yapei/images/title2.jpg"/>
+            </div>
+            <div class="content">
+                <div class="border clearfix">
+                    <div class="goodbox"><a href="http://www.deebei.net/goods-1236.html" target="_blank"><img src="{$theme_path}zt/yapei/images/module2_img1.jpg" /></a></div>
+                    <div class="goodbox"><a href="http://www.deebei.net/goods-1240.html" target="_blank"><img src="{$theme_path}zt/yapei/images/module2_img2.jpg" /></a></div>
+                </div>
+                <div class="clearfix">
+                    <div class="goodbox"><a href="http://www.deebei.net/goods-1233.html" target="_blank"><img src="{$theme_path}zt/yapei/images/module2_img3.jpg" /></a></div>
+                    <div class="goodbox"><a href="http://www.deebei.net/goods-1239.html" target="_blank"><img src="{$theme_path}zt/yapei/images/module2_img4.jpg" /></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="module3">
+            <div class="title">
+                <img src="{$theme_path}zt/yapei/images/title3.jpg"/>
+            </div>
+            <div class="content goods-suit clearfix">
+                <?php foreach ($this->_var['topic_class']['suit']['goods_list'] as $goods): ?>
+                    <?php if($goods['sort_order']%2==0):?>
+                        <?php if($goods['sort_order']==0):?>
+                            <div class="clearfix">
+                        <?php elseif($goods['sort_order']!=0):?>
+                            <div class="border clearfix">
+                        <?php endif;?>
+                    <?php endif;?>         
+                    <div class="goodbox <?php if($goods['is_buy_nine']){ echo 'w450';}?>">
+                        <a target="_blank" href="<?php echo $goods['url'];?>">
+                            <div class="goods">
+                                <div class="give-tip">
+                                    <?php if ($goods['is_buy_six'] == 1): ?>
+                                        <img src="{$theme_path}zt/images/give-tip/m5s1-blue.png"/>
+                                    <?php elseif ($goods['is_buy_nine'] == 1): ?>
+                                        <img src="{$theme_path}zt/images/give-tip/m8s2-blue.png"/>
+                                    <?php endif; ?>
+                                </div>
+                                <img src="<?php echo $goods['index_img'];?>"/>
+                                <div class="details">
+                                    <div class="explain clearfix">
+                                        <span class="right">
+                                            <?php if ($goods['is_buy_six'] == 1): ?>
+                                                共7盒
+                                            <?php elseif ($goods['is_buy_nine'] == 1): ?>
+                                                共11盒
+                                            <?php endif; ?>
+                                        </span>
+                                        <span class="left">
+                                            <?php echo $goods['tag1'];?>
+                                        </span>
+                                    </div>
+                                    <div class="goods-name"><?php echo $goods['topic_name'];?></div>
+                                    <div class="goods-price">
+                                        <span class="unit-price">单罐仅：<?php echo $goods['formated_real_price'];?></span>
+                                        <div class="total">
+                                            <span class="total-l">极致品质价：</span><span class="total-r">￥<span class="fw"><?php echo $goods['shop_price'];?></span></span>
+                                            &nbsp;<img src="{$theme_path}zt/images/suit-btn-3.jpg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <?php if($goods['sort_order']%2!=0 ):?>
+                        </div>
+                    <?php endif;?>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+    <div class="main_div2">
+        <div class="module4">
+            <div class="title"></div>
+            <div class="content">
+                <img src="{$theme_path}zt/yapei/images/module4_img1.jpg" />
+            </div>
+        </div>
+        <div class="module5">
+            <div class="title"></div>
+            <div class="content">
+                <img src="{$theme_path}zt/yapei/images/module5_img1.jpg" />
+                <img src="{$theme_path}zt/yapei/images/module5_img2.jpg" />
+                <img src="{$theme_path}zt/yapei/images/module5_img3.jpg" />
+                <img src="{$theme_path}zt/yapei/images/module5_img4.jpg" />
+            </div>
+        </div>
+        <div class="module6">
+            <div class="title"></div>
+            <div class="content">
+                <img src="{$theme_path}zt/yapei/images/module6_img1.jpg" />
+            </div>
+        </div>
+        <div class="module7">
+            <div class="title"></div>
+            <div class="content">
+                <img src="{$theme_path}zt/yapei/images/module7_img1.jpg" />
+            </div>
+        </div>
+        <div class="module8">
+            <div class="title"></div>
+            <div class="content">
+                <div class="ul_warp">
+                    <ul class="clearfix">
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=18"><img src="{$theme_path}zt/yapei/images/module8_img1.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/topic.php?topic_id=16"><img src="{$theme_path}zt/yapei/images/module8_img2.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="{$theme_path}zt/yapei/images/module8_img3.jpg" /></a></li>
+                        <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="{$theme_path}zt/yapei/images/module8_img4.jpg" /></a></li>
+                        <li><a href="http://m.deebei.net/"><img src="{$theme_path}zt/yapei/images/module8_img5.jpg" /></a></li>
+
+                    </ul>
+                </div>
+                <div class="return_index">
+                    <a href="/">
+                        <img src="{$theme_path}zt/yapei/images/return_index.png" />
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<a target="_blank" href="tencent://message/?uin=2462814798&Site=www.deebei.net&Menu=yes">
+<div id="debei-service"></div>
+</a>
+<script type="text/javascript">
+    side_bar_fixed($("#debei-service"),'right','undefined','top');  
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>﻿

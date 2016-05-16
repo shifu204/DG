@@ -1,0 +1,70 @@
+<div class="clearfix">
+    <div id="snFlash" class11="w1190">
+         <!-- 买五送一 -->
+<!--
+        <div class="gratis_goods">
+            <div class="gratis_goods_box">
+                <!--{if $is_buy_five_open}-->
+                <h3>{$buy_five_goods.brand_name} {$buy_five.title}</h3>
+                <div class="countdown clearfix"><p>剩余时间：</p><p id="TimeCounter_p1" class="time-counter">{$lang.please_waiting}</p></div>
+                <div class="buy_five_goods">
+                    <b class="icon_buy_five">买五<br>送一</b>
+                    <a href="/brand.php?id={$buy_five_goods.brand_id}" target="_blank"><img src="{$buy_five_goods.goods_thumb}" width="170" height="170" /></a>
+                </div>
+                <!--{else}-->
+                <h3>精选奶粉 {$buy_five.title}</h3>
+                <div class="coming_soon">敬请期待</div>
+                <!--{/if}-->
+            </div>
+            <div><a href="/tryonebuy.php" target="_blank"><img src="themes/deebeis/tryonebuy/trybuy_img.jpg" width="290" height="140" /></a></div>
+        </div>
+{insert_scripts files='lefttime_topic.js'}
+<script language="javascript" type="text/javascript">
+target[target.length] = ({$buy_five.end_time} + 28800)*1000;
+ServerTime = new Date();
+time_id[time_id.length] = "TimeCounter_p1";				
+</script>
+-->
+        <!-- / 买五送一 -->
+
+        <!--[if lt IE 7]><iframe class="mainIfrm" style="display:none" frameborder="0" width="190" height="420" src=""></iframe><![endif]-->
+        <!--[if lt IE 7]><iframe class="subIfrm" style="display:none" frameborder="0" src=""></iframe><![endif]-->
+        <div class="flashMask"></div>
+
+        <div id="slideContBox">
+	<!-- {if $index_ad eq 'cus'} -->
+        <?php $this->_var['hometopad']=kl3w_get_homead();?>
+        <!--{foreach from=$hometopad key=htad_key item=htad}-->
+        <!-- {if $htad.ad_type eq 0} -->
+            <dl class="slideCont" style="z-index:200;display:none;">
+            <dd style="opacity:1;">
+            <div class="l"><a href="{$htad.url}" target="_blank"><img width="100%" height="420" src="{$htad.content}"></a></div>
+            <!--{if $is_exit} -->
+            <div class="r">
+            <img width="290" height="420" usemap="#mapLink{$htad_key}" src="{$htad.ad_minimg}">
+            <map name="mapLink{$htad_key}">
+            <area href="{$htad.ad_url1}" coords="0,0,279,144" shape="rect" target="_blank">
+            <area href="{$htad.ad_url2}" url="" coords="0,140,279,279" shape="rect" target="_blank">
+            <area href="{$htad.ad_url3}" coords="0,280,280,415" shape="rect" target="_blank">
+            </map>
+            </div>
+            <!--{/if}-->
+            </dd>
+            </dl>
+        <!-- {/if} -->
+        <!--{/foreach}-->
+            <div class="handle">
+                <p class="maskLayer"></p>
+                <p class="num">    
+                	<!--{foreach from=$hometopad name=hometopad_key item=htad}-->
+					<!-- {if $htad.ad_type eq 0} -->
+                    <em{if $smarty.foreach.hometopad_key.iteration==1} class="on"{/if}>{$smarty.foreach.hometopad_key.iteration}</em>
+                    <!-- {/if} -->
+                    <!--{/foreach}-->
+                </p>
+            </div>
+    <!-- {/if} -->
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>

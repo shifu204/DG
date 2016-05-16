@@ -1,0 +1,31 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="wrap proList goodsList">
+    <!--{foreach name=goods_list from=$goods_list item=goods}-->
+    <!-- {if $goods.goods_id} -->
+   	<dl>
+        <dt>
+	        <a href="{$goods.url}"><img class="lazy" src="{$goods.goods_thumb}" alt=""></a>
+        </dt>
+       	<dd>
+	        <a href="{$goods.url}">
+                <h4>{$goods.goods_name}</h4>
+                <p class="promTags">
+                    {if $goods.is_buy_five && $goods.is_preferential_five}<span class="gift icon_buy_five">买五 送一</span>
+                    {elseif $goods.is_buy_seven && $goods.is_preferential_seven}<span class="decre icon_buy_seven">买七送一</span>{/if}
+                </p>
+                <p class="price">
+                    <strong>{$goods.shop_price}</strong>
+                    <del>{$goods.market_price}</del>
+                </p>
+            </a>
+        	<a class="cartBtn" href="javascript:addToCart({$goods.goods_id})">+</a>
+            <div class="ins">
+                <p></p>
+                <a href="javascript:commonStatistics('','buttonPosition','goshopping','');" class="goBuy">继续购物</a>
+                <a href="javascript:commonStatistics('','buttonPosition','gotocart','/mw/cart');">去购物车结算</a>
+            </div>
+        </dd>
+    </dl>
+    <!--{/if}-->
+    <!-- {/foreach} -->
+</div>

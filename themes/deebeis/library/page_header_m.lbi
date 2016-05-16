@@ -1,0 +1,31 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<a name="top"></a>
+<header class="headV2">
+    <div class="top">
+        <a class="logo" href="/"><img src="images_m/logo.png" alt="德贝母婴" height="36" width="114"></a>
+        <div class="topInR fr">
+            <a href="/user.php" class="log{if !$user_info} noLog{/if}" id="logstatus"> <span></span><!--是否登录，登录时将noLog去掉--></a>
+            <a class="cart" href="/flow.php"><span><em id="bquantity">{$cart_info.number}</em></span></a>
+            <a class="searchBtn cur" href="javascript:void(0)" onclick="keywordfoot.focus(); return false;" class="search"> <span></span> </a>
+        </div>
+        <!--  
+    <a id="searchBtn" class="searchBtn cur" href="">
+        <span ></span>
+    </a>--> 
+    </div>
+    <div class="legRegOk none" id="qj"></div>
+    <div class="searchBar none clearfix"><!--搜索和分类button--> 
+        <a href="#" class="cateBtn">商品分类<i class="whiteArrow"></i></a>
+        <form method="get" action="/mw/search" name="searchForm" id="searchForm_id" onsubmit="return checkInput();">
+            <input name="keyword" id="keyword" maxlength="256" style="color:black" oninput="javascript:getSearchKeyWord();" onfocus="javascript:showSearchHistory();">
+            <input name="searchid" value="1" type="hidden">
+            <input name="serchtype" id="serchtype" type="hidden">
+            <button onclick="javascript:saveSearchHistory();">搜索</button>
+        </form>
+        <div id="suggest" class="suggest" style="display:'';">
+            <ul id="relatedkeywords">
+            </ul>
+        </div>
+        <!--end 搜索提示 --> 
+    </div>
+</header>

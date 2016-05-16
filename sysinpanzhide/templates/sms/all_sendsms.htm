@@ -1,0 +1,133 @@
+{include file="pageheader_debug.htm"}
+{insert_scripts files="../js/jquery.min.js"}
+{insert_scripts files="../js/ueditor/ueditor.config.js,../js/ueditor/ueditor.all.js,../js/ueditor/lang/zh-cn/zh-cn.js"}
+{insert_scripts files="../js/transport.js"}
+<div class="form-div">
+    <form class="searchForm msg-w">
+        短信模板：
+        <select id="selTemplate">
+            <option value="">请选择...</option>
+            {foreach from=$templates item=template key=key}
+                <option value="{$key}">{$template}</option>
+            {/foreach}
+            
+        </select>
+        
+        <span class="msg-add"><a href="sms.php?act=add">新增模板</a></span>
+        
+        <span class="msg-update"><a href="">修改模板</a></span>
+        
+        <span class="msg-del"><a href="" onclick="{if(confirm('您确定要删除吗？')){return true;}return false;}">删除模板</a></span>
+        
+    </form>
+    
+</div>
+<div id="tabbody-div">
+    <form method="post" action="sms.php" name="theForm" onsubmit="return validate()">
+        <table>
+            <tr>
+                <td class="label"><strong>{$lang.sms_template_t}：</strong></td>
+                <td><span id="sms_title"></span></td>
+            </tr>
+            <tr>
+                <td class="label"><strong>{$lang.sms_template_u}：</strong></td>
+                <td><input id="sms_user" type="text"/></td>
+            </tr>
+            <tr>
+                <td class="label"><strong>{$lang.sms_template_c}：</strong></td>
+                <td>
+                    <textarea class="editor-c"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    <!--<a class="send_sms" style="color:#F00;" title="" href="javascript:void(0);" onclick="paySMS({$order.order_id}, '{$order.tel}', this.title ); return false;">发送</a>-->
+                    <a class="send_sms" title="" href="javascript:void(0);" onclick="">发送短信</a>
+                    <input type="hidden" class="msg_id" value=""/>
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+    
+    <script type="text/javascript">
+        $(function(){
+//            模板列表改变时
+            $("#selTemplate").change(function(){
+                var template = $(this).val();
+                if(template != ''){
+                    $("#selTemplate option:first").attr("disabled","");
+                    $(".msg-update , .msg-del ,.send_sms").css("display","inline-block");
+                    $(".msg_id").val(template);
+                    $(".btn-revise , .del-template").css("display","inline-block");
+                    
+                    
+                    load_template(template);
+                }
+                
+            });
+            
+            $("#sms_user,.editor-c").blur(function(){
+                var mobile = $("#sms_user").val();
+                var content = $(".editor-c").val();
+                var msg_id = $(".msg_id").val();
+                $(".send_sms").attr("title",content);
+                $(".send_sms").attr("onclick","expressSMS('"+mobile+"', this.title ,"+msg_id+"); return false;");
+            });
+            
+            function load_template(template){
+                
+                $.ajax({
+                   type:"post",
+                   url:"sms.php?act=load_template&tpl="+template,
+                   dataType:"json",
+                   success:function(msg){
+                        $(".send_sms").attr("title",msg[3]);
+                        $(".send_sms").attr("onclick","expressSMS('"+msg[1]+"', this.title ,"+msg[0]+"); return false;");
+                        
+                        $("#sms_user").val(msg[1]);
+                        $("#sms_title").text(msg[2]);
+                        $(".editor-c").val(msg[3]);
+                        
+                        $(".msg-update a").attr('href','sms.php?act=edit&id='+msg[0]);
+                        $(".msg-del a").attr('href','sms.php?act=remove&id='+msg[0]);
+                   }
+                   
+                });
+            };
+            
+        });
+
+        function expressSMS(mobile, content ,template_id) {
+            
+//            alert("发送短信,手机："+mobile+",内容："+content);
+ 
+//            Ajax.call('/api/sms.php?act=common_msg&type=express&mobile=' + mobile + '&content=' + content, '', response_expressSMS , 'POST', 'JSON');
+            $.ajax({
+               type:"post",
+               url:'/api/sms.php?act=common_msg&type=express&mobile='+mobile+'&content='+content+'&template_id='+template_id,
+               dataType:"json",
+               success:function(result){
+                   if(result.result == 0){
+                       alert("发送成功");
+                   }else{
+                       alert("发送失败");
+                   }
+//                   response_expressSMS(result);
+               }
+            });
+        }
+//        function response_expressSMS(result) {
+//            if (result.result == "0") {
+//                alert("发送成功");
+//                
+//            }else{
+//                alert("发送失败");
+//            }
+//        }
+    </script>
+</div>
+{include file="pagefooter.htm"}

@@ -1,0 +1,59 @@
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<div class="main-div">
+    <form method="post" action="activity/51activity.php?act=set_top_users" >
+        <table width='700'>
+            <tbody>
+                {if $top_users}
+                <tr>
+                    <td class='label'>第1名：</td>
+                    <td>用户名：<input name='username[]' size='20' type='text' value='{$top_users.0}' /></td>
+                    <td>消费额：<input name='amount[]' size='20' type='text' value='{$top_amount.0}' /></td>
+                </tr>
+                <tr>
+                    <td class='label'>第2名：</td>
+                    <td>用户名：<input name='username[]' size='20' type='text' value='{$top_users.1}' /></td>
+                    <td>消费额：<input name='amount[]' size='20' type='text' value='{$top_amount.1}' /></td>
+                </tr>
+                <tr>
+                    <td class='label'>第3名：</td>
+                    <td>用户名：<input name='username[]' size='20' type='text' value='{$top_users.2}' /></td>
+                    <td>消费额：<input name='amount[]' size='20' type='text' value='{$top_amount.2}' /></td>
+                </tr>
+                <tr>
+                    <td class='label'>第4名：</td>
+                    <td>用户名：<input name='username[]' size='20' type='text' value='{$top_users.3}' /></td>
+                    <td>消费额：<input name='amount[]' size='20' type='text' value='{$top_amount.3}' /></td>
+                </tr>
+                {else}
+                <tr>
+                    <td class='label'>第1名：</td>
+                    <td>用户名：<input name='username[]' size='20' type='text' /></td>
+                    <td>消费额：<input name='amount[]' size='20' type='text' /></td>
+                </tr>
+                <tr>
+                    <td class='label'>第2名：</td>
+                    <td>用户名：<input name='username[]' size='20' type='text' /></td>
+                    <td>消费额：<input name='amount[]' size='20' type='text' /></td>
+                </tr>
+                <tr>
+                    <td class='label'>第3名：</td>
+                    <td>用户名：<input name='username[]' size='20' type='text' /></td>
+                    <td>消费额：<input name='amount[]' size='20' type='text' /></td>
+                </tr>
+                <tr>
+                    <td class='label'>第4名：</td>
+                    <td>用户名：<input name='username[]' size='20' type='text' /></td>
+                    <td>消费额：<input name='amount[]' size='20' type='text' /></td>
+                </tr>
+                {/if}
+                <tr>
+                    <td class='label'><a href="/activity.php?apage=51activity" target="_blank">打开活动页</a></td>
+                    <td><input type='submit' value='提交' /></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>        
+    </form>
+</div>
+{include file="pagefooter.htm"}

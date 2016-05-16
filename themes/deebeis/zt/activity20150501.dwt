@@ -1,0 +1,523 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/new_style.css" rel="stylesheet" type="text/css">
+<link href="{$theme_path}zt/activity20150501/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{$theme_path}zt/activity20150501/awardRotate.js"></script>
+<style type="text/css">
+    .footer .helper_top {top:-160px;}
+    .helper_ul {margin-top: 20px;}
+</style>
+<div class="dialog51 dialog-style1" id="xianjinquan">
+    <div class="dialog-container">
+        <div class="dialog-content">
+            <div class="close-dialog"></div>
+            <div class="align-center">
+                <p>恭喜您获得<span style="color:#DF1322;" id="bouns_amount"></span>元现金券</p>
+                <p>赶快选购商品吧~！</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <a href="#container_shopping" onclick="close_51dialog();">
+                <div class="button button3"></div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="dialog51 dialog-style2" id="choujiang">
+    <div class="dialog-container">
+        <div class="close-dialog"></div>
+        <div class="dialog-content">
+            <div class="align-center">
+                <p>恭喜您获得：<span id="draw_gift_name" style="color:#DF1322;"></span</p>
+                <p>礼品会和您选购的商品一同发出，</p>
+                <p>请稍后哟！</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="button button4" onclick="close_51dialog();"></div>
+        </div>
+    </div>
+</div>
+<div class="dialog51 dialog-style3" id="draw_click">    
+    <div class="dialog-container">
+        <div class="close-dialog"></div>
+        <div class="dialog-content">
+            <div class="align-center">
+                <p>赶快选购商品把我抽回家吧~！</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <a href="#container_shopping" onclick="close_51dialog();">
+                <div class="button button3"></div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="dialog51 dialog-style4" id="no_login">
+    <div class="dialog-container">
+        <div class="close-dialog"></div>
+        <div class="dialog-content">
+        </div>
+        <div class="buttons">
+            <div class="button button1" onclick="show_register();"></div>
+            <div class="button button-blank"></div>
+            <div class="button button2" onclick="show_login();"></div>
+        </div>
+    </div>
+</div>
+<div class="dialog51 dialog-style5" id="cart_success">
+    <div class="dialog-container">
+        <div class="close-dialog"></div>
+        <div class="dialog-content">
+        </div>
+        <div class="buttons">
+            <a href="#draw-edge">
+                <div class="button button5" onclick="close_51dialog();"></div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="poster"></div>
+    <div class="container-coupon-bg">
+        <div class="container-coupon wm01190">
+            <div class="container">
+                <img src="{$theme_path}zt/activity20150501/images/coupon-1.jpg" />
+                <div class="coupon">
+                    <ul class="clearfix">
+                        <li><a href="javascript:;" data-href="bonus.php?act=user_ajax_get&amp;type_id=41" onclick="get_bonus(this,10);">
+                                <img class="lazy" src="{$theme_path}zt/activity20150501/images/coupon-10.jpg" />
+                            </a>
+                        </li>
+                        <li><a href="javascript:;" data-href="bonus.php?act=user_ajax_get&amp;type_id=42" onclick="get_bonus(this,30);">
+                                <img class="lazy" src="{$theme_path}zt/activity20150501/images/coupon-30.jpg" />
+                            </a>
+                        </li>
+                        <li><a href="javascript:;" data-href="bonus.php?act=user_ajax_get&amp;type_id=43" onclick="get_bonus(this,50);">
+                                <img class="lazy" src="{$theme_path}zt/activity20150501/images/coupon-50.jpg" />
+                            </a>
+                        </li>
+                        <li><a href="javascript:;" data-href="bonus.php?act=user_ajax_get&amp;type_id=44" onclick="get_bonus(this,70);">
+                                <img class="lazy" src="{$theme_path}zt/activity20150501/images/coupon-70.jpg" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <img class="lazy" src="{$theme_path}zt/activity20150501/images/coupon-2.jpg" />
+            </div>
+        </div>
+    </div>
+    <div class="container-draw-bg">
+        <div class="container-draw wm01190">
+            <div class="draw-edge" id="draw-edge">
+                <div id="draw_rotate" class="draw-panel"></div>
+                <div id="draw_pointer" class="draw-pointer"></div>
+            </div>
+            <div class="draw-tips">
+                <div class="tips-item">
+                    <div class="title title1 clearfix"></div>
+                    <div class="content">
+                        <p>在德贝母婴商城(www.deebei.net)购物后，点击活动页面“开始抽奖”按钮参加活动。</p>
+                    </div>
+                </div>
+                <div class="tips-item">
+                    <div class="title title2 clearfix"></div>
+                    <div class="content">
+                        <p>1.活动时间：2015年4月27日 - 2015年5月7日。</p>
+                        <p>2.抽奖成功后，礼品将会与你所购买的商品一起发出。</p>
+                    </div>
+                </div>
+            </div>           
+        </div>
+    </div>
+    <div class="container-rankings-bg">
+        <div class="container-rankings wm01190">
+            <div class="container clearfix">
+                <div class="container-left">
+                    <div class="title"><h1>总消费金额最高的<span>前4名</span>会员,奖品加赠</h1></div>
+                    <div class="prize-wrap clearfix">
+                        <div class="prize">
+                            <img src="{$theme_path}zt/activity20150501/images/rankings-prize-1-1.jpg" />
+                            <img class="lazy" src="{$theme_path}zt/activity20150501/images/rankings-prize-1-2.jpg" />
+                            <h2>2999元夏普空气净化器一台</h2>
+                           <!-- <div class="more">
+                                <a target="_blank"  href=""><img src="{$theme_path}zt/activity20150501/images/rankings-prize-more.jpg" /></a>
+                            </div>
+                           -->
+                        </div>
+                        <div class="prize">
+                            <img src="{$theme_path}zt/activity20150501/images/rankings-prize-2-1.jpg" />
+                            <img class="lazy" src="{$theme_path}zt/activity20150501/images/rankings-prize-2-2.jpg" />
+                            <h2>1280元全自动智能配奶机一台</h2>
+                            <!--<div class="more">
+                                <a target="_blank"  href=""><img src="{$theme_path}zt/activity20150501/images/rankings-prize-more.jpg" /></a>
+                            </div>
+                            -->
+                        </div>
+                        <div class="prize">
+                            <img src="{$theme_path}zt/activity20150501/images/rankings-prize-3-1.jpg" />
+                            <img class="lazy" src="{$theme_path}zt/activity20150501/images/rankings-prize-3-2.jpg" />
+                            <h2>495元喔喔牛婴儿辅食机</h2>
+                            <!-- <div class="more">
+                                <a target="_blank"  href=""><img src="{$theme_path}zt/activity20150501/images/rankings-prize-more.jpg" /></a>
+                            </div>
+                            -->
+                        </div>
+                        <div class="prize">
+                            <img src="{$theme_path}zt/activity20150501/images/rankings-prize-4-1.jpg" />
+                            <img class="lazy" src="{$theme_path}zt/activity20150501/images/rankings-prize-4-2.jpg" />
+                            <h2>299元飞利浦新安仪温奶器</h2>
+                            <!--<div class="more">
+                                <a target="_blank"  href=""><img src="{$theme_path}zt/activity20150501/images/rankings-prize-more.jpg" /></a>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div>
+                <div class="container-right">
+                    <div class="title"><img src="{$theme_path}zt/activity20150501/images/rankings-right-t.jpg" /></div>
+                    <div class="rankings">
+                        <img src="{$theme_path}zt/activity20150501/images/rankings-th.jpg" />
+                        <table class="rankings-table">
+                            <?php $list_num = 0;?>
+                            <?php while($list_num < 10 ):?>
+                            <tr <?php if($list_num % 2 == 1):?>class="yellow" <?php endif;?>>
+                                <td class="rankings-1"><?php echo $list_num+1;?></td>
+                                <td class="rankings-2"><?php echo $this->_var['list'][$list_num]['user_name'];?></td>
+                                <td class="rankings-3"><?php echo $this->_var['list'][$list_num]['formated_total_amount'];?></td>
+                            </tr>  
+                            <?php $list_num++;?>
+                            <?php endwhile;?>
+                        </table>
+                    </div>
+                    <div class="rankings-introduce">
+                        <h1>赠送礼品规则说明</h1>
+                        <h2><span>1、</span>活动期间,消费金额最高的四名会员可获得对应名次的礼品，如果消费金额相同,则按下单时间先后发放奖品。</h2>
+                        <h2>活动时间：2015年4月27日-2015年5月7日</h2>
+                        <h2>（订单金额可叠加）</h2>
+                        <h2><span>*订单计算条件:已确定订单。</span></h2>
+                        <h2><span>2、</span>出现订单取消或者退换货导致不符合赠送条件的，奖品将发放给下一名次的用户。</h2>
+                        <h2><span>3、</span>活动最终解释权归德贝母婴商城所有。</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-milk-bg" id="container_shopping">
+        <div class="container-milk wm01190">
+            <div class="container clearfix">
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/category-131-b19.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/milk-1.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/category-131-b18.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/milk-2.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/category-131-b24.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/milk-3.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/category-131-b54.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/milk-4.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/category-131-b71.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/milk-5.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/category-131-b76.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/milk-6.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/category-131-b23.html   "><img class="lazy" src="{$theme_path}zt/activity20150501/images/milk-7.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/category-131-b77.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/milk-8.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/category-131-b216.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/milk-9.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/category-131-b50.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/milk-10.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/category-131-b55.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/milk-11.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/category-131-b45.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/milk-12.jpg" /></a>
+                </div>
+            </div>
+            <div class="more"><a target="_blank"  href="http://www.deebei.net/category.php?id=131"><img src="{$theme_path}zt/activity20150501/images/milk-more.jpg" /></a></div>
+        </div>
+    </div>
+    <div class="container-food-bg">
+        <div class="container-food wm01190">
+            <div class="container clearfix">
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-141.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/food-1.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-507.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/food-2.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-140.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/food-3.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-575.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/food-4.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-557.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/food-5.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-540.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/food-6.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-561.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/food-7.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-399.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/food-8.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-357.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/food-9.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-403.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/food-10.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-398.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/food-11.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-403.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/food-12.jpg" /></a>
+                </div>
+            </div>
+            <div class="more"><a target="_blank"  href="http://www.deebei.net/category.php?id=138"><img src="{$theme_path}zt/activity20150501/images/food-more.jpg" /></a></div>
+        </div>
+    </div>
+    <div class="container-alima-bg">
+        <div class="container-alima wm01190">
+            <div class="container clearfix">
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-146.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/alima-1.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-157.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/alima-2.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-158.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/alima-3.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-161.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/alima-4.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-160.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/alima-5.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-414.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/alima-6.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-223.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/alima-7.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-412.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/alima-8.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-413.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/alima-9.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-410.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/alima-10.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-145.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/alima-11.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-362.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/alima-12.jpg" /></a>
+                </div>
+            </div>
+            <div class="more"><a target="_blank"  href="http://www.deebei.net/category.php?id=266"><img src="{$theme_path}zt/activity20150501/images/alima-more.jpg" /></a></div>
+        </div>
+    </div>
+    <div class="container-commodity-bg ">
+        <div class="container-commodity wm01190">
+            <div class="container clearfix">
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-227.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/commodity-1.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-178.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/commodity-2.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-441.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/commodity-3.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-170.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/commodity-4.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-173.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/commodity-5.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-179.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/commodity-6.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-225.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/commodity-7.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-172.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/commodity-8.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-169.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/commodity-9.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-450.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/commodity-10.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-204.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/commodity-11.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-456.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/commodity-12.jpg" /></a>
+                </div>
+            </div>
+            <div class="more"><a target="_blank"  href="http://www.deebei.net/category.php?id=141"><img src="{$theme_path}zt/activity20150501/images/commodity-more.jpg" /></a></div>
+        </div>
+    </div>
+    <div class="container-tool-bg">
+        <div class="container-tool wm01190">
+            <div class="container clearfix">
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-466.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/tool-1.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-473.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/tool-2.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-467.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/tool-3.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-470.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/tool-4.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-461.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/tool-5.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-462.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/tool-6.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-588.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/tool-7.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-609.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/tool-8.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-175.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/tool-9.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-475.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/tool-10.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-477.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/tool-11.jpg" /></a>
+                </div>
+                <div class="goodbox">
+                    <a target="_blank"  href="http://www.deebei.net/goods-472.html"><img class="lazy" src="{$theme_path}zt/activity20150501/images/tool-12.jpg" /></a>
+                </div>
+            </div>
+            <div class="more"><a target="_blank"  href="http://www.deebei.net/category.php?id=268"><img src="{$theme_path}zt/activity20150501/images/tool-more.jpg" /></a></div>
+        </div>
+    </div>
+    
+    <div class="container-bottom">
+        <div class="container-quality">
+            <div class="title"></div>
+            <div class="container"></div>
+        </div>
+        <div class="container-recommend">
+            <div class="container-ul">
+                <ul class="clearfix">
+                    <li><a href="http://www.deebei.net/topic.php?topic_id=18" target="_blank"><img src="{$theme_path}zt/activity20150501/images/recommend-img-1.jpg" /></a></li>
+                    <li><a href="http://www.deebei.net/topic.php?topic_id=16" target="_blank"><img src="{$theme_path}zt/activity20150501/images/recommend-img-2.jpg" /></a></li>
+                    <li><a href="http://www.deebei.net/category.php?id=131&filter_id=339#filter_area" target="_blank"><img src="{$theme_path}zt/activity20150501/images/recommend-img-3.jpg" /></a></li>
+                    <li><a href="http://www.deebei.net/category.php?id=131&filter_id=340#filter_area" target="_blank"><img src="{$theme_path}zt/activity20150501/images/recommend-img-4.jpg" /></a></li>
+                    <li><a href="http://m.deebei.net/" target="_blank"><img src="{$theme_path}zt/activity20150501/images/recommend-img-5.jpg" /></a></li>
+                </ul>
+            </div>
+            <div class="return-index">
+                <a href="/">
+                    <img src="{$theme_path}zt/activity20150501/images/return-index.jpg" />
+                </a>
+            </div>
+        </div>
+    </div>  
+</div>
+<script type="text/javascript">
+    function rotateFn(angles,txt){
+        $('#draw_rotate').stopRotate();
+        $('#draw_rotate').rotate({
+                angle:0,
+                animateTo:angles+1800,
+                duration:5000,
+                callback:function (){
+                    $("#draw_gift_name").html(txt);
+                    open_dialog("choujiang",-150);
+                }
+        });
+    }
+    $(document).ready(function(){
+        $('#draw_pointer').click(function (){      
+            //检查是否有抽奖资格
+            var draw = false;
+            $.ajax({
+                type:"post",
+                dataType:"json",
+                url:"activity.php?apage=51activity&act=check_draw",
+                async:false,
+                success:function(data){
+                    if(data.err == '0'){
+                        var txt = data.gift_name;
+                        rotateFn(data.gift_angle, txt);
+                    } else if(data.err == '1'){
+                        open_dialog("no_login",-150);
+                    } else if(data.err == '3'){
+                        open_dialog("draw_click",-150);
+                    }
+                    
+                    else {
+                        alert(data.msg);
+                    }
+                }
+            });
+	});
+        $(".dialog51 .close-dialog").live("click",function(){
+            $(".dialog51").hide();
+            hideMask();
+        });
+        {if $show_deaw_tips}
+        open_dialog("cart_success",-150);
+        {/if}
+
+    });
+    //用户点击领取红包
+    function get_bonus(obj,bouns_amount){
+        var href= $(obj).attr("data-href");
+        $.post(href,function(data){
+            if(data.error == ''){
+                if(!isNaN(bouns_amount)){
+                    $("#bouns_amount").html(bouns_amount);
+                }
+                open_dialog("xianjinquan");
+            } else if(data == '-1'){
+                open_dialog("no_login",-150);
+            }
+            else {
+                alert(data.message);
+            }
+        },'json');
+    }
+    function show_register(){
+        $("#no_login").hide();
+        user_login_dialog('register');
+    }
+    function show_login(){
+        $("#no_login").hide();
+        user_login_dialog();
+    }
+    function close_51dialog(){
+        $(".dialog51").hide();
+        hideMask();
+    };
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>﻿

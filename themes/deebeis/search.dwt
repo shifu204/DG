@@ -1,0 +1,43 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem --> 
+<!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+<link rel="stylesheet" type="text/css" href="{$theme_path}/category/common_cat.css" />
+<script type="text/javascript" src="{$theme_path}js/category.js"></script>
+<input type="hidden" id="category" value="{$category}" name="category" />
+<div id="search_result" class="w1190 search_result"><font style="font-weight: bold;">搜索结果：</font>为您搜索到<font class="color8">{$pager.record_count}</font>个“{$keywords}”商品</div>
+<div class="category_content">
+    <div class="gboxWrap w1190" id="content_area">
+        <div class="goods_box">
+            <?php if(!empty($this->_var['goods'])):?>
+            <?php $counter == 0;?>
+            <?php foreach($this->_var['goods'] as $gk=>$gv):?>
+                <div class="category_good relative rounded <?php if($counter%4 == 0):?> first_goods <?php endif;?>">
+                   <a href="<?php echo $gv['url']?>" target="_blank">
+                       <div class="goodsImg">
+                           <img src="<?php echo $gv['goods_thumb']?>" />
+                       </div>
+                       <div class="goodsName"><?php echo $gv['goods_name']?></div>
+                       <div class="goodsPrice">                  
+                           <?php echo $gv['formated_final_price']?>
+                       </div>
+                       <?php if($gv['is_total_four']):?>
+                       <div class="goodsGive absolute total_four"></div>
+                       <?php endif;?>
+                       <?php if($gv['is_buy_six']):?>
+                       <div class="goodsGive absolute six_give_one"></div>
+                       <?php endif;?>                
+                       <?php if($gv['is_buy_nine']):?>
+                       <div class="goodsGive absolute nine_give_two"></div>
+                       <?php endif;?>
+                    </a>
+                </div>
+            <?php $counter++;?>
+            <?php endforeach;?>
+            <?php endif;?>
+        </div>
+        <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+    </div>  
+</div>
+<script type="text/javascript">
+    $(".category_good").ishover("hover");
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --></body></html>

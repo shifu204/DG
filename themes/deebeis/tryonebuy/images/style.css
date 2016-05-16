@@ -1,0 +1,25 @@
+/* CSS Document */
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+a {text-decoration:none}
+
+.ytsg_1 { height:286px; background-image: url(ytsg_1.jpg); background-repeat:no-repeat; background-position:center;}
+.ytsg_2 { height:191px; background-image: url(ytsg_2.jpg); background-repeat:no-repeat; background-position:center;}
+.ytsg_3 { height:381px; background-image: url(ytsg_3.jpg); background-repeat:no-repeat; background-position:center;}
+.ytsg_4 { height:286px; background-image: url(ytsg_4.jpg); background-repeat:no-repeat; background-position:center;}
+.ytsg_5 { height:286px; background-image: url(ytsg_5.jpg); background-repeat:no-repeat; background-position:center;}
+.ytsg_6 { height:286px; background-image: url(ytsg_6.jpg); background-repeat:no-repeat; background-position:center;}
+.ytsg_7 { height:286px; background-image: url(ytsg_7.jpg); background-repeat:no-repeat; background-position:center;}
+.ytsg_8 { height:286px; background-image: url(ytsg_8.jpg); background-repeat:no-repeat; background-position:center;}
+.ytsg_10 { height:398px; background-image: url(ytsg_10.jpg); background-repeat:no-repeat; background-position:center;}
+.ytsg_11 { height:263px; background-image: url(ytsg_11.jpg); background-repeat:no-repeat; background-position:center;}
+.ytsg_12 { height:316px; background-image: url(ytsg_12.jpg); background-repeat:no-repeat; background-position:center;}
+.w { width:1002px;margin:0 auto;}

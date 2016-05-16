@@ -1,0 +1,45 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/register/register.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{$theme_path}js/category.js"></script>
+<div class="register">
+    <div class="register1"></div>
+    <div class="register2">
+        <div class="wm01190">
+            <div class="coupon">
+                <a href="javascript:;" data-href="bonus.php?act=user_ajax_get&type_id=21" onclick="get_bonus(this);"><div class="c10"></div></a>
+                <a href="javascript:;" data-href="bonus.php?act=user_ajax_get&type_id=22" onclick="get_bonus(this);"><div class="c30"></div></a>
+                <a href="javascript:;" data-href="bonus.php?act=user_ajax_get&type_id=23" onclick="get_bonus(this);"><div class="c50"></div></a>
+                <a href="javascript:;" data-href="bonus.php?act=user_ajax_get&type_id=24" onclick="get_bonus(this);"><div class="c70"></div></a>
+            </div> 
+            <div class="coupon_time">4月1日-4月15日<br/>购物够1888送75CM超大号趴趴狗布公仔</div>
+        </div>
+    </div>
+    <div class="register3">
+        <div class="wm01190">
+            <div class="rule_title">活动规则</div>
+            <div class="rule">
+                1、4月1日-4月15日，无历史订单记录的新会员，注册即送160元红包，登陆我的德贝在&nbsp;“<span class="span_red">我的红包</span>”&nbsp;中查看；<br/>
+                2、使用红包：在结算页面，点击选择相应的红包即可抵扣现金；<br/>
+                3、一张订单<span class="span_red">只能使用一张</span>红包；<br/>
+                4、使用红包的订单如发生取消、拒收或退货，红包自动反还到账号上。<br/>
+                5、红包不能折现、不退换，过期作废，敬请谅解，活动最终解释权归德贝商城所有。<br/>
+            </div>
+            <div class="register_but clearfix">
+                <div class="register_btn">
+                   <a href="javascript:user_login_dialog('register');">
+                        <img src="{$theme_path}zt/register/images/register.png"/>
+                    </a> 
+                </div>
+                <div class="login_btn">
+                    <a href="javascript:user_login_dialog('login');">
+                        <img src="{$theme_path}zt/register/images/login.png"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

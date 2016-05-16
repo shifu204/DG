@@ -1,0 +1,20 @@
+
+.category_header {
+   /* height: 1536px; */
+    background: url(/themes/deebeis/images1/category_style5/head-bg.jpg) no-repeat center top;
+    height: 483px;
+}
+
+.category_content {
+    background: url(/themes/deebeis/images1/category_style5/content-bg.jpg) no-repeat center top;
+}
+.category_nav {
+    padding-top: 30px;
+}
+
+.category_nav .cate_nav_item .nav_left {
+    background: url(/themes/deebeis/images1/common.png) -50px -1055px no-repeat;
+}
+.category_nav .cate_nav_item .selected a label {
+    background: #FFD706;
+}

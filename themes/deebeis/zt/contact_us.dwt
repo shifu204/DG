@@ -1,0 +1,24 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/contact_us/contact_us.css" rel="stylesheet" type="text/css">
+<div class="contact_us">
+    <div class="contact_us_title"></div>
+    <div class="wm01190">
+        <div class="contact_us_c">
+            <ul class="contact_us_ul clearfix">
+                <li><img src="{$theme_path}zt/contact_us/images/contact_us_1.jpg"  /></li>
+                <li><img src="{$theme_path}zt/contact_us/images/contact_us_2.jpg"  /></li>
+                <li><img src="{$theme_path}zt/contact_us/images/contact_us_3.jpg"  /></li>
+                <li><img src="{$theme_path}zt/contact_us/images/contact_us_4.jpg"  /></li>
+
+            </ul>
+        </div>
+        <div class="contact_us_bottom">
+            <img src="{$theme_path}zt/contact_us/images/contact_us_bottom.png" />
+        </div>
+        
+
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

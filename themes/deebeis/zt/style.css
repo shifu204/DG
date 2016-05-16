@@ -1,0 +1,77 @@
+.min-1190{min-width: 1190px;}
+.rounded {-moz-border-radius:25px; -webkit-border-radius:25px; border-radius:25px; position:relative; behavior:url(/themes/deebeis/style/PIE.htc);}
+/* 通用样式 左侧分类导航栏 开始 */
+.catlist_menu{display:block; width:87px;height:457px;overflow:hidden;top:50%;z-index:500;zoom:1; position: fixed;}
+.catlist_body{overflow:hidden;}
+.side_close{ background:url('/themes/deebeis/images1/side_close.png') no-repeat; }
+.catlist_list{height:100%; background:#fff;position:relative;}
+.catlist_repeaty{background:url("/themes/deebeis/images1/cat_list_style.png") repeat-y; width:12px;}
+.catlist_style{ height:390px;position:absolute;top:49px;right:0;}
+.catlist_bottom{ height:19px;overflow:hidden;padding-left:14px;position:relative;}
+.catlist_side{height:13px;position:absolute; right:0;bottom:6px;}
+.catlist_bottom_bg{background:url("img/goods_list/cat_list_bg.png") repeat-x; height:100%; width:100%;}
+.catlist_title{overflow:hidden;height:31px;line-height:31px; color:#fff; font-size:16px; position:relative; font-weight:bold; text-align:center; background-position:0 -21px;}
+.just_show {height: 40px;padding-left: 9px;padding-right: 9px;width: 1182px; margin-bottom:15px;}
+.catlist_ul{float:left;margin-right:5px;overflow:hidden;}
+.catlist_ul li{text-align:right;padding:7px 0;width:75px;height:16px; cursor: pointer;}
+.catlist_ul .selected { background: #DF1322; color: #FFF;}
+.catlist_ul .selected .category_name_div { color:#FFF;}
+.category_name_div{width:63px;height:16px;float:left; overflow: hidden;}
+.catlist_arrow{color:#fff;}
+.category_name{display:block;width:52px;height:16px;float:right;overflow:hidden;color:#7b7b7b;}
+.cat_hover{cursor:pointer; color:#028cd7;}
+.catlist_menu_close{display:block;position:absolute;top:8px;right:9px;width:14px;height:13px;background-position:0 0;}
+.catlist_ctl{width:87px;height:18px;background:#FFF;cursor:pointer;background:url("/themes/deebeis/images1/menu_list.png");}
+.catlist_up{background-position:0 -64px;}
+.catlist_up_hover{background-position:0 -89px;}
+.catlist_down{height:25px;background-position:0 0;}
+.catlist_down_hover{background-position:0 -32px;}
+.catlist_scroll{width:87px;height:390px;overflow:hidden; background: #FFF;}
+/* 通用样式 左侧分类导航栏 结束 */
+
+/*联系我们*/
+.contact{}
+.contact_ul{ width: 1056px; margin-top: 50px;}
+.contact_ul ul li{float: left; width: 262px; border: solid 1px #d9d9d9;}
+
+/*特色服务*/
+.characteristic{}
+.characteristic .characteristic_ul{width: 1065px;}
+.characteristic .characteristic_ul ul{margin-top: 60px;}
+.characteristic .characteristic_ul ul li{float: left; margin: 0 5px;}
+.characteristic .characteristic_index{ margin-top: 80px; width: 200px; height: 55px;}
+
+.container-recommend{padding-bottom: 80px;}
+.container-recommend .container .container-ul{width: 1065px; padding-top: 95px;}
+.container-recommend .container .container-ul ul li{float:left; height: 164px; width: 203px; margin: 0 5px;}
+.container-recommend .container .return-index{margin-top: 50px; text-align: center;}
+
+/* 专题优惠套装 开始 */
+.goods-suit{ padding: 0 15px;}
+.goods-suit .w600{*width: 600px;}
+.goods-suit .goodbox{float: left; margin: 150px 15px 0px 15px; *width: 500px;}
+.goods-suit .goodbox .goods{position: relative; text-align: center;}
+.goods-suit .goods .give-tip{position: absolute; top: -80px; left: 0px;}
+.goods-suit .details .explain{color: #fff; font-weight: bold; font-size: 20px; margin-top: 15px;}
+.goods-suit .details .explain .left{padding: 2px 25px; background: #003788;}
+.goods-suit .details .explain .right{padding: 2px 15px; background: #ff8400; margin-left: -6px;}
+.goods-suit .goods .goods-name{font-size: 20px; font-weight: bold; color: #000; line-height: 48px; height: 48px;}
+.goods-suit .details .unit-price{font-size: 13px; color: #797979; margin-bottom: -6px; display: block;}
+.goods-suit .details .total{line-height: 40px;}
+.goods-suit .details .total .total-l{font-size: 16px; color: #3e3e3e; vertical-align:middle; display: inline-block;}
+.goods-suit .details .total .total-r{font-size: 30px; color: #f9625b; vertical-align:middle; display: inline-block; }
+.goods-suit .details .total .fw{font-weight: bold; letter-spacing: -2px;}
+.goods-suit .details .total img{ vertical-align:middle; padding-left: 5px;}
+
+
+/* 专题优惠套装 结束 */
+
+
+.goods-suit  .w600{width:600px;}
+
+/*圆角斜边*/
+.goods-suit .details .explain.rounded{-moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px; background: #343041;}
+.goods-suit .details .explain .left-rounded{margin-left: -6px; padding: 0px; line-height: 35px; width: 90px; display: inline-block;}
+.goods-suit .details .explain .right-rounded{margin-left: -1px; padding: 0px; line-height: 35px; width: 240px; display: inline-block; height: 0; border-bottom: 35px solid #d20d15; border-right: 11px solid transparent;}
+
+

@@ -1,0 +1,168 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/oversea_direct_buy/oversea_direct_buy.css" rel="stylesheet" type="text/css">
+<div class="oversea_direct_buy">
+	<div class="img">
+   	  <div class="poster"></div>
+      <div class="procedure_bg">
+      	<div class="procedure"></div>
+      </div>
+    </div>
+    <div class="wbg">
+        <div class="w">
+                <div class="explain">
+                    <div class="explain_title">
+                        <span class="explain_title_span">关于国际直邮说明</span>
+                    </div>
+                    <div class="explain_content">
+                        <div class="private_title">
+                            <div class="private_title_1">
+                                <div class="circle">
+                                    <div class="circle_1">
+                                        <span class="cirele_p">1</span>
+                                    </div>
+                                </div>
+                                <span class="private_span">国际私人直邮</span>
+                                <div class="ullicss">
+                                <ul>
+                                    <li>海外原装</li>
+                                    <li>正品保障</li>
+                                    <li>全球同步 品质共享</li>
+                                    <li>耗时略长（20-50天到货）</li>
+                                    <li>数量限制</li>
+                                </ul>
+                                </div>
+                            </div>
+                            <div c class="private_title_2">
+                            <span class="span_1">国际单独直邮针对单一用户，即用户订购后，德贝国外工作人员立即备货，打包后采用国际物流快递配送至国内。这种国际直邮方式经过海关需要交纳关税，并且有相关限制。</span>
+                            </div>
+                        </div>
+                        <div class="private_content">
+                            <p class="private_p1"><b>国际私人直邮说明</b></p>
+                            <p class="private_p2"><b>1.需要提供身份证资料</b><br>
+                            收件人本人身份证号码、联系方式（手机号码）、收货的详细地址。</p>
+        
+                            <p class="private_p2"><b>2、到货时间</b><br/>
+                            直邮订单下单后7个工作天内发货，直邮由于涉及海关清关问题，遇到海关清关不同时期检查力度不一样，清关也会出现快慢之分，一般建议选择直邮的顾客预计收货时间的20-50个工作天左右（时间不定 延长或提前），请留意快递信息。如有疑问，请联系在线客服咨询。温馨提示：如收货地点比较偏远的 快递公司会增加送货天数，请留意物流信息更新。为防止宝宝断粮，请务必提前下单。</p>
+                            
+                            <p class="private_p2"><b>3.海关检查</b><br/>
+                            海关对国际直邮奶粉等食品监管非常严格，例如出现奶粉入关后，被海关刺穿包装检查（此类情况就影响原包装的完好，分往地方客户运输途中会因此易受损坏）。因此就会有客户反映收到的奶粉有爆罐、漏粉等现象发生，这类情况无法控制与避免，客户如不能接受请慎重下单。</p>
+                            
+                            <p class="private_p2"><b>4.关税</b><br/>
+                            直邮有关税风险，如被抽到需缴纳关税（出现收取关税概率是30%），各省都有差别。我们都十分希望奶粉能顺利到达顾客手中，如不幸被抽到需要缴纳关税，所需费用需由顾客自定承担，对被抽到需要缴纳关税的顾客我们深感抱歉。需缴纳关税金额：15-25元/罐的关税，此价格按照海关征税税率折算，具体金额取决于当地海关估价标准，信息仅供参考。如产生关税，会有EMS工作人员与您联系确认，并代付关税，后上门送货时收取。</p>
+                            
+                            <p class="private_p2"><b>5.缴税方法</b><br/>
+                            大部分地区国内物流合作伙伴EMS都会将货物直接送到您手里；但直邮奶粉存在被收取关税的可能，如果客户选购的奶粉在海关检查被随机抽查到，需要支付税金，关税的支付方式分为快递员代收和到邮政局缴纳两种，具体的处理方式以当地规定为准，如需了解详细情况，请您在购买前咨询当地海关或邮局缴税方法和地点。一般情况下税金缴纳以后即可领取奶粉。（请在去邮局或海关前询问好所需要的身份证件，如身份证、户口本等）。除了被抽税的可能，还会出现个别包裹被扣押、没收、退回等情况，如因此类情况造成的损失都需由客户自行承担，请知悉。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="buy">
+                    <div class="buy_bg">
+                        <div class="buy_title"><h1><span class="jz">***奶粉国际直邮</span></h1></div>
+                    </div>
+                    <div class="buy_content">
+                        <!-- 国家框-->
+                        <div>
+                            <h2 class="country_div">国家：</h2>
+                            <ul class="country clearfix">
+                                <!--<li class="li1"><h2>国家：</h2></li>-->
+                                <li>
+                                    <div>
+                                        <div class="yg"><img src="{$theme_path}zt/oversea_direct_buy/images/yg.png"></div>
+                                        <div class="country_s"><span class="country_span">英国</span></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="mg"><img src="{$theme_path}zt/oversea_direct_buy/images/mg.png"></div>
+                                        <div class="country_s"><span class="country_span">美国</span></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="az"><img src="{$theme_path}zt/oversea_direct_buy/images/az.png"></div>
+                                        <div class="country_s"><span class="country_span">澳洲</span></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="dg"><img src="{$theme_path}zt/oversea_direct_buy/images/dg.png"></div>
+                                        <div class="country_s"><span class="country_span">德国</span></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="rd"><img src="{$theme_path}zt/oversea_direct_buy/images/rd.png"></div>
+                                        <div class="country_s"><span class="country_span">瑞典</span></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="hl"><img src="{$theme_path}zt/oversea_direct_buy/images/hl.png"></div>
+                                        <div class="country_s"><span class="country_span">荷兰</span></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="xxl"><img src="{$theme_path}zt/oversea_direct_buy/images/xxl.png"></div>
+                                        <div class="country_s"><span class="country_span">新西兰</span></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 品牌框-->
+                        <div>
+                            <ul class="ppl clearfix">
+                                <li><h2>品牌：</h2></li>
+                                <li>爱他美</li>
+                                <li>惠氏SMA</li>
+                                <li>牛栏</li>
+                            </ul>
+                        </div>
+                        <!-- 牛奶框-->
+                        <div class="milk_div clearfix">
+                            <div class="milk_price">
+                                <div class="milk"></div>
+                                <div class="price">德贝价：￥168.00</div>
+                            </div>
+                            <div class="milk_price">
+                                <div class="milk"></div>
+                                <div class="price">德贝价：￥168.00</div>
+                            </div>
+                            <div class="milk_price">
+                                <div class="milk"></div>
+                                <div class="price">德贝价：￥168.00</div>
+                            </div>
+                            <div class="milk_price">
+                                <div class="milk"></div>
+                                <div class="price">德贝价：￥168.00</div>
+                            </div>
+                            <div class="milk_price">
+                                <div class="milk"></div>
+                                <div class="price">德贝价：￥168.00</div>
+                            </div>
+                            <div class="milk_price">
+                                <div class="milk"></div>
+                                <div class="price">德贝价：￥168.00</div>
+                            </div>
+                        </div>
+                        <span class="zhu">注：（由于国际直邮重量限制，奶粉重量必须按照规定的重量选购。）</span>
+                        <div class="buy_botton clearfix">
+                            <div class="buy_botton2"  style="float:right;">
+                                <input type="button" class="button1"/>
+                            </div>
+                            <div class="buy_botton1" style="float:right;">
+                                （符合规定）<br/>
+                                （不符合规定）
+                             </div>
+                             
+                        </div>
+                    </div>
+                    
+                </div>
+        </div>
+    </div>
+    <div class="floorBlank clearfix"></div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+   </body>
+</html>

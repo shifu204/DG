@@ -1,0 +1,34 @@
+<!--{foreach name=goods_catid from=$floor.cat_list key=catkeys item=cats}-->
+<dd{if $catkeys==0}{else} style="display:none"{/if}>
+<div class="floorBanner">
+<?php echo get_adv('home_fl'.$this->_var['floor'][i].'_goods',$this->_var['catkeys']);?><!-- 200*385 -->
+</div>
+<ul>
+<?php $this->_var['goodsarr']=assign_cat_goods($this->_var['cats']['id'],7,'wap');?>
+<!--{foreach from=$goodsarr.goods key=goodskey name=xxxxx item=goods}-->
+<!--{if $goods.thumb&&$goodskey>0}-->
+<li>
+<p style="height:auto;"><a target="_blank" href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.name}</a></p>
+<em><span class="snPrice">{if $goods.promote_price}<del style="color:#ccc">{$goods.shop_price}</del> {$goods.promote_price}{else}{$goods.shop_price}{/if}</span></em>
+<div><a target="_blank" href="{$goods.url}" title="{$goods.name|escape:html}"><img width="120" height="120" alt="{$goods.name|escape:html}" src="{$goods.thumb}" class="err-product"></a></div>
+</li>
+<!--{if $smarty.foreach.xxxxx.iteration%4==0}--></ul><ul><!--{/if}-->
+<!--{/if}-->
+<!--{/foreach}-->
+</ul>
+<!--{foreach from=$goodsarr.goods key=goodskey item=goods}-->
+<!--{if $goods.thumb&&$goodskey==0}-->
+<div class="productSell">
+<b></b>
+<h3>{$goods.name|truncate:12:"..":false}</h3>
+<div class="proWarp">
+<a target="_blank" href="{$goods.url}" title="{$goods.name|escape:html}"><img width="145" height="145" src="{$goods.thumb}" alt="{$goods.name|escape:html}"></a>
+<p><a target="_blank" href="{$goods.url}">{$goods.name}</a></p>
+<em class="snPrice">{if $goods.promote_price}<del style="color:#ccc">{$goods.shop_price}</del> {$goods.promote_price}{else}{$goods.shop_price}{/if}</em>
+</div>
+<div class="proBtn"><a target="_blank" href="{$goods.url}">去抢购</a></div>
+</div>
+{/if}
+<!--{/foreach}-->
+</dd>
+<!--{/foreach}-->

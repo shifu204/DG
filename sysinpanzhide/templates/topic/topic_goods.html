@@ -1,0 +1,32 @@
+<table id="goodslist-table" style="display: none;">
+    <tr>
+        <th>商品编号</th>
+        <th>名称</th>
+        <th>商品专题名</th>
+        <th>价格</th>
+        <th>专题价格</th>
+        <th>排序</th>
+        <th>标签1</th>
+        <th>封面图路径</th>
+        <th>操作</th>
+    </tr>
+    {foreach from=$goods_list item=goods}
+    <tr>
+        <td align="center">{$goods.goods_id}</td>
+        <td align="center">{$goods.goods_name}</td>
+        <td align="center"><div onclick="listTable.edit(this, 'goods_topic_name', {goods_id:'{$goods.goods_id}', topic_id:'{$topic.topic_id}'})">{$goods.topic_goods_name}</div></td>
+        <td align="center">{$goods.shop_price}</td>
+        <td align="center"><span onclick="listTable.edit(this, 'goods_topic_price', {goods_id:'{$goods.goods_id}', topic_id:'{$topic.topic_id}'})">{$goods.price}</span></td>
+        <td align="center"><span onclick="listTable.edit(this, 'goods_sort_order', {goods_id:'{$goods.goods_id}', topic_id:'{$topic.topic_id}'})">{$goods.sort_order}</span></td>
+        <td align="center"><div onclick="listTable.edit(this, 'goods_tag1', {goods_id:'{$goods.goods_id}', topic_id:'{$topic.topic_id}'})">{$goods.tag1}</div></td>
+        <td align="center">
+            {if $goods.index_img}
+            <div onclick="listTable.edit(this, 'goods_index_img', {goods_id:'{$goods.goods_id}', topic_id:'{$topic.topic_id}'})"><img src="{$goods.index_img}" width="75"/></div>
+            {else}
+            <div style="width: 100px;" onclick="listTable.edit(this, 'goods_index_img', {goods_id:'{$goods.goods_id}', topic_id:'{$topic.topic_id}'})">增加</div>
+            {/if}
+        </td>
+        <td align="center"><a href="javascript:;" onclick="listTable.remove('{$goods.goods_id}|{$topic.topic_id}', '要删除该商品吗？','remove_topic_goods')">移除</a></td>
+    </tr>
+    {/foreach}
+</table>

@@ -1,0 +1,26 @@
+.con{margin: 0 auto; text-align: center; padding-bottom: 12%;}
+.rounded {-moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; position:relative; behavior:url(/themes/deebeis/style/PIE.htc);}
+
+.rp2_2{background: url(images/rp2_2.jpg); background-size: 100% 100%; width: 100%; height: 100%;}
+.coupon{width: 42%;}
+#cl{margin: 1% 0% 1% 5%;}
+#cr{margin: 1% 5% 1% 0%; float: right;}
+.rp3{background: url(images/rp3.jpg) top center no-repeat; background-size: 100% 100%; padding-top: 9%; padding-bottom: 6%;}
+.rp3_1{width: 95%; position:relative; margin-left:auto; margin-right:auto; padding-top: 0.5%;}
+.rp3_r{position: absolute; bottom:5%; right: 0.5%; width: 32%; height: 28%;}
+
+
+.rp4_bg_b{background: #c9eeff; height: 100%;}
+.gb_bg_b{background: #bcebff;}
+.rp4_bg_r{background: #fee8eb; height: 100%;}
+.gb_bg_r{background: #ffd4d8;}
+.rp4_bg_y{background: #fee8ac; height: 100%;}
+.gb_bg_y{background: #efd48c;}
+
+
+.goodbox{width: 48%; float: left; padding: 1.7%; margin: 1%; *padding:0%;}
+.rp4_img{position: relative;}
+.rp4_ico{position: absolute; top: 1%; left: 3%; width: 37%;}
+.rp4_but{margin-top: 2%;}
+
+.rp5_c{ background: #fee8ac;}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+<link rel="apple-touch-icon-precomposed" href="/icon_desktop.png">
+<link href="{$template_dir}/style_m/mobile.css" type="text/css" rel="stylesheet">
+{insert_scripts files='common.js,compare.js'}
+{insert_scripts files='jquery.min.js,jquery.json.min.js'}
+{insert_scripts files='transport_z.js,utils.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header_m.lbi" --><!-- #EndLibraryItem -->
+
+<!--品牌筛选 s-->
+	 <div class="brandFilter" style="display:none;">
+	    <div class="selectFilter">
+	        <select id="cateSelect" onchange="javascript:cateFilter();">
+	        	<option selected="selected" value="5984">奶粉</option>
+	        	     <option value="5984">1段奶粉</option>
+					 	<option value="5984">2段奶粉</option>
+					 	<option value="5984">3段奶粉</option>
+					 	<option value="5984">4段奶粉</option>
+					 	</select>
+	        <span class="greyRightArrowOut"><i class="greyRightArrow"></i></span>
+	    </div>
+	    <a href="javascript:commonStatistics('','buttonPosition','filter','/mw/filter/5984/0?filtertype=3&amp;filterfrom=1');" class="bgalink ml">筛选</a><a href="javascript:commonStatistics('','buttonPosition','brand','/mw/filter/5984/0?filtertype=1&amp;filterfrom=1');" class="bgalink">品牌</a>
+	</div>
+
+    <div class="artc_nav">
+        <nav>
+        <a href="category.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=<!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"{if $sort neq 'shop_price' && $sort neq 'last_update'} class="cur"{/if}>上架时间</a>
+        <a href="category.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->#goods_list" {if $sort eq 'shop_price'} class="cur"{/if}>价格</a>
+        <a href="category.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=last_update&order=<!-- {if $pager.sort == 'last_update' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list" {if $sort eq 'last_update'} class="cur"{/if}>更新时间</a>
+        </nav>
+    </div>
+    <!-- #BeginLibraryItem "/library/goods_list_m.lbi" --><!-- #EndLibraryItem -->
+    <!-- #BeginLibraryItem "/library/pages_m.lbi" --><!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem "/library/page_footer_m.lbi" --><!-- #EndLibraryItem -->
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write("<div style='display:none'>"+ unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff31531fca780ed5666345856c7edbf91' type='text/javascript'%3E%3C/script%3E")+"</div>");
+</script><div style="display:none"><script src="category_m_files/h.js" type="text/javascript"></script></div>
+<script type="text/javascript" src="category_m_files/zepto.js"></script>
+<script type="text/javascript" src="category_m_files/zepto_002.js"></script>
+<script type="text/javascript" src="category_m_files/v2_tracker_top.js"></script>
+<script type="text/javascript" src="category_m_files/tracker.js"></script>
+<script type="text/javascript" src="category_m_files/v2_tracker_hijack.js"></script>
+<script type="text/javascript" src="category_m_files/v2-mobile.js"></script>
+
+<!-- 如果是客户端写客户端的统计 -->
+<script type="text/javascript">
+
+//	搜索自动提示
+   sechSgst();
+   function check(){
+	 //保存搜索词
+	   saveSearchHistory();
+		var keyword=document.getElementById("keywordfoot").value;
+		keyword = keyword.replace(/\s/gi,"");
+		if(keyword==""){
+			//  alert("搜索关键字不能为空");
+			return false;
+		} 
+		url = "/mw/search?keyword="+keyword;
+		commonStatistics('',"linkPosition","bottomsearch",url);
+	  }
+ //埋点统计公共方法
+ function commonStatistics(formName,typekey,typevalue,locationUrl){
+	 var posetype="1";
+	if(typekey=='linkPosition') {
+		posetype ="1";
+	}else if(typekey=='buttonPosition'){
+		posetype ="2";
+	}else if(typekey=='pmId'){
+		posetype = "3";
+	}
+	addTrackPositionToCookie(posetype,typevalue);
+ 	if(locationUrl != null && locationUrl != ''){
+ 		window.location = locationUrl;
+ 	}else{
+ 		gotracker(posetype,typevalue,null);
+	}
+	
+ }	 
+ 
+ 
+//在与用户相关的链接后面加随机数 
+	var myDate = new Date();
+	var now=myDate.getTime();
+	//我的购物车
+   var obj=document.getElementById("mycart");
+   if(obj!=null){
+  	 var href="/mw/cart?et="+now+"&er="+getRandomString(10);
+  	 obj.setAttribute('href', href); 
+   }
+   //我的1号店
+   obj=document.getElementById("mystore");
+   if(obj!=null){
+  	 var href="/mw/mycenter?et="+now+"&er="+getRandomString(10);
+  	 obj.setAttribute('href', href); 
+   }
+   //面包屑我的1号店 
+   obj=document.getElementById("crumbsmystore");
+   if(obj!=null){
+  	 var href="/mw/mycenter?et="+now+"&er="+getRandomString(10);
+  	 obj.setAttribute('href', href); 
+   }
+   //切换省份
+   obj=document.getElementById("changeprovince");
+   if(obj!=null){
+  	 var href="/mw/provice?et="+now+"&er="+getRandomString(10);
+  	 obj.setAttribute('href', href); 
+   }	
+   //1号商城订单 
+   obj=document.getElementById("mallorder");
+   if(obj!=null){
+  	 var href=document.getElementById("mallorder").getAttribute("href")+"&et="+now+"&er="+getRandomString(10);
+  	 obj.setAttribute('href', href); 
+   }
+ 
+var wuserId = null;            
+userinfo();
+function userinfo(){
+	var myDate = new Date();
+	var now=myDate.getTime();
+	 $.ajax({   
+         type: "POST",   
+         url: "/mw/indexinfo?et="+now+"&er="+getRandomString(10),   
+         data: "",   
+         dataType : "", 
+         success: function(backdata) { 
+        	var data = backdata;
+        	var data = backdata.split("∑");
+        	 if(data[0]!=null&&data[0]!=''){
+        	 	$("#qj").append(data[0]);
+        	 	$("#qj").show();
+        	 }
+        	 $("#bquantity").append(data[1]);
+        	 $("#cprovincename").append(data[2]);
+             if(data[0] !=""){
+                $("#searchBtn").click();
+             }
+        	 //data[4]:token    data[5]:sharetokenflag
+        	 if(data[4]== null || data[4]== "null"  ){
+	        	 data[4] =""; 
+	         }
+	         if(data[5]== null || data[5]== "null"  ){
+	        	 data[5] =""; 
+	         }
+	         if(data[4] !="" &&$('#logstatus').hasClass('noLog')){  //区分用户登录状态，登录后在我的1号店图标上加勾  
+	         	$('#logstatus').removeClass('noLog');
+	         }
+         }   
+     });   
+}
+
+function getCookie(name)
+{
+	var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+	if(arr=document.cookie.match(reg)){
+		return (arr[2]);
+	}
+	else{
+		return "";
+	}
+}
+	
+function success_jsonpCallback(param){
+	//alert(param);
+}
+
+	
+//清除yhdcomefromwebsite这个cookie
+function backwap(url)
+{
+	debugger;
+	delCookie("yhdcomefromwebsite");
+	window.location.href =url+"?websiteflag=true";  
+}
+
+function delCookie(name){//为了删除指定名称的cookie，可以将其过期时间设定为一个过去的时间
+	var date = new Date();
+	date.setTime(date.getTime() - 10000);
+	document.cookie = name + "=a; expires=" + date.toGMTString();
+}
+
+//保存用户搜索历史记录 
+function saveSearchHistory(){
+	var keyword=document.getElementById("keywordfoot").value.toString();
+  //将用户的搜索关键词保存到local storage中 ，不支持则保存到cookie中 ,最多保留20个  ,去重,且过滤掉空字符串 
+  var shistory="";
+  var arrhistory="";
+  if(window.localStorage){
+  	if(window.localStorage.getItem("historykeyword")!=null){
+  		shistory = window.localStorage.getItem("historykeyword");
+  		arrhistory = window.localStorage.getItem("historykeyword").split("|");
+  	}
+  }else{
+  	if(getCookie("historykeyword")!=null){
+  		shistory = getCookie("historykeyword");
+  		arrhistory = getCookie("historykeyword").split("|");
+  	}
+  }
+  
+  var isdiff = 0;
+  if(arrhistory!=""&&arrhistory.length>0){
+  	$.each(arrhistory,function(index,item){
+  		if(keyword==item){
+  			isdiff = 1;
+  		}
+  	});
+  }
+  
+  keyword=keyword.replace(/(^\s*)|(\s*$)/g, "");  
+  if(keyword==""){ //搜索历史过滤空字符串 
+  	isdiff = 1;
+  }
+  
+  if(isdiff==0){
+	    if(arrhistory!=""&&arrhistory.length==20){
+	    		arrhistory.splice(0,1);
+	    		shistory = arrhistory.join("|");
+	    		shistory+="|"+keyword;
+  	}else{
+  		if(arrhistory.length<1){
+  			shistory+=keyword;
+  		}else{
+  			shistory+="|"+keyword;
+  		}
+  	}
+  	
+  	if(window.localStorage){
+  		window.localStorage.setItem("historykeyword",shistory);
+  	}else{
+  		setCookie("historykeyword",shistory);
+  	}
+	}
+	
+}
+
+
+</script>
+<script type="text/javascript" src="category_m_files/cart.js"></script>
+<script type="text/javascript">
+buy_car('.cartBtn');//点击购物车按钮
+
+
+//分类筛选功能
+function cateFilter(){
+	var catename=document.getElementById("cateSelect").options[document.getElementById("cateSelect").selectedIndex].text;
+	commonStatistics('','linkPosition','switch_category','/mw/filterpro/5984?categoryname='+catename+'&filtertype=2&filterfrom=1');
+}
+
+var cate='奶粉';
+if(cate=='null'||cate==''){
+	cate = $("option")[0].text;
+	var title=document.getElementsByTagName("title")[0].innerHTML;
+	document.getElementsByTagName("title")[0].innerHTML=title.replace('null',cate);
+}
+
+</script>
+</body></html>

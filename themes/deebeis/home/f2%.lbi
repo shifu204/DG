@@ -1,0 +1,19 @@
+<!--{foreach name=goods_catid from=$floor.cat_list key=catkeys item=cats}-->
+<dd{if $catkeys==0}{else} style="display:none"{/if}>
+<div class="floorBanner">
+<?php echo get_adv('home_fl2_goods',$this->_var['catkeys']);?><!-- 400*385 -->
+</div>
+<ul>
+<?php $this->_var['goodsarr']=assign_cat_goods($this->_var['cats']['id'],6,'wap');?>
+<!--{foreach from=$goodsarr.goods item=goods}-->
+{if $goods.thumb}
+<li>
+<a target="_blank" href="{$goods.url}"><img width="120" height="120" alt="{$goods.name}" src="{$goods.thumb}" class="err-product"></a>
+<p><a target="_blank" href="{$goods.url}">{$goods.name}</a></p>
+<em class="snPrice">{if $goods.promote_price}<del style="color:#ccc">{$goods.shop_price}</del> {$goods.promote_price}{else}{$goods.shop_price}{/if}</em>
+</li>
+{/if}
+<!--{/foreach}-->
+</ul>
+</dd>
+<!--{/foreach}-->

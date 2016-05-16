@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<meta name="Description" content="{$description}">
+<meta name="Keywords" content="{$keywords}">
+<title>{$page_title}</title>
+<link rel="stylesheet" type="text/css" href="/themes/deebeis/style/mobile_s.css">
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+{insert_scripts files='jquery.min.js,jquery.json.min.js'}
+{insert_scripts files='transport_z.js,utils.js'}
+<!-- #BeginLibraryItem "/library/google_analytics.lbi" --><!-- #EndLibraryItem -->
+</head>
+<body> 
+<!-- #BeginLibraryItem "/library/page_header_s.lbi" --><!-- #EndLibraryItem -->
+<div class="breadcrumb padding65">
+    <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+</div>
+<!-- {if $current_tab eq 1} -->
+<div class="item_operate_content padding65 b_bottom">
+    {$goods.goods_desc}
+</div>
+<!-- {else} -->
+<div class="content">
+	<h2 class="item_name">{$goods.goods_style_name}</h2>
+      <img src="{$goods.goods_img}">
+      <!--<p class="more_pic"><a href="/picture/9514_1_1_1_1">更多图片</a></p>-->
+    <div class="fgx"></div>
+</div>
+ <form action="javascript:addToCart({$goods.goods_id})" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
+    <div class="more">
+        <p>德贝价：<span id="ECS_SHOPPRICE" class="item_price font_red">{$goods.shop_price_formated}</span></p>
+        <p>数&nbsp;&nbsp;量：
+            <input class="inputa" name="number" type="text" id="number" value="1" size="4" onblur="changePrice()" style="border:1px solid #ccc;height:22px;line-height:22px;"/>
+            <a class="buy_btn" href="javascript:addToCart({$goods.goods_id})"> 购  买 </a>
+        </p>
+    </div>
+</form>
+<div class="item_operate font_gray bg_border padding65">
+	<a href="/goods.php?only_desc=1&id={$goods_id}">商品详情</a>
+</div>
+
+<div class="addfav_share b_bottom">
+	<form action="/addfavorite">
+		<input value="9514" name="productId" type="hidden">
+		<input value="加入收藏" class="addfav" type="submit">
+		</form>
+</div>
+<!-- {/if} -->
+<!-- #BeginLibraryItem "/library/page_footer_s.lbi" --><!-- #EndLibraryItem -->
+
+<script type="text/javascript">
+var goods_id = {$goods_id};
+var goodsattr_style = {$cfg.goodsattr_style|default:1};
+var gmt_end_time = {$promote_end_time|default:0};
+{foreach from=$lang.goods_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var goodsId = {$goods_id};
+var now_time = {$now_time};
+
+<!-- {literal} -->
+onload = function(){
+  changePrice();
+  fixpng();
+  try { onload_leftTime(); }
+  catch (e) {}
+}
+
+/**
+ * 点选可选属性或改变数量时修改商品价格的函数
+ */
+function changePrice()
+{
+  var attr = getSelectedAttributes(document.forms['ECS_FORMBUY']);
+  var qty = document.forms['ECS_FORMBUY'].elements['number'].value;
+
+  Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
+}
+
+/**
+ * 接收返回的信息
+ */
+function changePriceResponse(res)
+{
+  if (res.err_msg.length > 0)
+  {
+    alert(res.err_msg);
+  }
+  else
+  {
+    document.forms['ECS_FORMBUY'].elements['number'].value = res.qty;
+
+    if (document.getElementById('ECS_GOODS_AMOUNT'))
+      document.getElementById('ECS_GOODS_AMOUNT').innerHTML = res.result;
+  }
+}
+<!-- {/literal} -->
+</script>
+</body></html>
+

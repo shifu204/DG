@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+<link rel="apple-touch-icon-precomposed" href="/icon_desktop.png">
+<link href="{$template_dir}/style_m/mobile.css" type="text/css" rel="stylesheet">
+{insert_scripts files='common.js,compare.js'}
+{insert_scripts files='jquery.min.js,jquery.json.min.js'}
+{insert_scripts files='transport_z.js,utils.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header_m.lbi" --><!-- #EndLibraryItem -->
+<!--{if $is_history}-->
+<!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
+<!--{else}-->
+<!--{if !$cat_id}-->
+<div class="modCategory">
+    <div class="whiteBodrBox">
+        <!--{foreach from=$categories item=cat}-->
+        <a href="catlist.php?id={$cat.id}" class="cur">
+            <div class="tenth borderBotm relative">
+                <u></u>
+                <p>{$cat.name|escape:html}</p>
+                <p class="grey mt5">
+                <!--{foreach from=$cat.cat_id name=subcat item=child}-->
+                {$child.name|escape:html}{if !$smarty.foreach.subcat.last}&nbsp;/&nbsp;{/if}
+                <!--{/foreach}--> 
+                </p>
+                <i class="greyRightArrow"></i>
+            </div>
+        </a>
+        <!--{/foreach}--> 
+    </div>
+</div>
+<!--{else}-->
+<div class="modSubnav modHelp">
+    <!--{foreach from=$categories item=cat}-->
+    <div class="borderBotm">
+        <a href="javascript:void(0);"><p>{$cat.name|escape:html}<i class="greyRightArrow"></i></p></a>
+        <div style="display: none;" class="subCon">
+            <a href="{$cat.url}" id="listpro">所有商品</a>
+            <!--{foreach from=$cat.cat_id name=subcat item=child}-->
+            <a href="{$child.url}" id="listpro">{$child.name|escape:html}</a>
+            <!--{/foreach}-->
+        </div>
+    </div>
+    <!--{/foreach}--> 
+</div>
+<script type="text/javascript" src="js_m/zepto_002.js"></script>
+<script type="text/javascript" src="js_m/v2-mobile.js"></script>
+<script type="text/javascript">
+	 helpOpen("modSubnav");
+</script>
+<!--{/if}-->
+<!--{/if}-->
+<!-- #BeginLibraryItem "/library/page_footer_m.lbi" --><!-- #EndLibraryItem -->
+</body></html>

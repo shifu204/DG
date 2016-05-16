@@ -1,0 +1,403 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link type="text/css" rel="stylesheet" href="{$theme_path}zt/activity_20150601/style.css">
+<script type="text/javascript" src="{$theme_path}zt/activity_20150601/hover.js"></script>
+<script type="text/javascript" src="{$theme_path}js/category.js"></script>
+<div class="wrapper">
+    <div class="poster"></div>
+    <div class="coupon-wrapper">
+        <div class="wm01190">
+            <a href="javascript:;" data-href="bonus.php?act=user_ajax_get&amp;type_id=34" onclick="get_bonus(this);">
+                <img src="{$theme_path}zt/activity_20150601/images/coupon-10.png" class="coupon-img"/>
+            </a>
+            <a href="javascript:;" data-href="bonus.php?act=user_ajax_get&amp;type_id=35" onclick="get_bonus(this);">
+                <img src="{$theme_path}zt/activity_20150601/images/coupon-30.png" class="coupon-img"/>
+            </a>
+            <a href="javascript:;" data-href="bonus.php?act=user_ajax_get&amp;type_id=36" onclick="get_bonus(this);">
+                <img src="{$theme_path}zt/activity_20150601/images/coupon-50.png" class="coupon-img"/>
+            </a>
+            <a href="javascript:;" data-href="bonus.php?act=user_ajax_get&amp;type_id=37" onclick="get_bonus(this);">
+                <img src="{$theme_path}zt/activity_20150601/images/coupon-70.png" class="coupon-img"/>
+            </a>
+        </div>
+    </div>
+    <div class="gift-wrapper">
+        <div class="gift wm01190">
+            <img src="{$theme_path}zt/activity_20150601/images/gift.jpg"/>
+        </div>
+    </div>
+    <div class="f1-wrapper">
+        <div class="f1 wm01190">
+            <div class="gboxWrap">
+                <div class="goods-box clearfix">
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=19#filter_area" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f1-1.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=18#filter_area" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f1-2.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=24#filter_area" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f1-3.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=50#filter_area" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f1-4.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=71#filter_area" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f1-5.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=45#filter_area" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f1-6.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=55#filter_area" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f1-7.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=77#filter_area" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f1-8.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=216#filter_area" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f1-9.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=57#filter_area" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f1-10.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=23#filter_area" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f1-11.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/category.php?id=131&brand=76#filter_area" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f1-12.jpg"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="more">
+                    <a href="http://www.deebei.net/category.php?id=131" target="_blank"><img src="{$theme_path}zt/activity_20150601/images/more.png"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="f2-wrapper">
+        <div class="f2 wm01190">
+            <div class="gboxWrap">
+                <div class="goods-box clearfix">
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-141.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f2-1.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-507.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f2-2.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-140.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f2-3.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-575.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f2-4.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-557.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f2-5.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-540.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f2-6.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-561.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f2-7.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-399.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f2-8.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-357.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f2-9.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-403.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f2-10.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-398.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f2-11.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-407.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f2-12.jpg"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="more">
+                    <a href="http://www.deebei.net/category.php?id=138" target="_blank"><img src="{$theme_path}zt/activity_20150601/images/more.png"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="f3-wrapper">
+        <div class="f3 wm01190">
+            <div class="gboxWrap">
+                <div class="goods-box clearfix">
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-223.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f3-1.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-158.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f3-2.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-145.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f3-3.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-157.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f3-4.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-410.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f3-5.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-413.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f3-6.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-414.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f3-7.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-161.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f3-8.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-362.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f3-9.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-160.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f3-10.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-412.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f3-11.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-411.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f3-12.jpg"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="more">
+                    <a href="http://www.deebei.net/category.php?id=266" target="_blank"><img src="{$theme_path}zt/activity_20150601/images/more.png"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="f4-wrapper">
+        <div class="f4 wm01190">
+            <div class="gboxWrap">
+                <div class="goods-box clearfix">
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-227.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f4-1.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-178.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f4-2.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-441.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f4-3.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-170.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f4-4.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-173.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f4-5.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-179.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f4-6.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-225.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f4-7.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-172.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f4-8.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-169.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f4-9.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-450.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f4-10.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-204.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f4-11.jpg"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-456.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f4-12.jpg"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="more">
+                    <a href="http://www.deebei.net/category.php?id=141" target="_blank"><img src="{$theme_path}zt/activity_20150601/images/more.png"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="f5-wrapper">
+        <div class="f5 wm01190">
+            <div class="gboxWrap">
+                <div class="goods-box clearfix">
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-466.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f5-1.jpg" width="237"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-473.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f5-2.jpg" width="237"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-467.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f5-3.jpg" width="237"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-470.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f5-4.jpg" width="237"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-461.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f5-5.jpg" width="237"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-465.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f5-6.jpg" width="237"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-588.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f5-7.jpg" width="237"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-609.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f5-8.jpg" width="237"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-175.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f5-9.jpg" width="237"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-475.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f5-10.jpg" width="237"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-477.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f5-11.jpg" width="237"/>
+                        </a>
+                    </div>
+                    <div class="goodbox f_l">
+                        <a href="http://www.deebei.net/goods-472.html" target="_blank">
+                            <img src="{$theme_path}zt/activity_20150601/images/f5-12.jpg" width="237"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="more">
+                    <a href="http://www.deebei.net/category.php?id=268" target="_blank"><img src="{$theme_path}zt/activity_20150601/images/more.png"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="safety"></div>
+    <div class="trait "></div>
+    <div class="service">
+        <div class="wm01190">
+            <img src="{$theme_path}zt/activity_20150601/images/service-top.jpg"/>
+            <div class="service-ul">
+                <ul class="clearfix">
+                    <li><a href="http://www.deebei.net/topic.php?topic_id=18"><img src="{$theme_path}zt/activity_20150601/images/service-li-1.jpg"/></a></li>
+                    <li><a href="http://www.deebei.net/topic.php?topic_id=16"><img src="{$theme_path}zt/activity_20150601/images/service-li-2.jpg"/></a></li>
+                    <li><a href="http://www.deebei.net/category.php?id=131&amp;filter_id=244#filter_area"><img src="{$theme_path}zt/activity_20150601/images/service-li-3.jpg"/></a></li>
+                    <li><a href="http://www.deebei.net/category.php?id=131&amp;filter_id=244#filter_area"><img src="{$theme_path}zt/activity_20150601/images/service-li-4.jpg"/></a></li>
+                    <li><a href="http://m.deebei.net/"><img src="{$theme_path}zt/activity_20150601/images/service-li-5.jpg"/></a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

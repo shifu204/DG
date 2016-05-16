@@ -1,0 +1,89 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--底部导航 start-->
+<div id="bottomNav2" class="box block">
+  <div class="bNavList clearfix">
+   <!-- {if $navigator_list.bottom} -->
+   <!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
+        <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+         <!-- {if !$smarty.foreach.nav_bottom_list.last} -->
+           |
+        <!-- {/if} -->
+      <!-- {/foreach} -->
+  <!-- {/if} -->
+  </div>
+</div>
+<!--底部导航 end-->
+<!--版权 start-->
+<div id="footer" class="block950">
+ <div class="text">
+ {if $stats_code}{$stats_code}{/if}
+<span style="display:none">{$copyright}</span> {$shop_address} {$shop_postcode}
+ <!-- 客服电话{if $service_phone} -->
+      服务热线:{$service_phone}
+ <!-- 结束客服电话{/if} -->
+ <!-- 邮件{if $service_email} -->
+      E-mail:{$service_email}<br />
+ <!-- 结束邮件{/if} -->
+ <!-- QQ 号码 {foreach from=$qq item=im} -->
+      <!-- {if $im} -->
+      <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin={$im}&amp;Site={$shop_name}&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:{$im}:4" height="16" border="0" alt="QQ" /> {$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束QQ号码 -->
+      <!-- 淘宝旺旺 {foreach from=$ww item=im} -->
+      <!-- {if $im} -->
+      <a href="http://amos1.taobao.com/msg.ww?v=2&uid={$im|escape:u8_url}&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid={$im|escape:u8_url}&s=2" width="16" height="16" border="0" alt="淘宝旺旺" />{$im}</a>
+      <!-- {/if} -->
+      <!--{/foreach} 结束淘宝旺旺 -->
+      <!-- MSN Messenger {foreach from=$msn item=im} -->
+      <!-- {if $im} -->
+      <img src="../images/msn.gif" width="18" height="17" border="0" alt="MSN" /> <a href="msnim:chat?contact={$im}">{$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束MSN Messenger -->
+      <!-- Skype {foreach from=$skype item=im} -->
+      <!-- {if $im} -->
+      <img src="http://mystatus.skype.com/smallclassic/{$im|escape:url}" alt="Skype" /><a href="skype:{$im|escape:url}?call">{$im}</a>
+      <!-- {/if} -->
+  <!-- {/foreach} --><br />
+  <!-- ICP 证书{if $icp_number} -->
+  <div style="line-height:34px;">
+  {$lang.icp_number}:<a href="http://www.miitbeian.gov.cn/" target="_blank" style="line-height:34px;">{$icp_number}</a> &nbsp;&nbsp;
+  <!--<img src="../images/tel.png" style="vertical-align:middle;" /> -->
+  <span>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F60879ddbf3bb8cc6e6cd67c9f4f7ae25' type='text/javascript'%3E%3C/script%3E"));
+</script>  
+<script src="http://s19.cnzz.com/stat.php?id=5454931&web_id=5454931&show=pic" language="JavaScript"></script></span>&nbsp;
+
+  </div>
+  <!-- 结束ICP 证书{/if} -->
+  <span style="display:none">{insert name='query_info'}<br /></span>
+    
+    <div align="left"></div>
+    
+	<div class="subFooterx" style="padding-top:18px;">
+        <span title="支付宝特约商家"><img src="../images/ShoppingArea/Common/morelogo1.png" alt="支付宝特约商家" /></span>&nbsp;&nbsp;
+        <span title="银联特约商家"><img src="../images/ShoppingArea/Common/morelogo2.png" alt="银联特约商家" /></span>&nbsp;&nbsp;
+        <span title="妈妈最喜爱母婴商城"><img src="../images/ShoppingArea/Common/morelogo3.png" alt="妈妈最喜爱母婴商城" /></span>&nbsp;&nbsp;
+        <!--可信网站图片LOGO安装开始-->
+        <script src="http://kxlogo.knet.cn/seallogo.dll?sn=e1311134406004339876ee000000&size=4"></script>
+        <!--可信网站图片LOGO安装结束-->
+        <!--<span title="诚信网站"><img src="../images/ShoppingArea/Common/morelogo4.png" alt="诚信网站" /></span>-->&nbsp;&nbsp;
+        <span title="香港贸易进口"><img src="../images/ShoppingArea/Common/morelogo5.png" alt="香港贸易进口" /></span>&nbsp;&nbsp;&nbsp;
+		<span><a href="http://webscan.360.cn/index/checkwebsite/url/www.deebei.net"><img border="0" height="35" src="http://img.webscan.360.cn/status/pai/hash/59d99388c81b2bbedaa84c32074d6580"/></a></span>
+	</div>
+	<div class="blank"></div> 
+ </div>
+</div>
+<div style="text-align:center; height:30px;">&nbsp;</div>
+<script type="text/javascript">
+    var _tsa = _tsa || [];
+    _tsa.id = 7310;
+    _tsa.protocol = document.location.protocol == "https:" ? "https://" : "http://";
+    (function() {
+        var obj = document.createElement('script');
+        obj.src = _tsa.protocol + 's.topsem.com/safe.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(obj, s);
+    })();
+</script>

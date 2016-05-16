@@ -1,0 +1,37 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}category/common.css" rel="stylesheet" type="text/css">
+<link href="{$theme_path}category/{$category_style}/{$category_style}.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{$theme_path}js/category.js"></script>
+<input type="hidden" id="category" value="{$category}" name="category" />
+<div class="milk">
+    <div class="poster"></div>
+    <div class="milk1">
+        <div class="milk_c wm01190">
+            <div class="m1">
+                <div class="m1_c">
+                    <div class="category_nav">
+                        <div id="filter_area">
+                        <!-- #BeginLibraryItem "/library/goods/category_goods_filter.lbi" --><!-- #EndLibraryItem -->
+                        </div>
+                        <div class="nav_more">更多品牌</div>
+                    </div>
+                </div>
+                <div class="m1_img"></div>
+            </div>
+        </div>
+    </div>
+    <div class="milk2">
+        <div class="m2 wm01190">
+            <!-- #BeginLibraryItem "/library/goods/category_goods_list.lbi" --><!-- #EndLibraryItem -->
+        </div>
+    </div>
+{if $left_filter}
+    <!-- #BeginLibraryItem "/category/library/left_nav_powder.lbi" --><!-- #EndLibraryItem -->
+{/if}
+</div>
+<script type="text/javascript">
+    $.categoryNav("cate_nav_item");
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

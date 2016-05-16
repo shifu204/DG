@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<meta name="Description" content="{$description}">
+<meta name="Keywords" content="{$keywords}">
+<title>{$page_title}</title>
+<link rel="stylesheet" type="text/css" href="/themes/deebeis/style/mobile_s.css">
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,compare.js'}
+{insert_scripts files='jquery.min.js,jquery.json.min.js'}
+{insert_scripts files='transport_z.js,utils.js'}
+<!-- #BeginLibraryItem "/library/google_analytics.lbi" --><!-- #EndLibraryItem -->
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header_s.lbi" --><!-- #EndLibraryItem -->
+<div class="breadcrumb padding65">
+    <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+</div>
+<!-- #BeginLibraryItem "/library/goods_list_s.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/pages_s.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer_s.lbi" --><!-- #EndLibraryItem -->
+</body></html>

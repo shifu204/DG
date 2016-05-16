@@ -1,0 +1,13 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $pictures}-->
+<div id="proDetailScroll" class="proDetailScroll">
+    <div class="in">
+        <ul class="clearfix">
+            <!-- {foreach from=$pictures item=picture}-->
+            <?php $this->_var['picture']['goods_img']=str_replace('goods_img','source_img',$this->_var['picture']['img_url']);?>
+            <li><img src="{if $picture.thumb_url}{$picture.thumb_url}{else}{$picture.img_url}{/if}" alt="" height="154" width="154"></li>
+            <!--{/foreach}-->
+        </ul>
+    </div>
+<span class="mYhdSrollArrow mYhdSrollArrowL"></span><span class="mYhdSrollArrow mYhdSrollArrowR"></span><div style="margin-left: -16.5px;" class="mYhdSrollNav"><a hre="javascript:;" class="cur">1</a><a hre="javascript:;">2</a><a hre="javascript:;">3</a></div></div>
+<!-- {/if}-->

@@ -1,0 +1,349 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="{$theme_path}zt/style.css" rel="stylesheet" type="text/css" >
+<link href="{$theme_path}zt/nutrilon20150410/style.css" rel="stylesheet" type="text/css" >
+<link href="{$theme_path}zt/common20150410/common.css" rel="stylesheet" type="text/css" >
+<link href="{$theme_path}zt/nutrilon20150410/jcarousel.css" rel="stylesheet" type="text/css" >
+<script type="text/javascript" src="{$theme_path}/zt/nutrilon20150410/jquery.jCarousel.js"></script>
+<div class="min-1190">
+    <div class="header-fixed">
+        <div class="add-shadow">
+            <ul class="fixed-top-bar relative">
+                <a class="selected" href="#tab1" data-id="tab1">
+                    <li>
+                        荷兰研发
+                    </li>
+                </a>
+                <a href="#tab2" data-id="tab2">
+                    <li>
+                        奶粉试购
+                    </li>
+                </a>
+                <a href="#tab3" data-id="tab3">
+                    <li>
+                        优惠套装
+                    </li>
+                </a>
+                <a href="#tab4" data-id="tab4">
+                    <li>
+                        用户口碑
+                    </li>
+                </a>
+                <a href="#tab5" data-id="tab5">
+                    <li>
+                        资质承诺
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div class="header">
+        <div class="content-wrapper add-shadow">
+            <div class="content wm01190">
+                <div class="f_l left-pad">
+                    <img src="{$theme_path}/zt/nutrilon20150410/images/header-left.png" />
+                </div>
+                <div class="f_l right-pad" id="tab_pad">
+                    <a href="#tab1">
+                        <b>
+                            <img src="{$theme_path}/zt/nutrilon20150410/images/big_size1.png" />
+                            <span>荷兰研发</span>                      
+                        </b>
+                    </a>
+                    <a href="#tab2">
+                        <b>
+                            <img src="{$theme_path}/zt/nutrilon20150410/images/big_size2.png" />
+                            <span>奶粉试购</span>
+                        </b>                  
+                    </a>
+                    <a href="#tab3">
+                        <b>
+                            <img src="{$theme_path}/zt/nutrilon20150410/images/big_size3.png" />
+                            <span>优惠套装</span>
+                        </b>                  
+                    </a>
+                    <a href="#tab4">
+                        <b>
+                            <img src="{$theme_path}/zt/nutrilon20150410/images/big_size4.png" />
+                            <span>用户口碑</span>
+                        </b>                  
+                    </a>
+                    <a href="#tab5">
+                        <b>
+                            <img src="{$theme_path}/zt/nutrilon20150410/images/big_size5.png" />
+                            <span>资质承诺</span>
+                        </b>                  
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-1" id="tab1" style="margin:0;"></div>
+    <div>
+        <div class="wm01190 bg-2"></div>
+    </div>
+    <div class="aui">
+        <div class="connection_kv" style="background:#FFF">
+            <div class="container" style="padding:36px 0;"> 
+                <div class="jcarousel-wrapper"> 
+                    <div data-jcarouselautoscroll="true" data-jcarousel="true" class="jcarousel jcarouselAutoscroll">
+                        <ul> 
+                            <li> 
+                                <a href="#process-tab-1">
+                                    <img src="{$theme_path}/zt/nutrilon20150410/images/jcarousel-1.jpg" alt="">
+                                    <b>了解更多</b>
+                                </a> 
+                            </li>
+                            <li> 
+                                <a href="#process-tab-2">
+                                    <img src="{$theme_path}/zt/nutrilon20150410/images/jcarousel-2.jpg" alt="">
+                                    <b>了解更多</b>
+                                </a> 
+                            </li>
+                            <li>
+                                <a href="#process-tab-3">
+                                    <img src="{$theme_path}/zt/nutrilon20150410/images/jcarousel-3.jpg" alt="">
+                                    <b>了解更多</b>
+                                </a> 
+                            </li>
+                            <li> 
+                                <a href="#process-tab-4">
+                                    <img src="{$theme_path}/zt/nutrilon20150410/images/jcarousel-4.jpg" alt="">
+                                    <b>了解更多</b>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#process-tab-5">
+                                    <img src="{$theme_path}/zt/nutrilon20150410/images/jcarousel-5.jpg" alt="">
+                                    <b>了解更多</b>
+                                </a> 
+                            </li>
+                            <li> 
+                                <a href="#process-tab-6">
+                                    <img src="{$theme_path}/zt/nutrilon20150410/images/jcarousel-6.jpg" alt="">
+                                    <b>了解更多</b>
+                                </a> 
+                            </li>
+                        </ul> 
+                    </div> 
+                    <a data-jcarouselcontrol="true" href="javascript:void(0);" class="jcarousel-control-prev" style="display:block;"></a> 
+                    <a data-jcarouselcontrol="true" href="javascript:void(0);" class="jcarousel-control-next" style="display:block;"></a> 
+                    <p data-jcarouselpagination="true" class="jcarousel-pagination specific">
+                        <a class="" href="#1">1</a>
+                        <a class="" href="#2">2</a>
+                        <a class="" href="#3">3</a>
+                        <a class="" href="#4">4</a>
+                        <a class="" href="#5">5</a>
+                        <a class="" href="#6">6</a>
+                    </p> 
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="wm01190">
+            <div class="bg-3"></div>
+        </div>
+    </div>
+    <div class="bg-4"></div>
+    <div class="bg-color">
+        <div class="wm01190">
+            <div class="process-1" id="process-tab-1"></div>
+            <div class="process-2" id="process-tab-2"></div>
+            <div class="process-3" id="process-tab-3"></div>
+            <div class="process-4" id="process-tab-4"></div>
+            <div class="process-5" id="process-tab-5"></div>
+            <div class="process-6" id="process-tab-6"></div>
+        </div>
+
+        <div id="tab2">
+            <div class="nutricia-title"></div>   
+            <div class="wm01190 clearfix">
+                <div class="nutricia-goods-area clearfix">
+                    <a href="http://www.deebei.net/goods.php?id=126" target="_blank">
+                        <div class="nutricia-goods">
+                            <img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/nutricia-1.png" />
+                        </div>
+                    </a>
+                    <a href="http://www.deebei.net/goods.php?id=123" target="_blank">
+                        <div class="nutricia-goods">
+                            <img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/nutricia-2.png" />
+                        </div>
+                    </a>
+                    <a href="http://www.deebei.net/goods.php?id=138" target="_blank">
+                        <div class="nutricia-goods">
+                            <img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/nutricia-3.png" />
+                        </div>
+                    </a>
+                    <a href="http://www.deebei.net/goods.php?id=127" target="_blank">
+                        <div class="nutricia-goods">
+                            <img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/nutricia-4.png" />
+                        </div>
+                    </a>
+                    <a href="http://www.deebei.net/goods.php?id=203" target="_blank">
+                        <div class="nutricia-goods">
+                            <img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/nutricia-5.png" />
+                        </div>
+                    </a>
+                    <a href="http://www.deebei.net/goods.php?id=360" target="_blank">
+                        <div class="nutricia-goods">
+                            <img class="lazy" src="/images/loading-blank.gif" style="margin-top:155px;" data-original="{$theme_path}/zt/nutrilon20150410/images/nutricia-6.png" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="tab3">
+            <div class="nutricia-discount-title"></div>
+            <div class="wm01190 clearfix">
+                <div class="discount-suit-area goods-suit clearfix">
+                    <?php foreach ($this->_var['topic_class']['suit']['goods_list'] as $goods): ?>
+                        <div class="goodbox <?php if($goods['is_buy_nine']){ echo 'w550';}?>">
+                            <a target="_blank" href="<?php echo $goods['url'];?>">
+                                <div class="goods">
+                                    <div class="give-tip">
+                                        <?php if ($goods['is_buy_six'] == 1): ?>
+                                            <img src="{$theme_path}zt/images/give-tip/m5s1-blue.png"/>
+                                        <?php elseif ($goods['is_buy_nine'] == 1): ?>
+                                            <img src="{$theme_path}zt/images/give-tip/m8s2-blue.png"/>
+                                        <?php endif; ?>
+                                    </div>
+                                    <img src="<?php echo $goods['index_img'];?>"/>
+                                    <div class="details">
+                                        <div class="explain clearfix">
+                                            <span class="left">
+                                                <?php if ($goods['is_buy_six'] == 1): ?>
+                                                    共7罐
+                                                <?php elseif ($goods['is_buy_nine'] == 1): ?>
+                                                    共11罐
+                                                <?php endif; ?>
+                                            </span>
+                                            <span class="right"><?php echo $goods['tag1'];?></span>
+                                        </div>
+                                        <div class="goods-name"><?php echo $goods['topic_name'];?></div>
+                                        <div class="goods-price">
+                                            <span class="unit-price">单罐仅：<?php echo $goods['formated_real_price'];?></span>
+                                            <div class="total">
+                                                <span class="total-l">极致品质价：</span><span class="total-r">￥<span class="fw"><?php echo $goods['shop_price'];?></span></span>
+                                                <img src="{$theme_path}zt/images/suit-btn-3.jpg" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div> 
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tab4">
+        <div class="comments-title"></div>
+        <div class="wm01190">
+            <div style="height: 380px;"><img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/comments-1.jpg" /></div>
+            <div style="height: 465px;"><img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/comments-2.jpg" /></div>
+        </div>
+    </div>
+    <div class="custom-title"></div>
+    <div>
+        <div class="wm01190">
+            <div style="height: 566px;"><img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/service-1.jpg" /></div>
+            <div style="height: 380px;"><img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/service-2.jpg" /></div>
+            <div style="height: 473px;"><img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/service-3.jpg" /></div>
+            <div style="height: 471px;"><img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/service-4.jpg" /></div>
+        </div>
+    </div>
+
+    <div id="tab5">
+        <div class="pingan-title"></div>
+        <div class="wm01190">
+            <div style="height: 523px;"><img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/pingan-1.jpg" /></div>
+        </div>
+    </div>
+    <div class="caigou-title"></div>
+    <div>
+        <div class="wm01190">
+            <div style="height: 861px;"><img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/caigou-1.jpg" /></div>
+            <div style="height: 552px;"><img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/caigou-2.jpg" /></div>
+            <div style="height: 618px;"><img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/caigou-3.jpg" /></div>
+        </div>
+    </div>
+    <div class="huanjie-title"></div>
+    <div>
+        <div class="wm01190">
+            <div style="height: 699px;"><img class="lazy" src="/images/loading-blank.gif" data-original="{$theme_path}/zt/nutrilon20150410/images/huanjie-1.jpg" /></div>
+        </div>
+    </div>
+    <div class="debei-title"></div>
+    <div class="container-recommend">
+        <div class="container">
+            <div class="container-ul">
+                <ul class="clearfix">
+                    <li><a href="http://www.deebei.net/topic.php?topic_id=18"><img src="{$theme_path}zt/nutrilon20150410/images/why-debei-1.jpg" /></a></li>
+                    <li><a href="http://www.deebei.net/topic.php?topic_id=16"><img src="{$theme_path}zt/nutrilon20150410/images/why-debei-2.jpg" /></a></li>
+                    <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="{$theme_path}zt/nutrilon20150410/images/why-debei-3.jpg" /></a></li>
+                    <li><a href="http://www.deebei.net/category.php?id=131&filter_id=244#filter_area"><img src="{$theme_path}zt/nutrilon20150410/images/why-debei-4.jpg" /></a></li>
+                    <li><a href="http://m.deebei.net/"><img src="{$theme_path}zt/nutrilon20150410/images/why-debei-5.jpg" /></a></li>
+
+                </ul>
+            </div>
+            <div class="return-index">
+                <a href="/">
+                    <img src="{$theme_path}zt/nutrilon20150410/images/back-to-index.jpg" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <a target="_blank" href="tencent://message/?uin=2462814798&Site=www.deebei.net&Menu=yes">
+    <div id="debei-service"></div>
+    </a>
+</div>
+<script type="text/javascript">
+    $("img.lazy").lazyload({
+        placeholder:"/images/loading-blank.gif",
+        effect:"fadeIn"
+    });
+    $(function(){
+        var a=$(".jcarousel");
+        a.on("jcarousel:reload jcarousel:create",function(){
+            var b=a.innerWidth();
+            a.jcarousel("items").css("width",b+"px")
+        }).jcarousel({wrap:"circular"});
+        $(".jcarousel-control-prev").jcarouselControl({target:"-=1"});
+        $(".jcarousel-control-next").jcarouselControl({target:"+=1"});
+        $(".jcarouselAutoscroll").jcarouselAutoscroll({target:"+=1"});
+        $(".jcarousel-pagination").on("jcarouselpagination:active","a",function(){
+            $(this).addClass("active");
+        }).on("jcarouselpagination:inactive","a",function(){
+            $(this).removeClass("active");
+        }).on("click",function(b){
+            b.preventDefault();
+        }).jcarouselPagination({perPage:1,item:function(b){return'<a href="#'+b+'">'+b+"</a>"}})});
+    $(document).ready(function(){
+        var a = $("#tab_pad").find("a");
+        $(a).ishover("selected");
+        var setSelected = function(objs){
+            $(objs).removeClass("selected");
+            var w_top = $(window).scrollTop();
+            $.each(objs,function(key,obj){
+                var pos_id = $(this).attr("data-id");
+                var obj_top = $("#"+pos_id).offset().top - 55;
+                var obj_bottom = $("#"+pos_id).offset().top + $("#"+pos_id).height();
+                /*到达相应的楼层，为相应的楼层添加selected*/                
+                if(obj_top <= w_top && w_top < obj_bottom){     
+                    $(objs).removeClass("selected");
+                    $(objs+"[data-id="+pos_id+"]").addClass("selected");
+                }
+            });
+        }
+        var a1 = $(".fixed-top-bar").find("a[data-id]");
+        setSelected(a1);
+        $(window).scroll(function(){
+            setSelected(a1);
+        });    
+    });
+    scroll_fixed($(".header-fixed"),'header-fixed-show',$("#tab1"));
+    side_bar_fixed($("#debei-service"),'right','undefined','top');   
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

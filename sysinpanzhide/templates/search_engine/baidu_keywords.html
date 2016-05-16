@@ -1,0 +1,76 @@
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<script type="text/javascript" src="../js/calendar.php?lang={$cfg_lang}"></script>
+<link href="../js/calendar/calendar.css" rel="stylesheet" type="text/css" />
+<div class="form-div">
+    <form action="javascript:searchKeywords()" name="searchForm">
+        <img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+        关键词：<input name="keyword" type="text" size="25" />
+        日期：<input name="start_date" value="{$start_date}" style="width:80px;" onclick="return showCalendar(this, '%Y-%m-%d', false, false, this);" />-
+            <input name="end_date" value="{$end_date}" style="width:80px;" onclick="return showCalendar(this, '%Y-%m-%d', false, false, this);" />
+        <input type="submit" value="{$lang.button_search}" class="button" />
+    </form>
+</div>
+
+
+<div id="listDiv" class="list-div">
+{/if}
+    {if $keywords_list}
+    <table id="list-table" cellspacing="1" cellpadding="3">
+        <tbody>
+            <tr>
+                <th align="center"><a href="javascript:listTable.sort('wd')">关键词</a></th>
+                <th align="center">where</th>
+                <th align="center">why</th>
+                <th align="center">what</th>
+                <th align="center">how</th>
+                <th align="center"><a href="javascript:listTable.sort('register_count')">注册数</a></th>
+                <th align="center"><a href="javascript:listTable.sort('order_count')">订单数</a></th>
+                <th align="center">总金额</th>
+                <th align="center"><a href="javascript:listTable.sort('count')">点击数</a></th>
+                <th align="center">操作</th>
+            </tr>
+            {foreach from=$keywords_list item=keyword}
+            <tr>
+                <td align="center" style="max-width: 300px; overflow: hidden;">{$keyword.wd}</td>
+                <td align="center">{$keyword.where}</td>
+                <td align="center">{$keyword.why}</td>
+                <td align="center">{$keyword.what}</td>
+                <td align="center">{$keyword.how}</td>
+                <td align="center">{$keyword.register_count}</td>
+                <td align="center">{$keyword.order_count}</td>
+                <td align="center">{$keyword.total_amount}</td>
+                <td align="center">{$keyword.count}</td>
+                <td align="center">
+                    <a href="engine_baidu.php?act=keyword_detail&keyword={$keyword.wd}" target="_blank">详情</a>
+                </td>
+            </tr>
+            {/foreach}
+            <tr>&nbsp;
+                <td align="right" nowrap="true" colspan="8">{include file="page.htm"}</td>
+            </tr>
+        </tbody>
+    </table>
+    {/if}
+{if $full_page}
+</div>
+
+<script type="text/javascript" language="JavaScript">
+  listTable.recordCount = {$record_count};
+  listTable.pageCount = {$page_count};
+  
+  {foreach from=$filter item=item key=key}
+  listTable.filter.{$key} = '{$item}';
+  {/foreach}
+      
+function searchKeywords(){
+    listTable.filter.keyword = Utils.trim(document.forms['searchForm'].elements['keyword'].value);
+    listTable.filter.start_date = Utils.trim(document.forms['searchForm'].elements['start_date'].value);
+    listTable.filter.end_date = Utils.trim(document.forms['searchForm'].elements['end_date'].value);
+    listTable.filter.page = 1;
+    listTable.loadList();
+}
+</script>
+{include file="pagefooter.htm"}
+{/if}

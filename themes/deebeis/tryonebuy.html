@@ -1,0 +1,154 @@
+<?php $this->_var['themes_template'] = $GLOBALS['_CFG']['template'];?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<link href="themes/{$themes_template}/tryonebuy/images/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+#brandbox{background:none;display:none;height:200px;width:460px;position:relative;}
+#brandbox .brandbox{position:absolute; top:0; height:auto; width:420px; overflow:hidden; background:#FFF6DF; padding:4px; text-align:center;}
+#brandbox .showall{background:#FFF6DF; border:2px #F8B250 dashed;}
+.brandbox img{cursor:pointer;}ul{list-style-type:none; margin:0px; padding:0;}
+#showgoods{color:#999;}
+#showgoods .price {color: #DD0000;font-family: Arial,Helvetica,sans-serif;font-weight: bold;font-size: 18px;overflow: hidden;}
+#goods_id{line-height:22px;}#goods_id label{cursor:pointer;}
+
+#trybuyformhtml{ padding-top:150px; font-size:14px; color:#666;}
+#trybuybox .goodsadd{ width:98%; margin:24px auto 0 auto;}
+#trybuybox .goodsadd td{height:40px;}.goodsadd input{height:24px;border:1px #7F9DB9 solid; padding:0 4px; line-height:24px;}
+</style>
+
+{* 包含脚本文件 *}
+{insert_scripts files='transport_z.js,common.js,user.js,region.js,utils.js'}
+{insert_scripts files='jquery.min.js,jquery.json.min.js'}
+
+<script type="text/javascript">
+region.isAdmin = false;
+function trybuyResponseform(html){
+	document.getElementById('trybuyformhtml').innerHTML = html;
+}
+function tryonebuysubmit(obj){
+	var tryonebuyformObj = tryonebuypost(obj);
+	if(tryonebuyformObj){
+		Ajax.call('tryonebuy.php?act=buy', 'goods=' + $.toJSON(tryonebuyformObj), trybuyresponse, 'POST', 'JSON');//
+	}
+	return false;
+}
+function trybuyresponse(result){
+	if(result.error){
+		alert(result.message);
+	}else{
+		alert(result.message);
+		window.location.href = './';
+	}
+}
+
+function jsSelectIsExitItem(objSelect, objItemValue) { 
+    var isExit = false;        
+    for (var i = 0; i < objSelect.options.length; i++) {        
+        if (objSelect.options[i].value == objItemValue) { 
+			objSelect.options[i].selected = true;       
+            isExit = true;        
+            break;        
+        }        
+    }        
+    return isExit;        
+}   
+</script>
+<script type="text/javascript" src="themes/deebeis/tryonebuy/trybuy.js"></script>
+<!-- #BeginLibraryItem "/library/google_analytics.lbi" --><!-- #EndLibraryItem -->
+</head>
+<body onselectstart="return false;">
+<div class="ytsg_1"></div> 
+<div class="ytsg_2"></div> <br />
+
+<form action="tryonebuy.php?act=buy" method="post" onsubmit="return tryonebuysubmit(this);">
+<input name="act" type="hidden" value="buy" />
+<table width="1003" height="419" border="0" align="center" cellpadding="0" cellspacing="0" style="background-image:url(themes/{$themes_template}/tryonebuy/images/diyibu.jpg); background-repeat:no-repeat">
+  <tr>
+    <td><table width="1002" height="250" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="187">&nbsp;</td>
+        <td width="510" valign="top">
+        
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="80" width="14%">选择品牌：</td>
+    <td width="86%"><select onchange="getGoods(this.value)" name="brand_id" id="brand_id">
+<option value="0">请选择品牌</option>
+<!--{html_options options=$brand_list} -->
+</select></td>
+  </tr>
+  <tr>
+    <td>选择商品：</td>
+    <td><span style="color:#CCC">请先选择相关品牌，再在此选择商品</span>
+    <ul id="goods_id"></ul>
+    </td>
+  </tr>
+</table>
+{if $brand_id}
+<script type="text/javascript">getGoods('{$brand_id}');jsSelectIsExitItem(document.getElementById("brand_id"),'{$brand_id}');</script>
+{/if}       
+        
+
+<div id="brandbox">        
+<div style="position:absolute; right:0;">更多</div>
+<div class="brandbox showall">        
+  <!-- {foreach from=$brandlogo_list item=brand} -->
+      <!-- {if $brand.brand_logo} -->
+        <img style="width:100px; height:46px; margin-bottom:5px;" src="data/brandlogo/{$brand.brand_logo}" title="{$brand.brand_name|escape:html}" />
+      <!-- {else} -->
+        <img style="width:100px; height:46px; margin-bottom:5px;" src="images/brandlogo.jpg" title="{$brand.brand_name|escape:html}" />
+      <!-- {/if} -->
+  <!-- {/foreach} -->
+</div>        
+</div>        
+        
+        
+        </td>
+        <td width="263" id="showgoods">
+        
+        </td>
+        <td width="42">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+<br />
+<table width="1003" height="439" border="0" align="center" cellpadding="0" cellspacing="0" style="background-image:url(themes/{$themes_template}/tryonebuy/images/dierbu.jpg); background-repeat:no-repeat">
+  <tr>
+    <td valign="top" id="trybuybox"><table width="1002" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="144" colspan="4" style="padding-left:70px;" id="trybuyformhtml"><!-- 一听表单 --></td>
+        </tr>
+      <tr>
+        <td width="144">&nbsp;</td>
+        <td width="339">&nbsp;</td>
+        <td width="477">&nbsp;</td>
+        <td width="42">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<script type="text/javascript">Ajax.call('tryonebuy.php', 'act=tryonebuymin', trybuyResponseform, 'GET');</script>
+<table width="1002" border="0" align="center" cellpadding="0" cellspacing="10">
+  <tr>
+    <td align="center">
+    <input type="image" src="themes/{$themes_template}/tryonebuy/images/tijiao.jpg" id="tryonebuy_btn" style="width:324px; height:85px; border:0px;" />
+    </td>
+  </tr>
+</table>
+</form>
+
+<p>&nbsp;</p>
+<div></div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F60879ddbf3bb8cc6e6cd67c9f4f7ae25' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

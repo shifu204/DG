@@ -1,0 +1,28 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="top padding10">
+    <a href="/" class="logo"><img src="/themes/deebeis/images/s/logo.png" /></a>
+    <p class="login_cart font_gray">
+    {insert name='member_info_s'}
+   	|<a href="/flow.php" class="shoppingcart">购物车(<span class="font_red">{insert name='cart_number'}</span>)</a></p>
+</div>
+<div class="new-header">
+    <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()"  >
+        <div class="new-srch-box new-srch-box-v2">
+            <input name="keywords" type="text" id="keyword" value="品名或商品号" onclick="javascript:this.value=''" class="new-srch-input"/>
+        </div>
+        <a href="javascript:void(0)" onclick="$('#searchForm').submit();" class="new-a-search">搜&nbsp;索</a>
+    </form>
+<script type="text/javascript"><!--{literal} -->
+<!--
+function checkSearchForm(){
+    if(document.getElementById('keyword').value!=='品名或商品号'&&document.getElementById('keyword').value){
+        return true;
+    }else{
+        alert("{$lang.no_keywords}");
+        return false;
+    }
+}
+-->
+<!--{/literal} -->
+</script>
+</div>

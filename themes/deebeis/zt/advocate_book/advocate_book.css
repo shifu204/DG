@@ -1,0 +1,51 @@
+.advocate_book{margin: 0 auto; padding: 0; text-align: center; min-width: 1190px;}
+.poster{background: url(images/poster.jpg) center no-repeat; height: 503px;}
+.poster img{margin-top: 80px;}
+.advocate_book1{background: #fcebe1; overflow: hidden;}
+.ab_1_title{margin-top: 30px; margin-bottom: 15px;}
+.ab_1{width: 949px; margin-bottom: 88px;}
+.ab_1_hover1{float: left; background: url(images/ab_1_hover1_hover.png) center no-repeat; width: 237px; height: 58px;}
+.ab_1_hover2{float: left; background: url(images/ab_1_hover2_none.png) center no-repeat; width: 237px; height: 58px;}
+.ab_1_hover3{float: left; background: url(images/ab_1_hover3_none.png) center no-repeat; width: 238px; height: 58px;}
+.ab_1_hover4{float: left; background: url(images/ab_1_hover4_none.png) center no-repeat; width: 237px; height: 58px;}
+.ab_1_tab1{width: 949px; height: 425px; background: url(images/ab_1_tab1.jpg) center no-repeat;}
+.ab_1_tab2{width: 949px; height: 425px; background: url(images/ab_1_tab2.jpg) center no-repeat; display: none;}
+.ab_1_tab3{width: 949px; height: 425px; background: url(images/ab_1_tab3.jpg) center no-repeat; display: none;}
+.ab_1_tab4{width: 949px; height: 425px; background: url(images/ab_1_tab4.jpg) center no-repeat; display: none;}
+
+.advocate_book2_bg{background: url(images/advocate_book2_bg.jpg) center no-repeat; height: 1365px;}
+.advocate_book2_4{background: url(images/advocate_book2_4.png) center no-repeat; height: 309px; }
+.quality{float: left; margin: 77px 0px 3px 30px;}
+.advocate_book img{*display:block;}
+
+.advocate_book3_bg{background: url(images/advocate_book3_bg.jpg); height: 1819px;}
+.advocate_book3_1{margin-top: 110px; margin-bottom: 40px;}
+.advocate_book3_2{}
+.advocate_book3_3{margin-top: 40px; margin-bottom: 25px;}
+.advocate_book3_4{}
+.advocate_book3_5{margin-top: 75px;}
+
+.advocate_book4_t_bg{background: url(images/advocate_book4_t_bg.jpg) center no-repeat; height: 231px;}
+.advocate_book4_t{margin-top: 55px;}
+
+.advocate_book4_c1{background: url(images/advocate_book4_c1.jpg) center no-repeat; height: 320px;}
+.advocate_book4_c2{background: url(images/advocate_book4_c2.jpg) center no-repeat; height: 297px;}
+
+.advocate_book5_bg{background: url(images/advocate_book5_bg.jpg) center no-repeat; height: 389px;}
+
+.advocate_book6{margin-bottom: -300px; z-index: -1;}
+.advocate_book6_1{background: url(images/advocate_book6_1.jpg) center no-repeat; height: 735px;}
+.advocate_book6_2{background: url(images/advocate_book6_2.jpg) center no-repeat; height: 718px;}
+.advocate_book6_3{background: url(images/advocate_book6_3.jpg) center no-repeat; height: 670px;}
+.advocate_book6_3 a{cursor:pointer;}
+
+.to12{background: url(images/to12.jpg) center no-repeat; height: 670px; margin-bottom: -300px; z-index: -1; overflow: hidden;}
+
+
+.to12_bg{}
+.to12_ingdex_but{margin-top: 35px;}
+.to12_ingdex_but a{width: 201px; height: 56px; cursor:pointer;}
+.to12_ul_warp{width: 995px; margin-top: 170px;}
+.to12_ul{width: 995px;}
+.to12_ul li{float: left; margin: 0 4px; cursor:pointer;}
+.footerBlank { height: 80px;}

@@ -1,0 +1,17 @@
+.register{margin: 0 auto; padding: 0; min-width: 1190px;}
+.register1{background: url(images/register1.jpg) center no-repeat; height: 188px;}
+.register2{background: url(images/coupon_bg.jpg) center no-repeat; height: 625px; overflow: hidden;}
+.register3{background: url(images/register3.jpg) center no-repeat; height: 644px; overflow: hidden;}
+.coupon{margin: 210px 135px 0px 150px; position: relative; width: 905px;height: 215px}
+.coupon_time{color:#000; font-size:18px; line-height:23px; width:500px; margin-right:230px; text-align: center;}
+
+.c10{background: url(images/c10.png) center no-repeat; width: 225px; height: 111px; position: absolute; left: 0;  cursor: pointer;}
+.c30{background: url(images/c30.png) center no-repeat; width: 225px; height: 111px; position: absolute; right: 0px; cursor: pointer;}
+.c50{background: url(images/c50.png) center no-repeat; width: 225px; height: 111px; position: absolute; left: 0; top: 128px; cursor: pointer;}
+.c70{background: url(images/c70.png) center no-repeat; width: 225px; height: 111px; position: absolute;top: 128px; right: 0px; cursor: pointer;}
+.rule_title{font-size: 39px; line-height: 40px; width: 160px; margin-top: 10px; color: #fff; font-weight: bold;}
+.rule{color:#000; font-size: 20px; line-height: 38px; width: 890px; margin-top: 53px; height: 332px;}
+.span_red{color:#e40001;}
+.register_but{ width: 650px; margin-top: 20px;}
+.register_btn{float: left;}
+.login_btn{float: right;}
