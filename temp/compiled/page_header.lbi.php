@@ -64,10 +64,10 @@
                         </div>
                     </div>
                     <div class="f_l clearfix keywords">
-                        <?php $_from = $this->_var['searchkeywords']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'keywords_0_12848000_1463361557');if (count($_from)):
-    foreach ($_from AS $this->_var['keywords_0_12848000_1463361557']):
+                        <?php $_from = $this->_var['searchkeywords']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'keywords_0_87185300_1463562371');if (count($_from)):
+    foreach ($_from AS $this->_var['keywords_0_87185300_1463562371']):
 ?>
-                        <a href="javascript:;"><?php echo $this->_var['keywords_0_12848000_1463361557']; ?></a>
+                        <a href="javascript:;"><?php echo $this->_var['keywords_0_87185300_1463562371']; ?></a>
                         <?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>
                     </div>
                 </div>

@@ -35,7 +35,7 @@
         <?php foreach($this->_var['floors'] as $fk=>$fv):?>
             <?php
                 if($fv['i'] == 1){
-                    @include $this->_var['theme_path'].'home/f1.php';
+                    @include $this->_var['theme_path'].'home/f5.php'; 
                 } else if($fv['i'] == 2){
                     @include $this->_var['theme_path'].'home/f2.php';
                 } else if($fv['i'] == 3){

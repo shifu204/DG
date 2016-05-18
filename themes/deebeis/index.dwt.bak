@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="author" content="kl3w.com UI By PGCAO" />
+<meta name="copyright" content="2012-2015 KL3w.com Inc." />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+<meta property="qc:admins" content="202226306764552516654" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,index.js'}
+{insert_scripts files='jquery.min.js,jquery.json.min.js,jquery.lazyload.min.js'}
+<!-- #BeginLibraryItem "/library/google_analytics.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript">
+$(function() {
+    $("img.lazy").lazyload();
+});
+</script>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/home/ad.lbi" --><!-- #EndLibraryItem -->
+<div class="stickem-content">
+    <div class="daogou-container">
+        <!-- #BeginLibraryItem "/home/daogou.html" --><!-- #EndLibraryItem -->
+        <!-- #BeginLibraryItem "/home/floor.html" --><!-- #EndLibraryItem -->
+<!--{foreach from=$floors item=floor}-->
+<!-- 参数说明：floor.k 从 0 开始，floor.i 从 1 开始 -->
+
+
+                <div class="cat_content">
+                    <?php FB::log('b'); ?>
+                    <?php FB::info($this->_var['catkeys']); ?>
+                    <?php $this->_var['catkeys']=$this->_var['cats']=null;?>
+                    {if $floor.i eq 1}<!-- #BeginLibraryItem "/home/f1.lbi" --><!-- #EndLibraryItem -->{/if}
+                    {if $floor.i eq 2}<!-- #BeginLibraryItem "/home/f2.lbi" --><!-- #EndLibraryItem -->{/if}
+                    {if $floor.i eq 3}<!-- #BeginLibraryItem "/home/f1.lbi" --><!-- #EndLibraryItem -->{/if}
+                    {if $floor.i eq 4}<!-- #BeginLibraryItem "/home/f4.lbi" --><!-- #EndLibraryItem -->{/if}
+                    {if $floor.i eq 5}<!-- #BeginLibraryItem "/home/f5.lbi" --><!-- #EndLibraryItem -->{/if}
+                    {if $floor.i gt 5}
+                        {if $floor.i %2 == 0}
+                        <!-- #BeginLibraryItem "/home/f1.lbi" --><!-- #EndLibraryItem -->
+                        {else}
+                        <!-- #BeginLibraryItem "/home/f1.lbi" --><!-- #EndLibraryItem -->
+                        {/if}
+                    {/if}
+                </div>
+            </div>
+            <div class="layR r">
+                <!-- #BeginLibraryItem "/home/fr.lbi" --><!-- #EndLibraryItem -->
+                <div class="floorImg">
+                <?php echo get_adv('home_fr',$this->_var['floor']['i']);?>
+                </div>
+            </div>
+        </div> 
+        <!--{/foreach}--> 
+
+    </div>
+</div>
+<!-- 收起楼层按钮 -->
+<div class="w1190 indexBtnscroll" style="display:none;">
+    <a name="dac_index_lc107"><img src="images/home/index_open.gif?v=2013" class="hide"></a>
+    <a name="dac_index_lc509"><img src="images/home/index_close.png?v=2013"></a>
+</div>
+<!-- / 收起楼层按钮 -->
+
+<!-- #BeginLibraryItem "/home/show.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+
+<script type="text/javascript">
+var sn = sn || {
+"context" : '/emall',
+"domain" : 'www.deebei.net',
+"storeId" : '10052',
+"catalogId" : '10051',
+"memberDomain" : 'www.deebei.net',
+"online" : 'www.deebei.net',
+"cookieDomain" : '.deebei.net',
+"searchDomain" : 'http://www.deebei.net/search.php'
+};
+window.onload = function() {
+	jQuery.easing['jswing']=jQuery.easing['swing'];
+	jQuery.extend(jQuery.easing,{def:'easeOutQuad',
+		easeOutCubic:function(t){return 1 -(--t)*t*t*t;}, backout: function(B, C, A, F, E) {
+		var D = 1.70158;
+		return F * ((C = C / E - 1) * C * ((D + 1) * C + D) + 1) + A ; },
+		easeOutExpo: function (x, t, b, c, d) {
+			return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
+		}
+	});
+}
+
+</script>
+<script language="javascript" src="themes/deebeis/js/home.js"></script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

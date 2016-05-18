@@ -1,20 +1,20 @@
 <?php
 // 注意文件路径
 // database host
-//$db_host   = "localhost:3306";
-$db_host   = "qdm234013142.my3w.com";
+$db_host   = "localhost:3306";
+//$db_host   = "qdm234013142.my3w.com";
 
 // database name
-//$db_name   = "debei_test";
-$db_name   = "qdm234013142_db";
+$db_name   = "debei_test";
+//$db_name   = "qdm234013142_db";
 
 // database username
-//$db_user   = "root";
-$db_user   = "qdm234013142";
+$db_user   = "root";
+//$db_user   = "qdm234013142";
 
 // database password
-//$db_pass   = "";
-$db_pass   = "yangjianwei";
+$db_pass   = "";
+//$db_pass   = "yangjianwei";
 
 // table prefix
 $prefix    = "ecs_";
@@ -48,7 +48,7 @@ define('AUTH_KEY', 'this is a key');
 
 define('OLD_AUTH_KEY', '');
 
-define('API_TIME', '2016-05-16 09:13:54');
+define('API_TIME', '2016-05-18 15:58:25');
 
 define('DEBUG_MODE', 0);
 
